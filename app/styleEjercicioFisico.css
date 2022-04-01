@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0; /* Control caja*/
+}
+
+body{
+    background-color: #f3dbc3;
+    font-family: verdana;
+}
+
+header {
+    background:#e8c39e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+ }
+
+
+.boton{
+    width: 500px;
+    height: 90px;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 20px 15px;
+    font-size: 40px;
+    display: block;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+#tamanioVolver{
+    width: 150px;
+    margin-left: 10px;
+    position: absolute; /* Posición de manera absoluta con top*/
+    top: 0px;
+}
+
+p{
+    font-size: 50px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+.boton-central{
+    color:black;
+    background-color: #cab483;
+}
+
+
+
+.boton-central:hover{
+    background-color: #e4ca93;
+}
+
+.boton-central:active{
+    background-color: #b8a47d;
+}
+
+.contenedor{
+    padding-top: 200px;
+    text-align: center;
+}
