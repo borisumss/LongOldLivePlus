@@ -1,0 +1,23 @@
+#titulo{
+    text-align: center;
+}
+
+#volver{
+    position: relative;
+    top: 50px;
+    background-color: rgb(46, 113, 190);
+}
+
+section{
+    background-color: rgb(105, 105, 156);
+    min-height: 150px;
+}
+
+#formulario{
+    background-image: url(abuelo.jpg);
+}
+
+.container-fluid{
+    padding: 0%;
+    background-color: rgb(167, 224, 220);
+}
