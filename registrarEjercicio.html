@@ -8,6 +8,8 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <!--implementar css-->
   <link rel="stylesheet" href="estilos/registrarEjercicio.css">
+  <link rel="stylesheet" href="style.css">
+
   <script src="scripts/registro.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
@@ -22,10 +24,9 @@
   <div class="container-fluid">
     <div class="p-1 text-left">
       <a name="volver" id="volver" class="btn btn-primary" href="ejerciciosFisicos.html" role="button">Volver</a>
-      <h1>REGISTRAR EJERCICIO</h1>
+      <p id="letra" class="text-center fs-1">Registrar ejercicio</p>
     </div>
   </div>
-
   <br>
 
   <div class="container" id="form">
@@ -36,7 +37,7 @@
         <input type="text" class="form-control" name="nombre" id="nombre" minlength="5" required>
       </div>
       <div class="mb-3">
-        <label for="descripcion" class="form-label">Descripcion</label>
+        <label for="descripcion" class="form-label">Descripción</label>
         <textarea class="form-control" name="descripcion" id="descripcion" rows="1" required></textarea>
       </div>
       
