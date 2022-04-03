@@ -1,0 +1,82 @@
+/*
+    boton Volver
+       color---> Azul
+    pagina home
+        letra -> home encabezado
+        tituloApp -> long old live +
+        btn-EF -> ejercicios fisicos boton
+    
+    ejercicios fisicos
+        letra -> ejercicios fisicos encabezado
+        lista ->lista de ejercicios(boton)
+        registrar -> registrar ejercicio
+
+    Lista de ejercicios 
+        letra-> Lista de ejercicios encabezado
+    
+    Registrar ejercicios 
+    
+*/
+
+#tituloApp, #letra, #btnEF{
+   font-family: Verdana;
+}
+
+#tituloApp{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#letra,#btnEF{
+   font-size: 30px;
+   font-weight: bold;
+}
+
+#volver {
+    min-width: 130px;
+    height: 40px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #fff;
+    padding: 0px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: Verdana;
+    font-size: 25px;
+    border:none;
+    border-radius: 5px;
+    background-size: 120% auto;
+  }
+  
+#volver:hover {
+    background-position: right center;
+    border-radius: 5px;
+    padding-right: 24px;
+    padding-left: 8px;
+    
+}
+  
+#volver:active {
+    left: 1px;
+}
+  
+#volver:hover:after {
+    opacity: 1;
+    right: 10px;
+}
+  
+#volver:after {
+    content: "\00AB";
+    position: absolute;
+    opacity: 0;
+    font-size: 20px;
+    line-height: 40px;
+    top: 0;
+    right: -20px;
+    transition: 0.4s;
+}
+  
+#lista, #registrar{
+    background-color: rgb(84, 85, 155);/* Color */
+}

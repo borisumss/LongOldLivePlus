@@ -1,0 +1,14 @@
+
+.container-fluid{
+    padding: 0%;
+    background-color: rgb(167, 224, 220);
+}
+
+body{
+  background-image: url("/images/fondo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
