@@ -1,4 +1,8 @@
-
+*{
+    margin:0;
+    padding: 0;
+   
+}
 
 
 .card:hover{
@@ -9,3 +13,30 @@
 #head{
     background-color: rgb(167, 224, 220);
 }
+
+body{
+    background-image: url("/images/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+  }
+
+  
+#letra{
+    font-weight: bold;
+    font-family: Verdana;
+    font-size: 30px;
+}
+
+#card-color{
+    background-color: #e8cb9a;
+    color: black;
+}
+
+#tituloApp{
+    font-family: Verdana;
+    font-size: 50px;
+    font-weight: bold;
+}
+
