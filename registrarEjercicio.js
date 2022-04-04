@@ -1,11 +1,11 @@
 import {guardarRegistro} from './firebase.js'
 window.addEventListener('DOMContentLoaded' , () => {
 
-});
+})
 
 const formulario = document.getElementById('formulario');
 
-formulario.addEventListener('submit',(e)=>{
+formulario.addEventListener('submit', (e) =>{
     e.preventDefault()
     const nombre = formulario ['nombre']
     const descripcion = formulario ['descripcion']
@@ -13,3 +13,4 @@ formulario.addEventListener('submit',(e)=>{
     const gif = formulario ['formGif']
     guardarRegistro(nombre.value,descripcion.value,musculo.value)
 })
+
