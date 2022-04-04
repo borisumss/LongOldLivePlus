@@ -24,25 +24,88 @@
       <p id="letra" class="text-center fs-1">Lista de ejercicios</p>
     </div>
   </div>
-  <br>
-
-
 
   <br>
 
+
+
+  <br>
+
+  <!--
+    <div class="container">
+    <!--Poner card ejercicio1-->
+    <a href="#!" data-bs-toggle="modal" data-bs-target="#modal1">
+      <div type="button" class="card mb-3 mx-auto w-100mb-4 rounded" style="max-width: 540px;" href="#">
+        <div class="row g-0 justify-content-center align-items-center">
+          <div class="col-md-4" align-items="center">
+            <img src="images/flexion.gif" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <!--Poner card ejercicio2-->
+    <a href="#!" data-bs-toggle="modal" data-bs-target="#modal2">
+      <div type="button" class="card mb-3 mx-auto w-100mb-4 rounded" style="max-width: 540px;" href="#">
+        <div class="row g-0 justify-content-center align-items-center">
+          <div class="col-md-4 ">
+            <img src="images/logo.jpg" class="img-fluid rounded-start" alt="..."
+              style="max-width: 150px;max-height: 150px;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- modal 1 -->
+  <div tabindex="-1" aria-labelledby="modal1" aria-hidden="true" class="modal fade" id="modal1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="card mx-auto">
+          <img src="images/flexion.gif" class="card-img-top mx-auto" style="max-width: 400px; max-width: 400px;"
+            alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <div class="container text-center">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+
+  -->
   
   <!--Implementar generar objeto desde js-->
 
   <script src='https://code.jquery.com/jquery-1.12.4.min.js'></script>
    
-  <div class="container" id="contentPanel" >
+  <div class="container" id="contentPanel">
     
   </div>
 
  
 
   <script>
-    let num = 100;  /* select count -> es la cantidad de ejercicios registrados en firebase */
+    let num = 5;  /* select count -> es la cantidad de ejercicios registrados en firebase */
     var addCols = function () {
       for (var i = 1; i <= num; i++) {
         var myPanel = $('<a href="#!" data-bs-toggle="modal" data-bs-target="#modal2"> <div type="button" class="card mb-3 mx-auto w-100mb-4 rounded" style="max-width: 540px;" href="#"> <div class="row g-0 justify-content-center align-items-center"><div class="col-md-4 "><img src="images/logo.jpg" class="img-fluid rounded-start" alt="..."style="max-width: 150px;max-height: 150px;"></div><div class="col-md-8"><div class="card-body"><h5 class="card-title">Card title</h5><p class="card-text">This is a wider card with supporting text below as a natural lead-in to additionalcontent. This content is a little bit longer.</p><p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p></div></div></div></div></a><div tabindex="-1" aria-labelledby="modal2" aria-hidden="true" class="modal fade" id="modal2"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="card mx-auto"><img src="images/logo.jpg" class="card-img-top mx-auto" style="max-width: 400px; max-width: 400px;" alt="..."><div class="card-body"><h5 class="card-title">Card title</h5><p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content</p><div class="container text-center">      <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button></div></div></div></div></div></div>');
