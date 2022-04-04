@@ -1,102 +1,57 @@
 <!DOCTYPE html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Lista de ejercicios</title>
-    <!--implementacion bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="estilos/listaEjercicios.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Lista de ejercicios</title>
+  <!--implementacion bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="generarCard.js"></script>
+  <link rel="stylesheet" href="estilos/listaEjercicios.css">
+  <link rel="stylesheet" href="style.css">
+
 </head>
-<body>
-    <!--js de bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-    <div class="container-fluid">
-        <div class="p-1 text-left">
-          <a name="volver" id="volver" class="btn btn-primary" href="ejerciciosFisicos.html" role="button">Volver</a>
-          <p id="letra" class="text-center fs-1">Lista de ejercicios</p>
-        </div>
-    </div> 
+<body onload="addCols()">
+  <!--js de bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
 
-    <br>
-
-    
-
-    <br>
-
-    <div class="container">
-      <!--Poner card ejercicio1-->
-      <a href="#!" data-bs-toggle="modal" data-bs-target="#modal1">
-        <div type="button" class="card mb-3 mx-auto w-100mb-4 rounded" style="max-width: 540px;" href="#">
-          <div class="row g-0 justify-content-center align-items-center">
-            <div class="col-md-4" align-items="center">
-              <img src="images/flexion.gif" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
-          </div>
-      </div>
-      </a>
-      <!--Poner card ejercicio2-->
-      <a href="#!" data-bs-toggle="modal" data-bs-target="#modal2">
-        <div type="button" class="card mb-3 mx-auto w-100mb-4 rounded" style="max-width: 540px;" href="#">
-          <div class="row g-0 justify-content-center align-items-center">
-            <div class="col-md-4 ">
-              <img src="images/logo.jpg" class="img-fluid rounded-start" alt="..." style="max-width: 150px;max-height: 150px;">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
-          </div>
-      </div>
-      </a>
+  <div class="container-fluid">
+    <div class="p-1 text-left">
+      <a name="volver" id="volver" class="btn btn-primary" href="ejerciciosFisicos.html" role="button">Volver</a>
+      <p id="letra" class="text-center fs-1">Lista de ejercicios</p>
     </div>
+  </div>
+  <br>
 
-    <!-- modal 1 -->
-    <div tabindex="-1" aria-labelledby="modal1" aria-hidden="true" class="modal fade" id="modal1">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="card mx-auto">
-            <img src="images/flexion.gif" class="card-img-top mx-auto" style="max-width: 400px; max-width: 400px;" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <div class="container text-center">
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- modal 2 -->
-    <div tabindex="-1" aria-labelledby="modal2" aria-hidden="true" class="modal fade" id="modal2">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="card mx-auto">
-            <img src="images/logo.jpg" class="card-img-top mx-auto" style="max-width: 400px; max-width: 400px;" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <div class="container text-center">
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
+  <br>
+
+  
+  <!--Implementar generar objeto desde js-->
+  
+  <script src='https://code.jquery.com/jquery-1.12.4.min.js'></script>
+   
+  
+
+
+
+    <div class="container" id="contentPanel"style="height: 25em;line-height:1em; ;overflow-x: hidden;overflow-y: scroll;width: 100%;border:1px solido;">
+      <!--la funcion agrega aqui los cambios-->
+    </div>  
+ 
+
+  
+  <!-- appentTo? como funciona?
+      var myCol = $('<div class="col-sm-3 col-md-3 pb-2"></div>');
+          var myPanel = $('<div class="card card-outline-info" id="' + i + 'Panel"><div class="card-block"><div class="card-title"><span>Card #' + i + '</span><button type="button" class="close" data-target="#' + i + 'Panel" data-dismiss="alert"><span class="float-right"><i class="fa fa-remove"></i></span></button></div><p>Some text in ' + i + ' </p><img src="//placehold.it/50/eeeeee" class="rounded rounded-circle"></div></div>');
+          myPanel.appendTo(myCol);
+          myCol.appendTo('#contentPanel');
+    -->
 
 </body>
+
 </html>
