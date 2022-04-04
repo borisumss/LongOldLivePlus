@@ -36,7 +36,7 @@
     min-width: 130px;
     height: 40px;
     position: absolute;
-    top: 30px;
+    top: 22px;
     left: 30px;
     color: #fff;
     padding: 0px;
@@ -78,5 +78,23 @@
 }
   
 #lista, #registrar{
-    background-color: rgb(84, 85, 155);/* Color */
+    text-align: center;
+    border:none;
+    font-family: verdana;
+    font-size: 45px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px; 
+    top:2px;
+    color: beige;
+    background-color:rgb(84, 85, 155);
 }
+
+#lista:hover ,#registrar:hover {
+       top:15px;
+       background-color: #38204C;
+  }
+
+ 

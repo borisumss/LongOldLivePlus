@@ -12,6 +12,7 @@
 
   <script src="scripts/registro.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type = "module" src = "./registrarEjercicio.js"></script>
 </head>
 
 <body>
@@ -53,11 +54,20 @@
         <label for="formGif" class="form-label">Inserte un gif del ejercicio</label>
         <input class="form-control" type="file" name="gif" id="formGif" accept="image/gif" required>
       </div>
+
+      <label for="seleccione" class="form-label">Elija la cantidad de minutos del ejercicio</label>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <input type="number" min="1" max="10" style="height=">
+          </div>
+        </div>
+      </div>
+      <br>
       <button type="submit" class="btn btn-primary" id="btnRegistrar">Submit</button>
     </form>
   </div>
-  <br><br><br>
-  <script type = "module" src = "./registrarEjercicio.js"></script>
+  <br><br>
 </body>
 
 </html>
