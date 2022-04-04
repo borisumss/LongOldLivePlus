@@ -35,9 +35,19 @@
 
   <script src='https://code.jquery.com/jquery-1.12.4.min.js'></script>
    
-  <div class="container" id="contentPanel" >
+  <!--
+    <center><div class="scroll" style="overflow:scroll; overflow-x: hidden; width: 800px;">
+  </center>
+  -->
+  
+
+    <div class="container" id="contentPanel" >
+
+      <!--la funcion agrega aqui los cambios-->
+      
+    </div>
     
-  </div>
+  
 
  
 
@@ -49,10 +59,9 @@
         myPanel.appendTo('#contentPanel');
       }
     };
-
   </script>
   
-  <!--
+  <!-- appentTo? como funciona?
       var myCol = $('<div class="col-sm-3 col-md-3 pb-2"></div>');
           var myPanel = $('<div class="card card-outline-info" id="' + i + 'Panel"><div class="card-block"><div class="card-title"><span>Card #' + i + '</span><button type="button" class="close" data-target="#' + i + 'Panel" data-dismiss="alert"><span class="float-right"><i class="fa fa-remove"></i></span></button></div><p>Some text in ' + i + ' </p><img src="//placehold.it/50/eeeeee" class="rounded rounded-circle"></div></div>');
           myPanel.appendTo(myCol);
