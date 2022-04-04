@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded' , () => {
 
 })
 
-const formulario = document.getElementById('formulario');
+const formulario = document.getElementById('formulario')
 
 formulario.addEventListener('submit', (e) =>{
     e.preventDefault()
@@ -11,6 +11,6 @@ formulario.addEventListener('submit', (e) =>{
     const descripcion = formulario ['descripcion']
     const musculo = formulario ['seleccione']
     const gif = formulario ['formGif']
-    guardarRegistro(nombre.value,descripcion.value,musculo.value)
+    guardarRegistro(nombre.value, descripcion.value, musculo.value)
 })
 
