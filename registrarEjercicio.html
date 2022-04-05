@@ -33,7 +33,7 @@
     <form class="row g-3 needs-validation" novalidate action="index.html" method="get" name="regEjer" id="formulario">
       <div class="col-md-12">
         <label for="nombre" class="form-label">Nombre del Ejercicio</label>
-        <input type="text" class="form-control" id="nombre" name="nombre" pattern="[a-zA-Z]{5,30}" required>
+        <input type="text" class="form-control" id="nombre" name="nombre" pattern="^(?!\s)[a-zA-Z\s]{5,30}" required>
 
         <div class="invalid-feedback">
           *El nombre debe tener minimo 5 y maximo 30 letras.
@@ -71,7 +71,7 @@
       </div>
       <div class="col-md-6">
         <label for="formGif" class="form-label">Inserte un gif del ejercicio</label>
-        <input type="file" class="form-control" id="formGif" name="gif" accept="image/gif" required>
+        <input type="file" class="form-control" id="formGif" name="gif" accept="image/gif" onchange="return validarGif()" required>
         <div class="invalid-feedback">
           *Inserte un archivo .gif
         </div>
@@ -80,14 +80,14 @@
         <label class="form-label" for="min">Elija la duracion del ejercicio </label>
         <div class="row">
           <div class="col-md-3">
-            <input type="number" class="form-control" placeholder="min." id="min" name="min" min="0" max="3" required>
+            <input type="number" class="form-control" placeholder="min." id="min" name="min" min="0" max="3" onchange="return validarTiempo()" required>
             <div class="invalid-feedback">
               0 a 3 min.
             </div>
           </div>
 
           <div class="col-md-3">
-            <input type="number" class="form-control" placeholder="seg." id="seg" name="seg" min="0" max="59" required>
+            <input type="number" class="form-control" placeholder="seg." id="seg" name="seg" min="0" max="59"onchange="return validarTiempo()" required>
             <div class="invalid-feedback">
               0 a 59 seg.
             </div>
