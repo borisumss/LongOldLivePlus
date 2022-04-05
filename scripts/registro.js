@@ -1,4 +1,3 @@
-
 async function registrar() {
     event.preventDefault();
     const { value: test } = await Swal.fire({
@@ -15,20 +14,24 @@ async function registrar() {
     });
 
     if (test) {
-
-        Swal.fire({
-            titlle: "¡Cambios Guardados!",
+        const { value:test2}=await Swal.fire({
+            title: "¡Datos Guardados!",
             icon: "success",
-            
+            timer: 2000
         });
-        document.regEjer.submit();
+        if(test2){
+            document.regEjer.submit();
+        }else{
+            document.regEjer.submit();
+        }
+        
     } else {
         Swal.fire({
             title: "¡Cancelado!",
             icon: "error",
             timer: 3000
         });
-        
+
     }
 
 }

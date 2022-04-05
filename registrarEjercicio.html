@@ -9,10 +9,9 @@
   <!--implementar css-->
   <link rel="stylesheet" href="estilos/registrarEjercicio.css">
   <link rel="stylesheet" href="style.css">
-
-  <script src="scripts/registro.js"></script>
+  
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script type = "module" src = "./registrarEjercicio.js"></script>
+  
 </head>
 
 <body>
@@ -31,17 +30,17 @@
   <br>
 
   <div class="container" id="form">
-    <form class="row g-3" action="index.html" method="get" name="regEjer" id="formulario" onsubmit="return registrar()">
+    <form class="row g-3" action="index.html" method="get" name="regEjer" id="formulario" onsubmit="return registrar()" >
       <br>
-      <div class="mb-3">
+      <div class="mb-3" id="validarNombre">
         <label for="nombre" class="form-label">Nombre del Ejercicio</label>
-        <input type="text" class="form-control" name="nombre" id="nombre" minlength="5" required>
+        <input type="text" class="form-control" name="nombre" id="nombre" minlength="5" pattern="[a-zA-Z]{5,30}" title="Nombre invalido, el nombre debe tener minimo 5 y maximo 30 letras y no se permite números ni caracteres especiales" required>
       </div>
       <div class="mb-3">
         <label for="descripcion" class="form-label">Descripción</label>
         <textarea class="form-control" name="descripcion" id="descripcion" rows="1" required></textarea>
       </div>
-      
+
       <label for="seleccione" class="form-label">Seleccione el grupo muscular principal del ejercicio</label>
       <select class="form-select form-select-sm" name="musculo" id="seleccione" required>
         <option selected value="">Seleccione</option>
@@ -59,24 +58,45 @@
         <option value="12">Aerobicos</option>
 
       </select><br>
-      <div class="mb-3">
-        <label for="formGif" class="form-label">Inserte un gif del ejercicio</label>
-        <input class="form-control" type="file" name="gif" id="formGif" accept="image/gif" required>
-      </div>
 
-      <label for="seleccione" class="form-label">Elija la cantidad de minutos del ejercicio</label>
-      <div class="container">
+      <div class="container mb-3">
         <div class="row">
-          <div class="col-12 text-center">
-            <input type="number" min="1" max="10" style="height=">
+          <div class="col-6">
+            <label for="formGif" class="form-label">Inserte un gif del ejercicio</label>
+          </div>
+          <div class="col-6">
+            <label for="seleccione" class="form-label">Elija la duracion del jercicio</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6">
+            <input class="form-control" type="file" name="gif" id="formGif" accept="image/gif" required>
+          </div>
+
+          <div class="col-3 text-end">
+            <input type="number" placeholder="min." name="min" id="min" min="0" max="3" required>
+          </div>
+
+          <div class="col-3 text-start">
+            <input type="number" placeholder="seg." name="seg" id="seg" min="0" max="59" required>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col text-center">
+            <button type="submit" class="btn btn-primary" id="btnRegistrar">Registrar</button>
           </div>
         </div>
       </div>
       <br>
-      <button type="submit" class="btn btn-primary" id="btnRegistrar">Submit</button>
+
     </form>
   </div>
   <br><br>
+  <script src="scripts/registro.js"></script>
+  <script type="module" src="./registrarEjercicio.js"></script>
 </body>
 
 </html>
+
