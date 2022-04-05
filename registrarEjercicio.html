@@ -9,9 +9,9 @@
   <!--implementar css-->
   <link rel="stylesheet" href="estilos/registrarEjercicio.css">
   <link rel="stylesheet" href="style.css">
-  
+
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  
+
 </head>
 
 <body>
@@ -30,66 +30,76 @@
   <br>
 
   <div class="container" id="form">
-    <form class="row g-3" action="index.html" method="get" name="regEjer" id="formulario" onsubmit="return registrar()" >
-      <br>
-      <div class="mb-3" id="validarNombre">
+    <form class="row g-3 needs-validation" novalidate action="index.html" method="get" name="regEjer" id="formulario">
+      <div class="col-md-12">
         <label for="nombre" class="form-label">Nombre del Ejercicio</label>
-        <input type="text" class="form-control" name="nombre" id="nombre" minlength="5" pattern="[a-zA-Z]{5,30}" title="Nombre invalido, el nombre debe tener minimo 5 y maximo 30 letras y no se permite números ni caracteres especiales" required>
+        <input type="text" class="form-control" id="nombre" name="nombre" pattern="[a-zA-Z]{5,30}" required>
+
+        <div class="invalid-feedback">
+          *El nombre debe tener minimo 5 y maximo 30 letras.
+          <br>*No se permite números ni caracteres especiales.
+        </div>
       </div>
-      <div class="mb-3">
+      <div class="col-md-12">
         <label for="descripcion" class="form-label">Descripción</label>
-        <textarea class="form-control" name="descripcion" id="descripcion" rows="1" required></textarea>
-      </div>
-
-      <label for="seleccione" class="form-label">Seleccione el grupo muscular principal del ejercicio</label>
-      <select class="form-select form-select-sm" name="musculo" id="seleccione" required>
-        <option selected value="">Seleccione</option>
-        <option value="1">Brazos</option>
-        <option value="2">Piernas</option>
-        <option value="3">Espalda</option>
-        <option value="4">Hombro</option>
-        <option value="5">Resistencia Cardiovascular</option>
-        <option value="6">Biceps</option>
-        <option value="7">abdomen</option>
-        <option value="8">pantorrilla</option>
-        <option value="9">Gluteos</option>
-        <option value="10">Tricep</option>
-        <option value="11">Cuadriceps</option>
-        <option value="12">Aerobicos</option>
-
-      </select><br>
-
-      <div class="container mb-3">
-        <div class="row">
-          <div class="col-6">
-            <label for="formGif" class="form-label">Inserte un gif del ejercicio</label>
-          </div>
-          <div class="col-6">
-            <label for="seleccione" class="form-label">Elija la duracion del jercicio</label>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-6">
-            <input class="form-control" type="file" name="gif" id="formGif" accept="image/gif" required>
-          </div>
-
-          <div class="col-3 text-end">
-            <input type="number" placeholder="min." name="min" id="min" min="0" max="3" required>
-          </div>
-
-          <div class="col-3 text-start">
-            <input type="number" placeholder="seg." name="seg" id="seg" min="0" max="59" required>
-          </div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col text-center">
-            <button type="submit" class="btn btn-primary" id="btnRegistrar">Registrar</button>
-          </div>
+        <textarea class="form-control" name="descripcion" id="descripcion" rows="2" required></textarea>
+        <div class="invalid-feedback">
+          *Complete el campo.
         </div>
       </div>
-      <br>
+
+      <div class="col-md-12">
+        <label for="seleccione" class="form-label">Seleccione el grupo muscular principal del ejercicio</label>
+        <select class="form-select form-select-sm" id="seleccione" name="musculo" required>
+          <option selected value="">Seleccione</option>
+          <option value="Brazos">Brazos</option>
+          <option value="Piernas">Piernas</option>
+          <option value="Espalda">Espalda</option>
+          <option value="Hombro">Hombro</option>
+          <option value="Resistencia">Resistencia Cardiovascular</option>
+          <option value="Biceps">Biceps</option>
+          <option value="Abdomen">Abdomen</option>
+          <option value="Pantorrilla">Pantorrilla</option>
+          <option value="Gluteos">Gluteos</option>
+          <option value="Tricep">Tricep</option>
+          <option value="Cuadriceps">Cuadriceps</option>
+          <option value="Aerobicos">Aerobicos</option>
+        </select>
+        <div class="invalid-feedback">
+          *Seleccione un elemento de la lista.
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="formGif" class="form-label">Inserte un gif del ejercicio</label>
+        <input type="file" class="form-control" id="formGif" name="gif" accept="image/gif" required>
+        <div class="invalid-feedback">
+          *Inserte un archivo .gif
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label" for="min">Elija la duracion del ejercicio </label>
+        <div class="row">
+          <div class="col-md-3">
+            <input type="number" class="form-control" placeholder="min." id="min" name="min" min="0" max="3" required>
+            <div class="invalid-feedback">
+              0 a 3 min.
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <input type="number" class="form-control" placeholder="seg." id="seg" name="seg" min="0" max="59" required>
+            <div class="invalid-feedback">
+              0 a 59 seg.
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br><br><br><br>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <button class="btn btn-primary" type="submit" id="btnRegistrar">Registrar</button>
+        </div>
+      </div>
 
     </form>
   </div>
@@ -99,4 +109,3 @@
 </body>
 
 </html>
-

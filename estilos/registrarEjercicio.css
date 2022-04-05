@@ -5,7 +5,7 @@ body {
   margin: 0;
 }
 
-#formulario {
+#formulario{
   width: 80%;
   color: rgb(155, 246, 249);
   background: rgba(0, 0, 0, 0.8);
@@ -17,9 +17,6 @@ body {
 
 }
 
-input.invalid {
-  border-color: red;
-}
 
 #formGif {
   background-color: rgb(255, 255, 255, 0);
