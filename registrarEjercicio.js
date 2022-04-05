@@ -1,9 +1,9 @@
-import {guardarRegistro} from './firebase.js'
+import { guardarRegistro } from './firebase.js';
 window.addEventListener('DOMContentLoaded' , () => {
 
 })
 
-const formulario = document.getElementById('formulario')
+const formulario = document.getElementById('formulario');
 
 formulario.addEventListener('submit', (e) =>{
     e.preventDefault()

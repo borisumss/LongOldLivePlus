@@ -16,12 +16,14 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebas
   };
 
   // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
   //conexion a Firestore
-  const db = getFirestore();
+
+const db = getFirestore();
   //Conexion a Storage
   //const storage = getStorage();
 
-  export const guardarRegistro = (nombre,descripcion,seleccione) =>
-    addDoc(collection(db, 'ejercicios'), {nombre,descripcion,seleccione});
-  
+export const guardarRegistro = (nombre,descripcion,seleccione) =>{
+  addDoc(collection(db, 'ejercicios'), {nombre,descripcion,seleccione})
+}
+
