@@ -41,10 +41,10 @@ async function validarTiempo() {
     var minutos = document.getElementById("min");
     var segundos = document.getElementById("seg");
 
-    if (minutos.value == 0 && segundos.value < 15 && minutos.value !="" && segundos.value !="") {
+    if (minutos.value == 0 && minutos.value !="" && segundos.value !="") {
 
         Swal.fire({
-            title: "El tiempo minimo para un ejercicio es de 15 segundos",
+            title: "El tiempo minimo para un ejercicio es de 1 minuto",
             icon: "error",
         });
         minutos.value = "";
