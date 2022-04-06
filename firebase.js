@@ -21,8 +21,8 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebas
   export const db = getFirestore();
   //Conexion a Storage
   export const storage = getStorage();
-
-  export const guardarRegistro = (nombre,descripcion,seleccione,formGif) =>{
-    addDoc(collection(db, 'ejercicios'), {nombre,descripcion,seleccione})
-  }
   
+//se cambio
+  export const guardarRegistro = (nombre,descripcion,seleccione,min,seg,formGif) =>{
+    addDoc(collection(db, 'ejercicios'), {nombre,descripcion,seleccione,min,seg})
+  }
