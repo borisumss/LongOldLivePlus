@@ -26,9 +26,9 @@ import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL } from "h
   const storageRef = sRef(storage);
 
   export const registrar = (nombreEjercicio) => {
-    const datosDoc = {
+    /*const datosDoc = {
       NombreEjecicio: nombreEjercicio
-    };
+    };*/
     addDoc(collection(cloudDB, 'prueba2'), {nombreEjercicio});
   }
   /*const db = getFirestore();
