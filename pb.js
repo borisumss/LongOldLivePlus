@@ -1,4 +1,4 @@
-import {  } from "./firebasepb.js";
+import { registrar } from "./firebasepb.js";
 
 const form = document.getElementById('registro');
 
@@ -14,6 +14,7 @@ form.addEventListener('submit', (e)=>{
     const imgnombre = fl[0]
     const imgext = fl[1]
     console.log(imgnombre,imgext)
+    registrar(nombreEjercicio.value)
 })
 
 /*window.addEventListener('DOMContentLoaded', ()=>{
