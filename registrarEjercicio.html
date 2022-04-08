@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Home</title>
+
+  <script  src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+ 
+  <script  src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
   <!--implementacion bootstrap-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -10,7 +16,7 @@
   <link rel="stylesheet" href="estilos/registrarEjercicio.css">
   <link rel="stylesheet" href="style.css">
 
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ <!--- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>-->
 
 </head>
 
@@ -71,7 +77,9 @@
       </div>
       <div class="col-md-6">
         <label for="formGif" class="form-label">Inserte un gif del ejercicio</label>
-        <input type="file" class="form-control" id="formGif" name="gif" accept="image/gif" onchange="return validarGif()" required>
+       <!--- <input type="file" class="form-control" id="formGif" name="gif" accept="image/gif" onchange="return validarGif()" required>-->
+        <input type="file"  name="file" id="file">
+
         <div class="invalid-feedback">
           *Inserte un archivo .gif
         </div>
@@ -104,8 +112,9 @@
     </form>
   </div>
   <br><br>
-  <script src="scripts/registro.js"></script>
-  <script type="module" src="./registrarEjercicio.js"></script>
+  <!--<script src="scripts/registro.js"></script>
+  <script type="module" src="./registrarEjercicio.js"></script>-->
+  <script src="script.js"></script
 </body>
 
  
