@@ -1,20 +1,16 @@
 import { registrar } from "./firebasepb.js";
 
 const form = document.getElementById('registro');
+const input = document.querySelector('input[type="file"]');
+var gif = [];
+input.addEventListener('change', function (e) {
+    gif = input.files;
+})
 
-form.addEventListener('submit', (e)=>{
+form.addEventListener('submit', (e) =>{
     e.preventDefault()
     const nombreEjercicio = form ['nombre ejercicio']
-    const img = form ['formGif']
-    console.log(nombreEjercicio.value,img.value)
-    console.log(img.value.split(/(\\|\/)/g).pop())
-    var fl = []
-    fl = (img.value.split(/(\\|\/)/g).pop()).split('.')
-    
-    const imgnombre = fl[0]
-    const imgext = fl[1]
-    console.log(imgnombre,imgext)
-    registrar(nombreEjercicio.value)
+    registrar(nombreEjercicio.value,gif[0])
 })
 
 /*window.addEventListener('DOMContentLoaded', ()=>{

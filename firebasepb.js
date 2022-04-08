@@ -1,7 +1,3 @@
-// Import the functions you need from the SDKs you need
-
-import { getFirestore, collection, addDoc, doc, setDoc } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
-import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-storage.js";    
 
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
@@ -10,26 +6,46 @@ import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL } from "h
 
   // Your web app's Firebase configuration
   const firebaseConfig = {
-    apiKey: "AIzaSyAMISQz6M33tBYJ3SPMzvncgzYB_xTv9es",
-    authDomain: "prueba2-ccd00.firebaseapp.com",
-    projectId: "prueba2-ccd00",
-    storageBucket: "prueba2-ccd00.appspot.com",
-    messagingSenderId: "1060273787837",
-    appId: "1:1060273787837:web:4a723fa3246d2d56fbb8d4"
+    apiKey: "AIzaSyC1WJuRzxe5M5wtvRx-BK6c7mOps4usdR4",
+    authDomain: "long-old-live-plus-aab44.firebaseapp.com",
+    projectId: "long-old-live-plus-aab44",
+    storageBucket: "long-old-live-plus-aab44.appspot.com",
+    messagingSenderId: "371071760445",
+    appId: "1:371071760445:web:b44da528fddb82bb759254"
   };
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
 
+import { getFirestore, collection, addDoc, doc, setDoc } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
+import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-storage.js";    
+
   const cloudDB = getFirestore();
   const storage = getStorage();
-  const storageRef = sRef(storage);
+  
 
-  export const registrar = (nombreEjercicio) => {
-    /*const datosDoc = {
-      NombreEjecicio: nombreEjercicio
-    };*/
-    addDoc(collection(cloudDB, 'prueba2'), {nombreEjercicio});
+  export const registrar = (nombreEjercicio,gif) => {
+    const storageRef = sRef(storage, 'gifs/'+gif.name);
+    const uploadTask = uploadBytesResumable(storageRef,gif);
+    uploadTask.on('state_changed', (snapshot)=>{
+      
+    },(error) => {
+      alert("error: gif no subido");
+    },
+    ()=>{
+      getDownloadURL(uploadTask.snapshot.ref).then((downloadURL)=>{
+        guardarFirestore(downloadURL);
+      });
+    }
+    );
+    function guardarFirestore(downloadURL){
+      const datosDoc = {
+        NombreEjecicio: nombreEjercicio,
+        GifURL: downloadURL
+      };
+      setDoc(doc(cloudDB, "ejercicio", nombreEjercicio), datosDoc);
+    }
+    //addDoc(collection(cloudDB, 'prueba2'), {nombreEjercicio});
   }
   /*const db = getFirestore();
   const storage = getStorage();
