@@ -1,3 +1,23 @@
+/*importar { ejerciciosFirebase } desde './firebase.js';
+const listaEjercicios = document.getElementById("contentPanel");
+ventana.addEventListener("DOMContenetLoaded", asíncrono () => {
+    
+    ejerciciosFirebase((querySnapshot) => {
+        dejar html = "";
+        querySnapshot.forEach((doc) => {
+            const ejer = doc.datos();
+            console.log(ejer.NombreEjecicio);
+            html +=`
+                <div>
+                    <h3>${ejer.NombreEjecicio}</h3>
+                    <p>${ejer.DescripcionEjercicio}</p>
+                </div>
+            `;
+        });
+        listaEjercicios.innerHTML=html;
+    });
+});*/
+
 let num = 100;  /* select count -> es la cantidad de ejercicios registrados en firebase */
 var addCols = function () {
     for (var i = 1; i <= num; i++) {

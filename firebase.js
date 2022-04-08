@@ -49,3 +49,4 @@ import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL } from "h
       setDoc(doc(cloudDB, "Ejercicio", nombre), datosDoc);
     }
   }
+  export  const  ejerciciosFirebase  =  ( callback )  =>  onSnapshot  ( collection ( cloudDB ,  'Ejercicio' ) ,  callback )
