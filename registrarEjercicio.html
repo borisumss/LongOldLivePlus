@@ -32,8 +32,8 @@
   <div class="container" id="form">
     <form class="row g-3 needs-validation" novalidate action="index.html" method="get" name="regEjer" id="formulario">
       <div class="col-md-12">
-        <label for="nombre" class="form-label">Nombre del Ejercicio</label>
-        <input type="text" class="form-control" id="nombre" name="nombre" pattern="^(?!\s)[a-zA-Z\s]{5,30}" required>
+        <label for="nombre" class="form-label" >Nombre del Ejercicio</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" pattern="^(?!\s)[a-zA-Z\s]{5,30}" required>
 
         <div class="invalid-feedback">
           *El nombre debe tener minimo 5 y maximo 30 letras.
@@ -41,8 +41,8 @@
         </div>
       </div>
       <div class="col-md-12">
-        <label for="descripcion" class="form-label">Descripción</label>
-        <textarea class="form-control" name="descripcion" id="descripcion" rows="2" required></textarea>
+        <label for="descripcion" class="form-label">Descripción del Ejercicio</label>
+        <textarea class="form-control" name="descripcion" id="descripcion" placeholder="Descripción"rows="2" required></textarea>
         <div class="invalid-feedback">
           *Complete el campo.
         </div>
@@ -98,7 +98,7 @@
       <br><br><br><br><br>
       <div class="row">
         <div class="col-md-12 text-center">
-          <button class="btn btn-primary" type="submit" id="btnRegistrar">Registrar</button>
+          <button class="btn btn-primary" type="submit" name="Registrar" id="btnRegistrar">Registrar</button>
         </div>
       </div>
 
