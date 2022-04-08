@@ -4,7 +4,7 @@
    
 }
 
-.card:hover{
+#tarjeta1:hover{
     box-shadow: 5px 5px 20px rgba(117, 111, 111, 0.5);
     transform: translateY(-5%);
 }
@@ -14,6 +14,7 @@
     background-image: linear-gradient(315deg, rgb(109, 110, 182) 0%, #38204C 75%);
     border-bottom: 2px solid beige ;
     color:beige;
+    height: 81.1px;
 }
 
 body{
@@ -43,3 +44,47 @@ body{
     font-weight: bold;
 }
 
+#footer{
+    padding: 0%;
+    background-color:#38204c95;
+    color:beige;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.tituloFooter2, .tituloFooter1,#nombre{
+    font-size: 30px;
+}
+
+.descripcionFooter, #enlace{
+    font-size: 20px;
+}
+
+#formulario {
+    padding: 20px 30px;
+    margin:auto;
+    border-radius: 7px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+
+#descripcion {
+    max-height: 200px;
+    min-height: 200px;
+  }
+
+  #btnRegistrar{
+    width: 30%;
+    margin:auto;
+    border-radius:15px;
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border:none;
+  }
+#boton-reclamos{
+    background-color: #e8cb9a;
+    border:none;
+    border-radius: 5px;
+    padding: 2px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+  
