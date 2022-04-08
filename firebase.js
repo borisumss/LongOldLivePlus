@@ -16,7 +16,7 @@
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
-import { getFirestore, collection, addDoc, doc, setDoc } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"
+import { getFirestore, collection, addDoc, doc, setDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"
 import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-storage.js"
   //conexion a Firestore
   const cloudDB = getFirestore();
@@ -49,3 +49,5 @@ import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL } from "h
       setDoc(doc(cloudDB, "Ejercicio", nombre), datosDoc);
     }
   }
+
+  export const ejerciciosFirebase = (callback) => onSnapshot (collection(cloudDB, 'Ejercicio'), callback)
