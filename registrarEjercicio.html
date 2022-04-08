@@ -71,7 +71,7 @@
       </div>
       <div class="col-md-6">
         <label for="formGif" class="form-label">Inserte un gif del ejercicio</label>
-        <input type="file" class="form-control" id="formGif" name="gif" accept="image/gif" onchange="return validarGif()" required>
+        <input type="file" class="form-control" id="formGif" name="gif" accept="image/gif" required>
         <div class="invalid-feedback">
           *Inserte un archivo .gif
         </div>
@@ -80,14 +80,14 @@
         <label class="form-label" for="min">Elija la duracion del ejercicio </label>
         <div class="row">
           <div class="col-md-3">
-            <input type="number" class="form-control" placeholder="min." id="min" name="min" min="1" max="6" onchange="return validarTiempo()" required>
+            <input type="number" class="form-control" placeholder="min." id="min" name="min" min="1" max="6" required>
             <div class="invalid-feedback">
               1 a 6 min.
             </div>
           </div>
 
           <div class="col-md-3">
-            <input type="number" class="form-control" placeholder="seg." id="seg" name="seg" min="0" max="59"onchange="return validarTiempo()" required>
+            <input type="number" class="form-control" placeholder="seg." id="seg" name="seg" min="0" max="59" required>
             <div class="invalid-feedback">
               0 a 59 seg.
             </div>
@@ -103,18 +103,7 @@
 
     </form>
   </div>
-<<<<<<< HEAD
   <br><br><br>
   <script type = "module" src = "./registrarEjercicio.js"></script>
 </body>
-=======
-  <br><br>
-  <script src="scripts/registro.js"></script>
-  <script type="module" src="./registrarEjercicio.js"></script>
-</body>
-
- 
-
-</body>
->>>>>>> 16fb7605728618245446c9093a67e9025fe842c1
 </html>

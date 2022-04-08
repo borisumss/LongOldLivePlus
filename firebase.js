@@ -1,33 +1,51 @@
-// Import the functions you need from the SDKs you need
-import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"
-import { getStorage, ref } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-storage.js"
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
   // Your web app's Firebase configuration
   const firebaseConfig = {
-    apiKey: "AIzaSyBXvg6xzDvDQWO1wOuVD9Dna56RbtVjTYE",
-    authDomain: "long-old-live-plus.firebaseapp.com",
-    projectId: "long-old-live-plus",
-    storageBucket: "long-old-live-plus.appspot.com",
-    messagingSenderId: "748115889945",
-    appId: "1:748115889945:web:512e691fde54dea7e1bf88"
+    apiKey: "AIzaSyC1WJuRzxe5M5wtvRx-BK6c7mOps4usdR4",
+    authDomain: "long-old-live-plus-aab44.firebaseapp.com",
+    projectId: "long-old-live-plus-aab44",
+    storageBucket: "long-old-live-plus-aab44.appspot.com",
+    messagingSenderId: "371071760445",
+    appId: "1:371071760445:web:b44da528fddb82bb759254"
   };
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
+import { getFirestore, collection, addDoc, doc, setDoc } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"
+import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-storage.js"
   //conexion a Firestore
-  const db = getFirestore();
+  const cloudDB = getFirestore();
   //Conexion a Storage
   const storage = getStorage();
 
-<<<<<<< HEAD
-  export const guardarRegistro = (nombre,descripcion,seleccione) =>
-    addDoc(collection(db, 'ejercicios'), {nombre,descripcion,seleccione});
-  
-=======
-  export const guardarRegistro = (nombre,descripcion,seleccione,min,seg,formGif) =>{
-    addDoc(collection(db, 'ejercicios'), {nombre,descripcion,seleccione,min,seg})
+  export const guardarRegistro = (nombre,descripcion,musculo,minutos,segundos,gif) =>{
+    const storageRef = sRef(storage, 'gifs/'+gif.name);
+    const uploadTask = uploadBytesResumable(storageRef,gif);
+    uploadTask.on('state_changed', (snapshot)=>{
+      
+    },(error) => {
+      alert("error: gif no subido");
+    },
+    ()=>{
+      getDownloadURL(uploadTask.snapshot.ref).then((downloadURL)=>{
+        guardarFirestore(downloadURL);
+      });
+    }
+    );
+    function guardarFirestore(downloadURL){
+      const datosDoc = {
+        NombreEjecicio: nombre,
+        DescripcionEjercicio: descripcion,
+        GrupoMuscular: musculo,
+        MinutosEjercicio: minutos,
+        SegundosEjercicio: segundos,
+        GifURL: downloadURL
+      };
+      setDoc(doc(cloudDB, "Ejercicio", nombre), datosDoc);
+    }
   }
->>>>>>> 16fb7605728618245446c9093a67e9025fe842c1
