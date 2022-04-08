@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"
-//import { getStorage, ref } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-storage.js"
+import { getStorage, ref } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-storage.js"
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
