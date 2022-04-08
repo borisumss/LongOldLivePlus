@@ -1,17 +1,83 @@
-import {guardarRegistro} from './firebase.js'
-window.addEventListener('DOMContentLoaded' , () => {
+import { guardarRegistro } from './firebase.js'
 
-});
 
 const formulario = document.getElementById('formulario');
 
-formulario.addEventListener('submit',(e)=>{
-    e.preventDefault()
-    const nombre = formulario ['nombre']
-    const descripcion = formulario ['descripcion']
-    const musculo = formulario ['seleccione']
-    const gif = formulario ['formGif']
-    const minutos = formulario ['min']
-    const segundos = formulario ['seg']
-    guardarRegistro(nombre.value,descripcion.value,musculo.value,minutos.value,segundos.value)
-})
+
+(function () {
+    'use strict'
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                } else {
+                    event.preventDefault();
+                    registrar();
+                }
+
+                form.classList.add('was-validated')
+            }, false)
+        })
+})()
+
+async function registrar() {
+
+    event.preventDefault();
+    const { value: test } = await Swal.fire({
+        title: "Registro",
+        text: "¿Estas seguro de registrar el ejercicio?",
+        icon: "question",
+        showCancelButton: true,
+        confirmButtonColor: "#DD6B55",
+        confirmButtonText: "Si, guardar",
+        cancelButtonText: "No, cancelar",
+        closeOnConfirm: false,
+        closeOnCancel: false,
+        
+
+    });
+
+    if (test) {
+
+        const nombre = formulario['nombre']
+        const descripcion = formulario['descripcion']
+        const musculo = formulario['seleccione']
+        const gif = formulario['formGif']
+        const minutos = formulario['min']
+        const segundos = formulario['seg']
+        guardarRegistro(nombre.value, descripcion.value, musculo.value, minutos.value, segundos.value);
+
+        Swal.fire({
+            
+            title: "Guardando registro...",
+            icon: "info",
+            closeOnConfirm: true,
+            closeOnCancel: true,
+            allowOutsideClick: false,
+            showCancelButton: false,
+            showConfirmButton: false,
+            timer:3000
+             
+        }).then(function(){
+            document.regEjer.submit();
+        });
+        
+    } else {
+
+        Swal.fire({
+            title: "¡Cancelado!",
+            icon: "error",
+            timer: 3000
+        });
+
+    }
+
+
+}
