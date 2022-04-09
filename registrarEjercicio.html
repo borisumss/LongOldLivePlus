@@ -33,16 +33,16 @@
     <form class="row g-3 needs-validation" novalidate action="ejerciciosFisicos.html" method="get" name="regEjer" id="formulario">
       <div class="col-md-12">
         <label for="nombre" class="form-label" >Nombre del ejercicio</label>
-        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" pattern="^(?!\s)[a-zA-Z\s]{5,30}" required>
+        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" pattern="^(?!\s)[a-zA-Z\s]{5,50}" required>
 
         <div class="invalid-feedback">
-          *El nombre debe tener minimo 5 y maximo 30 letras.
+          *El nombre debe tener minimo 5 y maximo 50 letras.
           <br>*No se permite números ni caracteres especiales.
         </div>
       </div>
       <div class="col-md-12">
         <label for="descripcion" class="form-label">Descripción del ejercicio</label>
-        <textarea class="form-control" name="descripcion" id="descripcion" placeholder="Descripción"rows="2" required></textarea>
+        <textarea class="form-control" name="descripcion" id="descripcion" placeholder="Descripción"rows="2" minlength="50" maxlength="500" required></textarea>
         <div class="invalid-feedback">
           *Complete el campo.
         </div>
