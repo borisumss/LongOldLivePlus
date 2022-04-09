@@ -2,7 +2,11 @@ import { guardarRegistro } from './firebase.js'
 
 
 const formulario = document.getElementById('formulario');
-
+const input = document.querySelector('input[type="file"]');
+var gif = [];
+input.addEventListener('change', function (e) {
+    gif = input.files;
+});
 
 (function () {
     'use strict'
@@ -49,10 +53,9 @@ async function registrar() {
         const nombre = formulario['nombre']
         const descripcion = formulario['descripcion']
         const musculo = formulario['seleccione']
-        const gif = formulario['formGif']
         const minutos = formulario['min']
         const segundos = formulario['seg']
-        guardarRegistro(nombre.value, descripcion.value, musculo.value, minutos.value, segundos.value);
+        guardarRegistro(nombre.value,descripcion.value,musculo.value,minutos.value,segundos.value,gif[0])
 
         Swal.fire({
             
@@ -63,7 +66,7 @@ async function registrar() {
             allowOutsideClick: false,
             showCancelButton: false,
             showConfirmButton: false,
-            timer:3000
+            timer: 7000
              
         }).then(function(){
             document.regEjer.submit();

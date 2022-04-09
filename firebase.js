@@ -1,29 +1,59 @@
-// Import the functions you need from the SDKs you need
-import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"
-import { getStorage, ref } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-storage.js"
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyC1WJuRzxe5M5wtvRx-BK6c7mOps4usdR4",
-  authDomain: "long-old-live-plus-aab44.firebaseapp.com",
-  databaseURL: "https://long-old-live-plus-aab44-default-rtdb.firebaseio.com",
-  projectId: "long-old-live-plus-aab44",
-  storageBucket: "long-old-live-plus-aab44.appspot.com",
-  messagingSenderId: "371071760445",
-  appId: "1:371071760445:web:b44da528fddb82bb759254"
-};
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-//conexion a Firestore
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyC1WJuRzxe5M5wtvRx-BK6c7mOps4usdR4",
+    authDomain: "long-old-live-plus-aab44.firebaseapp.com",
+    projectId: "long-old-live-plus-aab44",
+    storageBucket: "long-old-live-plus-aab44.appspot.com",
+    messagingSenderId: "371071760445",
+    appId: "1:371071760445:web:b44da528fddb82bb759254"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+import { getFirestore, collection, addDoc, doc, setDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"
+import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-storage.js"
+  //conexion a Firestore
+  const cloudDB = getFirestore();
+  //Conexion a Storage
+  const storage = getStorage();
+
+  export const guardarRegistro = (nombre,descripcion,musculo,minutos,segundos,gif) =>{
+    const storageRef = sRef(storage, 'gifs/'+gif.name);
+    const uploadTask = uploadBytesResumable(storageRef,gif);
+    uploadTask.on('state_changed', (snapshot)=>{
+      
+    },(error) => {
+      alert("error: gif no subido");
+    },
+    ()=>{
+      getDownloadURL(uploadTask.snapshot.ref).then((downloadURL)=>{
+        guardarFirestore(downloadURL);
+      });
+    }
+    );
+    function guardarFirestore(downloadURL){
+      const datosDoc = {
+        NombreEjercicio: nombre,
+        DescripcionEjercicio: descripcion,
+        GrupoMuscular: musculo,
+        MinutosEjercicio: minutos,
+        SegundosEjercicio: segundos,
+        GifURL: downloadURL
+      };
+      setDoc(doc(cloudDB, "Ejercicio", nombre), datosDoc);
+    }
+  }
+
+
+export const conf = initializeApp(firebaseConfig);
+
 export const db = getFirestore();
-//Conexion a Storage
-export const storage = getStorage();
 
-//se cambio
-export const guardarRegistro = (nombre, descripcion, seleccione, min, seg, formGif) => {
-  addDoc(collection(db, 'ejercicios'), { nombre, descripcion, seleccione, min, seg })
-}
+export const onGetTasks = (callback) =>
+ onSnapshot(collection(db, "Ejercicio"), callback);
