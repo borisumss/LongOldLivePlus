@@ -33,6 +33,11 @@ body{
     color: black;
 }
 
+#head{
+    height: 78px;
+    background-image: linear-gradient(315deg, rgb(109, 110, 182) 0%, #38204C 75%);
+}
+
 #tituloApp{
     font-family: Verdana;
     font-size: 80px;
