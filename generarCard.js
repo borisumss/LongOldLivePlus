@@ -52,7 +52,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
                 <div class="card">
                 <br><br>
                 <img src="${foto}" class="card-img-top mx-auto"
-                    style="max-width: 400px; max-width: 400px;" alt="...">
+                    id="imgModal" alt="...">
                   <div class="card-body">
                     <div class="container-fluid" id="letras">
         
