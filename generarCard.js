@@ -15,9 +15,10 @@ import {
 const tasksContainer = document.getElementById("tasks-container");
 
 window.addEventListener("DOMContentLoaded", async (e) => {
-
     onGetTasks((querySnapshot) => {
+      let i = 1;
         querySnapshot.forEach((doc) => {
+          i = i+1;
             const task = doc.data();
             var titulo =task.NombreEjercicio;
             var foto = task.GifURL;
@@ -25,10 +26,9 @@ window.addEventListener("DOMContentLoaded", async (e) => {
             var grupo=task.GrupoMuscular;
             var timeMin= task.MinutosEjercicio;
             var timeSeg= task.SegundosEjercicio;
-
             tasksContainer.innerHTML += `
             <div class="container-fluid">
-          <a href="#!" data-bs-toggle="modal" data-bs-target="#modal2">
+          <a href="#!" data-bs-toggle="modal" data-bs-target="#modal${i}">
             <div type="button"  href="#" id="boton-modal">
               <div class="card card-body mt-2 border-primary" id="marco">
                 <div class="container-fluid" id="card">
@@ -46,7 +46,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
             </div>
           </a>
 
-          <div tabindex="-1" aria-labelledby="modal2" aria-hidden="true" class="modal fade"  id="modal2">
+          <div tabindex="-1" aria-labelledby="modal${i}" aria-hidden="true" class="modal fade"  id="modal${i}">
             <div class="modal-dialog modal-lg modal-dialog-centered">
               <div class="modal-content" id="modalId">
                 <div class="card">
@@ -91,10 +91,9 @@ window.addEventListener("DOMContentLoaded", async (e) => {
         </div>
         `;
 
-    
-
-        
-        });
+        }
+        );
+       
     });
 });
 
