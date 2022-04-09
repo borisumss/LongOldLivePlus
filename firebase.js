@@ -39,7 +39,7 @@ import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL } from "h
     );
     function guardarFirestore(downloadURL){
       const datosDoc = {
-        NombreEjecicio: nombre,
+        NombreEjercicio: nombre,
         DescripcionEjercicio: descripcion,
         GrupoMuscular: musculo,
         MinutosEjercicio: minutos,
