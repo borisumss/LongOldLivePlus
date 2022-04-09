@@ -30,7 +30,7 @@
   <br>
 
   <div class="container" id="form">
-    <form class="row g-3 needs-validation" novalidate action="index.html" method="get" name="regEjer" id="formulario">
+    <form class="row g-3 needs-validation" novalidate action="ejerciciosFisicos.html" method="get" name="regEjer" id="formulario">
       <div class="col-md-12">
         <label for="nombre" class="form-label" >Nombre del ejercicio</label>
         <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" pattern="^(?!\s)[a-zA-Z\s]{5,30}" required>
@@ -86,14 +86,14 @@
         <label class="form-label" for="min">Elija la duración del ejercicio </label>
         <div class="row">
           <div class="col-md-3">
-            <input type="number" class="form-control" placeholder="min." id="min" name="min" min="1" max="6"onchange="return validarTiempo()" required>
+            <input type="number" class="form-control" placeholder="min." id="min" name="min" min="1" max="6" required>
             <div class="invalid-feedback">
               1 a 6 min.
             </div>
           </div>
 
           <div class="col-md-3">
-            <input type="number" class="form-control" placeholder="seg." id="seg" name="seg" min="0" max="59"onchange="return validarTiempo()" required>
+            <input type="number" class="form-control" placeholder="seg." id="seg" name="seg" min="0" max="59" required>
             <div class="invalid-feedback">
               0 a 59 seg.
             </div>
