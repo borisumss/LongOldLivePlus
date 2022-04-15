@@ -65,21 +65,6 @@ async function registrar() {
           console.log(error);
         }
 
-        Swal.fire({
-            
-            title: "Guardando registro...",
-            icon: "info",
-            closeOnConfirm: true,
-            closeOnCancel: true,
-            allowOutsideClick: false,
-            showCancelButton: false,
-            showConfirmButton: false,
-            timer: 7000
-             
-        }).then(function(){
-
-            document.regEjer.submit();
-        });
         
     } else {
 
