@@ -24,30 +24,30 @@ const cloudDB = getFirestore();
 const storage = getStorage();
 var progress
 export const guardarRegistro = (nombre, descripcion, musculo, minutos, segundos, gif) => {
-  const storageRef = sRef(storage, 'gifs/' + gif.name);
+  const storageRef = sRef(storage, 'gifs/' + Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1)+".gif");
   const uploadTask = uploadBytesResumable(storageRef, gif);
   uploadTask.on('state_changed', (snapshot) => {
     progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
     if (progress < 100) {
-      Swal.fire({
+          Swal.fire({
 
-        title: "Guardando registro...",
-        icon: "info",
-        closeOnConfirm: true,
-        closeOnCancel: true,
-        allowOutsideClick: false,
-        showCancelButton: false,
-        showConfirmButton: false,
-
-
-      });
-    } 
-
-  }, (error) => {
-    alert("error: gif no subido");
-  },
-    () => {
-      getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+            title: "Guardando registro...",
+            icon: "info",
+            closeOnConfirm: true,
+            closeOnCancel: true,
+            allowOutsideClick: false,
+            showCancelButton: false,
+            showConfirmButton: false,
+    
+    
+          });
+        } 
+      
+    },(error) => {
+      alert("error: gif no subido");
+    },
+    ()=>{
+      getDownloadURL(uploadTask.snapshot.ref).then((downloadURL)=>{
         guardarFirestore(downloadURL);
                  
           setTimeout( function(){
@@ -62,20 +62,32 @@ export const guardarRegistro = (nombre, descripcion, musculo, minutos, segundos,
         
       });
     }
-  );
-  function guardarFirestore(downloadURL) {
-    const datosDoc = {
-      NombreEjercicio: nombre,
-      DescripcionEjercicio: descripcion,
-      GrupoMuscular: musculo,
-      MinutosEjercicio: minutos,
-      SegundosEjercicio: segundos,
-      GifURL: downloadURL
-    };
-    setDoc(doc(cloudDB, "Ejercicio", nombre), datosDoc);
-    
+    );
+    function guardarFirestore(downloadURL){
+      addDoc(collection(cloudDB, "Ejercicio"),{
+        NombreEjercicio: nombre,
+        DescripcionEjercicio: descripcion,
+        GrupoMuscular: musculo,
+        MinutosEjercicio: minutos,
+        SegundosEjercicio: segundos,
+        GifURL: downloadURL
+      });
+      /*const datosDoc = {
+        NombreEjercicio: nombre,
+        DescripcionEjercicio: descripcion,
+        GrupoMuscular: musculo,
+        MinutosEjercicio: minutos,
+        SegundosEjercicio: segundos,
+        GifURL: downloadURL
+      };
+      setDoc(doc(cloudDB, "Ejercicio", nombre), datosDoc);*/
+    }
+    /*function generarID() {
+      let id = () => {
+        return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+      }*/
   }
-}
+
 
 
 export const conf = initializeApp(firebaseConfig);
