@@ -55,7 +55,15 @@ async function registrar() {
         const musculo = formulario['seleccione']
         const minutos = formulario['min']
         const segundos = formulario['seg']
-        guardarRegistro(nombre.value,descripcion.value,musculo.value,minutos.value,segundos.value,gif[0])
+        
+
+        try {
+    
+            guardarRegistro(nombre.value,descripcion.value,musculo.value,minutos.value,segundos.value,gif[0])
+          
+        } catch (error) {
+          console.log(error);
+        }
 
         Swal.fire({
             
@@ -69,6 +77,7 @@ async function registrar() {
             timer: 7000
              
         }).then(function(){
+
             document.regEjer.submit();
         });
         
