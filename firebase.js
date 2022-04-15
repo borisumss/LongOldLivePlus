@@ -57,7 +57,7 @@ export const guardarRegistro = (nombre, descripcion, musculo, minutos, segundos,
           setTimeout( function(){
             Swal.close();
             window.location.href="ejerciciosFisicos.html";
-          },2000);
+          },3000);
           
         
       });
