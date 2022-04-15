@@ -24,7 +24,7 @@ import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL } from "h
   const storage = getStorage();
 
   export const guardarRegistro = (nombre,descripcion,musculo,minutos,segundos,gif) =>{
-    const storageRef = sRef(storage, 'gifs/'+gif.name);
+    const storageRef = sRef(storage, 'gifs/'+Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1)+".gif");
     const uploadTask = uploadBytesResumable(storageRef,gif);
     uploadTask.on('state_changed', (snapshot)=>{
       
@@ -38,7 +38,15 @@ import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL } from "h
     }
     );
     function guardarFirestore(downloadURL){
-      const datosDoc = {
+      addDoc(collection(cloudDB, "Ejercicio"),{
+        NombreEjercicio: nombre,
+        DescripcionEjercicio: descripcion,
+        GrupoMuscular: musculo,
+        MinutosEjercicio: minutos,
+        SegundosEjercicio: segundos,
+        GifURL: downloadURL
+      });
+      /*const datosDoc = {
         NombreEjercicio: nombre,
         DescripcionEjercicio: descripcion,
         GrupoMuscular: musculo,
@@ -46,8 +54,12 @@ import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL } from "h
         SegundosEjercicio: segundos,
         GifURL: downloadURL
       };
-      setDoc(doc(cloudDB, "Ejercicio", nombre), datosDoc);
+      setDoc(doc(cloudDB, "Ejercicio", nombre), datosDoc);*/
     }
+    /*function generarID() {
+      let id = () => {
+        return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+      }*/
   }
 
 
