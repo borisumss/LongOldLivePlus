@@ -34,12 +34,12 @@
       <div class="col-md-12">
         <label for="nombre" class="form-label" >Nombre del ejercicio</label>
         <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" pattern="^(?!\s)[a-zA-ZÁáÉéÍíÓóÚú\s]{5,50}" required> 
-
         <div class="invalid-feedback">
           *El nombre debe tener minimo 5 y maximo 50 letras.
           <br>*No se permite números ni caracteres especiales.
         </div>
       </div>
+
       <div class="col-md-12">
         <label for="descripcion" class="form-label">Descripción del ejercicio</label>
         <textarea class="form-control" name="descripcion" id="descripcion" placeholder="Descripción"rows="2" minlength="50" maxlength="500" required></textarea>
@@ -84,16 +84,18 @@
         <label class="form-label" for="min">Elija la duración del ejercicio </label>
         <div class="row">
           <div class="col-md-3">
-            <input type="number" class="form-control" placeholder="min." id="min" name="min" min="1" max="6" required>
+            <input step=1 type="number" class="form-control" placeholder="min." id="min" name="min" min="1" max="6" pattern="^(?!\s)" required>
             <div class="invalid-feedback">
-              1 a 6 min.
+              *1 a 6 min.
+              *No se permiten decimales
             </div>
           </div>
 
           <div class="col-md-3">
-            <input type="number" class="form-control" placeholder="seg." id="seg" name="seg" min="0" max="59" required>
+            <input type="number" class="form-control" placeholder="seg." id="seg" name="seg" min="0" max="59" pattern="^(?!\s)" required>
             <div class="invalid-feedback">
-              0 a 59 seg.
+              *0 a 59 seg.
+              *No se permiten decimales
             </div>
           </div>
         </div>
