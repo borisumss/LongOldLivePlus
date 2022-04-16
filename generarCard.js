@@ -32,6 +32,8 @@ window.addEventListener("DOMContentLoaded", async (e) => {
             var segValid;
             if(timeSeg < 10){
               segValid = '0'+timeSeg; 
+            }else{
+              segValid = timeSeg;
             }
             tasksContainer.innerHTML += `
             <div class="container-fluid">
