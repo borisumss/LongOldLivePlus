@@ -14,8 +14,11 @@ import {
 
 const tasksContainer = document.getElementById("tasks-container");
 
+
 window.addEventListener("DOMContentLoaded", async (e) => {
-    onGetTasks((querySnapshot) => {
+    
+  onGetTasks((querySnapshot) => {
+    tasksContainer.innerHTML ="";
       let i = 1;
         querySnapshot.forEach((doc) => {
           i = i+1;
@@ -38,7 +41,8 @@ window.addEventListener("DOMContentLoaded", async (e) => {
                     </div>
       
                     <div class="col-6" id="nombres">
-                      <h1 class="h1">${task.NombreEjercicio}</h1>
+                    <h1>${task.NombreEjercicio}</h1>
+ 
                     </div>
                   </div>
                 </div>
@@ -76,8 +80,8 @@ window.addEventListener("DOMContentLoaded", async (e) => {
                         </div>
                       </div>
                       <br><br>
-                      <div class="row" id="btnCerrar">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                      <div class="row" >
+                        <button type="button" id="btnCerrar" class="btn btn-primary" data-bs-dismiss="modal">
                           Cerrar
                         </button>
                       </div>
@@ -90,10 +94,11 @@ window.addEventListener("DOMContentLoaded", async (e) => {
           </div>
         </div>
         `;
-
+          
         }
-        );
        
+        );
+      
     });
 });
 

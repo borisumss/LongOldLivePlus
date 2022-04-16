@@ -1,4 +1,7 @@
 
+*{
+  text-decoration: none  !important;
+}
 body{
   background-image: url("/images/fondoLista.jpg");
   background-repeat: no-repeat;
@@ -36,7 +39,10 @@ body{
   background-color: #3C4F76;
   text-align: center;
   color:beige;
-
+  text-decoration: none  !important;
+}
+h1{
+  text-decoration: none !important;
 }
 
 #img {
