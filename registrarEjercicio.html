@@ -88,15 +88,13 @@
             <input type="number" class="form-control" placeholder="min." id="min" name="min" min="1" max="6"onkeypress="return validarMinutos(event)" required>
             <div class="invalid-feedback">
               *1 a 6 min.
-               <br>*No se permiten decimales
             </div>
           </div>
 
           <div class="col-md-3">
-            <input type="number" class="form-control" placeholder="seg." id="seg" name="seg" min="0" max="59"onkeypress="return validarSegundos(event)"required >
+            <input type="number" class="form-control" placeholder="seg." id="seg" name="seg" min="0" max="59"onkeypress="return validarSegundos(event)"onchange="return dosDigitos()" required >
             <div class="invalid-feedback">
-              *0 a 59 seg.
-              <br>*No se permiten decimales
+              *0 a 59 seg
             </div>
           </div>
         </div>

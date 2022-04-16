@@ -82,9 +82,16 @@ function validarMinutos(e){
   function validarSegundos(e){
     key=e.keyCode || e.which;
     teclado=String.fromCharCode(key);
-    numeros="012345689";
+    numeros="0123456789";
    
     if(numeros.indexOf(teclado)==-1 ){
       return false;
     }
   }
+  function dosDigitos(){
+    var valor = document.getElementById("seg");
+    var aux = ""+valor.value;
+    if(valor.value<10 && valor.value >=0 && aux.length<2){
+        valor.value="0"+valor.value;
+    }
+}
