@@ -72,20 +72,7 @@ export const guardarRegistro = (nombre, descripcion, musculo, minutos, segundos,
         SegundosEjercicio: segundos,
         GifURL: downloadURL
       });
-      /*const datosDoc = {
-        NombreEjercicio: nombre,
-        DescripcionEjercicio: descripcion,
-        GrupoMuscular: musculo,
-        MinutosEjercicio: minutos,
-        SegundosEjercicio: segundos,
-        GifURL: downloadURL
-      };
-      setDoc(doc(cloudDB, "Ejercicio", nombre), datosDoc);*/
     }
-    /*function generarID() {
-      let id = () => {
-        return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
-      }*/
   }
 
 
