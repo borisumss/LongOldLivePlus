@@ -27,6 +27,11 @@
     font-weight: bold;
 }
 
+.TodosTitulo{
+    font-size: 48px !important;
+    text-align: center !important;
+}
+
 #letra,#btnEF{
    font-size: 30px;
    font-weight: bold;
