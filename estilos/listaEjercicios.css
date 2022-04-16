@@ -1,9 +1,13 @@
 
+*{
+  text-decoration: none  !important;
+}
 body{
   background-image: url("/images/fondoLista.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   min-height: 100vh;
 }
 
@@ -35,7 +39,28 @@ body{
   background-color: #3C4F76;
   text-align: center;
   color:beige;
+  text-decoration: none  !important;
+}
 
+#card:hover {
+ 
+  background-color: #38204C;
+  /*background-color: #3C4F76;*/
+  
+  text-decoration: none  !important;
+}
+
+#marco:hover {
+ 
+  background-color: #38204C;
+  /*background-color: #3C4F76;*/
+  
+  text-decoration: none  !important;
+}
+
+
+h1{
+  text-decoration: none !important;
 }
 
 #img {

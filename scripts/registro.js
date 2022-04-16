@@ -70,3 +70,21 @@ async function validarGif() {
         return false;
     }
 }
+function validarMinutos(e){
+    key=e.keyCode || e.which;
+    teclado=String.fromCharCode(key);
+    numeros="123456";
+   
+    if(numeros.indexOf(teclado)==-1 ){
+      return false;
+    }
+  }
+  function validarSegundos(e){
+    key=e.keyCode || e.which;
+    teclado=String.fromCharCode(key);
+    numeros="012345689";
+   
+    if(numeros.indexOf(teclado)==-1 ){
+      return false;
+    }
+  }
