@@ -26,6 +26,10 @@ window.addEventListener("DOMContentLoaded", async (e) => {
             var grupo=task.GrupoMuscular;
             var timeMin= task.MinutosEjercicio;
             var timeSeg= task.SegundosEjercicio;
+            var segValid;
+            if(timeSeg < 10){
+              segValid = '0'+timeSeg; 
+            }
             tasksContainer.innerHTML += `
             <div class="container-fluid">
           <a href="#!" data-bs-toggle="modal" data-bs-target="#modal${i}">
@@ -72,7 +76,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
                         </div>
         
                         <div class="col-6">
-                          Tiempo: ${timeMin}:${timeSeg}
+                          Tiempo: ${timeMin}:${segValid}
                         </div>
                       </div>
                       <br><br>
