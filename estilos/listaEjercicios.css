@@ -41,6 +41,24 @@ body{
   color:beige;
   text-decoration: none  !important;
 }
+
+#card:hover {
+ 
+  background-color: #38204C;
+  /*background-color: #3C4F76;*/
+  
+  text-decoration: none  !important;
+}
+
+#marco:hover {
+ 
+  background-color: #38204C;
+  /*background-color: #3C4F76;*/
+  
+  text-decoration: none  !important;
+}
+
+
 h1{
   text-decoration: none !important;
 }
