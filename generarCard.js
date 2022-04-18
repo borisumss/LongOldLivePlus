@@ -80,7 +80,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
                           Grupo Muscular: ${grupo}
                         </div>
         
-                        <div class="col-6">
+                        <div class="col-6 text-center">
                           Tiempo: ${timeMin}:${segValid}
                         </div>
                       </div>

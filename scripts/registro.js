@@ -90,8 +90,9 @@ function validarMinutos(e){
   }
   function dosDigitos(){
     var valor = document.getElementById("seg");
-    var aux = ""+valor.value;
-    if(valor.value<10 && valor.value >=0 && aux.length<2){
-        valor.value="0"+valor.value;
-    }
+        if(valor.value<10 && valor.value >=0){
+            valor.value="0"+ parseInt( valor.value);
+        }else{
+            valor.value= parseInt( valor.value);
+        }    
 }
