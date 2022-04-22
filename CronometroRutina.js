@@ -1,4 +1,4 @@
-/*{
+/*{ Hora actual
     const myTime = setInterval(myTimer, 1000);
     function myTimer() {
       const today = new Date();
@@ -24,15 +24,10 @@
   const rest2 = document.getElementById("rest_2");
   const round3 = document.getElementById("round_3");
   
-  // ! Get Alerts
-  const alert10sec = document.getElementById("alert10sec");
-  const alertStart = document.getElementById("alertStart");
-  const alertStop = document.getElementById("alertStop");
+
   
   const startTimer = () => {
     // todo: Time stemps
-    console.log(roundTimeInput.value);
-    console.log(restTimeInput);
     let roundTime = (roundTimeInput.value) * 60;
     let restTime = (restTimeInput.value) * 60;
     let time = "10";
@@ -43,15 +38,12 @@
       alert("Input Round & Rest Time!");
       return;
     } else {
-      // console.log("start");
       //todo: Stop count down
       startStopBtn.innerHTML = "Stop";
       startStopBtn.style.backgroundColor = "#e24379";
       startStopBtn.onclick = newWorkout;
   
-      // todo: alert 10 sec
-  
-      setAlert(alert10sec);
+    
   
       // todo: Start The Countdown
       const startCountdown = document.querySelector(".title");
@@ -64,8 +56,7 @@
         // todo: hide header
         document.querySelector("header").style.display = "none";
   
-        // todo: alert Start Round
-        setAlert(alertStart);
+        
   
         // todo: Start First Round
         setInterval(() => {
@@ -79,9 +70,7 @@
   
             //   ! Alert 10 sec
             checkFor10Sec(round1);
-            // !Alert Stop
-  
-            round1.innerText === "0:00" ? setAlert(alertStop) : round1;
+            
           } else if (round1.innerText === "0:00" && rest1.innerText !== "0:00") {
             //todo: start rest 1
             // ! Toggle Display
@@ -95,7 +84,7 @@
             checkFor10Sec(rest1);
             // !Alert Start next Round
   
-            rest1.innerText === "0:00" ? setAlert(alertStart) : rest1;
+            
   
             //   ! Rest Round Time
             resetRoundTime();
@@ -112,7 +101,7 @@
             checkFor10Sec(round2);
             // !Alert Stop Round
   
-            round2.innerText === "0:00" ? setAlert(alertStop) : round2;
+            
   
             //   ! Rest Round Time
             resetRestTime();
@@ -129,7 +118,7 @@
             checkFor10Sec(rest2);
             // !Alert Start next Round
   
-            rest2.innerText === "0:00" ? setAlert(alertStart) : rest2;
+            
   
             //   ! Rest Round Time
             resetRoundTime();
@@ -146,7 +135,7 @@
             checkFor10Sec(round3);
             // !Alert Stop  Round
   
-            round3.innerText === "0:00" ? setAlert(alertStop) : round3;
+            
           }
           // todo: Stop Workout and Create New Workout
   
@@ -165,7 +154,7 @@
   
       function checkFor10Sec(activity) {
         activity.innerText === "0:10"
-          ? (setAlert(alert10sec), (activity.style.color = "#e24379"))
+          ? (/*setAlert(alert10sec),*/ (activity.style.color = "#e24379"))
           : activity;
       }
   
@@ -220,15 +209,9 @@
         time--;
       }
   
-      // ! Interaction Alerts
+      
   
-      function setAlert(alert) {
-        /*alert.play();
-        setTimeout(() => {
-          alert.pause();
-          alert.currentTime = 0;
-        }, 1300);*/
-      }
+      
     }
   };
   
