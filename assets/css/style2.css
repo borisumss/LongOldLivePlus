@@ -83,7 +83,7 @@
     transition: 0.4s;
 }
   
-#lista, #registrar{
+#lista, #registrar, #rutinas{
     text-align: center;
     border:none;
     font-family: "Open Sans", sans-serif;
@@ -95,12 +95,17 @@
     border-radius: 5px; 
     top:2px;
     color: beige;
-    background-color:rgb(84, 85, 155);
+    background-color:#FD7314;
 }
 
 #lista:hover ,#registrar:hover {
        top:15px;
        background-color: #38204C;
-  }
+}
+
+#botones{
+    margin-top: 10%;
+    align-content: center;
+}
 
  

@@ -8,7 +8,7 @@ body {
 
 #formulario{
   width: 80%;
-  color: rgb(155, 246, 249);
+  color: #FDFDFD;
   background: #2E3040;
   padding: 20px 30px;
   margin: auto;
@@ -71,4 +71,9 @@ body {
   font-size: 25px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   border: none;
+  background-color: #FD7314;
+}
+
+.invalid-feedback{
+  color: #FD7314;
 }
