@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyC1WJuRzxe5M5wtvRx-BK6c7mOps4usdR4",
+          authDomain: "long-old-live-plus-aab44.firebaseapp.com",
+          databaseURL: "https://long-old-live-plus-aab44-default-rtdb.firebaseio.com",
+          projectId: "long-old-live-plus-aab44",
+          storageBucket: "long-old-live-plus-aab44.appspot.com",
+          messagingSenderId: "371071760445",
+          appId: "1:371071760445:web:b44da528fddb82bb759254"
+    };
+    firebase.initializeApp(config);
+    </script>
+    
+</head>
+<body>
+    
+    <h4>Registro de usuarios</h4>
+    <input id="email" type="email" placeholder="Ingresa email">
+    <input id="contrasena" type="password" placeholder="Ingresa contraseña">
+    <button onclick="registrar()">Enviar</button>
+
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
