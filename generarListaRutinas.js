@@ -6,7 +6,9 @@ import {
 
 const tasksContainer = document.getElementById("tasks-container");
 
-export var name="Rutina1";
+
+
+
 
 
 
@@ -25,7 +27,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       tasksContainer.innerHTML += `
             
            
-              <button id="rut" onclick="cambiar()">                         
+              <button type="submit" id="rut" value="${titulo}" class="btn">                         
                 <h1>${titulo}</h1>
               </button>
            
@@ -177,3 +179,11 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
 })()
 
+const formulario = document.getElementById('tasks-container');
+
+var aux;
+formulario.addEventListener('submit',(e)=>{
+  e.preventDefault()
+  aux = e.submitter.innerText;
+  window.location.href="rutina.html#"+aux;
+});

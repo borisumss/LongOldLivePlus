@@ -4,16 +4,26 @@ import {
 } from "./firebase.js";
 
 
-import {
-    name
-
-} from "./generarListaRutinas.js"
 
 const tasksContainer = document.getElementById("tasks-container");
+var url = ""+window.location.href;
+var rutina = limpiar(url) ;
 
-var rutina = name;
+function limpiar(palabra){
+    var res ="";
+    var bandera = false;
+    for(let i=0;i<palabra.length;i++){
+        if(palabra[i]=="#"){
+            bandera= true;
+            i++;
+        }
 
-
+        if(bandera){
+            res+=palabra[i];
+        }
+    }
+    return res;
+}
 
 window.addEventListener("DOMContentLoaded", async (e) => {
 
