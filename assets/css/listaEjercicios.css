@@ -3,7 +3,7 @@
   text-decoration: none  !important;
 }
 body{
-  background-image: url("/images/fondoLista.jpg");
+  background-image: url("../img/galeria/fondoLista.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
