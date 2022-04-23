@@ -19,7 +19,7 @@
 */
 
 #tituloApp, #letra, #btnEF{
-   font-family: Verdana;
+   font-family: "Open Sans", sans-serif;
 }
 
 #tituloApp{
@@ -48,7 +48,7 @@
     padding: 0px;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-family: Verdana;
+    font-family: "Open Sans", sans-serif;
     font-size: 25px;
     border:none;
     border-radius: 5px;
@@ -86,7 +86,7 @@
 #lista, #registrar{
     text-align: center;
     border:none;
-    font-family: verdana;
+    font-family: "Open Sans", sans-serif;
     font-size: 30px;
     transition: all 0.3s ease;
     position: relative;
