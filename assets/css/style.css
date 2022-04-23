@@ -1,15 +1,15 @@
 body {
     font-family: "Open Sans", sans-serif;
-    color: #444444;
+    color: #2E3040;
   }
   
   a {
-    color: #ef6603;
+    color: #FD7E14;
     text-decoration: none;
   }
   
   a:hover {
-    color: #fc8129;
+    color: #FD7E14;
     text-decoration: none;
   }
   
@@ -27,7 +27,7 @@ body {
     right: 15px;
     bottom: 15px;
     z-index: 996;
-    background: #ef6603;
+    background: #FD7E14;
     width: 40px;
     height: 40px;
     border-radius: 50px;
@@ -39,7 +39,7 @@ body {
     line-height: 0;
   }
   .back-to-top:hover {
-    background: #fc7c1f;
+    background: #FD7E14;
     color: #fff;
   }
   .back-to-top.active {
@@ -63,13 +63,13 @@ body {
     transition: all 0.5s;
     z-index: 997;
     transition: all 0.5s;
-    background: rgba(42, 44, 57, 0.9);
+    background: #2E3040;
   }
   #header.header-transparent {
     background: transparent;
   }
   #header.header-scrolled {
-    background: rgba(42, 44, 57, 0.9);
+    background: #2E3040;
   }
   #header .logo h1 {
     font-size: 28px;
@@ -126,7 +126,7 @@ body {
     margin-left: 5px;
   }
   .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-    background: #ef6603;
+    background: #FD7E14;
   }
   .navbar .dropdown ul {
     display: block;
@@ -139,7 +139,7 @@ body {
     opacity: 0;
     visibility: hidden;
     background: #fff;
-    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    box-shadow: 0px 0px 30px #2E3040;
     transition: 0.3s;
     border-radius: 15px;
   }
@@ -148,7 +148,7 @@ body {
   }
   .navbar .dropdown ul a {
     padding: 10px 20px;
-    color: #2a2c39;
+    color: #2E3040;
     margin: 0 5px;
     font-size: 14px;
   }
@@ -237,7 +237,7 @@ body {
     padding: 10px 20px;
     margin: 5px;
     font-size: 15px;
-    color: #2a2c39;
+    color: #2E3040;
   }
   .navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
     color: #fff;
@@ -254,7 +254,7 @@ body {
     opacity: 1;
     visibility: visible;
     background: #fff;
-    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    box-shadow: 0px 0px 30px #2E3040;
   }
   .navbar-mobile .dropdown ul li {
     min-width: 200px;
@@ -329,10 +329,10 @@ body {
     color: #fff;
     -webkit-animation-delay: 0.8s;
     animation-delay: 0.8s;
-    border: 2px solid #ef6603;
+    border: 2px solid #FD7E14;
   }
   #hero .btn-get-started:hover {
-    background: #ef6603;
+    background: #FD7E14;
     color: #fff;
     text-decoration: none;
   }
@@ -457,7 +457,7 @@ body {
     width: 120px;
     height: 1px;
     display: inline-block;
-    background: #fd9042;
+    background: #FD7E14;
     margin: 4px 10px;
   }
   .section-title p {
@@ -467,7 +467,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
-    color: #2a2c39;
+    color: #2E3040;
   }
   
 
@@ -488,7 +488,7 @@ body {
     font-weight: 500;
     line-height: 1;
     text-transform: uppercase;
-    color: #444444;
+    color: #2E3040;
     transition: all 0.3s ease-in-out;
   }
   .portfolio #portfolio-flters li::before {
@@ -508,10 +508,10 @@ body {
     transition: all 0.3s ease-in-out;
   }
   .portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
-    color: #ef6603;
+    color: #FD7E14;
   }
   .portfolio #portfolio-flters li.filter-active::before, .portfolio #portfolio-flters li.filter-active::after {
-    color: #ef6603;
+    color: #FD7E14;
   }
   .portfolio .portfolio-item {
     margin-bottom: 30px;
@@ -530,7 +530,7 @@ body {
     z-index: 3;
     right: 15px;
     transition: all ease-in-out 0.3s;
-    background: rgba(0, 0, 0, 0.5);
+    background: #2E3040;
     padding: 10px 15px;
   }
   .portfolio .portfolio-item .portfolio-info h4 {
@@ -554,7 +554,7 @@ body {
     transition: 0.3s;
   }
   .portfolio .portfolio-item .portfolio-info .preview-link:hover, .portfolio .portfolio-item .portfolio-info .details-link:hover {
-    color: #fd9f5b;
+    color: #FD7E14;
   }
   .portfolio .portfolio-item .portfolio-info .details-link {
     right: 10px;
@@ -576,7 +576,7 @@ body {
     transition: 0.3s;
   }
   .portfolio .portfolio-item .portfolio-links a:hover {
-    color: #fd9f5b;
+    color: #FD7E14;
   }
   .portfolio .portfolio-item:hover .portfolio-img img {
     transform: scale(1.2);
@@ -590,7 +590,7 @@ body {
   # Footer
   --------------------------------------------------------------*/
   #footer {
-    background: #14151c;
+    background: #2E3040;
     color: #fff;
     font-size: 14px;
     text-align: center;
@@ -617,7 +617,7 @@ body {
   #footer .social-links a {
     font-size: 18px;
     display: inline-block;
-    background: #ef6603;
+    background: #FD7E14;
     color: #fff;
     line-height: 1;
     padding: 8px 0;
@@ -629,7 +629,7 @@ body {
     transition: 0.3s;
   }
   #footer .social-links a:hover {
-    background: #bd5102;
+    background: #FD7E14;
     color: #fff;
     text-decoration: none;
   }
