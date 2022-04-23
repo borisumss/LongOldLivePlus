@@ -86,6 +86,3 @@ export const onGetTasks = (callback) =>
 
 export const onGetTasks2 = (callback) =>
   onSnapshot(collection(db, "Rutinas"), callback);
-
-export const onGetTasks3 = (callback) =>
-  onSnapshot(collection(db, "Rutinas2"), callback);

@@ -1,5 +1,5 @@
 import {
-  onGetTasks2, onGetTasks3
+  onGetTasks2
 
 } from "./firebase.js";
 
