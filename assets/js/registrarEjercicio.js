@@ -39,9 +39,10 @@ async function registrar() {
         text: "¿Estas seguro de registrar el ejercicio?",
         icon: "question",
         showCancelButton: true,
-        confirmButtonColor: "#DD6B55",
+        confirmButtonColor: "#FD7E14",
         confirmButtonText: "Si, guardar",
         cancelButtonText: "No, cancelar",
+        cancelButtonColor: "#C4C4C4",
         closeOnConfirm: false,
         closeOnCancel: false,
         
