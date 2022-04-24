@@ -60,16 +60,18 @@
     border-radius: 5px;
     padding-right: 24px;
     padding-left: 8px;
-    
+    color: black;
 }
   
 #volver:active {
     left: 1px;
+    color: black;
 }
   
 #volver:hover:after {
     opacity: 1;
     right: 10px;
+    color: black;
 }
   
 #volver:after {
@@ -81,8 +83,9 @@
     top: 0;
     right: -20px;
     transition: 0.4s;
+    color: black;
 }
-  
+
 #lista, #registrar, #rutinas{
     text-align: center;
     border:none;
@@ -98,7 +101,7 @@
     background-color:#FD7314;
 }
 
-#lista:hover ,#registrar:hover {
+#lista:hover ,#registrar:hover ,#rutinas:hover{
        top:15px;
        background-color: #38204C;
 }
