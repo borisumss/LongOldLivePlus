@@ -1,6 +1,7 @@
 
 *{
   text-decoration: none  !important;
+  box-sizing: border-box;
 }
 body{
   background-image: url("../img/galeria/fondo.jpg");
@@ -21,9 +22,16 @@ body{
   border:none;
   
 }
-
+ 
 #nombres{
   padding-top: 8%;
+  /*Lineas nuevas*/
+  font-size: 35px;
+  font-family: Arial;
+  padding: 4%;
+  text-align: center;
+  justify-content: center;      
+  align-items: center;
 }
 /*
 #header{
@@ -59,7 +67,7 @@ body{
   text-decoration: none  !important;
 }
 
-
+/*Titulo de la pagina*/
 h1{
   text-decoration: none !important;
 }
@@ -93,6 +101,7 @@ h1{
   font-size: 25px;
   font-family: "Open Sans", sans-serif;
   border: none;
+  background-color: #FD7E14;
 }
 
 #modalId{
@@ -108,4 +117,83 @@ h1{
   font-size: 40px;
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
+}
+
+
+@media screen and (max-width: 600px){
+  h1{
+    font-size: 30px;
+    line-height: 50px;
+    text-align: right;
+  }
+
+  body{
+    /*background-image: linear-gradient(rgb(215, 208, 200),rgb(182, 171, 165));*/
+    background-image: url("../img/galeria/fondo-small.png");
+  }
+
+  #card{
+    width: 90%;
+    padding: 0%;
+    text-align: center;
+    color:beige;
+    text-decoration: none  !important;
+  }
+
+  #img {
+    /*
+    max-width: 80%;
+    width: 700px;
+    margin: 2% 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;*/
+    height: auto;
+    max-width: 100%;
+  }
+  #nombres{
+    font-size: 15px;
+    text-align: center;
+    padding-top: 4%;
+    padding-bottom: 4%;
+  }
+  #nombres.col-6{
+    justify-content: center;
+    align-items: center;
+  }
+
+  #modalId{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  #tituloModal{
+    font-size: 30px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  #imgModal {
+    width: 50%;
+    height: 30%;    
+  }
+
+  #boton-modal{
+    font-family: "Open Sans", sans-serif;
+    border:none;
+    padding: 0%;
+    background-color: black;
+  }
+
+  #btnCerrar {
+    width: 40%;
+    margin: auto;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 25px;
+    font-family: "Open Sans", sans-serif;
+    border: none;
+  }
 }

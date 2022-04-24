@@ -83,4 +83,13 @@
     align-content: center;
 }
 
- 
+@media screen and (max-width: 600px){
+  #volver{
+    position: fixed;
+    min-width: 50px;
+    height: 20px;
+    top: 5px;
+    left: 5px;
+    font-size: 15px;
+  }
+}

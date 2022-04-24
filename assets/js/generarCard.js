@@ -46,7 +46,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
                     </div>
       
                     <div class="col-6" id="nombres">
-                    <h1>${task.NombreEjercicio}</h1>
+                    <p>${task.NombreEjercicio}</p>
  
                     </div>
                   </div>
