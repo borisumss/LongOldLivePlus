@@ -73,6 +73,15 @@ body {
   border: none;
   background-color: #FD7314;
 }
+#btnRegistrar:hover {
+    background-position: right center;
+    /*border-radius: 5px;*/
+    padding-right: 24px;
+    padding-left: 8px;
+    color: black;
+    top:15px;
+    background-color: #C4C4C4
+}
 
 .invalid-feedback{
   color: #FD7314;
