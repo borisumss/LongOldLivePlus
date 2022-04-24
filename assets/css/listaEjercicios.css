@@ -3,13 +3,15 @@
   text-decoration: none  !important;
 }
 body{
-  background-image: url("../img/galeria/fondoLista.jpg");
+  background-image: url("../img/galeria/fondo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   min-height: 100vh;
 }
+
+
 
 #marco{
   width: 100%;
@@ -23,20 +25,19 @@ body{
 #nombres{
   padding-top: 8%;
 }
+/*
 #header{
   width: 100%;
   padding: 0%;
   background-color: #11192bd3;
   text-align: center;
   color:beige;
-
 }
-
+*/
 #card {
   width: 100%;
   padding: 0%;
-  background-color: #38204C;
-  background-color: #3C4F76;
+  background-color: #FD7E14;
   text-align: center;
   color:beige;
   text-decoration: none  !important;
@@ -44,7 +45,7 @@ body{
 
 #card:hover {
  
-  background-color: #38204C;
+  background-color: #2E3040;
   /*background-color: #3C4F76;*/
   
   text-decoration: none  !important;
@@ -52,7 +53,7 @@ body{
 
 #marco:hover {
  
-  background-color: #38204C;
+  background-color: #2E3040;
   /*background-color: #3C4F76;*/
   
   text-decoration: none  !important;
@@ -77,7 +78,7 @@ h1{
 
 #boton-modal{
 
-  font-family: Verdana;
+  font-family: "Open Sans", sans-serif;
   border:none;
   padding: 0%;
   background-color: black;
@@ -90,21 +91,21 @@ h1{
   padding: 5px;
   border-radius: 15px;
   font-size: 25px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Open Sans", sans-serif;
   border: none;
 }
 
 #modalId{
-  background-color: red;
+  background-color: #FD7E14;
 }
 
 #letras{
   font-size: 20px;
-  font-family: Verdana;
+  font-family: "Open Sans", sans-serif;
 }
 
 #tituloModal{
   font-size: 40px;
-  font-family: Verdana;
+  font-family: "Open Sans", sans-serif;
   font-weight: bold;
 }

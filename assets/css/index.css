@@ -1,7 +1,6 @@
 *{
     margin:0;
-    padding: 0;
-   
+    padding: 0;   
 }
 
 #tarjeta1:hover{
@@ -25,7 +24,7 @@ body{
     font-weight: bold;
     font-family: "Open Sans", sans-serif;
     font-size: 30px;
-    color:beige;
+    color:#fdfdfd;
 }
 
 #card-color{
@@ -47,6 +46,7 @@ body{
     margin-top: 80px;
 }
 
+/*
 #footer{
     padding: 0%;
     background-color:#38204c95;
@@ -67,7 +67,7 @@ body{
     margin:auto;
     border-radius: 7px;
     font-family:"Open Sans", sans-serif;
- }
+}
 
 #descripcion {
     max-height: 200px;
@@ -90,4 +90,4 @@ body{
     font-family:"Open Sans", sans-serif;;
     font-weight: bold;
 }
-  
+ */ 

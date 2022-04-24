@@ -97,13 +97,13 @@
     outline: none;
     border-radius: 5px; 
     top:2px;
-    color: beige;
+    color: white;
     background-color:#FD7314;
 }
 
 #lista:hover ,#registrar:hover ,#rutinas:hover{
        top:15px;
-       background-color: #38204C;
+       background-color: #2E3040;
 }
 
 #botones{
