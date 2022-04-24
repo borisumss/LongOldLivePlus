@@ -16,12 +16,16 @@
   const rest2 = document.getElementById("rest_2");
   const round3 = document.getElementById("round_3");
   
+  const mins = [0,0,0];
+  const segs = [10,30,20];
 
+  let tam = mins.length;
+  let i = 0;
   //Funcion llamada por ell boton "Start"
   const startTimer = () => {
     // Tiempo en segundos de ronda y rest
-    let min = 1;  //Obtener datos de firebase del n-esimo ejercicio
-    let seg = 10; //Obtener datos de firebase del n-esimo ejercicio
+    let min;  //Obtener datos de firebase del n-esimo ejercicio
+    let seg; //Obtener datos de firebase del n-esimo ejercicio
     let roundTime = (roundTimeInput.value) * 60;
     let restTime = 15;//(restTimeInput.value) * 60;
   
@@ -54,7 +58,7 @@
         }
       }, 1000);
   
-      // Iniciar ejercicio luego de preparacion
+      // Iniciar rutina (ejercicios) luego de preparacion
       setTimeout(() => {
         // todo: hide header
         document.querySelector("header").style.display = "none";
@@ -62,7 +66,9 @@
         
   
         // todo: Start First Round
-        setInterval(() => {
+        min = mins[i];//1
+        seg = segs[i];//10
+        let rutina = setInterval(() => {
           if (round1.innerText !== "0:00") {
             //   ! Update Round
             updateRound(round1);
@@ -73,24 +79,41 @@
             //   ! Alert 10 sec
             checkFor10Sec(round1);
             
-          } else if (round1.innerText === "0:00" && rest1.innerText !== "0:00") {
-            //  start rest 1
-            // ! Toggle Display
-            addRemoveActiveClass(round1, rest1);
-            //   ! Update Rest
-            updateRest(rest1);
-            //   ! Change Icon
-            addRemoveIconClass("fa-fist-raised", "fa-chair");
-            //   ! Alert 10 sec
-  
-            checkFor10Sec(rest1);
-            // !Alert Start next Round
-  
-            
-  
-            //   ! Reset Round Time
-            //resetRoundTime();
-          } else if (round2.innerText !== "0:00") {
+          } else if (round1.innerText === "0:00") {
+            if(i == tam-1){
+              clearInterval(rutina);
+              body.innerHTML = `
+              <h1 class="title" >Terminaste rutina</h1>
+              <div class="inputs-container">
+                <button class="btn" onclick="newWorkout()">Again</button>
+              </div>  
+              `;
+            }else if(rest1.innerText !== "0:00"){
+              //  start rest 1
+              // ! Toggle Display
+              addRemoveActiveClass(round1, rest1);
+              //   ! Update Rest
+              updateRest(rest1);
+              //   ! Change Icon
+              addRemoveIconClass("fa-fist-raised", "fa-chair");
+              //   ! Alert 10 sec
+    
+              checkFor10Sec(rest1);
+              // !Alert Start next Round
+    
+              
+    
+              //   ! Reset Round Time
+              //resetRoundTime();
+            }else if(rest1.innerText === "0:00"){
+              i++;
+              resetRoundTime(round1);
+              resetRestTime(rest1);
+              console.log("i es "+i);//2
+              console.log("min es "+min+" y seg es "+seg);//2 y 30
+              console.log("descanso es "+restTime);
+            }
+          } /*else if (round2.innerText !== "0:00") {
             //todo: start Round 2
             // ! Toggle Display
             addRemoveActiveClass(rest1, round2);
@@ -141,14 +164,14 @@
           }*/
           // todo: Stop Workout and Create New Workout
   
-          if (round2.innerText === "0:00") {
+          /*if (round2.innerText === "0:00") {
             body.innerHTML = `
               <h1 class="title" >Done</h1>
               <div class="inputs-container">
                 <button class="btn" onclick="newWorkout()">Again</button>
               </div>  
               `;
-          }
+          }*/
         }, 1000);
       }, 11000);
   
@@ -175,19 +198,22 @@
       //! Create Rounds and Rest Updates functions
       //* Rounds
       function updateRound(round) {
-        let minutes = min;//Math.floor(roundTime / 60);
-        let seconds = seg;//roundTime % 60;
+        let minutes = min;
+        let seconds = seg;
   
         seconds = seconds < 10 ? "0" + seconds : seconds;
         round.innerHTML = `${minutes}:${seconds}`;
         seg--;
-        if(seg == 0 && min>0){
+        if(seg == 0 && min > 0){
           min--;
           seg=59;
         }
       }
       //Resetear tiempo de ronda para las otras
-      function resetRoundTime() {
+      function resetRoundTime(round) {
+        min = mins[i];
+        seg = segs[i];
+        round.innerHTML = `${min}:${seg}`;
         return (roundTime = roundTimeInput.value * 60);
       }
       //* Descanso
@@ -200,13 +226,14 @@
         restTime--;
       }
       //Resetear tiempo de descanso
-      function resetRestTime() {
-        return (restTime = restTimeInput.value * 60);
+      function resetRestTime(rest) {
+        restTime = 15;
+        rest.innerHTML = `${0}:${restTime}`;
       }
   
       
   
-      
+    
   
       
     }
