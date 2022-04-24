@@ -42,7 +42,7 @@
     min-width: 130px;
     height: 40px;
     position: absolute;
-    top: 34px;
+    top: 15px;
     left: 30px;
     color: #fff;
     padding: 0px;
@@ -51,40 +51,12 @@
     font-family: "Open Sans", sans-serif;
     font-size: 25px;
     border:none;
-    border-radius: 5px;
+    border-radius: 50px;
     background-size: 120% auto;
+    background-color: #FD7314;
   }
   
-#volver:hover {
-    background-position: right center;
-    border-radius: 5px;
-    padding-right: 24px;
-    padding-left: 8px;
-    color: black;
-}
-  
-#volver:active {
-    left: 1px;
-    color: black;
-}
-  
-#volver:hover:after {
-    opacity: 1;
-    right: 10px;
-    color: black;
-}
-  
-#volver:after {
-    content: "\00AB";
-    position: absolute;
-    opacity: 0;
-    font-size: 20px;
-    line-height: 40px;
-    top: 0;
-    right: -20px;
-    transition: 0.4s;
-    color: black;
-}
+
 
 #lista, #registrar, #rutinas{
     text-align: center;
