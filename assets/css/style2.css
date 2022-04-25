@@ -93,3 +93,127 @@
     font-size: 15px;
   }
 }
+
+@media screen and (max-width: 600px){
+    h1{
+        font-size: 28px;
+        line-height: 50px;
+        text-align: right;
+    }
+    #botones{
+        margin-top: 15%;
+        align-content: center;
+    }
+    #lista, #registrar, #rutinas{
+        text-align: center;
+        border:none;
+        font-family: "Open Sans", sans-serif;
+        font-size: 40px;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        outline: none;
+        border-radius: 5px; 
+        top:2px;
+        color: white;
+        background-color:#FD7314;
+    }
+    
+    #lista:hover ,#registrar:hover ,#rutinas:hover{
+        top:15px;
+        background-color: #2E3040;
+    }
+    body {
+        background-image: url("../img/galeria/fondo-small.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+    } 
+    
+    #volver {
+        min-width: 90px;
+        height: 30px;
+        position: absolute;
+        top: 13px;
+        left: 10px;
+        color: #fff;
+        padding: 0px;
+        cursor: pointer;
+        font-family: "Open Sans", sans-serif;
+        font-size: 18px;
+        border:none;
+        border-radius: 50px;
+        background-color: #FD7314;
+    }
+    
+    
+}
+
+
+@media screen and (max-width: 980px){
+    h1{
+        font-size: 25px;
+        line-height: 50px;
+        text-align: right;
+    }
+    #botones{
+        margin-top: 30%;
+        align-content: center;
+    }
+    #lista, #registrar, #rutinas{
+        text-align: center;
+        border:none;
+        font-family: "Open Sans", sans-serif;
+        font-size: 21px;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        outline: none;
+        border-radius: 5px; 
+        top:2px;
+        color: white;
+        background-color:#FD7314;
+    }
+    
+    #lista:hover ,#registrar:hover ,#rutinas:hover{
+        top:15px;
+        background-color: #2E3040;
+    }
+    body {
+        background-image: url("../img/galeria/fondo-small.png");
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center;
+        min-height: 100vh;
+    } 
+    
+    #volver {
+        min-width: 90px;
+        height: 30px;
+        position: absolute;
+        top: 13px;
+        left: 10px;
+        color: #fff;
+        padding: 0px;
+        cursor: pointer;
+        font-family: "Open Sans", sans-serif;
+        font-size: 18px;
+        border:none;
+        border-radius: 50px;
+        background-color: #FD7314;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
