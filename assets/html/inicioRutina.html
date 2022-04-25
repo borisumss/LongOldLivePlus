@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/75e53ee709.js" crossoringin="anonymus"></script>
+    
+    
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.seg" />-->
+    <link rel="stylesheet" href="../css/inicioRutina.css" />
+    <title>Inicio Rutina</title>
+
+</head>
+<body class="flex">
+<!--inicia el body-->  
+<i class="fas fa-heartbeat"></i>
+
+    <!-- create 3 stopwatches -->
+    <div class="workout-timer-container flex">
+      <header class="flex">
+        <h1 class="title">Temp rondas de ejercicio</h1>
+        <div class="inputs-container">
+          <button class="btn" id="start" onclick="startTimer()">Iniciar</button>
+        </div>
+        
+      </header>
+
+      <!-- Contenedor 3 rounds y 2 rest -->
+      <div class="rounds-container flex">
+        <section class="group flex">
+          <div class="round" id="ejercicio"></div>
+          <span class="round-time" id="round_1"></span>
+        </section>
+        <section class="group flex">
+          <div class="rest">Rest</div>
+          <span class="rest-time" id="rest_1"></span>
+        </section>
+      </div>
+    </div>
+
+    <script src="../js/CronometroRutina.js" crossorigin="anonymous"></script>
+</body>
+</html>
