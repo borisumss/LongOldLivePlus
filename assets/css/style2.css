@@ -83,77 +83,11 @@
     align-content: center;
 }
 
-@media screen and (max-width: 600px){
-  #volver{
-    position: fixed;
-    min-width: 50px;
-    height: 20px;
-    top: 5px;
-    left: 5px;
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 600px){
-    h1{
-        font-size: 28px;
-        line-height: 50px;
-        text-align: right;
-    }
-    #botones{
-        margin-top: 15%;
-        align-content: center;
-    }
-    #lista, #registrar, #rutinas{
-        text-align: center;
-        border:none;
-        font-family: "Open Sans", sans-serif;
-        font-size: 40px;
-        transition: all 0.3s ease;
-        position: relative;
-        display: inline-block;
-        outline: none;
-        border-radius: 5px; 
-        top:2px;
-        color: white;
-        background-color:#FD7314;
-    }
-    
-    #lista:hover ,#registrar:hover ,#rutinas:hover{
-        top:15px;
-        background-color: #2E3040;
-    }
-    body {
-        background-image: url("../img/galeria/fondo-small.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        min-height: 100vh;
-    } 
-    
-    #volver {
-        min-width: 90px;
-        height: 30px;
-        position: absolute;
-        top: 13px;
-        left: 10px;
-        color: #fff;
-        padding: 0px;
-        cursor: pointer;
-        font-family: "Open Sans", sans-serif;
-        font-size: 18px;
-        border:none;
-        border-radius: 50px;
-        background-color: #FD7314;
-    }
-    
-    
-}
-
-
+/*=============RESPONSIVE================*/
+/*MENOR A 980 (TABLETS, IPADS)*/
 @media screen and (max-width: 980px){
     h1{
-        font-size: 25px;
+        font-size: 40px;
         line-height: 50px;
         text-align: right;
     }
@@ -165,7 +99,7 @@
         text-align: center;
         border:none;
         font-family: "Open Sans", sans-serif;
-        font-size: 21px;
+        font-size: 40px;
         transition: all 0.3s ease;
         position: relative;
         display: inline-block;
@@ -205,6 +139,103 @@
     }
 }
 
+/*
+@media screen and (max-width: 600px){
+  #volver{
+    position: fixed;
+    min-width: 50px;
+    height: 20px;
+    top: 5px;
+    left: 5px;
+    font-size: 15px;
+  }
+}
+*/
+/*MENOR A 600*/
+@media screen and (max-width: 600px){
+    h1{
+        font-size: 28px;
+        line-height: 50px;
+        text-align: right;
+    }
+    #botones{
+        margin-top: 15%;
+        align-content: center;
+    }
+    #lista, #registrar, #rutinas{
+        text-align: center;
+        border:none;
+        font-family: "Open Sans", sans-serif;
+        font-size: 25px;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        outline: none;
+        border-radius: 5px; 
+        top:2px;
+        color: white;
+        background-color:#FD7314;
+    }
+    
+    #lista:hover ,#registrar:hover ,#rutinas:hover{
+        top:15px;
+        background-color: #2E3040;
+    }
+    body {
+        background-image: url("../img/galeria/fondo-small.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+    }     
+
+    #volver {
+        min-width: 90px;
+        height: 30px;
+        position: absolute;
+        top: 13px;
+        left: 10px;
+        color: #fff;
+        padding: 0px;
+        cursor: pointer;
+        font-family: "Open Sans", sans-serif;
+        font-size: 18px;
+        border:none;
+        border-radius: 50px;
+        background-color: #FD7314;
+    }  
+}
+
+/*MENOR A 412 (CELULARES MAS PEQIEÑOS)*/
+@media screen and (max-width: 412px) {
+    #volver {
+        min-width: 50px;
+        height: 20px;
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        color: #fff;
+        padding: 1px;
+        cursor: pointer;
+        font-family: "Open Sans", sans-serif;
+        font-size: 15px;
+        border:none;
+        border-radius: 50px;
+        background-color: #FD7314;
+    }
+    
+    h1{
+        font-size: 25px;
+        align-self: flex-end;
+    }
+
+    #lista, #registrar, #rutinas{
+        text-align: center;
+        border:none;
+        font-family: "Open Sans", sans-serif;
+        font-size: 20px;
+    }
+}
 
 
 
