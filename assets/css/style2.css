@@ -1,0 +1,281 @@
+/*
+    boton Volver
+       color---> Azul
+    pagina home
+        letra -> home encabezado
+        tituloApp -> long old live +
+        btn-EF -> ejercicios fisicos boton
+    
+    ejercicios fisicos
+        letra -> ejercicios fisicos encabezado
+        lista ->lista de ejercicios(boton)
+        registrar -> registrar ejercicio
+
+    Lista de ejercicios 
+        letra-> Lista de ejercicios encabezado
+    
+    Registrar ejercicios 
+    
+*/
+
+#tituloApp, #letra, #btnEF{
+   font-family: "Open Sans", sans-serif;
+}
+
+#tituloApp{
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.TodosTitulo{
+    font-size: 48px !important;
+    text-align: center !important;
+}
+
+#letra,#btnEF{
+   font-size: 30px;
+   font-weight: bold;
+   margin-top: 15px;
+}
+
+#volver {
+    min-width: 130px;
+    height: 40px;
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    color: #fff;
+    padding: 0px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Open Sans", sans-serif;
+    font-size: 25px;
+    border:none;
+    border-radius: 50px;
+    background-size: 120% auto;
+    background-color: #FD7314;
+  }
+  
+
+
+#lista, #registrar, #rutinas{
+    text-align: center;
+    border:none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px; 
+    top:2px;
+    color: white;
+    background-color:#FD7314;
+}
+
+#lista:hover ,#registrar:hover ,#rutinas:hover{
+       top:15px;
+       background-color: #2E3040;
+}
+
+#botones{
+    margin-top: 10%;
+    align-content: center;
+}
+
+/*=============RESPONSIVE================*/
+/*MENOR A 980 (TABLETS, IPADS)*/
+@media screen and (max-width: 980px){
+    h1{
+        font-size: 40px;
+        line-height: 50px;
+        text-align: right;
+    }
+    #botones{
+        margin-top: 30%;
+        align-content: center;
+    }
+    #lista, #registrar, #rutinas{
+        text-align: center;
+        border:none;
+        font-family: "Open Sans", sans-serif;
+        font-size: 28px;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        outline: none;
+        border-radius: 5px; 
+        top:2px;
+        color: white;
+        background-color:#FD7314;
+    }
+    
+    #lista:hover ,#registrar:hover ,#rutinas:hover{
+        top:15px;
+        background-color: #2E3040;
+    }
+    body {
+        background-image: url("../img/galeria/fondo-small.png");
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center;
+        min-height: 100vh;
+    } 
+    
+    #volver {
+        min-width: 90px;
+        height: 30px;
+        position: absolute;
+        top: 15px;
+        left: 10px;
+        color: #fff;
+        padding: 0px;
+        cursor: pointer;
+        font-family: "Open Sans", sans-serif;
+        font-size: 20px;
+        border:none;
+        border-radius: 50px;
+        background-color: #FD7314;
+    }
+}
+
+/*
+@media screen and (max-width: 600px){
+  #volver{
+    position: fixed;
+    min-width: 50px;
+    height: 20px;
+    top: 5px;
+    left: 5px;
+    font-size: 15px;
+  }
+}
+*/
+/*MENOR A 600*/
+@media screen and (max-width: 600px){
+    h1{
+        font-size: 26px;
+        line-height: 50px;
+        text-align: center;
+    }
+    #botones{
+        margin-top: 15%;
+        align-content: center;
+    }
+    #lista, #registrar, #rutinas{
+        text-align: center;
+        border:none;
+        font-family: "Open Sans", sans-serif;
+        font-size: 17px;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        outline: none;
+        border-radius: 5px; 
+        top:2px;
+        color: white;
+        background-color:#FD7314;
+    }
+    
+    #lista:hover ,#registrar:hover ,#rutinas:hover{
+        top:15px;
+        background-color: #2E3040;
+    }
+    body {
+        background-image: url("../img/galeria/fondo-small.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+    }     
+
+    #volver {
+        min-width: 90px;
+        height: 30px;
+        position: absolute;
+        top: 13px;
+        left: 10px;
+        color: #fff;
+        padding: 0px;
+        cursor: pointer;
+        font-family: "Open Sans", sans-serif;
+        font-size: 15px;
+        border:none;
+        border-radius: 50px;
+        background-color: #FD7314;
+    }  
+}
+
+/*MENOR A 412 (CELULARES MAS PEQIEÑOS)*/
+@media screen and (max-width: 412px) {
+    #volver {
+        min-width: 70px;
+        height: 30px;
+        position: absolute;
+        top: 15px;
+        left: 5px;
+        color: #fff;
+        padding: 1px;
+        cursor: pointer;
+        font-family: "Open Sans", sans-serif;
+        font-size: 15px;
+        border:none;
+        border-radius: 50px;
+        background-color: #FD7314;
+    }
+    
+    h1{
+        font-size: 21px;
+        align-self: flex-end;
+    }
+
+    #lista, #registrar, #rutinas{
+        text-align: center;
+        border:none;
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+    }
+}
+
+
+
+
+/*MENOR A 412 (CELULARES MAS PEQIEÑOS)*/
+@media screen and (max-width: 290px) {
+    #volver {
+        min-width: 50px;
+        height: 30px;
+        position: absolute;
+        top: 15px;
+        left: 5px;
+        color: #fff;
+        padding: 1px;
+        cursor: pointer;
+        font-family: "Open Sans", sans-serif;
+        font-size: 15px;
+        border:none;
+        border-radius: 50px;
+        background-color: #FD7314;
+    }
+    
+
+    h1{
+        font-size: 20px;
+        align-self: flex-end;
+    }
+
+    #lista, #registrar, #rutinas{
+        text-align: center;
+        border:none;
+        width: 144px;
+        font-family: "Open Sans", sans-serif;
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+
+

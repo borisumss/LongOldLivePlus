@@ -1,7 +1,6 @@
 *{
     margin:0;
-    padding: 0;
-   
+    padding: 0;   
 }
 
 #tarjeta1:hover{
@@ -13,7 +12,7 @@
 
 
 body{
-    background-image: url("../images/fondo.jpg");
+    background-image: url("../img/galeria/fondo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -23,13 +22,13 @@ body{
   
 #letra{
     font-weight: bold;
-    font-family: Verdana;
+    font-family: "Open Sans", sans-serif;
     font-size: 30px;
-    color:beige;
+    color:#fdfdfd;
 }
 
 #card-color{
-    background-color: #e8cb9a;
+    background-color:#c4c4c4;
     color: black;
     padding-left: 10px;
     padding-right:10px;
@@ -42,17 +41,17 @@ body{
 }
 
 #tituloApp{
-    font-family: Verdana;
+    font-family: "Open Sans", sans-serif;
     font-size: 80px;
-    font-weight: bold;
-    margin-top: 10px;
+    margin-top: 80px;
 }
 
+/*
 #footer{
     padding: 0%;
     background-color:#38204c95;
     color:beige;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Open Sans", sans-serif;;
 }
 
 .tituloFooter2, .tituloFooter1,#nombre{
@@ -67,8 +66,8 @@ body{
     padding: 20px 30px;
     margin:auto;
     border-radius: 7px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
- }
+    font-family:"Open Sans", sans-serif;
+}
 
 #descripcion {
     max-height: 200px;
@@ -80,7 +79,7 @@ body{
     margin:auto;
     border-radius:15px;
     font-size: 20px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:"Open Sans", sans-serif;
     border:none;
   }
 #boton-reclamos{
@@ -88,7 +87,7 @@ body{
     border:none;
     border-radius: 5px;
     padding: 2px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:"Open Sans", sans-serif;;
     font-weight: bold;
 }
-  
+ */ 

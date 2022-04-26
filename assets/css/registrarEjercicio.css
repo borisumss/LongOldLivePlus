@@ -1,0 +1,136 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../img/galeria/fondo.jpg");
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
+  margin: 0;  
+}
+
+#formulario{
+  width: 80%;
+  color: #FDFDFD;
+  background: #2E3040;
+  padding: 20px 30px;
+  margin: auto;
+  border-radius: 7px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+}
+
+
+#formGif {
+  background-color: rgb(255, 255, 255, 0);
+  border: none;
+  box-sizing: border-box;
+  color: #FD7314;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+#seleccione {
+  box-sizing: border-box;
+  padding: 6px 10px;
+  background-color: #FDFDFD;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+}
+
+#descripcion {
+  max-height: 200px;
+}
+
+.container-fluid {
+
+  background-image: linear-gradient(315deg, #43cea2 0%, #185a9d 75%);
+  text-align: center;
+  border-bottom: 2px solid black;
+  /*position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;*/
+
+}
+
+#letra {
+  /* 
+  font-size: 60px;
+  margin-top: 10px;*/
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  font-weight: bold;
+}
+
+#btnRegistrar {
+  width: 40%;
+  margin: auto;
+  margin-bottom: 15px;
+  padding: 5px;
+  border-radius: 15px;
+  font-size: 25px;
+  font-family: "Open Sans", sans-serif;
+  border: none;
+  background-color: #FD7314;
+}
+#btnRegistrar:hover {
+    background-position: right center;
+    /*border-radius: 5px;*/
+    padding-right: 24px;
+    padding-left: 8px;
+    color: black;
+    top:15px;
+    background-color: #C4C4C4
+}
+
+.invalid-feedback{
+  color: #FD7314;
+}
+
+
+@media screen and (max-width: 980px){   
+  #formulario{
+    width: 90%;
+    color: #FDFDFD;
+    background: #2E3040;
+    padding: 25px 35px;
+    margin: auto;
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+  }  
+
+}
+
+@media screen and (max-width:600px){
+  body{
+    /*background-image: linear-gradient(rgb(215, 208, 200),rgb(182, 171, 165));*/
+    background-image: url("../img/galeria/fondo-small.png");
+  }
+
+  #formulario{
+    padding: 4%;
+  }
+
+  #btnRegistrar{
+    font-size: 15px;
+    padding-bottom: 0%;
+    margin-bottom: 1%;
+  }
+
+  #min.form-control{
+    min-width: 10px;
+  }
+}
+
+@media screen and (max-width: 280px){
+  #btnRegistrar{
+    font-size: 15px;
+    padding-bottom: 0%;
+    bottom: 1px;
+    margin-bottom: 1%;
+    width: 52%;
+    align-items: center;
+  }
+}

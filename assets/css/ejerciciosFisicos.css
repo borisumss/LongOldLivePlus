@@ -1,13 +1,15 @@
+*{
+  box-sizing: border-box;
+}
+
 .container-fluid {
   padding: 0%;
-  background-image: linear-gradient(315deg, rgb(109, 110, 182) 0%, #38204C 75%);
-  border-bottom: 2px solid beige ;
-  
+  border-bottom: 2px solid #FDFDFD ;
   color:beige;
 }
 
 body {
-  background-image: url("/images/fondo.jpg");
+  background-image: url("../img/galeria/fondo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
