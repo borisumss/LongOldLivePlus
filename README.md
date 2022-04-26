@@ -15,7 +15,7 @@ El proposito de esta pagina web es brindarles a las personas mayores, distintos 
     
 2-Abrir la carpeta "LongOldLivePlus" con Visual Studio Code
 
-3-Ejecutar el archivo "index.html" con la extesion LiveServer de Visual Studio Code
+3-Ejecutar el archivo "index.html" con la extension LiveServer de Visual Studio Code
 
 ## Autores
 - Arando Quecaña Cristian
