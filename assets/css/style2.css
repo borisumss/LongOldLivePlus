@@ -99,7 +99,7 @@
         text-align: center;
         border:none;
         font-family: "Open Sans", sans-serif;
-        font-size: 40px;
+        font-size: 28px;
         transition: all 0.3s ease;
         position: relative;
         display: inline-block;
@@ -126,13 +126,13 @@
         min-width: 90px;
         height: 30px;
         position: absolute;
-        top: 13px;
+        top: 15px;
         left: 10px;
         color: #fff;
         padding: 0px;
         cursor: pointer;
         font-family: "Open Sans", sans-serif;
-        font-size: 18px;
+        font-size: 20px;
         border:none;
         border-radius: 50px;
         background-color: #FD7314;
@@ -154,9 +154,9 @@
 /*MENOR A 600*/
 @media screen and (max-width: 600px){
     h1{
-        font-size: 28px;
+        font-size: 26px;
         line-height: 50px;
-        text-align: right;
+        text-align: center;
     }
     #botones{
         margin-top: 15%;
@@ -166,7 +166,7 @@
         text-align: center;
         border:none;
         font-family: "Open Sans", sans-serif;
-        font-size: 25px;
+        font-size: 17px;
         transition: all 0.3s ease;
         position: relative;
         display: inline-block;
@@ -199,7 +199,7 @@
         padding: 0px;
         cursor: pointer;
         font-family: "Open Sans", sans-serif;
-        font-size: 18px;
+        font-size: 15px;
         border:none;
         border-radius: 50px;
         background-color: #FD7314;
@@ -209,11 +209,11 @@
 /*MENOR A 412 (CELULARES MAS PEQIEÑOS)*/
 @media screen and (max-width: 412px) {
     #volver {
-        min-width: 50px;
-        height: 20px;
+        min-width: 70px;
+        height: 30px;
         position: absolute;
-        top: 1px;
-        left: 1px;
+        top: 15px;
+        left: 5px;
         color: #fff;
         padding: 1px;
         cursor: pointer;
@@ -225,7 +225,7 @@
     }
     
     h1{
-        font-size: 25px;
+        font-size: 21px;
         align-self: flex-end;
     }
 
@@ -233,14 +233,45 @@
         text-align: center;
         border:none;
         font-family: "Open Sans", sans-serif;
-        font-size: 20px;
+        font-size: 14px;
     }
 }
 
 
 
 
+/*MENOR A 412 (CELULARES MAS PEQIEÑOS)*/
+@media screen and (max-width: 290px) {
+    #volver {
+        min-width: 50px;
+        height: 30px;
+        position: absolute;
+        top: 15px;
+        left: 5px;
+        color: #fff;
+        padding: 1px;
+        cursor: pointer;
+        font-family: "Open Sans", sans-serif;
+        font-size: 15px;
+        border:none;
+        border-radius: 50px;
+        background-color: #FD7314;
+    }
+    
 
+    h1{
+        font-size: 20px;
+        align-self: flex-end;
+    }
+
+    #lista, #registrar, #rutinas{
+        text-align: center;
+        border:none;
+        width: 144px;
+        font-family: "Open Sans", sans-serif;
+        font-size: 12px;
+    }
+}
 
 
 
