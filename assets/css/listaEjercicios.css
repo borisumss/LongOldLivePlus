@@ -3,6 +3,7 @@
   text-decoration: none  !important;
   box-sizing: border-box;
 }
+
 body{
   background-image: url("../img/galeria/fondo.jpg");
   background-repeat: no-repeat;
@@ -17,22 +18,20 @@ body{
 #marco{
   width: 100%;
   height: 33%;
-  background-color: beige;
   background-color: #3A4764;
   border:none;
   
 }
  
 #nombres{
-  padding-top: 8%;
   /*Lineas nuevas*/
-  font-size: 35px;
+  font-size: 50px;
   font-family: Arial;
-  padding: 4%;
-  text-align: center;
-  justify-content: center;      
+  display: flex;
   align-items: center;
+  justify-content: center;        
 }
+
 /*
 #header{
   width: 100%;
@@ -45,19 +44,12 @@ body{
 #card {
   width: 100%;
   padding: 0%;
-  background-color: #FD7E14;
-  text-align: center;
-  color:beige;
-  text-decoration: none  !important;
-}
-
-#card:hover {
- 
-  background-color: #2E3040;
-  /*background-color: #3C4F76;*/
   
+  text-align: center;
+  color:white;
   text-decoration: none  !important;
 }
+  
 
 #marco:hover {
  
@@ -89,7 +81,7 @@ h1{
   font-family: "Open Sans", sans-serif;
   border:none;
   padding: 0%;
-  background-color: black;
+  /*background-color: black;*/
 }
 
 #btnCerrar {
@@ -118,7 +110,9 @@ h1{
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
 }
-@media screen and (max-width: 980px){
+
+
+@media screen and (max-width: 1200px){
   h1{
     font-size: 30px;
     line-height: 50px;
@@ -134,7 +128,7 @@ h1{
     width: 90%;
     padding: 0%;
     text-align: center;
-    color:beige;
+    color:white;
     text-decoration: none  !important;
   }
 
@@ -151,10 +145,88 @@ h1{
     max-width: 100%;
   }
   #nombres{
-    font-size: 15px;
+    font-size: 35px;
+    display: flex;
     text-align: center;
-    padding-top: 4%;
-    padding-bottom: 4%;
+    
+  }
+  #nombres.col-6{
+    justify-content: center;
+    align-items: center;
+  }
+
+  #modalId{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  #tituloModal{
+    font-size: 30px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  #imgModal {
+    width: 50%;
+    height: 30%;    
+  }
+
+  #boton-modal{
+    font-family: "Open Sans", sans-serif;
+    border:none;
+    padding: 0%;
+    background-color: black;
+  }
+
+  #btnCerrar {
+    width: 40%;
+    margin: auto;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 25px;
+    font-family: "Open Sans", sans-serif;
+    border: none;
+  }
+}
+
+@media screen and (max-width: 980px){
+  h1{
+    font-size: 30px;
+    line-height: 50px;
+    text-align: right;
+  }
+
+  body{
+    /*background-image: linear-gradient(rgb(215, 208, 200),rgb(182, 171, 165));*/
+    background-image: url("../img/galeria/fondo-small.png");
+  }
+
+  #card{
+    width: 90%;
+    padding: 0%;
+    text-align: center;
+    color:white;
+    text-decoration: none  !important;
+  }
+
+  #img {
+    /*
+    max-width: 80%;
+    width: 700px;
+    margin: 2% 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;*/
+    height: auto;
+    max-width: 100%;
+  }
+  #nombres{
+    font-size: 25px;
+    display: flex;
+    text-align: center;
+    
   }
   #nombres.col-6{
     justify-content: center;
@@ -212,7 +284,7 @@ h1{
     width: 90%;
     padding: 0%;
     text-align: center;
-    color:beige;
+    color:white;
     text-decoration: none  !important;
   }
 
@@ -229,10 +301,10 @@ h1{
     max-width: 100%;
   }
   #nombres{
-    font-size: 15px;
+    font-size: 20px;
+    display: flex;
     text-align: center;
-    padding-top: 4%;
-    padding-bottom: 4%;
+    
   }
   #nombres.col-6{
     justify-content: center;
@@ -275,7 +347,7 @@ h1{
 }
 
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 360px){
   h1{
     font-size: 30px;
     line-height: 50px;
@@ -292,7 +364,7 @@ h1{
     height: auto;
     padding: 0%;
     text-align: center;
-    color:beige;
+    color:white;
     text-decoration: none  !important;
   }
 
@@ -306,16 +378,15 @@ h1{
     margin-left: 5%;
     margin-right: 5%;*/
     padding: 5%;
-    height: 80%;
+    height: 100%;
     max-width: 100%;
     align-items: center;
   }
   #nombres{
-    font-size: 9px;
+    font-size: 15px;
     text-align: center;
-    padding-top: 4%;
-    padding-bottom: 6%;
-    padding-right: 5%;
+    display: flex;
+    align-items: center;
   }
   #nombres.col-6{
     justify-content: center;

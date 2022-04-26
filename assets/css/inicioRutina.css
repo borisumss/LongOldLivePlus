@@ -174,3 +174,7 @@
       transform: scale(1);
     }
   }
+
+  #start{
+    visibility: hidden;
+  }

@@ -21,13 +21,19 @@
       <header class="flex">
         <h1 class="title">Temp rondas de ejercicio</h1>
         <div class="inputs-container">
-          <button class="btn" id="start" onclick="startTimer()">Iniciar</button>
+          <form id="formulario">
+            <button class="btn" id="start" type="submit">Iniciar</button>
+          </form>
+          
         </div>
         
       </header>
-
+      <form id = formulario2>
+      
+      </form>
+      
       <!-- Contenedor 3 rounds y 2 rest -->
-      <div class="rounds-container flex">
+      <div class="rounds-container flex" id="test">
         <section class="group flex">
           <div class="round" id="ejercicio"></div>
           <span class="round-time" id="round_1"></span>
@@ -38,7 +44,17 @@
         </section>
       </div>
     </div>
-
-    <script src="../js/CronometroRutina.js" crossorigin="anonymous"></script>
+    
 </body>
+
+<script src="../js/CronometroRutina.js" type="module"></script>
+<script type="module">
+  import{
+    newWorkout
+  } from "../js/CronometroRutina.js";
+
+  function parar(){
+    newWorkout();
+  };
+</script>
 </html>

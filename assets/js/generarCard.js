@@ -40,13 +40,16 @@ window.addEventListener("DOMContentLoaded", async (e) => {
             <div type="button"  href="#" id="boton-modal">
               <div class="card card-body mt-2 border-primary" id="marco">
                 <div class="container-fluid" id="card">
-                  <div class="row">
+                  <div class="row" id="cont">
                     <div class="col-6" >
                       <img src="${task.GifURL}" alt="imagen" id="img" >
                     </div>
       
                     <div class="col-6" id="nombres">
-                    <p>${task.NombreEjercicio}</p>
+                   
+                    <div>${task.NombreEjercicio}</div>
+                   
+                    
  
                     </div>
                   </div>

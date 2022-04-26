@@ -265,6 +265,11 @@ body{
     font-size: 70px;
     
 }
+#formulario{
+  width: 300px;
+  height: 290px;   
+}
+
 #circulo:hover{
     background: #fc8129;
 }

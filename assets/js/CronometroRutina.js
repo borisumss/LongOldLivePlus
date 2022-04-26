@@ -1,5 +1,69 @@
-  // todo: Get Elements from the DOM
+import {
+  onGetTasks2
+
+} from "./firebase.js";
+var listaNombres = new Array();
+var mins = new Array();
+var segs = new Array();
+
+var url = ""+window.location.href;
+var rutina = limpiar(url) ;
+
+function limpiar(palabra){
+    var res ="";
+    var bandera = false;
+    for(let i=0;i<palabra.length;i++){
+        if(palabra[i]=="#"){
+            bandera= true;
+            i++;
+        }
+
+        if(bandera){
+            res+=palabra[i];
+        }
+    }
+    return res;
+}
+let btn = document.querySelector('#start');
+//btn.style.visibility = "hidden";
+
+const formulario = document.getElementById('formulario');
+const formulario2 = document.getElementById('formulario2');
+
+window.addEventListener("DOMContentLoaded", async (e) => {
+
+  onGetTasks2((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          if (doc.id == rutina) {
+              const task = doc.data();
+
+              let claves = Object.keys(task);
+
+              for (let i = 0; i < claves.length; i++) {
+                  var titulo = claves[i];
+                  var nombreEjer = task[titulo].NombreEjercicio;
+                  var minutos = task[titulo].MinutosEjercicio;
+                  var segundos = task[titulo].SegundosEjercicio;
+                  listaNombres.push(nombreEjer);
+                  mins.push(minutos);
+                  segs.push(segundos);
+                  
+              }
+              btn.style.visibility = "visible";
+              
+          }
+      }
+
+      );
+
+  });
+ 
   
+});
+
+
+// todo: Get Elements from the DOM
+ 
   const body = document.querySelector("body");
   const icon = document.querySelector("i");
   
@@ -10,18 +74,18 @@
   const datosEjer = document.getElementById("ejercicio");
   const round1 = document.getElementById("round_1");
   const rest1 = document.getElementById("rest_1");
+ 
   
-  const mins = [0,0,0];
-  const segs = [10,25,20];
 
   let tam = mins.length;
   let i = 0;
+
   //Funcion llamada por el boton "Start"
   const startTimer = () => {
     // Tiempo en segundos de ronda y rest
     let min;  //Obtener datos de firebase del n-esimo ejercicio?
     let seg; //Obtener datos de firebase del n-esimo ejercicio?
-    let restTime = 15;
+    let restTime = 1;
   
 
     // aparicion Boton stop y evento solo en preparacion
@@ -70,14 +134,21 @@
           checkFor10Sec(round1);
 
         } else if (round1.innerText === "0:00") {
-          if(i == tam-1){
+          if(i == mins.length-1){
             clearInterval(rutina);
-            body.innerHTML = `
+            
+            formulario2.innerHTML = `
             <h1 class="title" >Terminaste rutina</h1>
             <div class="inputs-container">
-              <button class="btn" onclick="newWorkout()">Again</button>
-            </div>  
+              
+              <button class="btn" type="submit">Again</button>
+              
+              </div>  
             `;
+            document.querySelector("#test").style.display = "none";
+            icon.classList.remove("fa-fist-raised");
+            icon.classList.remove("fa-chair");
+            
           }else if(rest1.innerText !== "0:00"){
             //  start rest 1
             // ! Toggle Display
@@ -111,9 +182,9 @@
     // ! Pinta tiempo en rojo a los 10 segundos
 
     function checkFor10Sec(activity) {
-      activity.innerText === "0:10"
+      activity.innerText <= "0:10"
         ? (activity.style.color = "#e24379")
-        : activity;
+        : (activity.style.color = '#44de00');
     }
 
     // ! Create addRemoveIconClass() function
@@ -132,9 +203,9 @@
     //* Rounds
     function updateRound(round) {
       let minutes = min;
-      let seconds = seg;
+      let seconds = parseInt(seg);
       
-      datosEjer.innerHTML = `Round ${i+1}`;
+      datosEjer.innerHTML = `${listaNombres[i]}`;
       seconds = seconds < 10 ? "0" + seconds : seconds;
       round.innerHTML = `${minutes}:${seconds}`;
       seg--;
@@ -176,7 +247,18 @@
   // ! Utility Function
   
   // todo: Detiene y renicia la pagina actual (rutina)
-  
-  const newWorkout = () => {
+  export const newWorkout = () => {
     window.location.reload();
-  };
+  }; 
+  
+
+  formulario.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    startTimer();
+  });
+
+  formulario2.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    
+    newWorkout();
+  });
