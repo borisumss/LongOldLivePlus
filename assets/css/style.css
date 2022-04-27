@@ -1,5 +1,5 @@
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Verdana";
     color: #2E3040;
   }
   
@@ -14,7 +14,7 @@ body {
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: "Raleway", sans-serif;
+    font-family: "Verdana";
   }
   
   /*--------------------------------------------------------------
@@ -83,6 +83,7 @@ body {
     color: #fff;
     text-decoration: none;
   }
+  
   #header .logo img {
     padding: 0;
     margin: 0;
@@ -316,7 +317,7 @@ body {
     height: auto;
   }
   #hero .btn-get-started {
-    font-family: "Raleway", sans-serif;
+    font-family: "Verdana";
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 1px;
@@ -450,7 +451,7 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #aaaaaa;
-    font-family: "Poppins", sans-serif;
+    font-family: "Verdana";
   }
   .section-title h2::after {
     content: "";
@@ -466,53 +467,14 @@ body {
     font-size: 36px;
     font-weight: 700;
     text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
+    font-family: "Verdana";
     color: #2E3040;
   }
   
-
-
   
   /*--------------------------------------------------------------
   # Portfolio
   --------------------------------------------------------------*/
-  .portfolio #portfolio-flters {
-    list-style: none;
-    margin-bottom: 20px;
-  }
-  .portfolio #portfolio-flters li {
-    cursor: pointer;
-    display: inline-block;
-    margin: 0 0 10px 10px;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1;
-    text-transform: uppercase;
-    color: #2E3040;
-    transition: all 0.3s ease-in-out;
-  }
-  .portfolio #portfolio-flters li::before {
-    content: "[";
-    margin-right: 6px;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 400;
-    transition: all 0.3s ease-in-out;
-  }
-  .portfolio #portfolio-flters li::after {
-    content: "]";
-    margin-left: 6px;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 400;
-    transition: all 0.3s ease-in-out;
-  }
-  .portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
-    color: #FD7E14;
-  }
-  .portfolio #portfolio-flters li.filter-active::before, .portfolio #portfolio-flters li.filter-active::after {
-    color: #FD7E14;
-  }
   .portfolio .portfolio-item {
     margin-bottom: 30px;
   }
@@ -585,7 +547,6 @@ body {
     opacity: 1;
   }
  
-  
   /*--------------------------------------------------------------
   # Footer
   --------------------------------------------------------------*/
@@ -601,34 +562,17 @@ body {
     font-weight: 700;
     color: #fff;
     position: relative;
-    font-family: "Poppins", sans-serif;
+    font-family: "Verdana";
     padding: 0;
     margin: 0 0 15px 0;
   }
   #footer p {
     font-size: 15;
-    font-style: italic;
+    font-style: verdana;
     padding: 0;
     margin: 0 0 40px 0;
   }
-  #footer .social-links {
-    margin: 0 0 40px 0;
-  }
-  #footer .social-links a {
-    font-size: 18px;
-    display: inline-block;
-    background: #FD7E14;
-    color: #fff;
-    line-height: 1;
-    padding: 8px 0;
-    margin-right: 4px;
-    border-radius: 50%;
-    text-align: center;
-    width: 36px;
-    height: 36px;
-    transition: 0.3s;
-  }
- 
+
   #footer .credits {
     font-size: 20px;
   }
