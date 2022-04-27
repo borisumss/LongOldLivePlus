@@ -31,6 +31,7 @@ let btn = document.querySelector('#start');
 //const formulario = document.getElementById('formulario');
 const formulario2 = document.getElementById('formulario2');
 const nombreEjercicio = document.getElementById('nombreEjercicio');
+const gifSector = document.getElementById('gif_ejercicio');
 
 window.addEventListener("DOMContentLoaded", async (e) => {
 
@@ -104,6 +105,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
     let preparar = setInterval(() => {
       console.log("Descanso "+preparacion);
       nombreEjercicio.innerHTML = `${rutina}`;
+      
       startCountdown.innerHTML = `
     <div class="inputs-container flex">
       <h2 id='seconds' class='active animateSeconds'>${preparacion}</h2>
@@ -133,7 +135,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
           round1.parentElement.classList.add("active");
           //   ! Change Icon
           addRemoveIconClass("fa-heartbeat", "fa-fist-raised");
-
+          
           //   ! Alert 10 sec
           checkFor10Sec(round1);
 
@@ -164,6 +166,8 @@ window.addEventListener("DOMContentLoaded", async (e) => {
             //   ! Change Icon
             addRemoveIconClass("fa-fist-raised", "fa-chair");
             nombreEjercicio.innerHTML = "Descanso";
+            //gif aqui
+
             //   ! Alert 10 sec
   
             checkFor10Sec(rest1);
@@ -199,6 +203,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
     function addRemoveIconClass(currentIcon, nextIcon) {
       icon.classList.remove(currentIcon);
       icon.classList.add(nextIcon);
+      
     }
 
     function addRemoveActiveClass(previousActivity, currentActivity) {
@@ -214,6 +219,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       
       
       nombreEjercicio.innerHTML = `${listaNombres[i]}`;
+      gifSector.innerHTML = `<img src="${gifs[i]}" class="img-fluid p-0 m-0" style="max-height:300px">`;
       seconds = seconds < 10 ? "0" + seconds : seconds;
       round.innerHTML = `${minutes}:${seconds}`;
       if(seg!=0){
