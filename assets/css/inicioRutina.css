@@ -6,7 +6,10 @@
     --blue: #01567d;
     --green: #44de00;
   }
-  
+  *{
+    font-family: Verdana !important;
+    font-style: Verdana !important;
+  }
   body {
     height: 100vh;
     margin: auto;

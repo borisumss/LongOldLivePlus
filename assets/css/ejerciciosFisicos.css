@@ -1,5 +1,7 @@
 *{
   box-sizing: border-box;
+  /*font-family: Verdana !important;
+  font-style: Verdana !important;*/
 }
 
 
@@ -9,8 +11,13 @@ body {
   background-size: cover;
   background-position: center;
   min-height: 100vh;
+  font-family: Verdana !important;
+  font-style: Verdana !important;
 }
-
+ header{
+  font-family: Verdana !important;
+  font-style: Verdana !important;
+ }
 
 body {
   font-family: "Open Sans", sans-serif;

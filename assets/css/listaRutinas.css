@@ -1,3 +1,8 @@
+*{
+  font-family: Verdana !important;
+  font-style: Verdana !important;
+}
+
 body {
     font-family: "Open Sans", sans-serif;
     color: #fff;
