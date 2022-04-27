@@ -11,8 +11,6 @@
 
 }
 
-
-
 body{
     background-image: url("../img/galeria/fondo.jpg");
     background-repeat: no-repeat;
@@ -23,8 +21,7 @@ body{
 
   
 #letra{
-    font-weight: bold;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Verdana";
     font-size: 30px;
     color:#fdfdfd;
 }
@@ -43,7 +40,7 @@ body{
 }
 
 #tituloApp{
-    font-family: "Open Sans", sans-serif;
+    font-family: "Verdana";
     font-size: 80px;
     margin-top: 80px;
 }
