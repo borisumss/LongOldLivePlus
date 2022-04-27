@@ -1,10 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-body{
-    font-family: 'Poppins', sans-serif;
-    background-color:#FEAD5B;
-}
+
 .content{
-    margin: 5%;
+    margin: 20%;
     margin:auto;
     margin-top: 75px;
     background-color: #fff;
@@ -15,74 +12,23 @@ body{
     width: 700px;
     height: 350px;
 }
-.center-h {
-    justify-content: center;
-  }
-.center-v {
-    align-items: center;
-}
+
 
 
 .signin-text{
-    font-style: normal;
-    font-weight: 600 !important;
-
-}
-.form-control{
-    display: block;
-    width:100%;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height:1.5;
-    border-color: #00ac96 !important;
-    border-style: solid !important;
-    border-width: 0 0 1px 0 !important;
-    padding: 0px !important;
-    color:#495057;
-    height: auto;
-    border-radius: 0;
-    background-color: #fff;
-    background-clip: padding-box;
+    font-style: bolder;
+    font-weight: 900 !important;
+    
 }
 
-
-.form-control:focus{
-
-    color: #495057;
-    background-color: #fff;
-    border-color: #fff;
-    outline: 0;
-    box-shadow: none;
-}
-.birthday-section{
-    padding: 15px;
-}
-.btn-class{
-    border-color: #00ac96;
-    color: #00ac96;
-}
-.btn-class:hover{
-    background-color:  #00ac96;
-    color: #fff;
-}
-
-  .container-fluid {
+.container-fluid {
     padding: 0%;
     background-image: linear-gradient(315deg, #2E3040 0%, #2E3040 75%);
-    border-bottom: 2px solid beige ;
+    border-bottom: 0px solid beige ;
     
     color:beige;
  }
-  
-  
 
-  
-#tituloApp, #letra, #btnEF{
-    font-family: Verdana;
- }
- 
- 
- 
  .TodosTitulo{
      font-size: 48px !important;
      text-align: center !important;
@@ -108,6 +54,7 @@ body{
     border:none;
     border-radius: 5px;
     background-size: 120% auto;
+    background-color: #FD7314;
   }
   
 #volver:hover {
@@ -137,8 +84,78 @@ body{
     right: -20px;
     transition: 0.4s;
 }
-  
 
+
+body {
+    font-family: "Roboto", sans-serif;
+    background: #FEAD5B; 
+    
+   
+    
+  }
+  
+  .container{
+     
+      width: 700px;
+      position: relative;
+      margin-top: 90px;
+      background: white;
+      padding: 0px;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+  }
+  .logo_img{
+      width: 300px;   
+      padding-top: 0%;
+      padding-bottom: 0%;
+      padding-left: 0%;
+  
+  }
+  
+  .form{
+      padding: 10px;
+  }
+  
+  
+  .form__clave{
+      width: 100%;
+      margin-bottom: 40px;
+      position: relative;
+  }
+  .form__usuario{
+      font-size: 20px;
+  
+  }
+  .usuario, .clave{
+      width: 95%;
+      padding: 10px 15px;
+      border: none;
+      outline: none;
+      background: #C4C4C4;
+      
+  }
+  .ver_clave{
+      position: absolute;
+      right: 40px;
+      bottom: 90px;
+      cursor: pointer;
+      font-size: 20px;
+  }
+  .boton{
+      background: #FD7314;
+      padding: 10px 20px;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin: 0 auto;
+  }
+  
+  .form__boton{
+      display: flex;
+      justify-content: flex-start;
+  }
  
  
 

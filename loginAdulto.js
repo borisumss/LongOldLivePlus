@@ -1,11 +1,26 @@
 
-
+let con=true
+function verClave(){
+  let ver=document.getElementById("ver");
+  let clave=document.getElementById("clave")
+  let icono=document.getElementById("icono")
+  if (con==true) {
+    clave.type="text"
+    icono.classList.add("fa-eye-slash")
+    con=false
+} else {
+    clave.type="password"
+    icono.classList.remove("fa-eye-slash")
+    con=true
+}
+  
+}
 
 
 function ingreso(){
     
   var email2 = document.getElementById('email2').value;
-  var contrasena2 = document.getElementById('contrasena2').value;
+  var contrasena2 = document.getElementById('clave').value;
   try {
     firebase.auth().signInWithEmailAndPassword(email2, contrasena2)
     observador();
@@ -50,12 +65,11 @@ function aparece(user){
   var user = user;
   var contenido = document.getElementById('contenido');
   if(user.emailVerified){
-      //contenido.innerHTML = `
-      //<p>Bienvenido!</p>
-     // <button onclick="cerrar()">Cerrar sesión</button> 
-     // <a href="userName.html" >
-      
-    //  `
+   ///   contenido.innerHTML = `
+     // <p>Bienvenido!</p>
+      //<button onclick="cerrar()">Cerrar sesión</button> 
+      //<a href="userName.html" >
+        //`
       window.location="userName.html";
   } 
 }
