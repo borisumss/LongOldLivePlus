@@ -30,19 +30,28 @@
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
         <div class="container d-flex align-items-center justify-content-between">
-            <nav id="navbar" class="navbar">
-                <ul>
-                    <li><a class="nav-link scrollto active" href="listaRutinas.html" id="volver">Volver</a></li>
-                </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav><!-- .navbar -->
-
-            <div class="logo">
-                <h1><a href="index.html">Long Old Live +</a></h1>
-                <!-- Descomentar si se prefiere un logo en lugar de texto -->
-                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            <div class="col col-lg-2">
+                <nav id="navbar" class="navbar">
+                    <ul>
+                        <li><a class="nav-link scrollto active" href="listaRutinas.html" id="volver">Volver</a></li>
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav><!-- .navbar -->
             </div>
+            <div class="col auto-md">
+                <h1 id="nombreRutina" style="font-size: 28px;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+                line-height: 1;
+                font-weight: 700;
+                letter-spacing: 1px;">
 
+                </h1>
+            </div>
+            <div class="col col-lg-2">
+
+            </div>
 
 
         </div>
@@ -56,8 +65,8 @@
             <div class="col-md-6">
                 <div class="row">
                     <button id="circulo" onclick="cambiar()">
-                            INICIAR
-                        </button>
+                        INICIAR
+                    </button>
 
                 </div>
                 <div class="row" id="tasks-container">
@@ -93,8 +102,8 @@
             return res;
         }
 
-        function cambiar(){
-            window.location.href="inicioRutina.html#"+rutina;
+        function cambiar() {
+            window.location.href = "inicioRutina.html#" + rutina;
         }
     </script>
     <script src="../js/generarRutina.js" type="module"></script>

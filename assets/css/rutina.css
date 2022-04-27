@@ -256,8 +256,8 @@ body{
 
 #circulo {
     color:black;
-    width: 300px;
-    height: 290px;
+    width: 200px;
+    height: 190px;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
@@ -266,7 +266,7 @@ body{
     margin-right: auto;
     margin-bottom: 30px;
     border: none;
-    font-size: 70px;
+    font-size: 40px;
     
 }
 #formulario{

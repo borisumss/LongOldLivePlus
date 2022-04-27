@@ -5,6 +5,7 @@ import {
 
 
 const tasksContainer = document.getElementById("tasks-container");
+const nombreRutina = document.getElementById("nombreRutina");
 var url = ""+window.location.href;
 var rutina = limpiar(url) ;
 
@@ -28,6 +29,7 @@ function limpiar(palabra){
 
         onGetTasks2((querySnapshot) => {
             tasksContainer.innerHTML="";
+            nombreRutina.innerHTML=rutina;
     
             querySnapshot.forEach((doc) => {
                 if (doc.id == rutina) {
