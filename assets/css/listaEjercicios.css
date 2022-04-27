@@ -4,14 +4,17 @@
   box-sizing: border-box;
 }
 
-body{
-  background-image: url("../img/galeria/fondo.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  min-height: 100vh;
+h1{
+  color:white;
 }
+  body{
+    background-image: url("../img/galeria/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
 
 
 
@@ -60,9 +63,7 @@ body{
 }
 
 /*Titulo de la pagina*/
-h1{
-  text-decoration: none !important;
-}
+
 
 #img {
   width: 300px;

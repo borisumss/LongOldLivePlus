@@ -252,6 +252,10 @@ body{
     border-radius: 10px; 
     border:none;
     font-size: 100px;
+    position: relative;
+    outline: none;
+    transition: all 0.3s ease;
+    top:2px;
 }
 
 #enlace{
@@ -265,8 +269,11 @@ body{
     color: white;
     border-radius: 10px; 
     border:none;
+    
 }
 
-#rut:hover,#enlace:hover{
-    background-color: #fc8129;
+#rut:hover{
+    top:15px;
+    background-color: #2E3040;
+
 }

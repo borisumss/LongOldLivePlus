@@ -12,8 +12,8 @@
   <link rel="stylesheet" href="../css/listaEjercicios.css">
   <link href="../import/bootstrap/css/bootstrap.min.css" rel="stylesheet"><!--bootstrap 5-->
   <link href="../import/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"><!--iconos boostrap 5-->
-  <link rel="stylesheet" href="../css/style2.css">
-  <link href="../css/plantilla.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/plantilla.css">
+  
     <!-- import archivos JS -->
     <script src="../import/aos/aos.js"></script>
     <script src="../import/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -29,18 +29,28 @@
     crossorigin="anonymous"></script>
 
   
-<header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
-      <div class="container d-flex align-items-center justify-content-between">
+ <!-- ======= Header ======= -->
+ <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+  <div class="container d-flex align-items-center justify-content-between">
       <div class="col col-lg-2">
-       <a class="btn btn-primary" id="volver" href="../html/ejerciciosFisicos.html" role="button">Volver</a>
+          <nav id="navbar" class="navbar">
+              <ul>
+                  <li><a class="nav-link scrollto active" href="../html/ejerciciosFisicos.html" id="volver">Volver</a></li>
+              </ul>
+              <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
       </div>
       <div class="col-auto-md">
-      <h1 style="color:white">Lista de ejercicios</h1>
+          <div class="rutinas align-text-top">
+              <h1>Ver Rutinas</h1>
+          </div>
       </div>
       <div class="col col-lg-2">
+          
       </div>
-    </div>
-</header>
+  
+  </div>
+</header><!-- End Header -->
 <br>
 <br>
 
@@ -60,8 +70,12 @@
 
 
   
-  <script src="../js/generarCard.js" type="module"></script>
+  <script src="../../assets/js/generarCard.js" type="module"></script>
+  <script src="../../assets/import/aos/aos.js"></script>
+  <script src="../../assets/import/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+  <!--archivo JS principal-->
+  <script src="../../assets/js/plantilla.js"></script>
   </body>
 
 
