@@ -27,7 +27,7 @@ function limpiar(palabra){
 let btn = document.querySelector('#start');
 //btn.style.visibility = "hidden";
 
-const formulario = document.getElementById('formulario');
+//const formulario = document.getElementById('formulario');
 const formulario2 = document.getElementById('formulario2');
 
 window.addEventListener("DOMContentLoaded", async (e) => {
@@ -58,7 +58,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
   });
  
-  
+  startTimer();
 });
 
 
@@ -68,7 +68,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
   const icon = document.querySelector("i");
   
   // Obtener boton de Inicio/Parar
-  const startStopBtn = document.getElementById("start");
+  //const startStopBtn = document.getElementById("start");
   
   // ! get Ejercicio y descanso
   const datosEjer = document.getElementById("ejercicio");
@@ -89,9 +89,9 @@ window.addEventListener("DOMContentLoaded", async (e) => {
   
 
     // aparicion Boton stop y evento solo en preparacion
-    startStopBtn.innerHTML = "Stop";
+    /*startStopBtn.innerHTML = "Stop";      aca aparece un boton
     startStopBtn.style.backgroundColor = "#e24379";
-    startStopBtn.onclick = newWorkout;
+    startStopBtn.onclick = newWorkout;*/
 
   
 
@@ -115,7 +115,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
     // Iniciar rutina (ejercicios) luego de preparacion
     setTimeout(() => {
       // Ocultar header
-      document.querySelector("header").style.display = "none";
+      document.querySelector("headerp").style.display = "none";
 
       
       
@@ -208,8 +208,10 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       datosEjer.innerHTML = `${listaNombres[i]}`;
       seconds = seconds < 10 ? "0" + seconds : seconds;
       round.innerHTML = `${minutes}:${seconds}`;
+      if(seg!=0){
       seg--;
-      if(seg == 0 && min > 0){
+      }
+      else if(seg == 0 && min > 0){
         min--;
         seg=59;
       }
@@ -252,10 +254,10 @@ window.addEventListener("DOMContentLoaded", async (e) => {
   }; 
   
 
-  formulario.addEventListener('submit',(e)=>{
+  /*formulario.addEventListener('submit',(e)=>{
     e.preventDefault();
     startTimer();
-  });
+  });*/
 
   formulario2.addEventListener('submit',(e)=>{
     e.preventDefault();
