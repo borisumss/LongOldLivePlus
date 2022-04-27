@@ -4,7 +4,6 @@ import {
 } from "./firebase.js";
 
 
-
 const tasksContainer = document.getElementById("tasks-container");
 var url = ""+window.location.href;
 var rutina = limpiar(url) ;
@@ -25,41 +24,41 @@ function limpiar(palabra){
     return res;
 }
 
-window.addEventListener("DOMContentLoaded", async (e) => {
+    window.addEventListener("DOMContentLoaded", async (e) => {
 
-    onGetTasks2((querySnapshot) => {
-        tasksContainer.innerHTML = "";
-
-        querySnapshot.forEach((doc) => {
-            if (doc.id == rutina) {
-                const task = doc.data();
-
-                let claves = Object.keys(task);
-
-                for (let i = 0; i < claves.length; i++) {
-                    var titulo = claves[i];
-                    var nombreEjer = task[titulo].NombreEjercicio;
-                    var timeMin = task[titulo].MinutosEjercicio;
-                    var timeSeg = task[titulo].SegundosEjercicio;
-                    var timeTotal= timeMin +":"+ timeSeg;
-                    tasksContainer.innerHTML += `
-
-                      <div id="nombres">                         
-                        <h1 id="ejer">${nombreEjer}</h1>
-                        <h2 id="time">Tiempo: ${timeTotal}</h2>
-                      </div>
-                    
-                 
-                `;
+        onGetTasks2((querySnapshot) => {
+            tasksContainer.innerHTML="";
+    
+            querySnapshot.forEach((doc) => {
+                if (doc.id == rutina) {
+                    const task = doc.data();
+    
+                    let claves = Object.keys(task);
+    
+                    for (let i = 0; i < claves.length; i++) {
+                        var titulo = claves[i];
+                        var nombreEjer = task[titulo].NombreEjercicio;
+                        var timeMin = task[titulo].MinutosEjercicio;
+                        var timeSeg = task[titulo].SegundosEjercicio;
+                        var timeTotal= timeMin +":"+ timeSeg;
+                        tasksContainer.innerHTML += `
+    
+                          <div id="nombres">                         
+                            <h1 id="ejer">${nombreEjer}</h1>
+                            <h2 id="time">Tiempo: ${timeTotal}</h2>
+                          </div>
+                        
+                     
+                    `;
+                    }
+                    return true;
                 }
-                return true;
             }
-        }
-
-        );
-
+    
+            );
+    
+        });
     });
-});
 
 (function () {
     "use strict";

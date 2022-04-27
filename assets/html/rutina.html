@@ -43,21 +43,22 @@
                 <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
             </div>
 
-            
+
 
         </div>
     </header><!-- End Header -->
     <div class="container-fluid p-4" id="fondo">
         <div class="row">
             <div class="col-md-3">
-               
+
             </div>
 
-            <div class="col-md-6" >
+            <div class="col-md-6">
                 <div class="row">
-                    <button id="circulo">                         
-                        INICIAR
-                    </button>
+                    <button id="circulo" onclick="cambiar()">
+                            INICIAR
+                        </button>
+
                 </div>
                 <div class="row" id="tasks-container">
 
@@ -69,11 +70,36 @@
             </div>
         </div>
     </div>
-    
-    </body>
-    <script src="../js/generarRutina.js" type="module"></script>
 
+    </body>
+
+    <script>
+        var url = "" + window.location.href;
+        var rutina = limpiar(url);
+
+        function limpiar(palabra) {
+            var res = "";
+            var bandera = false;
+            for (let i = 0; i < palabra.length; i++) {
+                if (palabra[i] == "#") {
+                    bandera = true;
+                    i++;
+                }
+
+                if (bandera) {
+                    res += palabra[i];
+                }
+            }
+            return res;
+        }
+
+        function cambiar(){
+            window.location.href="inicioRutina.html#"+rutina;
+        }
+    </script>
+    <script src="../js/generarRutina.js" type="module"></script>
     <!-- import archivos JS -->
     <script src="../../assets/import/aos/aos.js"></script>
     <script src="../../assets/import/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 </html>

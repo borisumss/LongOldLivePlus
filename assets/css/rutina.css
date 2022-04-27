@@ -1,3 +1,7 @@
+*{
+  font-family: Verdana !important;
+  font-style: Verdana !important;
+}
 body {
     font-family: "Open Sans", sans-serif;
     color: #fff;
@@ -265,6 +269,11 @@ body{
     font-size: 70px;
     
 }
+#formulario{
+  width: 300px;
+  height: 290px;   
+}
+
 #circulo:hover{
     background: #fc8129;
 }

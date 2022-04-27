@@ -1,5 +1,10 @@
 *{
   box-sizing: border-box;
+  font-family: Verdana !important;
+  font-style: Verdana !important;
+}
+h1{
+  color:white;
 }
 
 body {
@@ -88,8 +93,6 @@ body {
 .invalid-feedback{
   color: #FD7314;
 }
-
-
 @media screen and (max-width: 980px){   
   #formulario{
     width: 90%;
@@ -103,20 +106,36 @@ body {
 
 }
 
+@media screen and (max-width: 768px){
+
+  #minCol{
+    padding-bottom:20px !important;
+  }
+}
+
 @media screen and (max-width:600px){
   body{
     /*background-image: linear-gradient(rgb(215, 208, 200),rgb(182, 171, 165));*/
     background-image: url("../img/galeria/fondo-small.png");
   }
 
+  h1{
+    font-size: 30px !important;
+  }
+
   #formulario{
     padding: 4%;
+    font-size: 25px;
   }
 
   #btnRegistrar{
     font-size: 15px;
     padding-bottom: 0%;
     margin-bottom: 1%;
+  }
+
+  #minCol{
+    padding-bottom:20px !important;
   }
 
   #min.form-control{
@@ -125,6 +144,16 @@ body {
 }
 
 @media screen and (max-width: 280px){
+
+  h1{
+    font-size: 25px !important;
+  }
+
+  #formulario{
+    padding: 4%;
+    font-size: 20px;
+  }
+
   #btnRegistrar{
     font-size: 15px;
     padding-bottom: 0%;
@@ -132,5 +161,9 @@ body {
     margin-bottom: 1%;
     width: 52%;
     align-items: center;
+  }
+
+  #minCol{
+    padding-bottom:20px !important;
   }
 }

@@ -1,6 +1,7 @@
-body {
-    font-family: "Open Sans", sans-serif;
-    color: #444444;
+
+body, header {
+    font-family: Verdana !important;
+    font-style: Verdana !important;
   }
   
   a {
@@ -18,7 +19,7 @@ body {
   }
   
  
-  /*--------------------------------------------------------------
+ /*--------------------------------------------------------------
   # Disable AOS delay on mobile para ver menu en responsive
   --------------------------------------------------------------*/
   @media screen and (max-width: 768px) {
@@ -68,13 +69,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 15px 7px 15px;
-    margin-left: 5px;
-    font-size: 14px;
+    padding: 5px 37px 5px 37px;
+    margin-right: 10vh;
+    font-size: 22px;
     color: #fff;
     white-space: nowrap;
     transition: 0.3s;
-    border-radius: 50px;
+    border-radius: 10px;
   }
   .navbar a i, .navbar a:focus i {
     font-size: 12px;
@@ -227,5 +228,3 @@ body {
   .navbar-mobile .dropdown > .dropdown-active {
     display: block;
   }
-  
-  
