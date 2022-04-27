@@ -219,7 +219,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       
       
       nombreEjercicio.innerHTML = `${listaNombres[i]}`;
-      gifSector.innerHTML = `<img src="${gifs[i]}" class="img-fluid p-0 m-0" style="max-height:300px">`;
+      gifSector.innerHTML = `<img src="${gifs[i]}" class="img-fluid" style="max-height:250px" alt="">`;
       seconds = seconds < 10 ? "0" + seconds : seconds;
       round.innerHTML = `${minutes}:${seconds}`;
       if(seg!=0){
