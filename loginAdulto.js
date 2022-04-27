@@ -21,20 +21,29 @@ function ingreso(){
     
   var email2 = document.getElementById('email2').value;
   var contrasena2 = document.getElementById('clave').value;
-  try {
-    firebase.auth().signInWithEmailAndPassword(email2, contrasena2)
-    observador();
   
-  }   
-  catch(error ){
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      console.log(errorCode);
-      console.log(errorMessage);
-      // ...
-    }
-    console.log("hola");
+    firebase.auth().signInWithEmailAndPassword(email2, contrasena2)
+    .catch(function(error ){
+      
+      if (email2=="" && contrasena2=="" ){
+        swal('Ingrese su correo y contraseña','','error');
+      }else if (contrasena2==""){
+        swal('Ingrese su contraseña','','error');
+      }
+      else if (email2==""){
+        swal('Ingrese su Correo','','error');
+      }
+      else{
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log(errorCode);
+        console.log(errorMessage);
+        swal('Datos Incorrectos','','error')
+    
+      }
+    });
+    observador();
 }
 
 function observador(){
@@ -71,7 +80,7 @@ function aparece(user){
       //<a href="userName.html" >
         //`
       window.location="userName.html";
-  } 
+  }
 }
 
 function cerrar(){
