@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="../import/bootstrap/css/bootstrap.min.css" rel="stylesheet">
    
     <script src="https://kit.fontawesome.com/98af28cb8a.js" crossorigin="anonymous"></script>
     <title>Document</title>
@@ -31,15 +30,13 @@
     firebase.initializeApp(config);
     </script>
      <!--js de bootstrap-->
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-     crossorigin="anonymous"></script>
+  <script src="../import/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
     
     <div class="container-fluid p-1">       
-            <a name="volver" id="volver" class="btn btn-primary" href="" role="button">Volver</a>
+            <a name="volver" id="volver" class="btn btn-primary" href="landing-page.html" role="button" style="border-radius: 50px">Volver</a>
             <p class="TodosTitulo" class="text-center fs-1" id="letra">Long Old Live+</p>        
     </div>
     </div>
@@ -48,13 +45,13 @@
             <img class="logo_img" src="../img/galeria/logo.png" alt="">
         </div>
         <div action="" class="form">
-            <h3 class="signin-text text-center " id="letra"> Iniciar Sesion </h3>
+            <h3 class="signin-text text-center " id="letra"> Iniciar Sesión </h3>
             <br>
             <div class="form__usuario">
-                <label class="correo " for="">Correo Electronico:<br></label>
+                <label class="correo" for="email2">Correo Electrónico:<br></label>
                 <input id ="email2" type="email" class="usuario">
                 
-                <label for="">Contraseña:</label>
+                <label for="clave">Contraseña:</label>
                 <input id="clave" type="password" class="clave" >
                 
                 <span id="ver" onclick="verClave()" class="ver_clave"><i id="icono" class="fas fa-eye"></i></span>
@@ -62,7 +59,7 @@
             <h2 ></h2>
             
             <div class="form__boton">
-                <button onclick="ingreso()" class="boton">Acceder</button>
+                <button onclick="ingreso()" class="boton" style="border-radius: 50px">Acceder</button>
                 
                
             </div>
