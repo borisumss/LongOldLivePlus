@@ -54,7 +54,7 @@
     transition: all 0.2s ease;
   }
   .input-group {
-    padding: 1rem;
+    padding: 0rem;
   }
   label.roundTime {
     font-size: 1.1rem;
@@ -111,7 +111,6 @@
   .fas {
     font-size: 20rem;
     position: absolute;
-  
     top: 10vh;
     z-index: -1;
     color: var(--red);
@@ -132,8 +131,10 @@
   .group {
     display: none;
   }
+
+  /*tamaño cronometro*/
   .active {
-    font-size: 30vh;
+    font-size: 20vh;
     display: flex;
   }
   
@@ -142,6 +143,7 @@
     font-size: 10vh;
   }
   
+  /*div de cronometro y*/
   .round-time,
   .rest-time {
     background-color: var(--bg-c-2);

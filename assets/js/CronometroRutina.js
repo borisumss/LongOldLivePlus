@@ -5,6 +5,7 @@ import {
 var listaNombres = new Array();
 var mins = new Array();
 var segs = new Array();
+var gifs = new Array();
 
 var url = ""+window.location.href;
 var rutina = limpiar(url) ;
@@ -27,8 +28,10 @@ function limpiar(palabra){
 let btn = document.querySelector('#start');
 //btn.style.visibility = "hidden";
 
-const formulario = document.getElementById('formulario');
+//const formulario = document.getElementById('formulario');
 const formulario2 = document.getElementById('formulario2');
+const nombreEjercicio = document.getElementById('nombreEjercicio');
+const gifSector = document.getElementById('gif_ejercicio');
 
 window.addEventListener("DOMContentLoaded", async (e) => {
 
@@ -44,9 +47,11 @@ window.addEventListener("DOMContentLoaded", async (e) => {
                   var nombreEjer = task[titulo].NombreEjercicio;
                   var minutos = task[titulo].MinutosEjercicio;
                   var segundos = task[titulo].SegundosEjercicio;
+                  var gif = task[titulo].GifURL;
                   listaNombres.push(nombreEjer);
                   mins.push(minutos);
                   segs.push(segundos);
+                  gifs.push(gif);
                   
               }
               btn.style.visibility = "visible";
@@ -58,7 +63,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
   });
  
-  
+  startTimer();
 });
 
 
@@ -68,16 +73,15 @@ window.addEventListener("DOMContentLoaded", async (e) => {
   const icon = document.querySelector("i");
   
   // Obtener boton de Inicio/Parar
-  const startStopBtn = document.getElementById("start");
+  //const startStopBtn = document.getElementById("start");
   
   // ! get Ejercicio y descanso
-  const datosEjer = document.getElementById("ejercicio");
   const round1 = document.getElementById("round_1");
   const rest1 = document.getElementById("rest_1");
  
   
 
-  let tam = mins.length;
+  
   let i = 0;
 
   //Funcion llamada por el boton "Start"
@@ -85,13 +89,13 @@ window.addEventListener("DOMContentLoaded", async (e) => {
     // Tiempo en segundos de ronda y rest
     let min;  //Obtener datos de firebase del n-esimo ejercicio?
     let seg; //Obtener datos de firebase del n-esimo ejercicio?
-    let restTime = 1;
+    let restTime = 15;
   
 
     // aparicion Boton stop y evento solo en preparacion
-    startStopBtn.innerHTML = "Stop";
+    /*startStopBtn.innerHTML = "Stop";      aca aparece un boton
     startStopBtn.style.backgroundColor = "#e24379";
-    startStopBtn.onclick = newWorkout;
+    startStopBtn.onclick = newWorkout;*/
 
   
 
@@ -100,6 +104,8 @@ window.addEventListener("DOMContentLoaded", async (e) => {
     let preparacion = 10;
     let preparar = setInterval(() => {
       console.log("Descanso "+preparacion);
+      nombreEjercicio.innerHTML = `${rutina}`;
+      
       startCountdown.innerHTML = `
     <div class="inputs-container flex">
       <h2 id='seconds' class='active animateSeconds'>${preparacion}</h2>
@@ -115,7 +121,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
     // Iniciar rutina (ejercicios) luego de preparacion
     setTimeout(() => {
       // Ocultar header
-      document.querySelector("header").style.display = "none";
+      document.querySelector("headerp").style.display = "none";
 
       
       
@@ -129,7 +135,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
           round1.parentElement.classList.add("active");
           //   ! Change Icon
           addRemoveIconClass("fa-heartbeat", "fa-fist-raised");
-
+          
           //   ! Alert 10 sec
           checkFor10Sec(round1);
 
@@ -145,6 +151,8 @@ window.addEventListener("DOMContentLoaded", async (e) => {
               
               </div>  
             `;
+            nombreEjercicio.innerHTML = "Rutina Completada";
+            
             document.querySelector("#test").style.display = "none";
             icon.classList.remove("fa-fist-raised");
             icon.classList.remove("fa-chair");
@@ -157,6 +165,9 @@ window.addEventListener("DOMContentLoaded", async (e) => {
             updateRest(rest1);
             //   ! Change Icon
             addRemoveIconClass("fa-fist-raised", "fa-chair");
+            nombreEjercicio.innerHTML = "Descanso";
+            //gif aqui
+
             //   ! Alert 10 sec
   
             checkFor10Sec(rest1);
@@ -192,6 +203,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
     function addRemoveIconClass(currentIcon, nextIcon) {
       icon.classList.remove(currentIcon);
       icon.classList.add(nextIcon);
+      
     }
 
     function addRemoveActiveClass(previousActivity, currentActivity) {
@@ -205,11 +217,15 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       let minutes = min;
       let seconds = parseInt(seg);
       
-      datosEjer.innerHTML = `${listaNombres[i]}`;
+      
+      nombreEjercicio.innerHTML = `${listaNombres[i]}`;
+      gifSector.innerHTML = `<img src="${gifs[i]}" class="img-fluid" style="max-height:250px" alt="">`;
       seconds = seconds < 10 ? "0" + seconds : seconds;
       round.innerHTML = `${minutes}:${seconds}`;
+      if(seg!=0){
       seg--;
-      if(seg == 0 && min > 0){
+      }
+      else if(seg == 0 && min > 0){
         min--;
         seg=59;
       }
@@ -236,12 +252,6 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       rest.innerHTML = `${0}:${restTime}`;
     }
   
-      
-  
-    
-  
-      
-    
   };
   
   // ! Utility Function
@@ -252,10 +262,10 @@ window.addEventListener("DOMContentLoaded", async (e) => {
   }; 
   
 
-  formulario.addEventListener('submit',(e)=>{
+  /*formulario.addEventListener('submit',(e)=>{
     e.preventDefault();
     startTimer();
-  });
+  });*/
 
   formulario2.addEventListener('submit',(e)=>{
     e.preventDefault();

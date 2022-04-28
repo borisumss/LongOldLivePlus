@@ -22,7 +22,7 @@ body, header{
     font-style: Verdana !important;
 }
 #tituloApp, #letra, #btnEF{
-   font-family: "Open Sans", sans-serif;
+   font-family: "Verdana";
 }
 
 #tituloApp{
@@ -64,7 +64,7 @@ body, header{
 #lista, #registrar, #rutinas{
     text-align: center;
     border:none;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Verdana";
     font-size: 30px;
     transition: all 0.3s ease;
     position: relative;
@@ -101,7 +101,7 @@ body, header{
     #lista, #registrar, #rutinas{
         text-align: center;
         border:none;
-        font-family: "Open Sans", sans-serif;
+        font-family: "Verdana";
         font-size: 28px;
         transition: all 0.3s ease;
         position: relative;
@@ -168,7 +168,7 @@ body, header{
     #lista, #registrar, #rutinas{
         text-align: center;
         border:none;
-        font-family: "Open Sans", sans-serif;
+        font-family: "Verdana";
         font-size: 17px;
         transition: all 0.3s ease;
         position: relative;
@@ -235,7 +235,7 @@ body, header{
     #lista, #registrar, #rutinas{
         text-align: center;
         border:none;
-        font-family: "Open Sans", sans-serif;
+        font-family: "Verdana";
         font-size: 14px;
     }
 }
@@ -271,7 +271,7 @@ body, header{
         text-align: center;
         border:none;
         width: 144px;
-        font-family: "Open Sans", sans-serif;
+        font-family: "Verdana";
         font-size: 12px;
     }
 }
