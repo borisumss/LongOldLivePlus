@@ -111,7 +111,6 @@
   .fas {
     font-size: 20rem;
     position: absolute;
-  
     top: 10vh;
     z-index: -1;
     color: var(--red);
