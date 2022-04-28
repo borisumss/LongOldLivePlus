@@ -169,6 +169,10 @@
     animation: animateTime 1s ease;
   }
   
+  #volver{
+      display: none;
+  }
+
   @keyframes animateTime {
     from {
       opacity: 1;
