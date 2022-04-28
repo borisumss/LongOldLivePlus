@@ -30,18 +30,17 @@
     };
     firebase.initializeApp(config);
     </script>
+     <!--js de bootstrap-->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+     crossorigin="anonymous"></script>
 </head>
 
 <body>
-      <!--js de bootstrap-->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"></script>
-    <div class="container-fluid">
-        <div class="p-1 text-left">
+    
+    <div class="container-fluid p-1">       
             <a name="volver" id="volver" class="btn btn-primary" href="" role="button">Volver</a>
-            <p class="TodosTitulo" class="text-center fs-1" id="letra">Long Old Live+</p>
-        </div>
+            <p class="TodosTitulo" class="text-center fs-1" id="letra">Long Old Live+</p>        
     </div>
     </div>
         <div class="container">
@@ -52,7 +51,7 @@
             <h3 class="signin-text text-center " id="letra"> Iniciar Sesion </h3>
             <br>
             <div class="form__usuario">
-                <label for="">Correo Electronico:<br></label>
+                <label class="correo " for="">Correo Electronico:<br></label>
                 <input id ="email2" type="email" class="usuario">
                 
                 <label for="">Contraseña:</label>
