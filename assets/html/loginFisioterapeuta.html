@@ -57,6 +57,23 @@
         </div>
     </div>
     <script type="module" src="../js/loginFisioterapeuta.js"></script>
+    <script>
+        let con=true;
+        function verClave(){
+            let ver=document.getElementById("ver");
+            let clave=document.getElementById("contraseñaFisioterapeuta")
+            let icono=document.getElementById("icono")
+            if (con==true) {
+                clave.type="text"
+                icono.classList.add("fa-eye-slash")
+                con=false
+            }else{
+                clave.type="password"
+                icono.classList.remove("fa-eye-slash")
+            con=true
+            }
+        }
+    </script>
 </body>
 
 </html>
