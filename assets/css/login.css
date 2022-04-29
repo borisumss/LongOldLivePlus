@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.content{
+    margin: 20%;
+    margin:auto;
+    margin-top: 75px;
+    background-color: #fff;
+    padding: 4rem 1rem 4rem 1rem;
+    box-shadow: 0 0 5px 5px rgba(0,0,0, .05);
+  
+    align-items: start;
+    width: 700px;
+    height: 350px;
+}
+
+
+
+.signin-text{
+    font-style: bolder;
+    font-weight: 900 !important;
+    
+}
+
+.container-fluid {
+    padding: 0%;
+    background-image: linear-gradient(315deg, #2E3040 0%, #2E3040 75%);
+    border-bottom: 0px solid beige ;
+    
+    color:beige;
+ }
+
+ .TodosTitulo{
+     font-size: 48px !important;
+     text-align: center !important;
+ }
+ 
+ #letra,#btnEF{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 15px;
+ }
+ #volver {
+    min-width: 130px;
+    height: 40px;
+    position: absolute;
+    top: 34px;
+    left: 30px;
+    color: #fff;
+    padding: 0px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: Verdana;
+    font-size: 25px;
+    border:none;
+    border-radius: 5px;
+    background-size: 120% auto;
+    background-color: #FD7314;
+  }
+  
+#volver:hover {
+    background-position: right center;
+    border-radius: 5px;
+    padding-right: 24px;
+    padding-left: 8px;
+    
+}
+  
+#volver:active {
+    left: 1px;
+}
+  
+#volver:hover:after {
+    opacity: 1;
+    right: 10px;
+}
+  
+#volver:after {
+    content: "\00AB";
+    position: absolute;
+    opacity: 0;
+    font-size: 20px;
+    line-height: 40px;
+    top: 0;
+    right: -20px;
+    transition: 0.4s;
+}
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    background: #FEAD5B; 
+    
+   
+    
+  }
+  
+  .container{
+     
+      width: 700px;
+      position: relative;
+      margin-top: 90px;
+      background: white;
+      padding: 0px;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+  }
+  .logo_img{
+      width: 300px;   
+      padding-top: 0%;
+      padding-bottom: 0%;
+      padding-left: 0%;
+  
+  }
+  
+  .form{
+      padding: 10px;
+  }
+  
+  
+  .form__clave{
+      width: 100%;
+      margin-bottom: 40px;
+      position: relative;
+  }
+  .form__usuario{
+      font-size: 20px;
+  
+  }
+  .usuario, .clave{
+      width: 95%;
+      padding: 10px 15px;
+      border: none;
+      outline: none;
+      background: #C4C4C4;
+      
+  }
+  .ver_clave{
+      position: absolute;
+      right: 40px;
+      bottom: 90px;
+      cursor: pointer;
+      font-size: 20px;
+  }
+  .boton{
+      background: #FD7314;
+      padding: 10px 20px;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin: 0 auto;
+  }
+  
+  .form__boton{
+      display: flex;
+      justify-content: flex-start;
+  }

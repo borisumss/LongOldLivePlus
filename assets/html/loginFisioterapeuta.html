@@ -12,24 +12,9 @@
     <script src="https://kit.fontawesome.com/98af28cb8a.js" crossorigin="anonymous"></script>
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="estilos/loginA.css" />
+    <link rel="stylesheet" href="../css/login.css" />
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-    <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>               
-    <script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyC1WJuRzxe5M5wtvRx-BK6c7mOps4usdR4",
-          authDomain: "long-old-live-plus-aab44.firebaseapp.com",
-          databaseURL: "https://long-old-live-plus-aab44-default-rtdb.firebaseio.com",
-          projectId: "long-old-live-plus-aab44",
-          storageBucket: "long-old-live-plus-aab44.appspot.com",
-          messagingSenderId: "371071760445",
-          appId: "1:371071760445:web:b44da528fddb82bb759254"
-    };
-    firebase.initializeApp(config);
-    </script>
 </head>
 
 <body>
@@ -46,30 +31,32 @@
     </div>
         <div class="container">
         <div class="logo">
-            <img class="logo_img" src="images/logo.png" alt="">
+            <img class="logo_img" src="../img/galeria/fisioterapeutaLogo1.jpg" alt="">
         </div>
-        <div action="" class="form">
-            <h3 class="signin-text text-center " id="letra"> Iniciar Sesion </h3>
-            <br>
-            <div class="form__usuario">
-                <label for="">Correo Electronico:<br></label>
-                <input id ="email2" type="email" class="usuario">
+        <form id="login">
+            <div action="" >
+                <h3 class="signin-text text-center " id="letra"> Iniciar Sesion </h3>
+                <br>
+                <div class="form__usuario">
+                    <label for="">Correo Electronico:<br></label>
+                    <input id ="emailFisioterapeuta" type="email" class="usuario">
                 
-                <label for="">Contraseña:</label>
-                <input id="clave" type="password" class="clave" >
+                    <label for="">Contraseña:</label>
+                    <input id="contraseñaFisioterapeuta" type="password" class="clave" >
                 
-                <span id="ver" onclick="verClave()" class="ver_clave"><i id="icono" class="fas fa-eye"></i></span>
-            </div>
-            <h2 ></h2>
+                    <span id="ver" onclick="verClave()" class="ver_clave"><i id="icono" class="fas fa-eye"></i></span>
+                </div>
+                
             
-            <div class="form__boton">
-                <button onclick="ingreso()" class="boton">Acceder</button>
-                
-               
+                <div class="form__boton">
+                    <button type="submit" name="iniciarSesionFisioterapeuta" class="boton">Acceder</button>
+                </div>
             </div>
+        </form>
+            
         </div>
     </div>
-    <script src="loginAdulto.js"></script>
+    <script type="module" src="../js/loginFisioterapeuta.js"></script>
 </body>
 
 </html>
