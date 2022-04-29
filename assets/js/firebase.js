@@ -20,7 +20,7 @@ const app = initializeApp(firebaseConfig);
 
 import { getFirestore, collection, addDoc, doc, setDoc, getDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"
 import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-storage.js"
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"
 
 
 //conexion a Firestore
@@ -52,6 +52,7 @@ export const guardarRegistro = (nombre, descripcion, musculo, minutos, segundos,
       
     },(error) => {
       alert("error: gif no subido");
+      Swal.close();
     },
     ()=>{
       getDownloadURL(uploadTask.snapshot.ref).then((downloadURL)=>{
@@ -63,7 +64,7 @@ export const guardarRegistro = (nombre, descripcion, musculo, minutos, segundos,
 
           setTimeout( function(){
             Swal.close();
-            window.location.href="ejerciciosFisicos.html";
+            window.location.href="ejerciciosFisicosFTP.html#Fisioterapeuta";
           },3000);
           
         
@@ -90,7 +91,21 @@ export const autenticacion = (email, password) => {
     const docUser = await getDoc(listausers)
     const tipoUser = docUser.data().tipo
     if (tipoUser == "fisioterapeuta"){
-      window.location = "../html/ejerciciosFisicosFTP.html";
+      
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          // User is signed in, see docs for a list of available properties
+          // https://firebase.google.com/docs/reference/js/firebase.User
+          const uid = user.uid;
+          
+          window.location = "../html/index.html";
+          // ...
+        } else {
+          // User is signed out
+          // ...
+        }
+      });
+      
     }else{
       alert("No es un usuario Fisioterapeuta")
     }
@@ -105,7 +120,7 @@ export const autenticacion = (email, password) => {
 
 }
 
-//export const conf = initializeApp(firebaseConfig);
+export const conf = initializeApp(firebaseConfig);
 
 //export const db = getFirestore();
 

@@ -27,7 +27,7 @@
           <div class="col col-lg-2">
               <nav id="navbar" class="navbar">
                   <ul>
-                      <li><a class="nav-link scrollto active" href="../html/index.html" id="volver">Volver</a></li>
+                      <li><a class="nav-link scrollto active" onclick="redireccionar()" id="volver">Volver</a></li>
                   </ul>
                   <i class="bi bi-list mobile-nav-toggle"></i>
               </nav><!-- .navbar -->
@@ -137,4 +137,18 @@
   <!--archivo JS principal-->
   <script src="../../assets/js/plantilla.js"></script>
 </body>
+
+<script>
+  var url = "" + window.location.href;
+  var pos = url.indexOf("#");
+  var res = "";
+
+    for (var i = pos + 1; i < url.length && i > 0; i++) {
+      res += url[i];
+    }
+
+  function redireccionar() {
+    window.location.href = "../html/ejerciciosFisicosFTP.html#" + res;
+  }
+</script>
 </html>
