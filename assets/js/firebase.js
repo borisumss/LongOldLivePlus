@@ -104,7 +104,7 @@ export const autenticacion = (email, password) => {
       });
       
     }else{
-      alert("No es un usuario Fisioterapeuta")
+      swal('No es un usuario Fisioterapeuta','','error');
     }
     console.log("Usuario logeado  :")
     console.log(tipoUser == "fisioterapeuta")

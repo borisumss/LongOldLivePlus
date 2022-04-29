@@ -22,7 +22,7 @@ function verClave() {
 function ingreso() {
 
   var email2 = document.getElementById('email2').value;
-  var contrasena2 = document.getElementById('clave').value;
+  var contrasena2 = document.getElementById('contraseñaAM').value;
 
   firebase.auth().signInWithEmailAndPassword(email2, contrasena2)
     .then(async (userCredential) => {
@@ -135,7 +135,7 @@ function link() {
 
 }
 
-const tasksContainer = document.getElementById("cont");
+/*const tasksContainer = document.getElementById("cont");
 
 firebase.auth().onAuthStateChanged(function (user) {
 
@@ -151,4 +151,4 @@ firebase.auth().onAuthStateChanged(function (user) {
          
         `;
 
-});
+});*/
