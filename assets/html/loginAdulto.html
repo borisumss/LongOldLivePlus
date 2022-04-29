@@ -9,10 +9,15 @@
   <link href="../import/bootstrap/css/bootstrap.min.css" rel="stylesheet">
    
     <script src="https://kit.fontawesome.com/98af28cb8a.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Iniciar Sesión</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="../../assets/import/aos/aos.css" rel="stylesheet">
+    <!--ver menu en responsive-->
+    <link href="../../assets/import/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--bootstrap 5-->
+    <link href="../../assets/import/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/loginA.css" />
-
+    <link rel="stylesheet" href="../css/login.css" />
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>               
@@ -40,7 +45,7 @@
             <p class="TodosTitulo" class="text-center fs-1" id="letra">Long Old Live+</p>        
     </div>
     </div>
-        <div class="container">
+        <div class="container" id="contenedor">
         <div class="logo">
             <img class="logo_img" src="../img/galeria/logo.png" alt="">
         </div>
@@ -52,9 +57,10 @@
                 <input id ="email2" type="email" class="usuario">
                 
                 <label for="clave">Contraseña:</label>
-                <input id="clave" type="password" class="clave" >
-                
-                <span id="ver" onclick="verClave()" class="ver_clave"><i id="icono" class="fas fa-eye"></i></span>
+                <div class="input-group flex-nowrap" id="contra">
+                    <input id="contraseñaAM" type="password" class="clave">
+                    <span class="input-group-text" id="ver_clave" onclick="verClave()"><i id="icono" class="fas fa-eye"></i></span>  
+                </div>
             </div>
             <h2 ></h2>
             

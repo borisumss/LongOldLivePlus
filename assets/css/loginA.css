@@ -140,10 +140,8 @@ body {
       
   }
   
-  .ver_clave{
-      position: absolute;
-      right: 0px !important;
-      bottom: 90px;
+  #ver_clave{
+      
       cursor: pointer;
       font-size: 20px;
   }

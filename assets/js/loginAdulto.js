@@ -3,8 +3,8 @@
 
 let con = true
 function verClave() {
-  let ver = document.getElementById("ver");
-  let clave = document.getElementById("clave")
+  let ver = document.getElementById("ver_clave");
+  let clave = document.getElementById("contraseñaAM")
   let icono = document.getElementById("icono")
   if (con == true) {
     clave.type = "text"
