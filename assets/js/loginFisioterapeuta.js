@@ -1,6 +1,6 @@
 import { autenticacion } from './firebase.js'
-//let con=true;
-/*function verClave(){
+let con=true;
+function verClave(){
   let ver=document.getElementById("ver");
   let clave=document.getElementById("contraseñaFisioterapeuta")
   let icono=document.getElementById("icono")
@@ -13,7 +13,7 @@ import { autenticacion } from './firebase.js'
     icono.classList.remove("fa-eye-slash")
     con=true
     }
-}*/
+}
 
 
 
