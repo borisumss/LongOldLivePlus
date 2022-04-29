@@ -18,7 +18,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 
-import { getFirestore, collection, addDoc, doc, setDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"
+import { getFirestore, collection, addDoc, doc, setDoc, getDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"
 import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-storage.js"
 import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"
 
@@ -84,10 +84,18 @@ export const guardarRegistro = (nombre, descripcion, musculo, minutos, segundos,
 
 export const autenticacion = (email, password) => {
   signInWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
+  .then(async (userCredential) => {
     const user = userCredential.user;
-    console.log("Usuario logeado")
-    
+    const listausers = doc(cloudDB, "Users", user.uid)
+    const docUser = await getDoc(listausers)
+    const tipoUser = docUser.data().tipo
+    if (tipoUser == "fisioterapeuta"){
+      window.location = "../html/ejerciciosFisicosFTP.html";
+    }else{
+      alert("No es un usuario Fisioterapeuta")
+    }
+    console.log("Usuario logeado  :")
+    console.log(tipoUser == "fisioterapeuta")
   })
   .catch((error) => {
     const errorCode = error.code;
