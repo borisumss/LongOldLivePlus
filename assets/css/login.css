@@ -117,7 +117,7 @@ body {
     background: #FD7314;
     padding: 10px 20px;
     color: white;
-    border-radius: 10px;
+    border-radius: 10px !important;
     border: none;
     cursor: pointer;
     margin-left: auto;
