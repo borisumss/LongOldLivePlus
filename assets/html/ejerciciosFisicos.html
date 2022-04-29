@@ -50,11 +50,11 @@
   <div class="container " id="botones">
     <br><br><br>
     <div class="d-grid gap-5 col-6 mx-auto ">
-      <a name="lista de ejercicios" id="lista" class="btn btn-primary" href="../html/listaEjercicios.html"
+      <a name="lista de ejercicios" id="lista" class="btn btn-primary" onclick="redireccionarEjercicios()"
         role="button">
         <i class="fa-solid fa-list" id="btn-lista"></i> Lista de ejercicios</a>
-      <a name="registrar ejercicio" id="registrar" class="btn btn-primary" href="../html/listaRutinas.html"
-        role="button"><i class="bi bi-calendar-check"></i> Ver rutinas</a>
+      <a name="registrar ejercicio" id="registrar" class="btn btn-primary" onclick="redireccionarRutina()"
+        role="button"><i class="bi bi-calendar-check"></i> Lista de rutinas</a>
     </div>
   </div>
 
@@ -65,18 +65,24 @@
   <script src="../js/plantilla.js"></script>
 </body>
 <script>
-  function redireccionar() {
-    var url = "" + window.location.href;
-    var pos = url.indexOf("#");
-    var res = "";
+  var url = "" + window.location.href;
+  var pos = url.indexOf("#");
+  var res = "";
 
     for (var i = pos + 1; i < url.length && i > 0; i++) {
       res += url[i];
     }
 
+  function redireccionar() {
     window.location.href = "../html/index.html#" + res;
-    
+  }
 
+  function redireccionarEjercicios() {
+    window.location.href = "../html/listaEjercicios.html#" + res;
+  }
+
+  function redireccionarRutina() {
+    window.location.href = "../html/listaRutinas.html#" + res;
   }
 </script>
 

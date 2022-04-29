@@ -11,20 +11,12 @@ var url = ""+window.location.href;
 var rutina = limpiar(url) ;
 
 function limpiar(palabra){
-    var res ="";
-    var bandera = false;
-    for(let i=0;i<palabra.length;i++){
-        if(palabra[i]=="#"){
-            bandera= true;
-            i++;
-        }
-
-        if(bandera){
-            res+=palabra[i];
-        }
-    }
-    return res;
+ 
+  var pos2 = palabra.indexOf("-");
+  var res2= palabra.substring(pos2+1,palabra.length);;
+  return res2;
 }
+
 let btn = document.querySelector('#start');
 //btn.style.visibility = "hidden";
 
@@ -109,7 +101,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       startCountdown.innerHTML = `
     <div class="inputs-container flex">
       <h2 id='seconds' class='active animateSeconds'>${preparacion}</h2>
-      <h4 class='title'>¡Prepárate</h4>
+      <h4 class='title'>¡Prepárate!</h4>
       </div>
     `;
       preparacion--;
@@ -144,10 +136,10 @@ window.addEventListener("DOMContentLoaded", async (e) => {
             clearInterval(rutina);
             
             formulario2.innerHTML = `
-            <h1 class="title" >Terminaste rutina</h1>
+            <h1 class="title" >Terminaste la rutina</h1>
             <div class="inputs-container">
               
-              <button class="btn" type="submit">Again</button>
+              <button class="btn" id="again" type="submit">Repetir</button>
               
               </div>  
             `;
