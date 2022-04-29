@@ -29,7 +29,7 @@ const cloudDB = getFirestore();
 const storage = getStorage();
 
 const auth = getAuth();
-var progress;
+var progress
 export const guardarRegistro = (nombre, descripcion, musculo, minutos, segundos, gif) => {
   const storageRef = sRef(storage, 'gifs/' + Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1)+".gif");
   const uploadTask = uploadBytesResumable(storageRef, gif);
@@ -51,7 +51,7 @@ export const guardarRegistro = (nombre, descripcion, musculo, minutos, segundos,
         } 
       
     },(error) => {
-      alert("error: gif no subido por el siguiente motivo:"+error);
+      alert("error: gif no subido");
       Swal.close();
     },
     ()=>{
@@ -87,6 +87,7 @@ export const autenticacion = (email, password) => {
   signInWithEmailAndPassword(auth, email, password)
   .then(async (userCredential) => {
     const user = userCredential.user;
+
     const listausers = doc(cloudDB, "Users", user.uid)
     const docUser = await getDoc(listausers)
     const tipoUser = docUser.data().tipo
@@ -94,15 +95,11 @@ export const autenticacion = (email, password) => {
       
       onAuthStateChanged(auth, (user) => {
         if (user) {
-          // User is signed in, see docs for a list of available properties
-          // https://firebase.google.com/docs/reference/js/firebase.User
           const uid = user.uid;
-          
           window.location = "../html/index.html";
-          // ...
+
         } else {
-          // User is signed out
-          // ...
+          
         }
       });
       
@@ -113,6 +110,18 @@ export const autenticacion = (email, password) => {
     console.log(tipoUser == "fisioterapeuta")
   })
   .catch((error) => {
+    if (email == "" && password == "") {
+      swal('Ingrese su correo y contraseña', '', 'error');
+    } else if (password == "") {
+      swal('Ingrese su contraseña', '', 'error');
+    }
+    else if (email == "") {
+      swal('Ingrese su Correo', '', 'error');
+    }
+    else {
+      swal('Datos Incorrectos', '', 'error');
+      
+    }
     const errorCode = error.code;
     const errorMessage = error.message;
     console.log(errorCode + errorMessage)
@@ -120,6 +129,9 @@ export const autenticacion = (email, password) => {
 
 }
 
+export const conf = initializeApp(firebaseConfig);
+
+//export const db = getFirestore();
 
 export const onGetTasks = (callback) =>
   onSnapshot(collection(cloudDB, "Ejercicio"), callback);

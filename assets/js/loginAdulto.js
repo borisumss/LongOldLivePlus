@@ -25,6 +25,29 @@ function ingreso() {
   var contrasena2 = document.getElementById('clave').value;
 
   firebase.auth().signInWithEmailAndPassword(email2, contrasena2)
+    .then(async (userCredential) => {
+      const user = userCredential.user;
+
+      const listausers = doc(cloudDB, "Users", user.uid)
+      const docUser = await getDoc(listausers)
+      const tipoUser = docUser.data().tipo
+      if (tipoUser == "adulto"){
+        
+        onAuthStateChanged(auth, (user) => {
+          if (user) {
+            const uid = user.uid;
+            window.location = "../html/index.html";
+
+          } else {
+            
+          }
+        });
+        
+      }else{
+        alert("No es un usuario Fisioterapeuta")
+      }
+      
+    })
     .catch(function (error) {
 
       if (email2 == "" && contrasena2 == "") {
