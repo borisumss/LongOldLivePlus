@@ -139,9 +139,10 @@ body {
       background: #C4C4C4;
       
   }
+  
   .ver_clave{
       position: absolute;
-      right: 40px;
+      right: 0px !important;
       bottom: 90px;
       cursor: pointer;
       font-size: 20px;
@@ -191,10 +192,4 @@ body {
         bottom: 70px;
     
 }
-
- 
-
-   
- 
-
-  
+}
