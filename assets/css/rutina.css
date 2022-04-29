@@ -318,7 +318,7 @@ body{
 }
 #imagentrofeo{
   height: 400px;
-  width: 800px;
+  width: 800px;/*viene con limite ya la imagen, no es 800*/
 }
 #formulario{
   width: 300px;

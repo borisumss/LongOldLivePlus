@@ -89,7 +89,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
     // Tiempo de preparacion 10 seg antes de iniciar rutina
     const startCountdown = document.querySelector(".title");
-    let preparacion = 3;
+    let preparacion = 10;
     let preparar = setInterval(() => {
       nombreEjercicio.innerHTML = `${rutina}`;
       
@@ -138,7 +138,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
             
             <div class="inputs-container">
               <li id="botonesfinrutina">
-              <button class="btn" id="listaEjerFinRutina" type="submit">Lista De Ejercicios</button>
+              <button class="btn" id="listaEjerFinRutina" type="submit">Lista De Rutinas</button>
               </li>
               <li>
               <div id="divdefelicitacion">
@@ -186,7 +186,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
           }
         } 
       }, 1000);
-    }, 4000);
+    }, 11000);
 
     // Pinta tiempo en rojo a los 10 segundos sino lo deja en verde
 
