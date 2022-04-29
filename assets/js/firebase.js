@@ -52,6 +52,7 @@ export const guardarRegistro = (nombre, descripcion, musculo, minutos, segundos,
       
     },(error) => {
       alert("error: gif no subido");
+      Swal.close();
     },
     ()=>{
       getDownloadURL(uploadTask.snapshot.ref).then((downloadURL)=>{
@@ -63,7 +64,7 @@ export const guardarRegistro = (nombre, descripcion, musculo, minutos, segundos,
 
           setTimeout( function(){
             Swal.close();
-            window.location.href="ejerciciosFisicos.html";
+            window.location.href="ejerciciosFisicosFTP.html#Fisioterapeuta";
           },3000);
           
         
@@ -86,7 +87,8 @@ export const autenticacion = (email, password) => {
   signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     const user = userCredential.user;
-    console.log("Usuario logeado")
+    console.log("Usuario logeado");
+    window.location.href="index.html#Fisioterapeuta";
     
   })
   .catch((error) => {
@@ -97,7 +99,7 @@ export const autenticacion = (email, password) => {
 
 }
 
-//export const conf = initializeApp(firebaseConfig);
+export const conf = initializeApp(firebaseConfig);
 
 //export const db = getFirestore();
 
