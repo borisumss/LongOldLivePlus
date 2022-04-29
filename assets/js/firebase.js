@@ -29,7 +29,7 @@ const cloudDB = getFirestore();
 const storage = getStorage();
 
 const auth = getAuth();
-//var progress
+var progress
 export const guardarRegistro = (nombre, descripcion, musculo, minutos, segundos, gif) => {
   const storageRef = sRef(storage, 'gifs/' + Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1)+".gif");
   const uploadTask = uploadBytesResumable(storageRef, gif);
