@@ -135,13 +135,20 @@ window.addEventListener("DOMContentLoaded", async (e) => {
             clearInterval(rutina);
             
             formulario2.innerHTML = `
-            <h1 class="title" >¡Felicitaciones!</h1>
+            
             <div class="inputs-container">
-              
-              <button class="btn" id="repetir" type="submit">Repetir</button>
-              
+              <li id="botonesfinrutina">
               <button class="btn" id="listaEjerFinRutina" type="submit">Lista De Ejercicios</button>
-              
+              </li>
+              <li>
+              <div id="divdefelicitacion">
+                <img id="imagentrofeo" src="../img/galeria/trofeofinrutina.jpg" class="img-fluid" alt="">
+                <h1 class="felicitacion" >¡Felicitaciones!</h1>
+              </div>
+              </li>
+              <li id="botonesfinrutina">
+              <button class="btn" id="repetir" type="submit">Repetir</button>
+              </li>
               </div>  
             `;
             nombreEjercicio.innerHTML = "Rutina Completada";

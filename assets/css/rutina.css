@@ -263,6 +263,7 @@ body{
     font-size: 40px;
     
 }
+/*botones de la pagina fin de rutina*/
 #repetir {
   color:black;
   width: 200px;
@@ -275,7 +276,9 @@ body{
   margin-right: auto;
   margin-bottom: 30px;
   border: none;
-  font-size: 40px;
+  font-size: 35px;
+  position: relative;
+  top: 33%;
   
 }
 #listaEjerFinRutina{
@@ -290,8 +293,32 @@ body{
   margin-right: auto;
   margin-bottom: 30px;
   border: none;
-  font-size: 40px;
-  
+  font-size: 35px;
+  position: relative;
+  top: 33%;
+}
+#listaEjerFinRutina:hover{
+  background: #fc8129;
+}
+#repetir:hover{
+  background: #fc8129;
+}
+#divdefelicitacion{
+    height: 75vh;
+    width: 70vh;
+    margin: 100px;
+    background-color: var(--dark-gray);
+    justify-content: space-evenly;
+    padding: 40px;
+    text-align: center;
+}
+.felicitacion{
+  position: relative;
+  top: 10%;
+}
+#imagentrofeo{
+  height: 400px;
+  width: 800px;
 }
 #formulario{
   width: 300px;
