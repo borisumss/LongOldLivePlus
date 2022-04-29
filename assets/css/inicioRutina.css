@@ -5,6 +5,8 @@
     --red: #e24379;
     --blue: #01567d;
     --green: #44de00;
+    --dark-gray: #c4c4c4;
+    --light-gay: #fdfdfd;
   }
   *{
     font-family: Verdana !important;
@@ -14,7 +16,6 @@
     height: 100vh;
     margin: auto;
     color: #eee;
-    text-shadow: 4px 4px 5px #333;
     background-color: var(--bg-c-1);
     position: relative;
   }
@@ -29,28 +30,30 @@
     width: 600px;
   }
   
+  /*Contenedor de 10seg y ¡Preparate!*/
   .title {
+    color: black;
     font-size: 6rem;
     text-align: center;
-    margin: 15vh 0;
+    margin: 4vh 0;
   }
   
+  /*Texto ¡Preparate!*/
   h4 {
     text-align: center;
+    font-size: 85px !important;
   }
   
+  /*Sub contenedor de 10seg-Preparate*/
   .inputs-container {
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: var(--bg-c-2);
     padding: 1rem;
     border-radius: 5px;
-    box-shadow: 0 15px 10px #333;
     transition: all 0.2s ease;
   }
   .inputs-container:hover {
-    box-shadow: 0 10px 5px #333;
     transition: all 0.2s ease;
   }
   .input-group {
@@ -124,51 +127,71 @@
   .fa-chair {
     color: var(--green);
   }
+
+  /*Contenedor PLOMO secction de ejercicio-descanso-cronometro*/
   .group {
-    height: 100vh;
+    height: 80vh;
+    width: 75vh;
+    margin: 100px 0px 0px;
+    background-color: var(--dark-gray);
     justify-content: space-evenly;
   }
   .group {
     display: none;
   }
 
-  /*tamaño cronometro*/
+  /*Tamaño cronometro*/
   .active {
-    font-size: 20vh;
+    font-size: 15vh;
     display: flex;
   }
   
   .active > .round,
   .active > .rest {
+    top: 25px;
     font-size: 10vh;
   }
   
-  /*div de cronometro y*/
+  /*Caja span cronometro de Ejercicio-descanso*/
   .round-time,
   .rest-time {
-    background-color: var(--bg-c-2);
+    color: black;
     border-radius: 5px;
-    box-shadow: 0 15px 10px #333;
     transition: all 0.2s ease;
   }
   
-  /* Chrome, Safari, Edge, Opera */
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
   
-  /* Firefox */
-  input[type="number"] {
-    -moz-appearance: textfield;
-  }
-  
+  /*Animacion de tiempo 10seg de preparacion*/
   .animateSeconds {
-    color: var(--red);
-    animation: animateTime 1s ease;
+    /*color: var(--red);
+    animation: animateTime 1s ease;*/
+    font-size: 65px;
   }
   
+  /*Circulo plomo de 10 seg preparacion*/
+  .circulo-preparacion {
+    color:black;
+    width: 200px;
+    height: 190px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: var(--dark-gray);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    border: none;
+    font-size: 40px;
+  }
+  
+  /*Cuadrado plomo de !Preparate!*/
+  .caja-preparacion {
+    background: var(--dark-gray);
+    top: 10px;
+    width: 520px;
+    height: 120px;
+  }
+
   #volver{
       display: none;
   }

@@ -92,25 +92,24 @@ window.addEventListener("DOMContentLoaded", async (e) => {
     let restTime = 15;
   
 
-    // aparicion Boton stop y evento solo en preparacion
-    /*startStopBtn.innerHTML = "Stop";      aca aparece un boton
-    startStopBtn.style.backgroundColor = "#e24379";
-    startStopBtn.onclick = newWorkout;*/
 
   
 
     // Tiempo de preparacion 10 seg antes de iniciar rutina
     const startCountdown = document.querySelector(".title");
-    let preparacion = 10;
+    let preparacion = 3;
     let preparar = setInterval(() => {
-      console.log("Descanso "+preparacion);
       nombreEjercicio.innerHTML = `${rutina}`;
       
       startCountdown.innerHTML = `
     <div class="inputs-container flex">
-      <h2 id='seconds' class='active animateSeconds'>${preparacion}</h2>
-      <h4 class='title'>¡Prepárate</h4>
+      <div class="circulo-preparacion flex">
+        <h2 id='seconds' class='active animateSeconds'>${preparacion}</h2>
       </div>
+      <div class="caja-preparacion flex">
+        <h4 class='title'>¡Prepárate!</h4>
+      </div>
+    </div>
     `;
       preparacion--;
       if(preparacion === 0){
@@ -120,7 +119,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
     // Iniciar rutina (ejercicios) luego de preparacion
     setTimeout(() => {
-      // Ocultar header
+      // Ocultar tiempo de preparacion
       document.querySelector("headerp").style.display = "none";
 
       
@@ -137,17 +136,17 @@ window.addEventListener("DOMContentLoaded", async (e) => {
           addRemoveIconClass("fa-heartbeat", "fa-fist-raised");
           
           //   ! Alert 10 sec
-          checkFor10Sec(round1);
+          //checkFor10Sec(round1);
 
         } else if (round1.innerText === "0:00") {
           if(i == mins.length-1){
             clearInterval(rutina);
             
             formulario2.innerHTML = `
-            <h1 class="title" >Terminaste rutina</h1>
+            <h1 class="title" >¡Felicitaciones!</h1>
             <div class="inputs-container">
               
-              <button class="btn" type="submit">Again</button>
+              <button class="btn" type="submit">Repetir</button>
               
               </div>  
             `;
@@ -169,14 +168,12 @@ window.addEventListener("DOMContentLoaded", async (e) => {
             //gif aqui
 
             //   ! Alert 10 sec
-  
-            checkFor10Sec(rest1);
-            // !Alert Start next Round
+            //checkFor10Sec(rest1);
+            
   
             console.log("descanso "+restTime+" texto "+rest1.innerText);
   
-            //   ! Reset Round Time
-            //resetRoundTime();
+          
           }else if(rest1.innerText === "0:00"){
             i++;
             resetRoundTime(round1);
@@ -188,9 +185,9 @@ window.addEventListener("DOMContentLoaded", async (e) => {
           }
         } 
       }, 1000);
-    }, 11000);
+    }, 4000);
 
-    // ! Pinta tiempo en rojo a los 10 segundos
+    // Pinta tiempo en rojo a los 10 segundos sino lo deja en verde
 
     function checkFor10Sec(activity) {
       activity.innerText <= "0:10"
