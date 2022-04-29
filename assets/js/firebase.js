@@ -1,8 +1,6 @@
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
-import { getFirestore, collection, addDoc, doc, setDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.js"
-import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-storage.js"
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js"
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -10,7 +8,6 @@ import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/fir
 const firebaseConfig = {
   apiKey: "AIzaSyC1WJuRzxe5M5wtvRx-BK6c7mOps4usdR4",
   authDomain: "long-old-live-plus-aab44.firebaseapp.com",
-  databaseURL: "https://long-old-live-plus-aab44-default-rtdb.firebaseio.com",
   projectId: "long-old-live-plus-aab44",
   storageBucket: "long-old-live-plus-aab44.appspot.com",
   messagingSenderId: "371071760445",
@@ -19,6 +16,12 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+
+import { getFirestore, collection, addDoc, doc, setDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"
+import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-storage.js"
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"
+
 
 //conexion a Firestore
 const cloudDB = getFirestore();
@@ -83,7 +86,7 @@ export const autenticacion = (email, password) => {
   signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     const user = userCredential.user;
-    console.log("Usuarion logeado")
+    console.log("Usuario logeado")
     
   })
   .catch((error) => {
