@@ -138,7 +138,9 @@ window.addEventListener("DOMContentLoaded", async (e) => {
             <h1 class="title" >¡Felicitaciones!</h1>
             <div class="inputs-container">
               
-              <button class="btn" type="submit">Repetir</button>
+              <button class="btn" id="repetir" type="submit">Repetir</button>
+              
+              <button class="btn" id="listaEjerFinRutina" type="submit">Lista De Ejercicios</button>
               
               </div>  
             `;
