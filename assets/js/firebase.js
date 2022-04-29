@@ -29,7 +29,7 @@ const cloudDB = getFirestore();
 const storage = getStorage();
 
 const auth = getAuth();
-var progress
+var progress;
 export const guardarRegistro = (nombre, descripcion, musculo, minutos, segundos, gif) => {
   const storageRef = sRef(storage, 'gifs/' + Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1)+".gif");
   const uploadTask = uploadBytesResumable(storageRef, gif);
@@ -51,7 +51,7 @@ export const guardarRegistro = (nombre, descripcion, musculo, minutos, segundos,
         } 
       
     },(error) => {
-      alert("error: gif no subido");
+      alert("error: gif no subido por el siguiente motivo:"+error);
       Swal.close();
     },
     ()=>{
@@ -120,9 +120,6 @@ export const autenticacion = (email, password) => {
 
 }
 
-export const conf = initializeApp(firebaseConfig);
-
-//export const db = getFirestore();
 
 export const onGetTasks = (callback) =>
   onSnapshot(collection(cloudDB, "Ejercicio"), callback);
