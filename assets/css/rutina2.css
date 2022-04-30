@@ -284,8 +284,8 @@
   
   #time{
       text-align: right;
-      margin-right: 50px;
-      
+      margin-right: 5px;
+      margin-bottom: 10px;
   }
   @media (max-width: 210px) {
     #circulo{
