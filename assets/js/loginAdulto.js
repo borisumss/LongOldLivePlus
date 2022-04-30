@@ -28,7 +28,7 @@ function ingreso() {
     .then(async (userCredential) => {
       var aux =""+ email2;
       aux.toUpperCase();
-      if (aux == "JUANPE@GMAIL.COM"){
+      if (aux == "JHEISONJR15@GMAIL.COM"){
         
         observador();
       }else{
