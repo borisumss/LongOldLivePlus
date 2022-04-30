@@ -214,3 +214,35 @@
   #start{
     visibility: hidden;
   }
+  /*@media screen and (max-width: 375px){
+    #seconds{
+        max-width: 90%;
+        left: 5%;
+        right: 5%;
+        padding: 0%;
+       text-align: center;
+   }
+
+    #nombreEjercicio{
+         font-size: 30px;
+    }
+   .title{
+       font-size: 40px;
+   }
+    span{
+       font-size: 40px;
+    }
+    #test{
+      max-width: 80%;
+    }
+    body{
+      box-sizing: border-box;
+      width: 10%;
+      height: 90%;
+    }
+    #imagentrofeo{
+      max-width: 90%;
+      margin: 2% 5%;
+
+    }
+}*/

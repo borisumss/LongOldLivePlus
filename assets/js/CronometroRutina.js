@@ -136,9 +136,9 @@ window.addEventListener("DOMContentLoaded", async (e) => {
             
             formulario2.innerHTML = `
             
-            <div class="inputs-container">
+            <div class="inputs-container" class"flex-colum" class="flex-md-row">
               <li id="botonesfinrutina">
-              <button class="btn" id="listaEjerFinRutina" type="submit">Lista De Rutinas</button>
+              <a><button id="listaEjerFinRutina" onclick="redireccionarVolver()">Lista De Rutinas</button></a>
               </li>
               <li>
               <div id="divdefelicitacion">
