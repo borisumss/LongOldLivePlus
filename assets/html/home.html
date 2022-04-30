@@ -45,20 +45,7 @@
   <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
     <div class="container d-flex align-items-center justify-content-between">
       <div class="logo" id="cont">
-        <h1 style="color:white">
-          <!-- 
-          <a onclick="cargar()" style="font-size: 28px;
-          margin: 0;
-          padding: 0;
-          line-height: 1;
-          font-weight: 700;
-          cursor:pointer;
-          letter-spacing: 1px;">
-          Bienvenido
-          </a>
-           -->
-          Bienvenido
-        </h1>
+        
       </div>
       <nav id="navbar" class="navbar">
         <ul>
@@ -101,8 +88,21 @@
 
 </body>
 <script>
+  user = link();
+  const usuario = document.getElementById('cont');
+
+  if (user == "AdultoMayor") {
+    usuario.innerHTML = `<h1 style="color:white">
+          Bienvenido Jheison
+        </h1>`;
+    } else {
+      usuario.innerHTML = `<h1 style="color:white">
+          Bienvenido Juan
+        </h1>`;
+    }
+ 
   function redireccionar() {
-    user = link();
+    
     //user="aa"
     if (user == "AdultoMayor") {
       window.location.href = "../html/ejerciciosFisicos.html#" + user;
@@ -113,7 +113,7 @@
   }
 
   function cargar() {
-    user = link();
+  
     //user="aa"
     if (user == "AdultoMayor") {
       window.location.href = "../html/home.html#" + user;
