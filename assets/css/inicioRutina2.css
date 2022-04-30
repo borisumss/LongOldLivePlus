@@ -20,7 +20,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 0;
-    
+
 }
 
 
@@ -55,6 +55,7 @@ h4 {
 .input-group {
     padding: 0rem;
 }
+
 /*
 label.roundTime {
     font-size: 1.1rem;
@@ -67,7 +68,7 @@ label.restTime {
 }
 
 
-#again{
+#again {
     color: white !important;
 }
 
@@ -77,9 +78,9 @@ label.restTime {
     justify-content: center;
     align-items: center;
 }
-  
+
 .workout-timer-container {
-   width: 600px;
+    width: 600px;
 }
 
 /*Contenedor PLOMO secction de ejercicio-descanso-cronometro*/
@@ -132,6 +133,7 @@ label.restTime {
     -webkit-border-radius: 50%;
     border-radius: 50%;
     background: var(--dark-gray);
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
@@ -150,6 +152,7 @@ label.restTime {
 #volver {
     display: none;
 }
+
 /*
 @keyframes animateTime {
     from {
@@ -162,9 +165,10 @@ label.restTime {
     }
   }
 */
-  #start{
+#start {
     visibility: hidden;
-  }
+}
+
 /*botones de la pagina fin de rutina*/
 #repetir {
     color: black;
@@ -205,6 +209,7 @@ label.restTime {
 #listaEjerFinRutina:hover {
     background: #fc8129;
 }
+
 /*
 #listaEjerFinRutina{
   display: flex;
@@ -221,13 +226,13 @@ label.restTime {
     margin: 100px;
     background-color: var(--dark-gray);
     justify-content: center;
-    padding: 40px;
+    padding: 30px;
     text-align: center;
 }
 
 .felicitacion {
     position: relative;
-    top: 2%;
+    top: 0%;
 }
 
 #imagentrofeo {
@@ -237,9 +242,56 @@ label.restTime {
 }
 
 @media screen and (max-width: 600px) {
-    body {
-        background-image: url("../img/galeria/fondoRutina-small.png");
-        background-size: cover; 
-        background-position: center;
+    * {
+        list-style: none;
     }
+
+    body {
+        background-size: cover;
+        background-position: center;
+        padding: 0%;
+        margin: 0%;
+        position: absolute;
+        left: 40px;
+    }
+
+    .inputs-container {
+        flex-direction: column;
+        max-width: 80%;
+        margin: 0%;
+        padding: 0%;
+        align-items: center;
+    }
+
+    #listaEjerFinRutina {
+        margin-top: 40%;
+
+    }
+
+    #divdefelicitacion {
+        max-width: fit-content;
+        padding: auto;
+    }
+
+    #nombreEjercicio {
+        font-size: 20px;
+    }
+
+    /*Circulo plomo de 10 seg preparacion*/
+    .circulo-preparacion {
+        margin-top: 60%;
+    }
+    /*FRASE : Preparate*/
+    .inputs-container {
+        max-width: 90%;
+        left: 10%;
+        right: 10%;
+        padding: 0%; 
+    }
+
+    .group{
+        max-width: fit-content;
+        padding: auto;
+        left: 40%;
+    } 
 }
