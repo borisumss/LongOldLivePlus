@@ -97,7 +97,7 @@ body {
     
   }
   
-  .container{
+  #contenedor{
      
       width: 700px;
       position: relative;
@@ -139,10 +139,9 @@ body {
       background: #C4C4C4;
       
   }
-  .ver_clave{
-      position: absolute;
-      right: 40px;
-      bottom: 90px;
+  
+  #ver_clave{
+      
       cursor: pointer;
       font-size: 20px;
   }
@@ -153,6 +152,7 @@ body {
       border: none;
       cursor: pointer;
       margin: 0 auto;
+      border-radius: 10px;
   }
   
   .form__boton{
@@ -191,10 +191,4 @@ body {
         bottom: 70px;
     
 }
-
- 
-
-   
- 
-
-  
+}

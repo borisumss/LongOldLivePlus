@@ -45,7 +45,13 @@
   <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
     <div class="container d-flex align-items-center justify-content-between">
       <div class="logo" id="cont">
-        
+        <h1><a onclick="cargar()" style="font-size: 28px;
+          margin: 0;
+          padding: 0;
+          line-height: 1;
+          font-weight: 700;
+          cursor:pointer;
+          letter-spacing: 1px;">Bienvenido</a></h1>
       </div>
       <nav id="navbar" class="navbar">
         <ul>
@@ -95,6 +101,17 @@
       window.location.href="../html/ejerciciosFisicos.html#"+ user;
     }else{
       window.location.href="../html/ejerciciosFisicosFTP.html#"+ user;
+    }
+    
+  }
+
+  function cargar(){
+    user = link();
+    //user="aa"
+    if(user=="AdultoMayor"){
+      window.location.href="../html/home.html#"+ user;
+    }else{
+      window.location.href="../html/home.html#"+ user;
     }
     
   }

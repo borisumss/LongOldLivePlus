@@ -96,7 +96,7 @@ export const autenticacion = (email, password) => {
       onAuthStateChanged(auth, (user) => {
         if (user) {
           const uid = user.uid;
-          window.location = "../html/index.html";
+          window.location = "../html/home.html";
 
         } else {
           
@@ -104,7 +104,7 @@ export const autenticacion = (email, password) => {
       });
       
     }else{
-      alert("No es un usuario Fisioterapeuta")
+      swal('No es un usuario Fisioterapeuta','','error');
     }
     console.log("Usuario logeado  :")
     console.log(tipoUser == "fisioterapeuta")
