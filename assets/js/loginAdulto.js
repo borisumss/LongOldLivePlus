@@ -27,7 +27,7 @@ function ingreso() {
   firebase.auth().signInWithEmailAndPassword(email2, contrasena2)
     .then(async (userCredential) => {
       var aux =""+ email2;
-      aux.toUpperCase();
+      aux=aux.toUpperCase();
       if (aux == "JHEISONJR15@GMAIL.COM"){
         
         observador();
