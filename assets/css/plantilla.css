@@ -84,6 +84,7 @@ body, header {
   }
   .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
     background: #ef6603;
+    cursor: pointer;
   }
   .navbar .dropdown ul {
     display: block;

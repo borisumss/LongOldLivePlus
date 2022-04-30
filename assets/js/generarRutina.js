@@ -6,23 +6,16 @@ import {
 
 const tasksContainer = document.getElementById("tasks-container");
 const nombreRutina = document.getElementById("nombreRutina");
-var url = ""+window.location.href;
-var rutina = limpiar(url) ;
+var rutina = limpiar(res) ;
 
 function limpiar(palabra){
-    var res ="";
-    var bandera = false;
-    for(let i=0;i<palabra.length;i++){
-        if(palabra[i]=="#"){
-            bandera= true;
-            i++;
-        }
-
-        if(bandera){
-            res+=palabra[i];
-        }
+    var res2="";
+    var pos2 = palabra.indexOf("-");
+    for (var i = pos2 + 1; i < res.length; i++) {
+            res2 += res[i];
+          
     }
-    return res;
+    return res2;
 }
 
     window.addEventListener("DOMContentLoaded", async (e) => {

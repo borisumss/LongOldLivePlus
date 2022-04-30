@@ -16,12 +16,19 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-import { getFirestore, collection, addDoc, doc, setDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"
+
+
+import { getFirestore, collection, addDoc, doc, setDoc, getDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"
 import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-storage.js"
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"
+
+
 //conexion a Firestore
 const cloudDB = getFirestore();
 //Conexion a Storage
 const storage = getStorage();
+
+const auth = getAuth();
 var progress
 export const guardarRegistro = (nombre, descripcion, musculo, minutos, segundos, gif) => {
   const storageRef = sRef(storage, 'gifs/' + Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1)+".gif");
@@ -45,6 +52,7 @@ export const guardarRegistro = (nombre, descripcion, musculo, minutos, segundos,
       
     },(error) => {
       alert("error: gif no subido");
+      Swal.close();
     },
     ()=>{
       getDownloadURL(uploadTask.snapshot.ref).then((downloadURL)=>{
@@ -56,7 +64,7 @@ export const guardarRegistro = (nombre, descripcion, musculo, minutos, segundos,
 
           setTimeout( function(){
             Swal.close();
-            window.location.href="ejerciciosFisicos.html";
+            window.location.href="ejerciciosFisicosFTP.html#Fisioterapeuta";
           },3000);
           
         
@@ -75,14 +83,58 @@ export const guardarRegistro = (nombre, descripcion, musculo, minutos, segundos,
     }
   }
 
+export const autenticacion = (email, password) => {
+  signInWithEmailAndPassword(auth, email, password)
+  .then(async (userCredential) => {
+    const user = userCredential.user;
 
+    const listausers = doc(cloudDB, "Users", user.uid)
+    const docUser = await getDoc(listausers)
+    const tipoUser = docUser.data().tipo
+    if (tipoUser == "fisioterapeuta"){
+      
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          const uid = user.uid;
+          window.location = "../html/home.html";
+
+        } else {
+          
+        }
+      });
+      
+    }else{
+      swal('No es un usuario Fisioterapeuta','','error');
+    }
+    console.log("Usuario logeado  :")
+    console.log(tipoUser == "fisioterapeuta")
+  })
+  .catch((error) => {
+    if (email == "" && password == "") {
+      swal('Ingrese su correo y contraseña', '', 'error');
+    } else if (password == "") {
+      swal('Ingrese su contraseña', '', 'error');
+    }
+    else if (email == "") {
+      swal('Ingrese su Correo', '', 'error');
+    }
+    else {
+      swal('Datos Incorrectos', '', 'error');
+      
+    }
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.log(errorCode + errorMessage)
+  });
+
+}
 
 export const conf = initializeApp(firebaseConfig);
 
-export const db = getFirestore();
+//export const db = getFirestore();
 
 export const onGetTasks = (callback) =>
-  onSnapshot(collection(db, "Ejercicio"), callback);
+  onSnapshot(collection(cloudDB, "Ejercicio"), callback);
 
 export const onGetTasks2 = (callback) =>
-  onSnapshot(collection(db, "Rutinas"), callback);
+  onSnapshot(collection(cloudDB, "Rutinas"), callback);

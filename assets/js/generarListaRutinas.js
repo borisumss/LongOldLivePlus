@@ -180,10 +180,16 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 })()
 
 const formulario = document.getElementById('tasks-container');
+var url = "" + window.location.href;
+var pos = url.indexOf("#");
+var res = "";
 
+for (var i = pos + 1; i < url.length && i > 0; i++) {
+    res += url[i];
+}
 var aux;
 formulario.addEventListener('submit',(e)=>{
   e.preventDefault()
   aux = e.submitter.innerText;
-  window.location.href="rutina.html#"+aux;
+  window.location.href="rutina.html#"+res+"-"+aux;
 });

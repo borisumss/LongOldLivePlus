@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  <link href="../import/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   
+    <script src="https://kit.fontawesome.com/98af28cb8a.js" crossorigin="anonymous"></script>
+    <title>Iniciar Sesión</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="../../assets/import/aos/aos.css" rel="stylesheet">
+    <!--ver menu en responsive-->
+    <link href="../../assets/import/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--bootstrap 5-->
+    <link href="../../assets/import/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/login.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>               
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyC1WJuRzxe5M5wtvRx-BK6c7mOps4usdR4",
+          authDomain: "long-old-live-plus-aab44.firebaseapp.com",
+          databaseURL: "https://long-old-live-plus-aab44-default-rtdb.firebaseio.com",
+          projectId: "long-old-live-plus-aab44",
+          storageBucket: "long-old-live-plus-aab44.appspot.com",
+          messagingSenderId: "371071760445",
+          appId: "1:371071760445:web:b44da528fddb82bb759254"
+    };
+    firebase.initializeApp(config);
+    </script>
+     <!--js de bootstrap-->
+  <script src="../import/bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    
+    <div class="container-fluid p-1">       
+        <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+            <div class="container d-flex align-items-center justify-content-between">
+                <div class="col col-lg-2">
+                    <nav id="navbar" class="navbar">
+                        <ul>
+                            <li><a class="nav-link scrollto active" href="../../index.html" id="volver">Volver</a></li>
+                        </ul>
+                        <i class="bi bi-list mobile-nav-toggle"></i>
+                    </nav><!-- .navbar -->
+                </div>
+                <div class="col-auto-md">
+                    <div class="rutinas align-text-top">
+                        <h1>Long Old Live+</h1>
+                    </div>
+                </div>
+                <div class="col col-lg-2">
+    
+                </div>
+    
+            </div>
+        </header><!-- End Header -->     
+    </div>
+    </div>
+        <div class="container" id="contenedor">
+        <div class="logo">
+            <img class="logo_img" src="../img/galeria/logo.png" alt="">
+        </div>
+        <div action="" class="form">
+            <h3 class="signin-text text-center " id="letra"> Iniciar Sesión </h3>
+            <br>
+            <div class="form__usuario">
+                <label class="correo" for="email2">Correo Electrónico:<br></label>
+                <input id ="email2" type="email" class="usuario">
+                
+                <label for="clave">Contraseña:</label>
+                <div class="input-group flex-nowrap" id="contra">
+                    <input id="contraseñaAM" type="password" class="clave">
+                    <span class="input-group-text" id="ver_clave" onclick="verClave()"><i id="icono" class="fas fa-eye"></i></span>  
+                </div>
+            </div>
+            <h2 ></h2>
+            
+            <div class="form__boton">
+                <button onclick="ingreso()" class="boton" style="border-radius: 50px">Acceder</button>
+                
+               
+            </div>
+        </div>
+    </div>
+    <script src="../js/loginAdulto.js"></script>
+</body>
+<script src="../../assets/import/aos/aos.js"></script>
+    <script src="../../assets/import/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/plantilla.js"></script>
+</html>

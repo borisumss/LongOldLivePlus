@@ -35,7 +35,7 @@
       <div class="col col-lg-2">
           <nav id="navbar" class="navbar">
               <ul>
-                  <li><a class="nav-link scrollto active" href="../html/ejerciciosFisicos.html" id="volver">Volver</a></li>
+                  <li><a class="nav-link scrollto active" onclick="redireccionar()" id="volver">Volver</a></li>
               </ul>
               <i class="bi bi-list mobile-nav-toggle"></i>
           </nav><!-- .navbar -->
@@ -94,6 +94,24 @@ appentTo? como funciona?
       myPanel.appendTo(myCol);
       myCol.appendTo('#contentPanel');
 -->
+<script>
+  function redireccionar() {
+      var url = "" + window.location.href;
+      var pos = url.indexOf("#");
+      var res = "";
 
+      for (var i = pos + 1; i < url.length && i > 0; i++) {
+          res += url[i];
+      }
+
+      if (res == "AdultoMayor") {
+          window.location.href = "../html/ejerciciosFisicos.html#" + res;
+      } else {
+          window.location.href = "../html/ejerciciosFisicosFTP.html#" + res;
+      }
+
+  }
+
+</script>
 
 </html>

@@ -33,7 +33,7 @@
             <div class="col col-lg-2">
                 <nav id="navbar" class="navbar">
                     <ul>
-                        <li><a class="nav-link scrollto active" href="listaRutinas.html" id="volver">Volver</a></li>
+                        <li><a class="nav-link scrollto active" onclick="redireccionarVolver()" id="volver">Volver</a></li>
                     </ul>
                     <i class="bi bi-list mobile-nav-toggle"></i>
                 </nav><!-- .navbar -->
@@ -84,28 +84,26 @@
 
     <script>
         var url = "" + window.location.href;
-        var rutina = limpiar(url);
-
-        function limpiar(palabra) {
-            var res = "";
-            var bandera = false;
-            for (let i = 0; i < palabra.length; i++) {
-                if (palabra[i] == "#") {
-                    bandera = true;
-                    i++;
-                }
-
-                if (bandera) {
-                    res += palabra[i];
-                }
-            }
-            return res;
+        var pos = url.indexOf("#");
+        var posFin = url.indexOf("-")
+        var res = "";
+        var complemento=url.substring(pos+1,posFin);
+        for (var i = pos + 1; i < url.length && i > 0; i++) {
+            res += url[i];
+            
+            
         }
 
-        function cambiar() {
-            window.location.href = "inicioRutina.html#" + rutina;
+        function redireccionarVolver() {
+            window.location.href = "listaRutinas.html#" +complemento;
+        }
+
+        function cambiar(){
+            window.location.href = "inicioRutina.html#" + res;
         }
     </script>
+
+    
     <script src="../js/generarRutina.js" type="module"></script>
     <!-- import archivos JS -->
     <script src="../../assets/import/aos/aos.js"></script>
