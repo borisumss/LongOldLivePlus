@@ -24,19 +24,19 @@
   <!-- Principal CSS -->
   <link href="../css/plantilla.css" rel="stylesheet">
   <!--Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>               
-    <script>
+  <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+  <script>
     var config = {
-        apiKey: "AIzaSyC1WJuRzxe5M5wtvRx-BK6c7mOps4usdR4",
-          authDomain: "long-old-live-plus-aab44.firebaseapp.com",
-          databaseURL: "https://long-old-live-plus-aab44-default-rtdb.firebaseio.com",
-          projectId: "long-old-live-plus-aab44",
-          storageBucket: "long-old-live-plus-aab44.appspot.com",
-          messagingSenderId: "371071760445",
-          appId: "1:371071760445:web:b44da528fddb82bb759254"
+      apiKey: "AIzaSyC1WJuRzxe5M5wtvRx-BK6c7mOps4usdR4",
+      authDomain: "long-old-live-plus-aab44.firebaseapp.com",
+      databaseURL: "https://long-old-live-plus-aab44-default-rtdb.firebaseio.com",
+      projectId: "long-old-live-plus-aab44",
+      storageBucket: "long-old-live-plus-aab44.appspot.com",
+      messagingSenderId: "371071760445",
+      appId: "1:371071760445:web:b44da528fddb82bb759254"
     };
     firebase.initializeApp(config);
-    </script>
+  </script>
 
 </head>
 
@@ -45,17 +45,24 @@
   <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
     <div class="container d-flex align-items-center justify-content-between">
       <div class="logo" id="cont">
-        <h1><a onclick="cargar()" style="font-size: 28px;
+        <h1 style="color:white">
+          <!-- 
+          <a onclick="cargar()" style="font-size: 28px;
           margin: 0;
           padding: 0;
           line-height: 1;
           font-weight: 700;
           cursor:pointer;
-          letter-spacing: 1px;">Bienvenido</a></h1>
+          letter-spacing: 1px;">
+          Bienvenido
+          </a>
+           -->
+          Bienvenido
+        </h1>
       </div>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" onclick="cerrar()">Cerrar Sesion</a></li>
+          <li><a class="nav-link scrollto active" onclick="cerrar()">Cerrar Sesión</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
@@ -79,7 +86,7 @@
       <div class="card" style="width: 30rem;" id="tarjeta1">
         <a onclick="redireccionar()" class="btn btn-secondary" id="card-color">
           <img src="../img/galeria/ej1.jpg" class="card-img-top" alt="ImagenEjercicio">
-          <h1 id="btnEF">Ejercicios físicos</h1>
+          <h1 id="btnEF">Ejercicios Físicos</h1>
         </a>
       </div>
     </div>
@@ -91,32 +98,33 @@
   <!--archivo JS principal-->
   <script src="../js/plantilla.js"></script>
   <script src="../js/loginAdulto.js"></script>
-  
+
 </body>
 <script>
-  function redireccionar(){
+  function redireccionar() {
     user = link();
     //user="aa"
-    if(user=="AdultoMayor"){
-      window.location.href="../html/ejerciciosFisicos.html#"+ user;
-    }else{
-      window.location.href="../html/ejerciciosFisicosFTP.html#"+ user;
+    if (user == "AdultoMayor") {
+      window.location.href = "../html/ejerciciosFisicos.html#" + user;
+    } else {
+      window.location.href = "../html/ejerciciosFisicosFTP.html#" + user;
     }
-    
+
   }
 
-  function cargar(){
+  function cargar() {
     user = link();
     //user="aa"
-    if(user=="AdultoMayor"){
-      window.location.href="../html/home.html#"+ user;
-    }else{
-      window.location.href="../html/home.html#"+ user;
+    if (user == "AdultoMayor") {
+      window.location.href = "../html/home.html#" + user;
+    } else {
+      window.location.href = "../html/home.html#" + user;
     }
-    
+
   }
- 
+
 </script>
 
 <script src="../js/loginFisioterapeuta.js" type="module"></script>
+
 </html>
