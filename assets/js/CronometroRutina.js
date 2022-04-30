@@ -12,7 +12,7 @@ var rutina = limpiar(url) ;
 
 function limpiar(palabra){
  
-  var pos2 = palabra.indexOf("-");
+  var pos2 = palabra.indexOf("%");
   var res2= palabra.substring(pos2+1,palabra.length);;
   return res2;
 }
