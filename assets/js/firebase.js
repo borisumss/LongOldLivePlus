@@ -96,7 +96,7 @@ export const autenticacion = (email, password) => {
       onAuthStateChanged(auth, (user) => {
         if (user) {
           const uid = user.uid;
-          window.location = "../html/index.html";
+          window.location = "../html/home.html";
 
         } else {
           

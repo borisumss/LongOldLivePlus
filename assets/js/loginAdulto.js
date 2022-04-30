@@ -93,7 +93,7 @@ function aparece(user) {
     //<button onclick="cerrar()">Cerrar sesión</button> 
     //<a href="userName.html" >
     //`
-    window.location.href = "index.html#AdultoMayor";
+    window.location.href = "home.html#AdultoMayor";
   }
 }
 
@@ -101,7 +101,7 @@ function cerrar() {
   firebase.auth().signOut()
     .then(function () {
       console.log('Saliendo...')
-      window.location = "../html/landing-page.html";
+      window.location = "../../index.html";
     })
     .catch(function (error) {
       console.log(error)
