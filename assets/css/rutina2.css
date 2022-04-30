@@ -264,64 +264,8 @@
       font-size: 40px;
       
   }
-  /*botones de la pagina fin de rutina*/
-  #repetir {
-    color:black;
-    width: 200px;
-    height: 190px;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    background: #ef6603;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    border: none;
-    font-size: 35px;
-    position: relative;
-    top: 33%;
-    
-  }
-  #listaEjerFinRutina{
-    color:black;
-    width: 200px;
-    height: 190px;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    background: #ef6603;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    border: none;
-    font-size: 35px;
-    position: relative;
-    top: 33%;
-    padding-top: 35px;
-  }
-  #listaEjerFinRutina:hover{
-    background: #fc8129;
-  }
-  #repetir:hover{
-    background: #fc8129;
-  }
-  #divdefelicitacion{
-      height: 75vh;
-      width: 70vh;
-      margin: 100px;
-      background-color: var(--dark-gray);
-      justify-content: space-evenly;
-      padding: 40px;
-      text-align: center;
-  }
-  .felicitacion{
-    position: relative;
-    top: 2%;
-  }
-  #imagentrofeo{
-    height: 400px;
-    width: 800px;/*viene con limite ya la imagen, no es 800*/
-  }
+
+
   #formulario{
     width: 300px;
     height: 290px;   
@@ -343,44 +287,9 @@
       margin-right: 50px;
       
   }
-  @media screen and (max-width: 375px){
-    body{
-      box-sizing: content-box;
-      width: 10%;
-      height: 90%;
+  @media (max-width: 210px) {
+    #circulo{
+        font-size: 30px;
     }
-    #divdefelicitacion{
-        margin-top: 5%;
-        margin-bottom: 50px;
-        padding: 5%;
-        max-width: 280px;
-        height: 450px;
-        position: absolute;
-        top: 100px;
-        left: -90px;
-        right: 0px;
-      }
-      #repetir{
-        position: absolute;
-        top: 600px;
-        left: 160%;
-        right: 50%;
-        bottom: 30px;
-      }
-      #listaEjerFinRutina{
-        position: absolute;
-        top: 800px;
-        left: 160%;
-        right: 50%;
-        bottom: 30px;
-      }
-      .felicitacion{
-        position: relative;
-        top: 0%;
-      }
-      #imagentrofeo{
-        max-width: 90%;
-        margin: 2% 5%;
   
-      }
   }
