@@ -1,0 +1,490 @@
+:root {
+    --bg-c-1: #484c67;
+    --bg-c-2: #37394e;
+    --orange: #e98850;
+    --blue: #01567d;
+    --green: #44de00;
+    --dark-gray: #c4c4c4;
+    --light-gay: #fdfdfd;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Verdana !important;
+    font-style: Verdana !important;
+}
+#nombreEjercicio{
+ font-size: 28px; 
+ color: white;
+ text-align: center;
+ margin: 0;
+ padding: 0;
+ line-height: 1;
+ font-weight: 700;
+ letter-spacing: 1px;
+}
+
+body {
+    background-image: url("../img/galeria/fondoRutina.png");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+
+}
+
+
+/*Contenedor de 10seg y ¡Preparate!*/
+.title {
+    color: black;
+    font-size: 6rem;
+    text-align: center;
+    margin: 4vh 0;
+}
+
+/*Texto ¡Preparate!*/
+h4 {
+    text-align: center;
+    font-size: 85px !important;
+}
+
+/*Sub contenedor de 10seg-Preparate*/
+.inputs-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+.inputs-container:hover {
+    transition: all 0.2s ease;
+}
+
+.input-group {
+    padding: 0rem;
+}
+
+/*
+label.roundTime {
+    font-size: 1.1rem;
+    color: var(--red);
+}*/
+
+label.restTime {
+    font-size: 1.1rem;
+    color: var(--orange);
+}
+
+
+#again {
+    color: white !important;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*
+.workout-timer-container {
+    width: 600px;
+}*/
+
+/*Contenedor PLOMO secction de ejercicio-descanso-cronometro*/
+.group {
+    height: 80vh;
+    width: 75vh;
+    margin: 100px 0px 0px;
+    background-color: var(--dark-gray);
+    justify-content: space-evenly;
+}
+
+.group {
+    display: none;
+}
+
+/*Tamaño cronometro*/
+.active {
+    font-size: 15vh;
+    display: flex;
+}
+
+.active>.round,
+.active>.rest {
+    top: 25px;
+    font-size: 10vh;
+}
+
+/*Caja span cronometro de Ejercicio-descanso*/
+.round-time,
+.rest-time {
+    color: black;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+
+/*Animacion de tiempo 10seg de preparacion*/
+.animateSeconds {
+    /*color: var(--red);
+    animation: animateTime 1s ease;*/
+    font-size: 65px;
+}
+
+/*Circulo plomo de 10 seg preparacion*/
+.circulo-preparacion {
+    color: black;
+    width: 200px;
+    height: 190px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: var(--dark-gray);
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    border: none;
+    font-size: 40px;
+}
+
+/*Cuadrado plomo de !Preparate!*/
+.caja-preparacion {
+    background: var(--dark-gray);
+    top: 10px;
+    width: 520px;
+    height: 120px;
+}
+
+#volver {
+    display: none;
+}
+
+/*
+@keyframes animateTime {
+    from {
+      opacity: 1;
+      transform: scale(0);
+    }
+    to {
+      opacity: 0;
+      transform: scale(1);
+    }
+  }
+*/
+#start {
+    visibility: hidden;
+}
+
+/*botones de la pagina fin de rutina*/
+#repetir {
+    color: black;
+    width: 200px;
+    height: 190px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #ef6603;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    border: none;
+    font-size: 35px;
+    position: relative;
+    top: 33%;
+
+}
+
+#listaEjerFinRutina {
+    color: black;
+    width: 200px;
+    height: 190px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #ef6603;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    border: none;
+    font-size: 35px;
+    position: relative;
+    top: 33%;
+    padding-top: 35px;
+}
+
+#listaEjerFinRutina:hover {
+    background: #fc8129;
+}
+
+/*
+#listaEjerFinRutina{
+  display: flex;
+  align-items: center;
+}*/
+
+#repetir:hover {
+    background: #fc8129;
+}
+
+#divdefelicitacion {
+    height: 75vh;
+    width: 70vh;
+    margin: 100px;
+    background-color: var(--dark-gray);
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+}
+
+.felicitacion {
+    position: relative;
+    top: 0%;
+}
+
+#imagentrofeo {
+    height: 400px;
+    width: 800px;
+    /*viene con limite ya la imagen, no es 800*/
+}
+
+@media screen and (max-width: 600px) {
+    * {
+        list-style: none;
+    }
+
+    body {
+        background-size: cover;
+        background-position: center;
+        padding: 0%;
+        margin: 0%;
+        position: absolute;
+        left: 40px;
+    }
+
+    .inputs-container {
+        flex-direction: column;
+        max-width: 80%;
+        margin: 0%;
+        padding: 0%;
+        align-items: center;
+    }
+
+    #listaEjerFinRutina {
+        margin-top: 40%;
+
+    }
+
+    #divdefelicitacion {
+        max-width: fit-content;
+        padding: auto;
+        margin: 2%;
+    }
+
+    #nombreEjercicio {
+        font-size: 20px;
+    }
+
+    /*Circulo plomo de 10 seg preparacion*/
+    .circulo-preparacion {
+        margin-top: 60%;
+    }
+    /*FRASE : Preparate*/
+    .inputs-container {
+        max-width: 90%;
+        left: 10%;
+        right: 10%;
+        padding: 0%; 
+    }
+
+    .group{
+        max-width: fit-content;
+        padding: auto;
+        left: 40%;
+    } 
+    .workout-timer-container {
+        max-width: 70%;
+    }
+}
+
+/*Añadido por ultimos verificar*/
+@media screen and (max-width: 991px) {
+    
+    #nombreEjercicio{
+        font-size: 18px;
+        color: white;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+       
+    #divdefelicitacion {
+        height: 25vh;
+        width: 25vh;
+        margin: 5px;
+        margin-top: 50%;
+        position: relative;
+        right: 36px;
+        background-color: var(--dark-gray);
+        justify-content: center;
+        padding: 40px;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .felicitacion {
+        top: 2%;
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    #imagentrofeo {
+        height: 15vh;
+        width: 15vh;
+        /*viene con limite ya la imagen, no es 800*/
+    }
+    #repetir {
+        color: black;
+        width: 80px;
+        margin: 15px;
+        margin-top: 50%;
+        height: 80px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background: #ef6603;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        border: none;
+        font-size: 13px;
+        position: relative;
+        top: 33%;
+          
+    }
+    #listaEjerFinRutina{
+        color: black;
+        margin: 15px;
+        margin-top: 50%;
+        width: 80px;
+        height: 80px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background: #ef6603;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        border: none;
+        font-size: 13px;
+        position: relative;
+        top: 33%;
+        padding-top: 5px;
+        
+    }
+    #botonesfinrutina{
+        align-items: center; 
+        margin-right: 70px;
+        margin-top: 50px
+    
+    }
+}    
+    
+@media screen and (max-width: 375px) {
+    body{
+        background-image: url("../img/galeria/fondoRutina-small.png");
+        background-size: cover; 
+        background-position: center;
+        list-style: none;
+    }
+
+    #nombreEjercicio{
+        font-size: 10px;
+        color: white;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+           
+    #divdefelicitacion {
+        height: 25vh;
+        width: 25vh;
+        margin: 5px;
+        margin-top: 50%;
+        position: relative;
+        right: 15px;
+        background-color: var(--dark-gray);
+        justify-content: center;
+        padding: 40px;
+        text-align: center;
+        align-items: center
+    }
+        
+    .felicitacion {
+        position: relative;
+        top: 2%;
+        font-size: 16px;
+    }
+        
+    #imagentrofeo {
+        height: 15vh;
+        width: 15vh;
+        /*viene con limite ya la imagen, no es 800*/
+    }
+    
+    #repetir {
+        color: black;
+        width: 65px;
+        margin: 10px;
+        margin-top: 50%;
+        height: 65px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background: #ef6603;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        border: none;
+        font-size: 13px;
+        position: relative;
+        top: 33%;
+
+              
+    }
+        
+    #listaEjerFinRutina{
+        color: black;
+        margin: 15px;
+        margin-top: 50%;
+        width: 65px;
+        height: 65px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background: #ef6603;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        border: none;
+        font-size: 13px;
+        position: relative;
+        top: 33%;
+        padding-top: 5px;
+            
+    }
+    #botonesfinrutina{
+        align-items: center; 
+        margin-right: 25px;
+        margin-top: 50px; 
+    }
+}

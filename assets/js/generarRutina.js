@@ -10,7 +10,7 @@ var rutina = limpiar(res) ;
 
 function limpiar(palabra){
     var res2="";
-    var pos2 = palabra.indexOf("-");
+    var pos2 = palabra.indexOf("%");
     for (var i = pos2 + 1; i < res.length; i++) {
             res2 += res[i];
           

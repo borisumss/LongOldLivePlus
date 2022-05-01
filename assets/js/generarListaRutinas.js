@@ -191,5 +191,5 @@ var aux;
 formulario.addEventListener('submit',(e)=>{
   e.preventDefault()
   aux = e.submitter.innerText;
-  window.location.href="rutina.html#"+res+"-"+aux;
+  window.location.href="rutina.html#"+res+"%"+aux;
 });

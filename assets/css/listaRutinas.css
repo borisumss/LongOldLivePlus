@@ -237,7 +237,7 @@ body {
 
 body{
     margin-top: 150px;
-    background-image: url("../img/galeria/fondoListaRutinas.png");
+    background-image: url("../img/galeria/fondoListaRutinas3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -282,4 +282,11 @@ body{
     top:15px;
     background-color: #2E3040;
 
+}
+
+@media screen and (max-width: 375px){
+  body{
+    background-image: url("../img/galeria/fondoListaRutinas-small.png");
+  }
+  
 }
