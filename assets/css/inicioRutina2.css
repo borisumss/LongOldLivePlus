@@ -13,6 +13,16 @@
     font-family: Verdana !important;
     font-style: Verdana !important;
 }
+#nombreEjercicio{
+ font-size: 28px; 
+ color: white;
+ text-align: center;
+ margin: 0;
+ padding: 0;
+ line-height: 1;
+ font-weight: 700;
+ letter-spacing: 1px;
+}
 
 body {
     background-image: url("../img/galeria/fondoRutina.png");
@@ -294,4 +304,183 @@ label.restTime {
         padding: auto;
         left: 40%;
     } 
+}
+
+/*Añadido por ultimos verificar*/
+@media screen and (max-width: 991px) {
+    
+    #nombreEjercicio{
+        font-size: 18px;
+        color: white;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+       
+    #divdefelicitacion {
+        height: 25vh;
+        width: 25vh;
+        margin: 5px;
+        margin-top: 50%;
+        position: relative;
+        right: 36px;
+        background-color: var(--dark-gray);
+        justify-content: center;
+        padding: 40px;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .felicitacion {
+        top: 2%;
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    #imagentrofeo {
+        height: 15vh;
+        width: 15vh;
+        /*viene con limite ya la imagen, no es 800*/
+    }
+    #repetir {
+        color: black;
+        width: 80px;
+        margin: 15px;
+        margin-top: 50%;
+        height: 80px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background: #ef6603;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        border: none;
+        font-size: 13px;
+        position: relative;
+        top: 33%;
+          
+    }
+    #listaEjerFinRutina{
+        color: black;
+        margin: 15px;
+        margin-top: 50%;
+        width: 80px;
+        height: 80px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background: #ef6603;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        border: none;
+        font-size: 13px;
+        position: relative;
+        top: 33%;
+        padding-top: 5px;
+        
+    }
+    #botonesfinrutina{
+        align-items: center; 
+        margin-right: 70px;
+        margin-top: 50px
+    
+    }
+}    
+    
+@media screen and (max-width: 375px) {
+    body{
+        background-image: url("../img/galeria/fondoRutina-small.png");
+        background-size: cover; 
+        background-position: center;
+        list-style: none;
+    }
+
+    #nombreEjercicio{
+        font-size: 10px;
+        color: white;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+           
+    #divdefelicitacion {
+        height: 25vh;
+        width: 25vh;
+        margin: 5px;
+        margin-top: 50%;
+        position: relative;
+        right: 15px;
+        background-color: var(--dark-gray);
+        justify-content: center;
+        padding: 40px;
+        text-align: center;
+        align-items: center
+    }
+        
+    .felicitacion {
+        position: relative;
+        top: 2%;
+        font-size: 16px;
+    }
+        
+    #imagentrofeo {
+        height: 15vh;
+        width: 15vh;
+        /*viene con limite ya la imagen, no es 800*/
+    }
+    
+    #repetir {
+        color: black;
+        width: 65px;
+        margin: 10px;
+        margin-top: 50%;
+        height: 65px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background: #ef6603;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        border: none;
+        font-size: 13px;
+        position: relative;
+        top: 33%;
+
+              
+    }
+        
+    #listaEjerFinRutina{
+        color: black;
+        margin: 15px;
+        margin-top: 50%;
+        width: 65px;
+        height: 65px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background: #ef6603;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        border: none;
+        font-size: 13px;
+        position: relative;
+        top: 33%;
+        padding-top: 5px;
+            
+    }
+    #botonesfinrutina{
+        align-items: center; 
+        margin-right: 25px;
+        margin-top: 50px; 
+    }
 }
