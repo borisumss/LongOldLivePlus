@@ -88,10 +88,10 @@ label.restTime {
     justify-content: center;
     align-items: center;
 }
-
+/*
 .workout-timer-container {
     width: 600px;
-}
+}*/
 
 /*Contenedor PLOMO secction de ejercicio-descanso-cronometro*/
 .group {
@@ -281,6 +281,7 @@ label.restTime {
     #divdefelicitacion {
         max-width: fit-content;
         padding: auto;
+        margin: 2%;
     }
 
     #nombreEjercicio {
@@ -304,6 +305,9 @@ label.restTime {
         padding: auto;
         left: 40%;
     } 
+    .workout-timer-container {
+        max-width: 70%;
+    }
 }
 
 /*Añadido por ultimos verificar*/
