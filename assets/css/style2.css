@@ -168,7 +168,7 @@ body, header{
         text-align: center;
         border:none;
         font-family: "Verdana";
-        font-size: 17px;
+        font-size: 15px;
         transition: all 0.3s ease;
         position: relative;
         display: inline-block;
@@ -273,7 +273,11 @@ body, header{
         font-family: "Verdana";
         font-size: 12px;
     }
+    #tituloApp{
+        font-size: 31px;
+    }
 }
+
 
 
 
