@@ -154,7 +154,18 @@ body, header{
 }
 */
 /*MENOR A 600*/
-@media screen and (max-width: 600px){
+@media screen and (max-width: 705px){
+    #tituloApp{
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width: 617px){
+
+    #tituloApp{
+        font-size: 60px;
+    }
+
     h1{
         font-size: 26px;
         line-height: 50px;
@@ -209,7 +220,42 @@ body, header{
 }
 
 /*MENOR A 412 (CELULARES MAS PEQIEÑOS)*/
-@media screen and (max-width: 412px) {
+
+@media screen and (max-width: 509px) {
+    /* #volver {
+         min-width: 70px;
+         height: 30px;
+         position: absolute;
+         top: 15px;
+         left: 5px;
+         color: #fff;
+         padding: 1px;
+         cursor: pointer;
+         font-family: "Open Sans", sans-serif;
+         font-size: 15px;
+         border:none;
+         border-radius: 50px;
+         background-color: #FD7314;
+     }*/
+     
+     h1{
+         font-size: 21px;
+         align-self: flex-end;
+     }
+ 
+     #lista, #registrar, #rutinas{
+         text-align: center;
+         border:none;
+         font-family: "Verdana";
+         font-size: 14px;
+     }
+ 
+     #tituloApp{
+         font-size: 55px;
+     }
+ }
+
+@media screen and (max-width: 466px) {
    /* #volver {
         min-width: 70px;
         height: 30px;
@@ -236,6 +282,10 @@ body, header{
         border:none;
         font-family: "Verdana";
         font-size: 14px;
+    }
+
+    #tituloApp{
+        font-size: 45px;
     }
 }
 
