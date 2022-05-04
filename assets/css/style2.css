@@ -117,7 +117,7 @@ body, header{
         background-color: #2E3040;
     }
     body {
-        background-image: url("../img/galeria/fondo-small.png");
+        background-image: url("../img/galeria/fondo-small.jpg");
         background-repeat: no-repeat;
         background-size: cover; 
         background-position: center;
@@ -184,7 +184,7 @@ body, header{
         background-color: #2E3040;
     }
     body {
-        background-image: url("../img/galeria/fondo-small.png");
+        background-image: url("../img/galeria/fondo-small.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
