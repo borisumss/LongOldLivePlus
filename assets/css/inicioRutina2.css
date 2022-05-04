@@ -12,6 +12,7 @@
     box-sizing: border-box;
     font-family: Verdana !important;
     font-style: Verdana !important;
+    list-style: none;
 }
 #nombreEjercicio{
  font-size: 28px; 
