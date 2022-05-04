@@ -6,6 +6,9 @@ import {
 
 const tasksContainer = document.getElementById("tasks-container");
 const nombreRutina = document.getElementById("nombreRutina");
+var listaNombres = [];
+var times = [];
+
 var rutina = limpiar(res) ;
 
 function limpiar(palabra){
@@ -36,11 +39,20 @@ function limpiar(palabra){
                         var timeMin = task[titulo].MinutosEjercicio;
                         var timeSeg = task[titulo].SegundosEjercicio;
                         var timeTotal= timeMin +":"+ timeSeg;
+                        var nro = parseInt(task[titulo].NroEjercicio);
+
+                        listaNombres[nro-1]=nombreEjer;
+                        times[nro-1]=timeTotal;
+                    }
+
+                    for (let i = 0; i < listaNombres.length; i++) {
+                        var name = listaNombres[i];
+                        var minSeg = times[i];
                         tasksContainer.innerHTML += `
     
                           <div id="nombres">                         
-                            <h1 id="ejer">${nombreEjer}</h1>
-                            <h2 id="time">Tiempo: ${timeTotal}</h2>
+                            <h1 id="ejer">${name}</h1>
+                            <h2 id="time">Tiempo: ${minSeg}</h2>
                           </div>
                         
                      

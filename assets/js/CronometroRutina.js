@@ -2,10 +2,10 @@ import {
   onGetTasks2
 
 } from "./firebase.js";
-var listaNombres = new Array();
-var mins = new Array();
-var segs = new Array();
-var gifs = new Array();
+var listaNombres = [];
+var mins = [];
+var segs = [];
+var gifs = [];
 
 var url = ""+window.location.href;
 var rutina = limpiar(url) ;
@@ -40,10 +40,12 @@ window.addEventListener("DOMContentLoaded", async (e) => {
                   var minutos = task[titulo].MinutosEjercicio;
                   var segundos = task[titulo].SegundosEjercicio;
                   var gif = task[titulo].GifURL;
-                  listaNombres.push(nombreEjer);
-                  mins.push(minutos);
-                  segs.push(segundos);
-                  gifs.push(gif);
+                  var nro = parseInt(task[titulo].NroEjercicio);
+
+                  listaNombres[nro-1]=nombreEjer;
+                  mins[nro-1] = minutos;
+                  segs[nro-1]=segundos;
+                  gifs[nro-1]=gif;
                   
               }
               btn.style.visibility = "visible";
