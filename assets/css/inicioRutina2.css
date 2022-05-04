@@ -244,6 +244,7 @@ label.restTime {
 .felicitacion {
     position: relative;
     top: 0%;
+    margin-top: 12px;
 }
 
 #imagentrofeo {
