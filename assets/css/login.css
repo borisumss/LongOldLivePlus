@@ -371,6 +371,10 @@ body {
         .boton{
             margin-bottom:20px;
         }
+        .logo_img{
+          width: 660px;
+          max-width: 100%;
+      }
        
      } 
      @media screen and (max-width:767px){
