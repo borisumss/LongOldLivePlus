@@ -259,6 +259,7 @@ label.restTime {
     }
 
     body {
+        background-image: url('../img/galeria/fondoRutina-small.png');
         background-size: cover;
         background-position: center;
         padding: 0%;
