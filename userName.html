@@ -41,5 +41,42 @@
         </div>
     </div>
     
-    <script src="loginAdulto.js"></script>
+    <script>
+    observador();
+    function observador(){
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                console.log('existe usuario activo')
+                //aparece(user);
+              // User is signed in.
+              var displayName = user.displayName;
+             // console.log(user);
+              var email = user.email;
+      
+              console.log('*****************');
+              console.log(user.emailVerified)
+              console.log('*****************');
+              
+          
+            } else {
+              // User is signed out.
+              console.log('no existe usuario activo')
+              window.location="loginAdulto.html";
+              
+              // ...
+            }
+          });
+      }
+      function cerrar(){
+        firebase.auth().signOut()
+        .then(function(){
+            console.log('Saliendo...')
+            window.location="loginAdulto.html";
+        })
+        .catch(function(error){
+            console.log(error)
+        })
+      }
+      
+    </script>
 </body>

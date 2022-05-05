@@ -1,5 +1,6 @@
 
 let con=true
+
 function verClave(){
   let ver=document.getElementById("ver");
   let clave=document.getElementById("clave")
@@ -43,9 +44,9 @@ function ingreso(){
     
       }
     });
-    observador();
+    //observador();
 }
-
+observador();
 function observador(){
   firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
@@ -55,7 +56,7 @@ function observador(){
         var displayName = user.displayName;
        // console.log(user);
         var email = user.email;
-        
+
         console.log('*****************');
         console.log(user.emailVerified)
         console.log('*****************');
@@ -64,6 +65,7 @@ function observador(){
       } else {
         // User is signed out.
         console.log('no existe usuario activo')
+        
         // ...
       }
     });
