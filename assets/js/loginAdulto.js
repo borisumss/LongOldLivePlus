@@ -30,7 +30,7 @@ function ingreso() {
       aux=aux.toUpperCase();
       if (aux == "JHEISONJR15@GMAIL.COM"){
         
-        observador();
+        //observador();
       }else{
         swal("No es un usuario Adulto Mayor","","error");
       }
@@ -58,7 +58,7 @@ function ingreso() {
     });
   
 }
-
+observador();
 function observador() {
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
@@ -78,6 +78,7 @@ function observador() {
     } else {
       // User is signed out.
       console.log('no existe usuario activo')
+      //window.location = "../../index.html";
       // ...
     }
   });

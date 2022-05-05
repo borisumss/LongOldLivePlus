@@ -121,10 +121,60 @@
       window.location.href = "../html/home.html#" + user;
     }
 
+
+  }
+  observador();
+function observador() {
+  firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+      console.log('existe usuario activo')
+
+      // User is signed in.
+      var displayName = user.displayName;
+
+      // console.log(user);
+      correo = user.email;
+     // aparece(user);
+      console.log('*****************');
+      console.log(user.emailVerified)
+      console.log('*****************');
+
+
+    } else {
+      // User is signed out.
+      console.log('no existe usuario activo')
+      window.location = "../../index.html";
+      // ...
+    }
+  });
+}
+function cerrar() {
+  firebase.auth().signOut()
+    .then(function () {
+      console.log('Saliendo...')
+      window.location = "../../index.html";
+    })
+    .catch(function (error) {
+      console.log(error)
+    })
+}
+
+
+
+function link() {
+  var url = "" + window.location.href;
+  var pos = url.indexOf("#");
+  var res = "";
+
+  for (var i = pos + 1; i < url.length && i > 0; i++) {
+    res += url[i];
   }
 
+  return res;
+
+}
 </script>
 
-<script src="../js/loginFisioterapeuta.js" type="module"></script>
+
 
 </html>
