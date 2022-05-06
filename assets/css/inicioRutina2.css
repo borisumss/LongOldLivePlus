@@ -276,7 +276,9 @@ label.restTime {
         font-weight: 700;
         letter-spacing: 1px;
     }
-    
+    .title{
+        zoom: 45%;
+    }
            
 }
 
@@ -335,6 +337,9 @@ label.restTime {
         padding:10px;
         
     } 
+    .title{
+        zoom: 65%;
+    }
 }
 
 /*Añadido por ultimos verificar*/
