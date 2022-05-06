@@ -253,6 +253,35 @@ label.restTime {
     /*viene con limite ya la imagen, no es 800*/
 }
 
+    
+@media screen and (max-width: 375px) {
+    body{
+        background-image: url("../img/galeria/fondoRutina-small.png");
+        background-size: cover; 
+        background-position: center;
+        list-style: none;
+    }
+
+    section.group.flex {
+        padding:10%;
+        margin-left:1%;
+    }
+
+    #nombreEjercicio{
+       color: white;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+    
+           
+}
+
+
+/*===============WEB RESPONSIVE 600PX - 376PX*/
 @media screen and (max-width: 600px) {
     * {
         list-style: none;
@@ -264,52 +293,48 @@ label.restTime {
         background-position: center;
         padding: 0%;
         margin: 0%;
-        position: absolute;
         left: 40px;
     }
 
-    .inputs-container {
-        max-width: 80%;
-        margin: 0%;
-        padding: 0%;
-        align-items: center;
+    
+    /*===================================*/
+
+    /*===ESTE EDITE PARA  EL 10 SEG Y PREPARATE */
+    /*==============================================*/
+    .inputs-container{
+        flex: 1;
+        max-width: 70%;
+        min-width: 40%;
+        left: 5%;
+        right: 5%;
+        padding: 10%; 
+        margin-left: 15%;
+        font-size: 20%;
+        margin-right: 15% ;
     }
-
-    #listaEjerFinRutina {
-        margin-top: 40%;
-
-    }
-
-    #divdefelicitacion {
-        max-width: fit-content;
-        padding: auto;
-        margin: 2%;
-    }
-
-    #nombreEjercicio {
-        font-size: 20px;
-    }
-
     /*Circulo plomo de 10 seg preparacion*/
     .circulo-preparacion {
-        margin-top: 60%;
+        margin-top: 30%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 30px;
+        font-size: 30px;
     }
     /*FRASE : Preparate*/
-    .inputs-container {
-        max-width: 90%;
-        left: 10%;
-        right: 10%;
-        padding: 0%; 
+    .caja-preparacion h4{
+        font-size: 3rem;
+        margin-left: 5%;
     }
-
+    /*=============================================*/
     .group{
         max-width: fit-content;
         padding: auto;
         left: 40%;
     } 
-    .workout-timer-container {
-        max-width: 70%;
-    }
+    section.group.flex {
+        padding:10px;
+        
+    } 
 }
 
 /*Añadido por ultimos verificar*/
@@ -397,92 +422,3 @@ label.restTime {
     
     }
 }    
-    
-@media screen and (max-width: 375px) {
-    body{
-        background-image: url("../img/galeria/fondoRutina-small.png");
-        background-size: cover; 
-        background-position: center;
-        list-style: none;
-    }
-
-    section.group.flex {
-        padding:10%;
-        margin-left:25%;
-    }
-
-    #nombreEjercicio{
-       color: white;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-        line-height: 1;
-        font-weight: 700;
-        letter-spacing: 1px;
-    }
-           
-    #divdefelicitacion {
-        height: 30vh;
-        width: 30vh;
-        margin: 5px;
-        margin-top: 70%;
-        position: relative;
-        right: 15px;
-        background-color: var(--dark-gray);
-        justify-content: center;
-        padding: 20px;
-        margin-left:10%;
-    }
-        
-    .felicitacion {
-        position: relative;
-        top: 5%;
-        font-size: 16px;
-    }
-        
-    #imagentrofeo {
-        height: 20vh;
-        width: 20vh;
-        /*viene con limite ya la imagen, no es 800*/
-    }
-    
-    #repetir {
-        width: 75px;
-        height: 75px;
-        margin: 10px;
-        margin-top: 500%;
-        margin-bottom: 30px;
-        
-        margin-left: auto;
-        margin-right: auto;
-       
-        border: none;
-        font-size: 13px;
-        position: relative;
-    }
-        
-    #listaEjerFinRutina{
-        margin: 15px;
-        margin-top: 500%;
-        width: 75px;
-        height: 75px;
-
-        -moz-border-radius: 50%;
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 30px;
-        border: none;
-        font-size: 13px;
-        position: relative;
-        top: 33%;
-        padding-top: 5px;
-            
-    }
-    #botonesfinrutina{
-        align-items: center; 
-        margin-right: 25px;
-        margin-top: 50px; 
-    }
-}
