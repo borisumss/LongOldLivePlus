@@ -254,99 +254,78 @@ label.restTime {
 }
 
     
-@media screen and (max-width: 375px) {
-    body{
-        background-image: url("../img/galeria/fondoRutina-small.png");
-        background-size: cover; 
-        background-position: center;
-        list-style: none;
-    }
 
-    section.group.flex {
-        padding:10%;
-        margin-left:1%;
-    }
-
-    #nombreEjercicio{
-       color: white;
+/*=======================WEB RESPONSIVE=========================*/
+@media screen and (max-width: 1056px) {
+    /*========EL TROFEO, SU DIV Y BOTONES ================*/
+    #divdefelicitacion {
+        height: 50vh;
+        width: 50vh;
+        margin: 5%;
+        margin-top: 25%;
+        margin-left: 0%;
+        position: relative;
+        background-color: var(--dark-gray);
+        justify-content: center;
+        padding: 4%;
         text-align: center;
-        margin: 0;
-        padding: 0;
-        line-height: 1;
-        font-weight: 700;
-        letter-spacing: 1px;
+        align-items: center;
     }
-    .title{
-        zoom: 45%;
-    }
-           
-}
-
-
-/*===============WEB RESPONSIVE 600PX - 376PX*/
-@media screen and (max-width: 600px) {
-    * {
-        list-style: none;
-    }
-
-    body {
-        background-image: url('../img/galeria/fondoRutina-small.png');
-        background-size: cover;
-        background-position: center;
-        padding: 0%;
-        margin: 0%;
-        left: 40px;
-    }
-
     
-    /*===================================*/
-
-    /*===ESTE EDITE PARA  EL 10 SEG Y PREPARATE */
-    /*==============================================*/
-    .inputs-container{
-        flex: 1;
-        max-width: 70%;
-        min-width: 40%;
-        left: 5%;
-        right: 5%;
-        padding: 10%; 
-        margin-left: 15%;
-        font-size: 20%;
-        margin-right: 15% ;
+    .felicitacion {
+        top: 2%;
+        text-align: center;
     }
-    /*Circulo plomo de 10 seg preparacion*/
-    .circulo-preparacion {
-        margin-top: 30%;
-        margin-left: 10%;
-        margin-right: 10%;
-        margin-bottom: 30px;
+    
+    #imagentrofeo {
+        height: 40vh;
+        width: 50vh;
+        padding-top: 2%;
+    }
+
+    #repetir {
+        margin-top:50%;
+        width: 160px;
+        height:160px;
+        margin-right: 5%;
         font-size: 30px;
     }
-    /*FRASE : Preparate*/
-    .caja-preparacion h4{
-        font-size: 3rem;
-        margin-left: 5%;
+    #listaEjerFinRutina{
+        margin-top:50%;
+        width: 160px;
+        height:160px;
+        margin-right: -5%;
+        font-size: 30px;
     }
-    /*=============================================*/
+    /*==================================================*/
+    /*---LA PARTE DE LOS EJERCICIOS Y EL DESCANSO---*/
     .group{
         max-width: fit-content;
         padding: auto;
         left: 40%;
     } 
     section.group.flex {
-        padding:10px;
+        padding:3%;
         
-    } 
-    .title{
-        zoom: 65%;
     }
+    .active>.round{
+        padding: 5%;
+    }
+    .group.flex.active{
+        height:100%;
+        margin-top:50%;
+    }
+    /*---------------------------------------------*/ 
+
 }
 
-/*Añadido por ultimos verificar*/
-@media screen and (max-width: 991px) {
-    
+
+@media screen and (max-width: 993px) {
+    /*body{
+        background-image: url('../img/galeria/fondoRutina-small.png');
+    }*/
+
     #nombreEjercicio{
-        font-size: 18px;
         color: white;
         text-align: center;
         margin: 0;
@@ -355,75 +334,64 @@ label.restTime {
         font-weight: 700;
         letter-spacing: 1px;
     }
-       
+     
+    /*========EL TROFEO, SU DIV Y BOTONES ================*/
     #divdefelicitacion {
-        height: 25vh;
-        width: 25vh;
-        margin: 5px;
+        height: 40vh;
+        width: 40vh;
+        margin: 5%;
         margin-top: 50%;
+        margin-left: 0%;
         position: relative;
-        right: 36px;
         background-color: var(--dark-gray);
         justify-content: center;
-        padding: 40px;
+        padding: 4%;
         text-align: center;
         align-items: center;
     }
     
     .felicitacion {
         top: 2%;
-        font-size: 16px;
         text-align: center;
     }
     
     #imagentrofeo {
-        height: 15vh;
-        width: 15vh;
+        height: 30vh;
+        width: 30vh;
+        padding-top: 3%;
         /*viene con limite ya la imagen, no es 800*/
     }
+
     #repetir {
-        color: black;
-        width: 80px;
-        margin: 15px;
-        margin-top: 50%;
-        height: 80px;
-        -moz-border-radius: 50%;
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
-        background: #ef6603;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 30px;
-        border: none;
-        font-size: 13px;
-        position: relative;
-        top: 33%;
-          
+        margin-top:60%;
+        width: 150px;
+        height:150px;
+        margin-right: 5%;
+        font-size: 30px;
     }
     #listaEjerFinRutina{
-        color: black;
-        margin: 15px;
-        margin-top: 50%;
-        width: 80px;
-        height: 80px;
-        -moz-border-radius: 50%;
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
-        background: #ef6603;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 30px;
-        border: none;
-        font-size: 13px;
-        position: relative;
-        top: 33%;
-        padding-top: 5px;
+        margin-top:60%;
+        width: 150px;
+        height:150px;
+        margin-right: -5%;
+        font-size: 30px;
+    }
+    /*==================================================*/
+    
+    /*---LA PARTE DE LOS EJERCICIOS Y EL DESCANSO---*/
+    .group{
+        max-width: fit-content;
+        padding: auto;
+        left: 40%;
+    } 
+    section.group.flex {
+        padding:10%;
         
     }
-    #botonesfinrutina{
-        align-items: center; 
-        margin-right: 70px;
-        margin-top: 50px
-    
+    .group.flex.active{
+        height:100%;
+        margin-top:50%;
     }
+    /*---------------------------------------------*/ 
 }    
+
