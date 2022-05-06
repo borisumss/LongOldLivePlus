@@ -138,13 +138,17 @@ function observador() {
       console.log('*****************');
       console.log(user.emailVerified)
       console.log('*****************');
+      window.location.hash="no-back-button";
+      window.location.hash="Again-No-back-button";
+      window.onhashchange=function(){window.location.hash="no-back-button";}
 
 
     } else {
       // User is signed out.
       console.log('no existe usuario activo')
       window.location = "../../index.html";
-      // ...
+
+    
     }
   });
 }

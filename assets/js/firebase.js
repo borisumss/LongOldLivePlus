@@ -87,7 +87,7 @@ export const autenticacion = (email, password) => {
   signInWithEmailAndPassword(auth, email, password)
   .then(async (userCredential) => {
     const user = userCredential.user;
-    console.log(user.emailVerified);
+    console.log(user.emailVerified);//ahi esta el boolean
     const listausers = doc(cloudDB, "Users", user.uid)
     const docUser = await getDoc(listausers)
     const tipoUser = docUser.data().tipo
