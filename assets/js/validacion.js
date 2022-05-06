@@ -25,13 +25,13 @@ import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from
 const cloudDB = getFirestore();
 //Conexion a Storage
 const storage = getStorage();
-
+const auth = getAuth();
 
 
 
 window.onload = function () {
     console.log("esta iniciado");
-    const auth = getAuth();
+    
     onAuthStateChanged(auth, async (user) => {
         if (user) {
             const uid = user.uid;
@@ -70,7 +70,15 @@ window.onload = function () {
                 confirmButtonColor: '#ffcc00'
             })
             
-            window.location = "../html/index.html";
+            window.location = "../../index.html";
         }
     });
 };
+  const btnLogout = document.getElementById('logout');
+  if (btnLogout != null) {
+    btnLogout.addEventListener('click', e => logout(e));
+  }
+  async function logout(e) {
+    await signOut(auth);
+    window.location = "../../index.html"
+  }
