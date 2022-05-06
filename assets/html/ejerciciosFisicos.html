@@ -1,3 +1,35 @@
+
+ <!--Firebase -->
+ <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+ <script>
+   var config = {
+     apiKey: "AIzaSyC1WJuRzxe5M5wtvRx-BK6c7mOps4usdR4",
+     authDomain: "long-old-live-plus-aab44.firebaseapp.com",
+     databaseURL: "https://long-old-live-plus-aab44-default-rtdb.firebaseio.com",
+     projectId: "long-old-live-plus-aab44",
+     storageBucket: "long-old-live-plus-aab44.appspot.com",
+     messagingSenderId: "371071760445",
+     appId: "1:371071760445:web:b44da528fddb82bb759254"
+   };
+   firebase.initializeApp(config);
+
+   observador();
+   function observador() {
+     firebase.auth().onAuthStateChanged(function (user) {
+       if (user) {
+         console.log('existe usuario activo')
+         console.log('*****************');
+         console.log(user.emailVerified)
+         console.log('*****************');  
+       } else {
+         console.log('no existe usuario activo')
+         window.location = "../../index.html";  
+       }
+     });
+   }
+ </script>
+
+
 <!DOCTYPE html>
 
 <head>
@@ -15,26 +47,6 @@
   <script src="https://kit.fontawesome.com/98af28cb8a.js" crossorigin="anonymous"></script>
   <link href="../import/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <!--iconos boostrap 5-->
-
-
-
-   <!--Firebase -->
-   <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
-   <script>
-     var config = {
-       apiKey: "AIzaSyC1WJuRzxe5M5wtvRx-BK6c7mOps4usdR4",
-       authDomain: "long-old-live-plus-aab44.firebaseapp.com",
-       databaseURL: "https://long-old-live-plus-aab44-default-rtdb.firebaseio.com",
-       projectId: "long-old-live-plus-aab44",
-       storageBucket: "long-old-live-plus-aab44.appspot.com",
-       messagingSenderId: "371071760445",
-       appId: "1:371071760445:web:b44da528fddb82bb759254"
-     };
-     firebase.initializeApp(config);
-   </script>
-
-
-
 </head>
 
 <body>
@@ -98,36 +110,6 @@
 
   function redireccionarRutina() {
     window.location.href = "../html/listaRutinas.html#" + res;
-  }
-
-
-
-  observador();
-  function observador() {
-    firebase.auth().onAuthStateChanged(function (user) {
-      if (user) {
-        console.log('existe usuario activo')
-  
-        // User is signed in.
-        var displayName = user.displayName;
-  
-        // console.log(user);
-        correo = user.email;
-       // aparece(user);
-        console.log('*****************');
-        console.log(user.emailVerified)
-        console.log('*****************');
-      
-  
-  
-      } else {
-        // User is signed out.
-        console.log('no existe usuario activo')
-        window.location = "../../index.html";
-  
-      
-      }
-    });
   }
 </script>
 

@@ -61,6 +61,8 @@ body {
       display: flex;
       align-items: center;
       gap: 20px;
+
+      margin-top:12%;
   }
   .logo_img{
       width: 300px;   
@@ -371,6 +373,10 @@ body {
         .boton{
             margin-bottom:20px;
         }
+        .logo_img{
+          width: 660px;
+          max-width: 100%;
+      }
        
      } 
      @media screen and (max-width:767px){
