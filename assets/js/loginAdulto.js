@@ -1,24 +1,6 @@
 
 
 
-let con = true
-function verClave() {
-  let ver = document.getElementById("ver_clave");
-  let clave = document.getElementById("contraseñaAM")
-  let icono = document.getElementById("icono")
-  if (con == true) {
-    clave.type = "text"
-    icono.classList.add("fa-eye-slash")
-    con = false
-  } else {
-    clave.type = "password"
-    icono.classList.remove("fa-eye-slash")
-    con = true
-  }
-
-}
-
-
 function ingreso() {
 
   var email2 = document.getElementById('email2').value;

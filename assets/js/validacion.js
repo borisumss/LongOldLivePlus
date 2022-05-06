@@ -27,12 +27,15 @@ const cloudDB = getFirestore();
 const storage = getStorage();
 
 
+
+
 window.onload = function () {
+    console.log("esta iniciado");
     const auth = getAuth();
     onAuthStateChanged(auth, async (user) => {
         if (user) {
             const uid = user.uid;
-            const docRef = doc(db, "Users", user.uid);
+            const docRef = doc(cloudDB, "Users", user.uid);
             const docSnap = await getDoc(docRef);
             if(docSnap.data().tipo == "fisioterapeuta"){
                 window.location = "../html/home.html#Fisioterapeuta";
