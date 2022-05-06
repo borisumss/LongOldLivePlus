@@ -38,9 +38,9 @@ window.onload = function () {
             const docRef = doc(cloudDB, "Users", user.uid);
             const docSnap = await getDoc(docRef);
             if(docSnap.data().tipo == "fisioterapeuta"){
-                window.location = "../html/home.html#Fisioterapeuta";
+               // window.location = "../html/home.html#Fisioterapeuta";
             }else if (docSnap.data().tipo == "adulto"){
-                window.location = "../html/home.html#AdultoMayor";
+               // window.location = "../html/home.html#AdultoMayor";
             }else{
                 await Swal.fire({
                     icon: 'error',
@@ -55,15 +55,15 @@ window.onload = function () {
                     if (result.isConfirmed) {
                       await logout("e")
                     } else{
-                        window.location = "../html/index.html";
+                        window.location = "../../index.html";
                     }
                 })
-                window.location = "../html/index.html";
+                window.location = "../../index.html";
             }
         } else {
             await Swal.fire({
                 icon: 'error',
-                title: 'Error',
+                title: 'Acceso Denegado',
                 text: 'Inicie sesión Primero!',
                 color: '#312d2d',
                 background: '#ffffff',
