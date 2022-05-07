@@ -64,16 +64,7 @@ window.onload = function () {
                 window.location = "../../index.html";
             }
         } else {
-            await Swal.fire({
-                icon: 'error',
-                title: 'Acceso Denegado',
-                text: 'Inicie sesión Primero!',
-                color: '#312d2d',
-                background: '#ffffff',
-                confirmButtonColor: '#ffcc00'
-            })
-            
-            window.location = "../../index.html";
+             window.location = "../../index.html";
         }
     });
 };
