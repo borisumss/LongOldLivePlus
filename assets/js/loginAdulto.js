@@ -1,7 +1,18 @@
 
+function link() {
+  var url = "" + window.location.href;
+  var pos = url.indexOf("#");
+  var res = "";
 
+  for (var i = pos + 1; i < url.length && i > 0; i++) {
+    res += url[i];
+  }
 
-function ingreso() {
+  return res;
+
+}
+
+/*function ingreso() {
 
   var email2 = document.getElementById('email2').value;
   var contrasena2 = document.getElementById('contraseñaAM').value;

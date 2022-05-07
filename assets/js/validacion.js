@@ -40,6 +40,9 @@ window.onload = function () {
             if(docSnap.data().tipo == "fisioterapeuta"){
                // window.location = "../html/home.html#Fisioterapeuta";
             }else if (docSnap.data().tipo == "adulto"){
+                if((window.location.href).includes("Fisioterapeuta")){
+                    window.location = "../html/ejerciciosFisicos.html#AdultoMayor";
+                }
                // window.location = "../html/home.html#AdultoMayor";
             }else{
                 await Swal.fire({

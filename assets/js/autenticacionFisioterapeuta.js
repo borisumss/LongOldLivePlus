@@ -102,8 +102,6 @@ window.onload = function () {
                 })
                 window.location = "../../index.html";
             }
-        } else {
-            
         }
     });
 };
