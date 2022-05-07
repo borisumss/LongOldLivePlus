@@ -49,7 +49,7 @@
       </div>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" onclick="cerrar()">Cerrar Sesión</a></li>
+          <li><a class="nav-link scrollto active" id='logout'>Cerrar Sesión</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
@@ -65,7 +65,7 @@
   <br>
 
   <div class="display-4">
-    <p class="text-center" id="tituloApp">Long Old Live + </p>
+    <p class="text-center" id="tituloApp">Long Old Live+ </p>
   </div>
   <div class="row mx-5">
     <!-- tarjeta ejercicio físicos-->
@@ -82,6 +82,7 @@
   <!-- import archivos JS -->
   <script src="../import/aos/aos.js"></script>
   <script src="../import/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script type= "module" src="../js/validacion.js"></script>
   <!--archivo JS principal-->
   <script src="../js/plantilla.js"></script>
   <script src="../js/loginAdulto.js"></script>
@@ -126,5 +127,5 @@
 </script>
 
 <script src="../js/loginFisioterapeuta.js" type="module"></script>
-
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>

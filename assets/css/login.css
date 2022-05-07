@@ -54,13 +54,15 @@ body {
      
       width: 700px;
       position: relative;
-      margin-top: 225px;
+      margin-top: 15%;
+
       background: white;
       padding: 0px;
       border-radius: 3px;
       display: flex;
       align-items: center;
       gap: 20px;
+      margin-bottom: 10%;
   }
   .logo_img{
       width: 300px;   
@@ -353,35 +355,63 @@ body {
     
   
    
-    @media screen and (max-width:660px){
-        #contenedor{
-            margin-top: 100px;
-            width: 90%;
-            height: 80% ;
-            flex-direction:column;
-          
-            align-items: center;
-            height: auto;
-        }
-        
-        .ver_clave{
-            margin-right: 15px;
-        }     
-        
-        .boton{
-            margin-bottom:20px;
-        }
-       
-     } 
-     @media screen and (max-width:767px){
-        .ver_clave{
-            
-            right: 30px;    
-            bottom: 70px;
-        
+    @media screen and (max-width:769px){
+     
+      #contenedor{
+        margin-top: 100px;
+        width: 90%;
+        height: 80% ;
+        flex-direction:column;
+      
+        align-items: center;
+        height: auto;
+    }
+    .logo_img{
+      margin-top: 50px;
+      
+  
     }
 
+    .clave{
+      width: 85%;
+      
+    } 
+    
+    .form__usuario{
+      margin-left: 20px;
+    }
+    
     .boton{
-        margin-bottom: 20px;
+        margin-bottom:20px;
     }
+  } 
+    
+  @media (max-width:767px){
+     
+    .clave{
+      width: 82%;
+      
+    }  
+  } 
+  
+  @media (max-width:460px){
+    .logo_img{
+      margin-top: 30px;
     }
+    .clave{
+      width: 79%;
+      
+    }  
+  } 
+
+    
+  @media (max-width:420px){
+    .logo_img{
+      margin-top: 20px;
+    }
+
+    .clave{
+      width: 77%;
+      
+    }  
+  }

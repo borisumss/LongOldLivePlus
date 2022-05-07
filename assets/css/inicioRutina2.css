@@ -12,6 +12,7 @@
     box-sizing: border-box;
     font-family: Verdana !important;
     font-style: Verdana !important;
+    list-style: none;
 }
 #nombreEjercicio{
  font-size: 28px; 
@@ -242,14 +243,157 @@ label.restTime {
 
 .felicitacion {
     position: relative;
-    top: 0%;
+    top: 3%;
+    margin-top: 12px;
 }
 
 #imagentrofeo {
-    height: 400px;
-    width: 800px;
+    height: 350px;
+    width: 700px;
     /*viene con limite ya la imagen, no es 800*/
 }
+
+    
+
+/*=======================WEB RESPONSIVE=========================*/
+@media screen and (max-width: 1056px) {
+    /*========EL TROFEO, SU DIV Y BOTONES ================*/
+    #divdefelicitacion {
+        height: 50vh;
+        width: 50vh;
+        margin: 5%;
+        margin-top: 25%;
+        margin-left: 0%;
+        position: relative;
+        background-color: var(--dark-gray);
+        justify-content: center;
+        padding: 4%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .felicitacion {
+        top: 2%;
+        text-align: center;
+    }
+    
+    #imagentrofeo {
+        height: 40vh;
+        width: 50vh;
+        padding-top: 2%;
+    }
+
+    #repetir {
+        margin-top:50%;
+        width: 160px;
+        height:160px;
+        margin-right: 5%;
+        font-size: 30px;
+    }
+    #listaEjerFinRutina{
+        margin-top:50%;
+        width: 160px;
+        height:160px;
+        margin-right: -5%;
+        font-size: 30px;
+    }
+    /*==================================================*/
+    /*---LA PARTE DE LOS EJERCICIOS Y EL DESCANSO---*/
+    .group{
+        max-width: fit-content;
+        padding: auto;
+        left: 40%;
+    } 
+    section.group.flex {
+        padding:3%;
+        
+    }
+    .active>.round{
+        padding: 5%;
+    }
+    .group.flex.active{
+        height:100%;
+        margin-top:50%;
+    }
+    /*---------------------------------------------*/ 
+
+}
+
+
+@media screen and (max-width: 993px) {
+    /*body{
+        background-image: url('../img/galeria/fondoRutina-small.png');
+    }*/
+
+    #nombreEjercicio{
+        color: white;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+     
+    /*========EL TROFEO, SU DIV Y BOTONES ================*/
+    #divdefelicitacion {
+        height: 50vh;
+        width: 50vh;
+        margin: 5%;
+        margin-top: 50%;
+        margin-left: 0%;
+        position: relative;
+        background-color: var(--dark-gray);
+        justify-content: center;
+        padding: 4%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .felicitacion {
+        top: 2%;
+        text-align: center;
+    }
+    
+    #imagentrofeo {
+        height: 30vh;
+        width: 30vh;
+        padding-top: 3%;
+        /*viene con limite ya la imagen, no es 800*/
+    }
+
+    #repetir {
+        margin-top:60%;
+        width: 150px;
+        height:150px;
+        margin-left: 15%;
+        font-size: 30px;
+    }
+    #listaEjerFinRutina{
+        margin-top:60%;
+        width: 150px;
+        height:150px;
+        margin-left: -15%;
+        font-size: 30px;
+    }
+    /*==================================================*/
+    
+    /*---LA PARTE DE LOS EJERCICIOS Y EL DESCANSO---*/
+    .group{
+        max-width: fit-content;
+        padding: auto;
+        left: 40%;
+    } 
+    section.group.flex {
+        padding:10%;
+        
+    }
+    .group.flex.active{
+        height:100%;
+        margin-top:50%;
+    }
+    /*---------------------------------------------*/ 
+}    
 
 @media screen and (max-width: 600px) {
     * {
@@ -261,230 +405,282 @@ label.restTime {
         background-position: center;
         padding: 0%;
         margin: 0%;
-        position: absolute;
         left: 40px;
     }
 
-    .inputs-container {
-        flex-direction: column;
-        max-width: 80%;
-        margin: 0%;
-        padding: 0%;
-        align-items: center;
-    }
-
-    #listaEjerFinRutina {
-        margin-top: 40%;
-
-    }
-
-    #divdefelicitacion {
-        max-width: fit-content;
-        padding: auto;
-        margin: 2%;
-    }
-
-    #nombreEjercicio {
-        font-size: 20px;
-    }
-
-    /*Circulo plomo de 10 seg preparacion*/
-    .circulo-preparacion {
-        margin-top: 60%;
-    }
-    /*FRASE : Preparate*/
-    .inputs-container {
-        max-width: 90%;
-        left: 10%;
-        right: 10%;
-        padding: 0%; 
-    }
-
-    .group{
-        max-width: fit-content;
-        padding: auto;
-        left: 40%;
-    } 
-    .workout-timer-container {
+    /*=====ESTE ES PARA  EL 10 SEG Y PREPARATE====== */
+    .inputs-container{
+        flex: 1;
         max-width: 70%;
+        min-width: 40%;
+        left: 5%;
+        right: 5%;
+        padding: 10%; 
+        margin-left: 15%;
+        font-size: 20%;
+        margin-right: 15% ;
     }
-}
 
-/*Añadido por ultimos verificar*/
-@media screen and (max-width: 991px) {
-    
-    #nombreEjercicio{
-        font-size: 18px;
-        color: white;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-        line-height: 1;
-        font-weight: 700;
-        letter-spacing: 1px;
+    .circulo-preparacion {
+        margin-top: 30%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 30px;
+        font-size: 30px;
     }
-       
+
+    .caja-preparacion h4{
+        font-size: 3rem;
+        margin-left: 5%;
+    }
+    /*================================================*/
+
+    /*========EL TROFEO, SU DIV Y BOTONES ================*/
     #divdefelicitacion {
-        height: 25vh;
-        width: 25vh;
-        margin: 5px;
-        margin-top: 50%;
+        height: 45vh;
+        width: 45vh;
+        margin: 5%;
+        margin-top: 30%;
+        margin-left: 0%;
         position: relative;
-        right: 36px;
         background-color: var(--dark-gray);
         justify-content: center;
-        padding: 40px;
+        padding: 4%;
         text-align: center;
         align-items: center;
     }
     
     .felicitacion {
-        top: 2%;
-        font-size: 16px;
+        top: 4%;
         text-align: center;
     }
     
     #imagentrofeo {
-        height: 15vh;
-        width: 15vh;
-        /*viene con limite ya la imagen, no es 800*/
+        height: 30vh;
+        width: 30vh;
+        padding-top: 3%;
     }
+    
     #repetir {
-        color: black;
-        width: 80px;
-        margin: 15px;
-        margin-top: 50%;
-        height: 80px;
-        -moz-border-radius: 50%;
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
-        background: #ef6603;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 30px;
-        border: none;
-        font-size: 13px;
-        position: relative;
-        top: 33%;
-          
+        margin-top:220%;
+        width: 125px;
+        height:125px;
+        margin-left: -25%;
+        font-size: 20px;
     }
     #listaEjerFinRutina{
-        color: black;
-        margin: 15px;
-        margin-top: 50%;
-        width: 80px;
-        height: 80px;
-        -moz-border-radius: 50%;
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
-        background: #ef6603;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 30px;
-        border: none;
-        font-size: 13px;
-        position: relative;
-        top: 33%;
-        padding-top: 5px;
+        margin-top:220%;
+        width: 125px;
+        height:125px;
+        margin-left: 25%;
+        font-size: 20px;
+    }
+    /*==================================================*/   
+    
+     /*---LA PARTE DE LOS EJERCICIOS Y EL DESCANSO---*/
+    .group{
+        max-width: fit-content;
+        padding: auto;
+        left: 40%;
+    } 
+    section.group.flex {
+        padding:10%;
         
+    } 
+    .group.flex.active{
+        height:55%;
+        margin-top:50%;
     }
-    #botonesfinrutina{
-        align-items: center; 
-        margin-right: 70px;
-        margin-top: 50px
-    
+    .title{
+        top: 50%;
+        zoom: 70%;
     }
-}    
-    
-@media screen and (max-width: 375px) {
+    /*=================================================*/
+}
+
+ 
+@media screen and (max-width: 469px) {
     body{
-        background-image: url("../img/galeria/fondoRutina-small.png");
+        /*background-image: url("../img/galeria/fondoRutina-small.png");*/
         background-size: cover; 
         background-position: center;
         list-style: none;
     }
 
     #nombreEjercicio{
-        font-size: 10px;
-        color: white;
+       color: white;
         text-align: center;
         margin: 0;
         padding: 0;
-        line-height: 1;
-        font-weight: 700;
+        font-weight: 400;
         letter-spacing: 1px;
     }
-           
+    
+    /*===========EL TROFEO, SU DIV Y BOTONES =============*/
     #divdefelicitacion {
-        height: 25vh;
-        width: 25vh;
-        margin: 5px;
-        margin-top: 50%;
+        height: 40vh;
+        width: 40vh;
+        margin: 5%;
+        margin-top: 30%;
+        margin-left: 0%;
         position: relative;
-        right: 15px;
         background-color: var(--dark-gray);
         justify-content: center;
-        padding: 40px;
+        padding: 4%;
         text-align: center;
-        align-items: center
-    }
-        
-    .felicitacion {
-        position: relative;
-        top: 2%;
-        font-size: 16px;
-    }
-        
-    #imagentrofeo {
-        height: 15vh;
-        width: 15vh;
-        /*viene con limite ya la imagen, no es 800*/
+        align-items: center;
     }
     
+    .felicitacion {
+        top: 0%;
+        text-align: center;
+    }
+    
+    #imagentrofeo {
+        height: 30vh;
+        width: 30vh;
+        padding-top: 3%;
+    }
     #repetir {
-        color: black;
-        width: 65px;
-        margin: 10px;
-        margin-top: 50%;
-        height: 65px;
-        -moz-border-radius: 50%;
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
-        background: #ef6603;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 30px;
-        border: none;
-        font-size: 13px;
-        position: relative;
-        top: 33%;
-
-              
+        margin-top:200%;
+        width: 125px;
+        height:125px;
+        margin-left: -80%;
+        font-size: 20px;
     }
-        
     #listaEjerFinRutina{
-        color: black;
-        margin: 15px;
-        margin-top: 50%;
-        width: 65px;
-        height: 65px;
-        -moz-border-radius: 50%;
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
-        background: #ef6603;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 30px;
-        border: none;
-        font-size: 13px;
-        position: relative;
-        top: 33%;
-        padding-top: 5px;
-            
+        margin-top:200%;
+        width: 125px;
+        height:125px;
+        margin-left: 80%;
+        font-size: 20px;
     }
-    #botonesfinrutina{
-        align-items: center; 
-        margin-right: 25px;
-        margin-top: 50px; 
+    /*==================================================*/
+
+    /*---LA PARTE DE LOS EJERCICIOS Y EL DESCANSO---*/
+    section.group.flex {
+        padding:10%;
+        margin-left:1%;
+    }
+    .group{
+        max-width: fit-content;
+        padding: auto;
+        left: 40%;
+    } 
+    .group.flex.active{
+        height:50%;
+        margin-top:50%;
+    }
+    /*==================================================*/
+}
+
+
+@media screen and (max-width:414px) {
+    /*===========EL TROFEO, SU DIV Y BOTONES =============*/
+    #divdefelicitacion {
+        margin-left: 10%;
+    }
+    #repetir {
+        margin-top:300%;
+        width: 125px;
+        height:125px;
+        margin-left: -70%;
+        font-size: 20px;
+    }
+    #listaEjerFinRutina{
+        margin-top:300%;
+        width: 125px;
+        height:125px;
+        margin-left: 110%;
+        font-size: 20px;
+    }
+    /*==================================================*/
+    /*Contenedor de 10seg y ¡Preparate!*/
+
+    /*Texto ¡Preparate!*/
+    h4 {
+        text-align: center;
+        font-size: 50px !important; 
+    }
+
+    /*Sub contenedor de 10seg-Preparate*/
+    .inputs-container {
+        justify-content: center;
+        width: 80%;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+    .caja-preparacion{
+        width: 170%;
+    }
+    
+}
+@media screen and (max-width: 375px) {
+    #nombreEjercicio{
+        color: white;
+         text-align: center;
+         margin: 0;
+         padding: 0;
+         line-height: 1;
+         font-weight: 500;
+         letter-spacing: 1px;
+     }
+    /*===========EL TROFEO, SU DIV Y BOTONES =============*/
+    #divdefelicitacion {
+        height: 40vh;
+        width: 40vh;
+        margin: 5%;
+        margin-top: 30%;
+        margin-left: 0%;
+        position: relative;
+        background-color: var(--dark-gray);
+        justify-content: center;
+        padding: 4%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .felicitacion {
+        top: 4%;
+        text-align: center;
+    }
+    
+    #imagentrofeo {
+        height: 30vh;
+        width: 30vh;
+        padding-top: 3%;
+    }
+    #repetir {
+        margin-top:205%;
+        width: 125px;
+        height:125px;
+        font-size: 20px;
+        margin-left: -60%;
+    }
+    #listaEjerFinRutina{
+        margin-top:205%;
+        width: 125px;
+        height:125px;
+        font-size: 20px;
+        margin-left: 60%;
+    }
+    /*==================================================*/
+    /*Contenedor de 10seg y ¡Preparate!*/
+
+    /*Texto ¡Preparate!*/
+    h4 {
+        text-align: center;
+        font-size: 50px !important; 
+    }
+
+    /*Sub contenedor de 10seg-Preparate*/
+    .inputs-container {
+        justify-content: center;
+        width: 80%;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+    .caja-preparacion{
+        width: 160%;
     }
 }

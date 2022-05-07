@@ -20,7 +20,7 @@ const app = initializeApp(firebaseConfig);
 
 import { getFirestore, collection, addDoc, doc, setDoc, getDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"
 import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-storage.js"
-import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"
 
 
 //conexion a Firestore
@@ -28,7 +28,7 @@ const cloudDB = getFirestore();
 //Conexion a Storage
 const storage = getStorage();
 
-const auth = getAuth();
+//const auth = getAuth();
 var progress
 export const guardarRegistro = (nombre, descripcion, musculo, minutos, segundos, gif) => {
   const storageRef = sRef(storage, 'gifs/' + Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1)+".gif");
@@ -83,7 +83,7 @@ export const guardarRegistro = (nombre, descripcion, musculo, minutos, segundos,
     }
   }
 
-export const autenticacion = (email, password) => {
+/*export const autenticacion = (email, password) => {
   signInWithEmailAndPassword(auth, email, password)
   .then(async (userCredential) => {
     const user = userCredential.user;
@@ -127,7 +127,7 @@ export const autenticacion = (email, password) => {
     console.log(errorCode + errorMessage)
   });
 
-}
+}*/
 
 export const conf = initializeApp(firebaseConfig);
 

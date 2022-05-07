@@ -12,7 +12,8 @@
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link href="../css/plantilla.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/98af28cb8a.js" crossorigin="anonymous"></script>
-  <link href="../import/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"><!--iconos boostrap 5-->
+  <link href="../import/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <!--iconos boostrap 5-->
 </head>
 
 <body>
@@ -45,7 +46,7 @@
         <a name="lista de ejercicios" id="lista" class="btn btn-primary" onclick="redireccionarEjercicios()" role="button">
             <i class="fa-solid fa-list" id="btn-lista"></i> Lista de Ejercicios</a>
         <a name="registrar ejercicio" id="registrar" class="btn btn-primary" onclick="redireccionarRutina()"
-            role="button"><i class="bi bi-calendar-check"></i> Lista de Rutinas</a>
+            role="button"><i class="bi bi-calendar2-check-fill"></i> Lista de Rutinas</a>
         <a name="registrar ejercicio" id="registrar" class="btn btn-primary" onclick="redireccionarRegistro()"
             role="button"><i class="fa-solid fa-dumbbell"></i> Registrar Ejercicio</a>
     </div>
@@ -54,8 +55,11 @@
  <!-- import archivos JS -->
   <script src="../import/aos/aos.js"></script>
   <script src="../import/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script type= "module" src="../js/validacion.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!--archivo JS principal-->
   <script src="../js/plantilla.js"></script>
+
 </body>
 <script>
     var url = "" + window.location.href;
