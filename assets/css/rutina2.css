@@ -293,3 +293,18 @@
     }
   
   }
+
+  @media (max-width: 1200px) {
+    body{
+      background-position: left;
+      background-attachment: fixed;
+    }
+  }
+
+  @media (max-height: 750px) {
+    body{
+      background-image: url("../img/galeria/fondoRutina-small.png") !important;
+      background-position: left;
+      background-attachment: scroll;
+    }
+  }
