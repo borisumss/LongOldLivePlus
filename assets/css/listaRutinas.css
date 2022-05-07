@@ -284,3 +284,10 @@ body{
     background-color: #2E3040;
 
 }
+/*
+@media screen and (max-width: 375px){
+  body{
+    background-image: url("../img/galeria/fondoListaRutinas-small.png");
+  }
+  
+}*/

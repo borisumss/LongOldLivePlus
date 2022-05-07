@@ -134,8 +134,11 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
         } else if (round1.innerText === "0:00") {
           if(i == mins.length-1){
-            clearInterval(rutina);
-            
+            clearInterval(rutina);   
+            document.getElementById("cancelar").style.display='none';
+            /*if(screen.width < 1024){
+              document.getElementsByClassName(".bi::before").style.display='none';       
+            }*/
             formulario2.innerHTML = `
             <div class="inputs-container">
             <li id="botonesfinrutina">

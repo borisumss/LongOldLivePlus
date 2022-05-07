@@ -117,7 +117,7 @@ body, header{
         background-color: #2E3040;
     }
     body {
-        background-image: url("../img/galeria/fondo-small.png");
+        background-image: url("../img/galeria/fondo-small.jpg");
         background-repeat: no-repeat;
         background-size: cover; 
         background-position: center;
@@ -179,7 +179,7 @@ body, header{
         text-align: center;
         border:none;
         font-family: "Verdana";
-        font-size: 17px;
+        font-size: 15px;
         transition: all 0.3s ease;
         position: relative;
         display: inline-block;
@@ -195,7 +195,7 @@ body, header{
         background-color: #2E3040;
     }
     body {
-        background-image: url("../img/galeria/fondo-small.png");
+        background-image: url("../img/galeria/fondo-small.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -323,7 +323,11 @@ body, header{
         font-family: "Verdana";
         font-size: 12px;
     }
+    #tituloApp{
+        font-size: 31px;
+    }
 }
+
 
 
 
