@@ -600,18 +600,17 @@ label.restTime {
     /*Texto ¡Preparate!*/
     h4 {
         text-align: center;
-        font-size: 50px !important; 
+        font-size: 70px !important; 
     }
 
     /*Sub contenedor de 10seg-Preparate*/
-    .inputs-container {
-        justify-content: center;
-        width: 80%;
-        padding: 1rem;
-        border-radius: 5px;
+    .circulo-preparacion {
+        margin-top: 100%;
+          
     }
+    
     .caja-preparacion{
-        width: 170%;
+        width: 250%;
     }
     
 }
@@ -666,14 +665,11 @@ label.restTime {
     }
     /*==================================================*/
     /*Contenedor de 10seg y ¡Preparate!*/
-
-    /*Texto ¡Preparate!*/
+    /*
     h4 {
         text-align: center;
         font-size: 50px !important; 
     }
-
-    /*Sub contenedor de 10seg-Preparate*/
     .inputs-container {
         justify-content: center;
         width: 80%;
@@ -682,5 +678,5 @@ label.restTime {
     }
     .caja-preparacion{
         width: 160%;
-    }
+    }*/
 }
