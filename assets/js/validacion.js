@@ -39,9 +39,13 @@ window.onload = function () {
             const docSnap = await getDoc(docRef);
             if(docSnap.data().tipo == "fisioterapeuta"){
                // window.location = "../html/home.html#Fisioterapeuta";
+
+               if((window.location.href).includes("AdultoMayor")){
+                window.location = "../html/home.html#Fisioterapeuta";
+               }
             }else if (docSnap.data().tipo == "adulto"){
                 if((window.location.href).includes("Fisioterapeuta")){
-                    window.location = "../html/ejerciciosFisicos.html#AdultoMayor";
+                    window.location = "../html/home.html#AdultoMayor";
                 }
                // window.location = "../html/home.html#AdultoMayor";
             }else{
