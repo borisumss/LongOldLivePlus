@@ -18,21 +18,24 @@
     <link href="../../assets/import/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     
     <link rel="stylesheet" href="../css/login.css" />
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-    <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>               
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>             
     <script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyC1WJuRzxe5M5wtvRx-BK6c7mOps4usdR4",
-          authDomain: "long-old-live-plus-aab44.firebaseapp.com",
-          databaseURL: "https://long-old-live-plus-aab44-default-rtdb.firebaseio.com",
-          projectId: "long-old-live-plus-aab44",
-          storageBucket: "long-old-live-plus-aab44.appspot.com",
-          messagingSenderId: "371071760445",
-          appId: "1:371071760445:web:b44da528fddb82bb759254"
-    };
-    firebase.initializeApp(config);
+    let con = true
+    function verClave() {
+    let ver = document.getElementById("ver_clave");
+    let clave = document.getElementById("contraseñaAM")
+    let icono = document.getElementById("icono")
+    if (con == true) {
+        clave.type = "text"
+        icono.classList.add("fa-eye-slash")
+        con = false
+    } else {
+        clave.type = "password"
+        icono.classList.remove("fa-eye-slash")
+        con = true
+    }
+
+    }
     </script>
      <!--js de bootstrap-->
   <script src="../import/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -68,6 +71,7 @@
         <div class="logo">
             <img class="logo_img" src="../img/galeria/logo.png" alt="">
         </div>
+    <form id="login">
         <div action="" class="form">
             <h3 class="signin-text text-center " id="letra"> Iniciar Sesión </h3>
             <br>
@@ -84,13 +88,14 @@
             <h2 ></h2>
             
             <div class="form__boton">
-                <button onclick="ingreso()" class="boton" style="border-radius: 50px">Acceder</button>
+                <button type="submit" name="iniciarSesionFisioterapeuta" class="boton" id="acceder" style="border-radius: 50px">Acceder</button>
                 
                
             </div>
         </div>
+    </form>
     </div>
-    <script src="../js/loginAdulto.js"></script>
+    <script type="module" src="../js/autenticacionAdulto.js"></script>
 </body>
 <script src="../../assets/import/aos/aos.js"></script>
     <script src="../../assets/import/bootstrap/js/bootstrap.bundle.min.js"></script>

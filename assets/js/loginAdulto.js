@@ -1,25 +1,18 @@
 
+function link() {
+  var url = "" + window.location.href;
+  var pos = url.indexOf("#");
+  var res = "";
 
-
-let con = true
-function verClave() {
-  let ver = document.getElementById("ver_clave");
-  let clave = document.getElementById("contraseñaAM")
-  let icono = document.getElementById("icono")
-  if (con == true) {
-    clave.type = "text"
-    icono.classList.add("fa-eye-slash")
-    con = false
-  } else {
-    clave.type = "password"
-    icono.classList.remove("fa-eye-slash")
-    con = true
+  for (var i = pos + 1; i < url.length && i > 0; i++) {
+    res += url[i];
   }
+
+  return res;
 
 }
 
-
-function ingreso() {
+/*function ingreso() {
 
   var email2 = document.getElementById('email2').value;
   var contrasena2 = document.getElementById('contraseñaAM').value;
