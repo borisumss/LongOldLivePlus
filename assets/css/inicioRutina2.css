@@ -243,13 +243,13 @@ label.restTime {
 
 .felicitacion {
     position: relative;
-    top: 0%;
+    top: 3%;
     margin-top: 12px;
 }
 
 #imagentrofeo {
-    height: 400px;
-    width: 800px;
+    height: 350px;
+    width: 700px;
     /*viene con limite ya la imagen, no es 800*/
 }
 
@@ -337,8 +337,8 @@ label.restTime {
      
     /*========EL TROFEO, SU DIV Y BOTONES ================*/
     #divdefelicitacion {
-        height: 40vh;
-        width: 40vh;
+        height: 50vh;
+        width: 50vh;
         margin: 5%;
         margin-top: 50%;
         margin-left: 0%;
@@ -366,14 +366,14 @@ label.restTime {
         margin-top:60%;
         width: 150px;
         height:150px;
-        margin-right: 5%;
+        margin-left: 15%;
         font-size: 30px;
     }
     #listaEjerFinRutina{
         margin-top:60%;
         width: 150px;
         height:150px;
-        margin-right: -5%;
+        margin-left: -15%;
         font-size: 30px;
     }
     /*==================================================*/
