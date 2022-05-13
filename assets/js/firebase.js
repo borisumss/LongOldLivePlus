@@ -22,7 +22,7 @@ import { getFirestore, collection, addDoc, doc, setDoc, getDoc, onSnapshot } fro
 import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-storage.js"
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"
 
-
+const formulario = document.getElementById('formulario');
 //conexion a Firestore
 const cloudDB = getFirestore();
 //Conexion a Storage
@@ -30,12 +30,14 @@ const storage = getStorage();
 
 //const auth = getAuth();
 var progress
+var activo= false;
 export const guardarRegistro = (nombre, descripcion, musculo, minutos, segundos, gif) => {
   const storageRef = sRef(storage, 'gifs/' + Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1)+".gif");
   const uploadTask = uploadBytesResumable(storageRef, gif);
   uploadTask.on('state_changed', (snapshot) => {
     progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-    if (progress < 100) {
+   /* if (progress < 100 && activo==false) {
+          activo = true;
           Swal.fire({
 
             title: "Guardando registro...",
@@ -48,7 +50,7 @@ export const guardarRegistro = (nombre, descripcion, musculo, minutos, segundos,
     
     
           });
-        } 
+        }*/ 
       
     },(error) => {
       alert("error: gif no subido");
@@ -57,22 +59,38 @@ export const guardarRegistro = (nombre, descripcion, musculo, minutos, segundos,
     ()=>{
       getDownloadURL(uploadTask.snapshot.ref).then((downloadURL)=>{
         guardarFirestore(downloadURL);
-                 
-          setTimeout( function(){
+        Swal.fire({
+
+          title: "Registro exitoso",
+          icon: "success",
+          closeOnCancel: true,
+          closeOnConfirm: true,
+          allowOutsideClick: false,
+          showCancelButton: false,
+          showConfirButton: false,
+        });
+
+        setTimeout( function(){
+          Swal.close(); 
+          formulario.reset();
+        },2000);
+        
+      
+          /*setTimeout( function(){
            
           },3000);
 
           setTimeout( function(){
             Swal.close();
             window.location.href="ejerciciosFisicosFTP.html#Fisioterapeuta";
-          },3000);
+          },3000);*/
           
         
       });
     }
     );
     function guardarFirestore(downloadURL){
-      addDoc(collection(cloudDB, "Ejercicio"),{
+      addDoc(collection(cloudDB, "test"),{
         NombreEjercicio: nombre,
         DescripcionEjercicio: descripcion,
         GrupoMuscular: musculo,
@@ -80,6 +98,7 @@ export const guardarRegistro = (nombre, descripcion, musculo, minutos, segundos,
         SegundosEjercicio: segundos,
         GifURL: downloadURL
       });
+     
     }
   }
 
@@ -134,7 +153,7 @@ export const conf = initializeApp(firebaseConfig);
 //export const db = getFirestore();
 
 export const onGetTasks = (callback) =>
-  onSnapshot(collection(cloudDB, "Ejercicio"), callback);
+  onSnapshot(collection(cloudDB, "test"), callback);
 
 export const onGetTasks2 = (callback) =>
   onSnapshot(collection(cloudDB, "Rutinas"), callback);
