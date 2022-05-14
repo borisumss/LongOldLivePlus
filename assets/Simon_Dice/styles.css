@@ -28,6 +28,7 @@
 .verde {
   background: green;
   transition: 0.2s;
+  border-radius: 0% 0% 30%;
 }
 
 .verde.light {
@@ -39,6 +40,7 @@
 .rojo {
   background: #c51616;;
   transition: 0.2s;
+  border-radius: 0% 30% 0%;
 }
 
 .rojo.light {
@@ -50,6 +52,7 @@
 .amarillo {
   background: #f1c232;
   transition: 0.2s;
+  border-radius: 0% 30% 0%;
 }
 
 .amarillo.light {
@@ -61,6 +64,7 @@
 .azul {
   background: rgb(0, 153, 255);
   transition: 0.2s;
+  border-radius: 30% 0% 0%;
 }
 
 .azul.light {

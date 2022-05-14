@@ -42,15 +42,17 @@
             <div class="d-grid gap-5 col-6 mx-auto ">
                 <a id="jugar" class="btn btn-primary" href="simon.html" role="button">
                     <i class="bi bi-caret-right-square-fill" id="btn-jugar"></i> Jugar</a>
-                <a id="comoJugar" class="btn btn-primary" onclick="mostrarAyuda()" role="button">
+                <a id="comoJugar" class="btn btn-primary" class="open-modal" data-open="instruccion" role="button">
                     <i class="bi bi-info-square-fill" id="btn-como"></i> ¿Cómo Jugar?</a>
             </div>
         </div>
+
+  <!-- import archivos JS -->
+  <script src="../import/aos/aos.js"></script>
+  <script src="../import/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script type= "module" src="../js/validacion.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!--archivo JS principal-->
+  <script src="../js/plantilla.js"></script>            
 </body>
-<script>
-    function mostrarAyuda() {
-
-    }
-</script>
-
 </html>
