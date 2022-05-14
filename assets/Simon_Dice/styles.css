@@ -34,46 +34,46 @@ body {
   float: left;
 }
 
-.celeste {
-  background: #22377c;
-  transition: 0.2s;
-}
-
-.celeste.light {
-  background: #123ece;
-  transform: scale(1.03);
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.violeta {
-  background: #7b1592;
-  transition: 0.2s;
-}
-
-.violeta.light {
-  background: #bf0ce7;
-  transform: scale(1.03);
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.naranja {
-  background: #a32727;
-  transition: 0.2s;
-}
-
-.naranja.light {
-  background: #e61111;
-  transform: scale(1.03);
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-}
-
 .verde {
-  background: #1c864c;
+  background: green;
   transition: 0.2s;
 }
 
 .verde.light {
-  background: #10e46f;
+  background: lime;
+  transform: scale(1.03);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.rojo {
+  background: #c51616;;
+  transition: 0.2s;
+}
+
+.rojo.light {
+  background: red;
+  transform: scale(1.03);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.amarillo {
+  background: #f1c232;
+  transition: 0.2s;
+}
+
+.amarillo.light {
+  background: yellow;
+  transform: scale(1.03);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.azul {
+  background: rgb(0, 153, 255);
+  transition: 0.2s;
+}
+
+.azul.light {
+  background: skyblue;
   transform: scale(1.03);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }

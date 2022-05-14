@@ -1,7 +1,7 @@
-const LIGHT_BLUE = document.getElementById("celeste");
-const PURPLE = document.getElementById("violeta");
-const ORANGE = document.getElementById("naranja");
 const GREEN = document.getElementById("verde");
+const RED = document.getElementById("rojo");
+const YELLOW = document.getElementById("amarillo");
+const BLUE = document.getElementById("azul");
 
 const btnStartGame = document.getElementById("btnEmpezar");
 
@@ -20,10 +20,10 @@ class Game {
     btnStartGame.classList.add("hide");
     this.nivel = 1;
     this.colores = {
-      celeste: LIGHT_BLUE,
-      violeta: PURPLE,
-      naranja: ORANGE,
       verde: GREEN,
+      rojo: RED,
+      amarillo: YELLOW,
+      azul: BLUE,
     };
   }
 
@@ -42,30 +42,30 @@ class Game {
   transformarNumeroAColor(numero) {
     switch (numero) {
       case 0:
-        return "celeste";
+        return "verde";
       case 1:
-        return "violeta";
+        return "rojo";
       case 2:
-        return "naranja";
+        return "amarillo";
       case 3:
-        return "verde";
+        return "azul";
       default:
-        return "verde";
+        return "azul";
     }
   }
 
   transformarColorANumero(color) {
     switch (color) {
-      case "celeste":
-        return 0;
-      case "violeta":
-        return 1;
-      case "naranja":
-        return 2;
       case "verde":
+        return 0;
+      case "rojo":
+        return 1;
+      case "amarillo":
+        return 2;
+      case "azul":
         return 3;
       default:
-        return "verde";
+        return "azul";
     }
   }
 
@@ -88,17 +88,17 @@ class Game {
   }
 
   agregarEventosClick() {
-    this.colores.celeste.addEventListener("click", this.elegirColor);
     this.colores.verde.addEventListener("click", this.elegirColor);
-    this.colores.violeta.addEventListener("click", this.elegirColor);
-    this.colores.naranja.addEventListener("click", this.elegirColor);
+    this.colores.azul.addEventListener("click", this.elegirColor);
+    this.colores.rojo.addEventListener("click", this.elegirColor);
+    this.colores.amarillo.addEventListener("click", this.elegirColor);
   }
 
   eliminarEventosClick() {
-    this.colores.celeste.removeEventListener("click", this.elegirColor);
     this.colores.verde.removeEventListener("click", this.elegirColor);
-    this.colores.violeta.removeEventListener("click", this.elegirColor);
-    this.colores.naranja.removeEventListener("click", this.elegirColor);
+    this.colores.azul.removeEventListener("click", this.elegirColor);
+    this.colores.rojo.removeEventListener("click", this.elegirColor);
+    this.colores.amarillo.removeEventListener("click", this.elegirColor);
   }
 
   elegirColor(ev) {
