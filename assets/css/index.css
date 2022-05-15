@@ -19,6 +19,10 @@ body{
     min-height: 100vh;
   }
 
+
+.col-lg-6{
+    width: 80vh;
+}
   
 #letra{
     font-family: "Verdana";
