@@ -39,6 +39,16 @@ body{
 }
 
 
+
+#fondoJuegMental{
+    background-image: url("../img/galeria/fondoMockup.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+
+}
+
 #head{
     height: 78px;
     background-image: linear-gradient(315deg, rgb(109, 110, 182) 0%, #38204C 75%);
