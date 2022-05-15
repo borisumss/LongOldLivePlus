@@ -67,45 +67,7 @@ login.addEventListener('submit', (e) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         console.log(errorCode + errorMessage)
-});
-  
-
+    });
 })
 
 
-window.onload = function () {
-    console.log("esta iniciado");
-    
-    onAuthStateChanged(auth, async (user) => {
-        if (user) {
-            const uid = user.uid;
-            const docRef = doc(cloudDB, "Users", user.uid);
-            const docSnap = await getDoc(docRef);
-            if(docSnap.data().tipo == "fisioterapeuta"){
-                window.location = "../html/home.html#Fisioterapeuta";
-            }else if (docSnap.data().tipo == "adulto"){
-                window.location = "../html/home.html#AdultoMayor";
-            }else{
-                await Swal.fire({
-                    icon: 'error',
-                    title: 'Error',
-                    text: 'Acceso denegado ¡Vuelva a iniciar sesión!',
-                    color: '#312d2d',
-                    background: '#ffffff',
-                    confirmButtonColor: '#ffcc00',
-                    timer: 3000
-                }).then(async (result) => {
-                    /* Read more about isConfirmed, isDenied below */
-                    if (result.isConfirmed) {
-                      await logout("e")
-                    } else{
-                        window.location = "../../index.html";
-                    }
-                })
-                window.location = "../../index.html";
-            }
-        } else {
-            
-        }
-    });
-};
