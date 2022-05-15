@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UFT-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,17 +34,45 @@
                 <div class="col col-lg-2"></div>
             </div>
         </header>
+        <!-- ======= Fin Header ======= -->
 
-
+        <!-- ======= Botones ====== -->
         <div class="container " id="botones">
             <br><br><br>
             <div class="d-grid gap-5 col-6 mx-auto ">
                 <a id="jugar" class="btn btn-primary" href="simon.html" role="button">
                     <i class="bi bi-caret-right-square-fill" id="btn-jugar"></i> Jugar</a>
-                <a id="comoJugar" class="btn btn-primary" class="open-modal" data-open="instruccion" role="button">
+                <a id="comoJugar" class="btn btn-primary" role="button">
                     <i class="bi bi-info-square-fill" id="btn-como"></i> ¿Cómo Jugar?</a>
             </div>
         </div>
+        <!-- ======= Fin Botones ====== -->
+
+        <!-- ======= Modal de Instrucciones ====== -->
+        <div class="fondo_transparente">
+            <div class="modal">
+                <div class="modal_titulo">Instrucciones</div>
+                <div class="modal_mensaje">
+                    <p><img id="icono_modal" src="../img/galeria/logoSD.png"></p>
+                    <p><strong>¿Qué es Simon Dice?</strong></p>
+                    <p>Simon Dice es un juego de memoria musical acompañado de cuatro colores.</p>
+    
+                    <p><strong>Pasos:</strong></p>
+                    <p> -Al ingresar al juego, presiona el botón de ¡Comenzar!</p>
+                    <p> -Primero, ponga atención al orden de colores que muestra el juego,
+                         (usted vera los colores volverse más brillantes por un momento) </p>
+                    <p> -Luego de que termine la música y los colores ya no se muestren más brillantes,
+                         presione los botones de color y repita el orden de colores que mostró el juego</p>
+                    <p> -Si logra repetir el orden, va por buen camino y el juego mostrará el mismo orden
+                         aumentando un movimiento más</p> 
+                    <p> -En caso de no lograr repetir el orden, se pierde la partida</p>   
+                    <div class="modal_cerrar">
+                        <a href="" class="boton">¡Listo!</a>
+                    </div>
+                </div>  
+            </div>
+        </div>   
+        <!-- ======= Fin Modal ====== -->
 
   <!-- import archivos JS -->
   <script src="../import/aos/aos.js"></script>
@@ -55,4 +82,20 @@
   <!--archivo JS principal-->
   <script src="../js/plantilla.js"></script>            
 </body>
+
+<script>
+   document.getElementById("comoJugar").addEventListener  
+   ("click", function(){
+       document.getElementsByClassName
+       ("fondo_transparente")[0].style.display="block"
+       return false
+   })
+
+   document.getElementsByClassName("modal_cerrar")[0].
+   addEventListener("click", function(){
+       document.getElementsByClassName
+       ("fondo_transparente")[0].style.display="none"
+   })
+</script>
+
 </html>

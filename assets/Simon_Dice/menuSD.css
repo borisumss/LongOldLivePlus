@@ -301,3 +301,67 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 10%;
     align-content: center;
 }
+
+/*Para el modal de instrucciones*/
+.fondo_transparente{
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.226);
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    display: none;
+}
+.modal{
+    background: #c4c4c4;
+    width: 600px;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*position: relative;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_titulo{
+    color:  black;
+    font-size: 40px;
+    margin-top: 15%;
+}
+
+#icono_modal{
+    width: 20%;
+    height: 20%;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+.modal_mensaje{            
+   padding: 10px 30px;
+}
+.modal_cerrar{      
+   width: 100%;    
+   background: #c4c4c4;
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.boton{
+    width: 90px;
+    background: #FD7314;
+    color: white;
+    text-align: center;
+    border-radius: 5px;    
+}
+.boton:hover{
+    background:  #2E3040;
+    color: white;
+}
+
+p{
+    color: black;
+}
+
+/*border: 5px solid black*/
