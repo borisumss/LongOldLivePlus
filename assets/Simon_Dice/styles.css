@@ -17,62 +17,6 @@
   display: inline-block;
 }
 
-.left {
-  float: left;
-}
-
-.right {
-  float: left;
-}
-
-.verde {
-  background: green;
-  transition: 0.2s;
-  border-radius: 0% 0% 30%;
-}
-
-.verde.light {
-  background: lime;
-  transform: scale(1.03);
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.rojo {
-  background: #c51616;;
-  transition: 0.2s;
-  border-radius: 0% 30% 0%;
-}
-
-.rojo.light {
-  background: red;
-  transform: scale(1.03);
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.amarillo {
-  background: #f1c232;
-  transition: 0.2s;
-  border-radius: 0% 30% 0%;
-}
-
-.amarillo.light {
-  background: yellow;
-  transform: scale(1.03);
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.azul {
-  background: rgb(0, 153, 255);
-  transition: 0.2s;
-  border-radius: 30% 0% 0%;
-}
-
-.azul.light {
-  background: skyblue;
-  transform: scale(1.03);
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-}
-
 .btn-start {
   cursor: pointer;
   width: 420px;
@@ -105,6 +49,71 @@
 .hide {
   display: none;
 }
+.color {
+  width: 50%;
+  height: 50%;
+  display: inline-block;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: left;
+}
+
+.azul {
+  background: green;
+  transition: 0.2s;
+  border-radius: 0% 0% 30%;
+}
+
+.azul.light {
+  background: lime;
+  transform: scale(1.03);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+.verde {
+  background: rgb(0, 153, 255);
+  transition: 0.2s;
+  border-radius: 30% 0% 0%;
+}
+
+.verde.light {
+  background: skyblue;
+  transform: scale(1.03);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.rosado {
+  background: #c51616;;
+  transition: 0.2s;
+  border-radius: 0% 30% 0%;
+}
+
+.rosado.light {
+  background: red;
+  transform: scale(1.03);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.naranja {
+  background: #f1c232;
+  transition: 0.2s;
+  border-radius: 0% 30% 0%;
+}
+
+.naranja.light {
+  background: yellow;
+  transform: scale(1.03);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
 
 @media screen and (max-width: 991px){
   .gameboard{
