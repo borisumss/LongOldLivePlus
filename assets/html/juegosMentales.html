@@ -45,7 +45,7 @@
     <div class="d-grid gap-5 col-6 mx-auto ">
         <a name="lista de ejercicios" id="lista" class="btn btn-primary" onclick="redireccionarListaJuegos()" role="button">
         Lista de Juegos</a>
-        <a name="registrar ejercicio" id="registrar" class="btn btn-primary" onclick="redireccionarRutina()"
+        <a name="registrar ejercicio" id="registrar" class="btn btn-primary" onclick="redireccionarRecomendados()"
             role="button">Juegos Recomendados</a>
     </div>
 </div>
@@ -70,4 +70,10 @@
         var res = "";
         window.location.href = "../html/listaJuegos.html#" + res;
     }
+
+    function redireccionarRecomendados() {
+        var res = "";
+        window.location.href = "../html/listaRecomendados.html#" + res;
+    }
+
 </script>
