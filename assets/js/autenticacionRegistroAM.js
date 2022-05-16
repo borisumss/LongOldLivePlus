@@ -109,7 +109,7 @@ async function  error(){
     }else if(validarNombre(username.value)==false){
         await Swal.fire({
             title: "Nombre de Usuario",
-            text: "El nombre de usuario debe tener mínimo 5 caracteres y máximo 50 caracteres. No se permiten caracteres especiales",
+            text: "El nombre de usuario debe tener mínimo 5 caracteres y máximo 50 caracteres",
             icon: "error",
             showCancelButton: false,
             showConfirmButton: false,
@@ -129,7 +129,27 @@ async function  error(){
     }else if(validarCorreo2(correo.value)==false){
         await Swal.fire({
             title: "Correo Electrónico",
-            text: "Inserte un correo con formato valido: example@gmail.com",
+            text: "Inserte un correo con formato válido: example@gmail.com",
+            icon: "error",
+            showCancelButton: false,
+            showConfirmButton: false,
+            timer:5000        
+    
+        });
+    }else if(correo.checkValidity()==false){
+        await Swal.fire({
+            title: "Correo Electrónico",
+            text: "No se permite caracteres especiales en el dominio del correo",
+            icon: "error",
+            showCancelButton: false,
+            showConfirmButton: false,
+            timer:5000        
+    
+        });
+    }else{
+        await Swal.fire({
+            title: "Nombre de Usuario",
+            text: "No se permite Caracteres especiales",
             icon: "error",
             showCancelButton: false,
             showConfirmButton: false,
@@ -148,7 +168,7 @@ async function  registrar(){
 
     if(validarDominio(correo.value)==false){
         await Swal.fire({
-            title: "Dominio de Correo Electrónico inválido",
+            title: "Correo Electrónico inválido",
             text: "Sólo se permiten los dominios gmail.com y hotmail.com",
             icon: "error",
             showCancelButton: false,
