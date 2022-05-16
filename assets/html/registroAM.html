@@ -91,7 +91,7 @@
 
       <div class="col-md-12">
         <label for="nombre" class="form-label" >Nombre de Usuario:</label>
-        <input type="text" class="form-control" minlength="5" maxlength="50" id="nombre" name="nombre" placeholder="Nombre" pattern="^(?!\s)[a-zA-ZÁáÉéÍíÓóÚú\s]{5,50}" required> 
+        <input type="text" class="form-control" minlength="5" maxlength="20" id="nombre" name="nombre" placeholder="Nombre" pattern="^(?!\s)[a-zA-Z0-9ÁáÉéÍíÓóÚú\s]{5,20}" required> 
         <div class="invalid-feedback">
           
         </div>
@@ -105,7 +105,7 @@
       </div>
 
       <div class="col-md-12">
-        <label for="Correo" class="form-label" >Contraseña:</label>
+        <label for="contraseñaAM" class="form-label" >Contraseña:</label>
         <div class="input-group flex-nowrap" id="contra">
             
             <input id="contraseñaAM" type="password" class="form-control" required>
@@ -117,7 +117,7 @@
       </div>
 
       <div class="col-md-12">
-        <label for="Correo" class="form-label" >Confirmar Contraseña:</label>
+        <label for="contraseñaAM2" class="form-label" >Confirmar Contraseña:</label>
         <div class="input-group flex-nowrap" id="contra">
             <input id="contraseñaAM2" type="password" class="form-control" required>
             <span class="input-group-text" id="ver_clave2" onclick="verClave2()"><i id="icono2" class="fas fa-eye"></i></span>  

@@ -91,13 +91,130 @@ window.onload = function () {
 
 async function  error(){
     event.preventDefault();
-    await Swal.fire({
-        title: "Llene los campos correctamente",
-        
-        icon: "error",
-        showCancelButton: false,
-        showConfirmButton: false,
-        timer:2000        
+    var username = document.getElementById('nombre');
+    var correo = document.getElementById('correo');
+    var pass1 = document.getElementById('contraseñaAM');
+    var pass2 = document.getElementById('contraseñaAM2');
 
-    });
+    if(username.value.length==0||correo.value.length==0||pass1.value.length==0||pass2.value.length==0){
+        await Swal.fire({
+            title: "Campos Vacios",
+            text: "Llene todos los campos",
+            icon: "error",
+            showCancelButton: false,
+            showConfirmButton: false,
+            timer:3000        
+    
+        });
+    }else if(validarNombre(username.value)==false){
+        await Swal.fire({
+            title: "Nombre de Usuario",
+            text: "El nombre de usuario debe tener mínimo 5 caracteres y máximo 50 caracteres. No se permiten caracteres especiales",
+            icon: "error",
+            showCancelButton: false,
+            showConfirmButton: false,
+            timer:5000        
+    
+        });
+    }else if(validarCorreo(correo.value)==false){
+        await Swal.fire({
+            title: "Correo Electrónico",
+            text: "El correo electrónico debe tener mínimo 10 caracteres y máximo 50 caracteres",
+            icon: "error",
+            showCancelButton: false,
+            showConfirmButton: false,
+            timer:5000        
+    
+        });
+    }else if(validarCorreo2(correo.value)==false){
+        await Swal.fire({
+            title: "Correo Electrónico",
+            text: "Inserte un correo con formato valido: example@gmail.com",
+            icon: "error",
+            showCancelButton: false,
+            showConfirmButton: false,
+            timer:5000        
+    
+        });
+    }
+
+}
+
+async function  registrar(){
+    event.preventDefault();
+    var correo = document.getElementById('correo');
+    var pass1 = document.getElementById('contraseñaAM');
+    var pass2 = document.getElementById('contraseñaAM2');
+
+    if(validarDominio(correo.value)==false){
+        await Swal.fire({
+            title: "Dominio de Correo Electrónico inválido",
+            text: "Sólo se permiten los dominios gmail.com y hotmail.com",
+            icon: "error",
+            showCancelButton: false,
+            showConfirmButton: false,
+            timer:5000        
+    
+        });
+    }else if(validarContraseñas(pass1.value,pass2.value)==false){
+        await Swal.fire({
+            title: "Contraseñas Incorrectas",
+            text: "Las contraseñas ingresadas no son las mismas",
+            icon: "error",
+            showCancelButton: false,
+            showConfirmButton: false,
+            timer:5000        
+    
+        });
+    }
+
+}
+function validarNombre(name){
+    var res = false;
+    if(name.length >=5 && name.length<=20){
+        res = true;
+    }
+
+    return res;
+}
+
+function validarCorreo(correo){
+    var res = false;
+    if(correo.length >=10 && correo.length<=50){
+        res = true;
+    }
+
+    return res;
+}
+
+function validarCorreo2(correo){
+    var res = false;
+    if(correo.indexOf("@")!=-1){
+        res = true;
+    }
+
+    return res;
+}
+
+function validarDominio(correo){
+    var res = false;
+    var pos = correo.indexOf("@");
+    var dominio= correo.substring(pos+1,correo.length).toUpperCase();
+
+    if(dominio == "GMAIL.COM"||dominio == "HOTMAIL.COM"){
+        res = true;
+    }
+
+    return res;
+}
+
+function validarContraseñas(pass1,pass2){
+    var res = false;
+    
+
+    if(pass1 == pass2){
+        res = true;
+    }
+
+    return res;
 }
