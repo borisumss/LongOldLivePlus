@@ -365,3 +365,9 @@ p{
 }
 
 /*border: 5px solid black*/
+@media screen and (max-width: 500px) {
+    body{
+        background-position: center;
+        min-height: 112vh;
+    }   
+}

@@ -1,20 +1,18 @@
-const azul = document.getElementById('azul')
-const rosado = document.getElementById('rosado')
-const naranja = document.getElementById('naranja')
-const verde   = document.getElementById('verde')
+const verde = document.getElementById('verde')
+const rojo = document.getElementById('rojo')
+const amarillo = document.getElementById('amarillo')
+const celeste   = document.getElementById('celeste')
 const btnEmpezar = document.getElementById('btnEmpezar')
 const ULTIMO_NIVEL = 8
 const MAXIMO_DE_PUNTOS = ULTIMO_NIVEL * 100
 
     
-
 class Juego{
     constructor(){
         this.inicializar = this.inicializar.bind(this)
         this.inicializar()
         this.generarSecuencia()
         setTimeout(this.siguienteNivel,1000)
-
     }
     inicializar(){
         // haciendo ref al this.elegirColor de abajo
@@ -24,11 +22,10 @@ class Juego{
         //btnEmpezar.classList.add('hide')
         this.nivel = 1
         this.colores = {
-            azul,
-            rosado,
-            naranja,
-            verde
-
+            verde,
+            rojo,
+            amarillo,
+            celeste
         }
      } 
     
@@ -37,7 +34,6 @@ class Juego{
              btnEmpezar.classList.remove('hide')
          }else {
             btnEmpezar.classList.add('hide')
-
          }
      }
 
@@ -47,7 +43,6 @@ class Juego{
      // this.nombreAtributo = 'valor'
      siguienteNivel(){
         this.subnivel = 0
-
         this.iluminarSecuencia()
         this.agregarEventosClick()
      }
@@ -55,45 +50,28 @@ class Juego{
      transformarNumeroAColor(numero){
         switch( numero){
             case 0 :
-                return 'azul'
-
+                return 'verde'
             case 1:
-                return 'rosado'
-
+                return 'rojo'
             case 2:
-                return 'naranja'
-
+                return 'amarillo'
             case 3:
-                return  'verde'
-
-
+                return  'celeste'
         }
      }
+
      transformarColorANumero(COLOR){
         switch(COLOR){
-            case 'azul' :
+            case 'verde' :
                 return 0
-
-            case 'rosado':
+            case 'rojo':
                 return 1
-
-            case 'naranja':
+            case 'amarillo':
                 return 2
-
-            case 'verde':
+            case 'celeste':
                 return 3
-
-
         }
      }
-
-
-
-
-
-
-
-
 
      iluminarSecuencia(){
          for(let i = 0 ; i< this.nivel; i++) {
@@ -101,6 +79,7 @@ class Juego{
              setTimeout(() => this.iluminarColor(COLOR), 1000 * i)
             }
         }
+
      iluminarColor(COLOR){
       let audio = document.getElementById("clip2");
       audio.play();
@@ -114,29 +93,18 @@ class Juego{
         }
 // ej let self= this , entonces eb en .bind(self) , para no perder la ref al this
      agregarEventosClick(){
-            this.colores.azul.addEventListener('click', this.elegirColor);
-            this.colores.rosado.addEventListener('click', this.elegirColor);
-            this.colores.naranja.addEventListener('click', this.elegirColor);
             this.colores.verde.addEventListener('click', this.elegirColor);
+            this.colores.rojo.addEventListener('click', this.elegirColor);
+            this.colores.amarillo.addEventListener('click', this.elegirColor);
+            this.colores.celeste.addEventListener('click', this.elegirColor);
            
         }
         eliminarEventosClick(){
-            this.colores.azul.removeEventListener('click', this.elegirColor);
-            this.colores.rosado.removeEventListener('click', this.elegirColor);
-            this.colores.naranja.removeEventListener('click', this.elegirColor);
             this.colores.verde.removeEventListener('click', this.elegirColor);
-           
-            
+            this.colores.rojo.removeEventListener('click', this.elegirColor);
+            this.colores.amarillo.removeEventListener('click', this.elegirColor);
+            this.colores.celeste.removeEventListener('click', this.elegirColor);    
         }
-
-
-
-
-
-
-
-
-
 
     elegirColor(ev){
       let audio = document.getElementById("clip2");
@@ -157,8 +125,7 @@ class Juego{
                      this.ganoElJuego()
                      
                  }else{
-                    setTimeout(this.siguienteNivel,1500)
-                
+                    setTimeout(this.siguienteNivel,1500)                
                  }
                 }
             }else{
@@ -166,15 +133,12 @@ class Juego{
             }
         }
        
-
-
         ganoElJuego(){
             swal('NOTIFICACIÓN', '¡¡Ganaste el juego, Felicidades!!','success')
             .then(this.inicializar)
         }
 
         perdioElJuego(){
-
           Swal.fire({
             title: '¡Perdiste! :(',
             showDenyButton: true,
@@ -189,15 +153,9 @@ class Juego{
               window.location = "menuSD.html";
             }
           })
-         
         }
     }
 
-  
-
-
-
     function empezarJuego(){
      window.juego= new Juego()
-    
-        }
+    }

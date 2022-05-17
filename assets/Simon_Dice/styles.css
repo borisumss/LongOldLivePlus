@@ -21,7 +21,7 @@
   cursor: pointer;
   width: 420px;
   height: 100px;
-  background: #ecf0f1;
+  background: #c4c4c4;
   color: #2c3e50;
   border: none;
   border: 2px solid #2c3e50;
@@ -63,52 +63,49 @@
   float: left;
 }
 
-.azul {
+.verde {
   background: green;
   transition: 0.2s;
   border-radius: 0% 0% 30%;
 }
 
-.azul.light {
+.verde.light {
   background: lime;
   transform: scale(1.03);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-
-
-
-.verde {
+.celeste {
   background: rgb(0, 153, 255);
   transition: 0.2s;
   border-radius: 30% 0% 0%;
 }
 
-.verde.light {
+.celeste.light {
   background: skyblue;
   transform: scale(1.03);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.rosado {
+.rojo {
   background: #c51616;;
   transition: 0.2s;
   border-radius: 0% 30% 0%;
 }
 
-.rosado.light {
+.rojo.light {
   background: red;
   transform: scale(1.03);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.naranja {
+.amarillo {
   background: #f1c232;
   transition: 0.2s;
   border-radius: 0% 30% 0%;
 }
 
-.naranja.light {
+.amarillo.light {
   background: yellow;
   transform: scale(1.03);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
