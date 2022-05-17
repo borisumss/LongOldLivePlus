@@ -5,18 +5,18 @@ generarTablero()
 
 function cargarIconos() {
     iconos = [
-        '<i class="fas fa-star"></i>',
-        '<i class="far fa-star"></i>',
-        '<i class="fas fa-star-of-life"></i>',
-        '<i class="fas fa-star-and-crescent"></i>',
-        '<i class="fab fa-old-republic"></i>',
-        '<i class="fab fa-galactic-republic"></i>',
-        '<i class="fas fa-sun"></i>',
-        '<i class="fas fa-stroopwafel"></i>',
-        '<i class="fas fa-dice"></i>',
-        '<i class="fas fa-chess-knight"></i>',
-        '<i class="fas fa-chess"></i>',
-        '<i class="fas fa-dice-d20"></i>',
+        '<i class="bi bi-star-fill"></i>',
+        '<i class="bi bi-star"></i>',
+        '<i class="bi bi-star-half"></i>',
+        '<i class="bi bi-stars"></i>',
+        '<i class="bi bi-minecart"></i>',
+        '<i class="bi bi-key-fill"></i>',
+        '<i class="bi bi-layers-fill"></i>',
+        '<i class="bi bi-hourglass-top"></i>',
+        '<i class="bi bi-journal-medical"></i>',
+        '<i class="bi bi-hammer"></i>',
+        '<i class="bi bi-gift-fill"></i>',
+        '<i class="bi bi-emoji-smile"></i>',
     ]
 }
 
@@ -33,7 +33,7 @@ function generarTablero() {
                     ${iconos[0]}
                 </div>
                 <div class="cara superior">
-                    <i class="far fa-question-circle"></i>
+                   <i class="bi bi-cloud-fill"></i>
                 </div>
             </div>
         </div>        
