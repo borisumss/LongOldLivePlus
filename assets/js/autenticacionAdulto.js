@@ -5,12 +5,12 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebas
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC1WJuRzxe5M5wtvRx-BK6c7mOps4usdR4",
-  authDomain: "long-old-live-plus-aab44.firebaseapp.com",
-  projectId: "long-old-live-plus-aab44",
-  storageBucket: "long-old-live-plus-aab44.appspot.com",
-  messagingSenderId: "371071760445",
-  appId: "1:371071760445:web:b44da528fddb82bb759254"
+    apiKey: "AIzaSyC1WJuRzxe5M5wtvRx-BK6c7mOps4usdR4",
+    authDomain: "long-old-live-plus-aab44.firebaseapp.com",
+    projectId: "long-old-live-plus-aab44",
+    storageBucket: "long-old-live-plus-aab44.appspot.com",
+    messagingSenderId: "371071760445",
+    appId: "1:371071760445:web:b44da528fddb82bb759254"
 };
 
 // Initialize Firebase
@@ -35,57 +35,71 @@ login.addEventListener('submit', (e) => {
     event.preventDefault();
     const email = document.getElementById('email2').value;
     const password = document.getElementById('contraseñaAM').value;
-    signInWithEmailAndPassword(auth, email, password)
-    .then(async (userCredential) => {
-        const user = userCredential.user;
+    var tipoUser;
 
-        const listausers = doc(cloudDB, "Users", user.uid)
-        const docUser = await getDoc(listausers)
-        const tipoUser = docUser.data().tipo
-        if (tipoUser == "adulto"){
-            window.location = "../html/home.html#AdultoMayor";
-        }else{
-            swal('No es un usuario AdultoMayor','','error');
+    const onGetTasks = (callback) =>
+        onSnapshot(collection(cloudDB, "Users"), callback);
+
+    onGetTasks((querySnapshot) => {
+        querySnapshot.forEach((doc1) => {
+            const task = doc1.data();
+            var em = task.email;
+            var tipo = task.tipo;
+            if (email == em) {
+                tipoUser = tipo;
+                return;
+            }
         }
-        
-        console.log("Usuario logeado  :")
-        console.log(tipoUser == "adulto")
-    })
-    .catch((error) => {
-        if (email == "" && password == "") {
-        swal('Ingrese su correo y contraseña', '', 'error');
-        } else if (password == "") {
-        swal('Ingrese su contraseña', '', 'error');
+        );
+
+        if (tipoUser == "adulto") {
+            signInWithEmailAndPassword(auth, email, password)
+                .then(async (userCredential) => {
+    
+                    window.location = "../html/home.html#AdultoMayor";
+                    console.log("Usuario logeado  :")
+                    console.log(tipoUser == "adulto")
+                })
+                .catch((error) => {
+                    if (email == "" && password == "") {
+                        swal('Ingrese su correo y contraseña', '', 'error');
+                    } else if (password == "") {
+                        swal('Ingrese su contraseña', '', 'error');
+                    }
+                    else if (email == "") {
+                        swal('Ingrese su Correo', '', 'error');
+                    }
+                    else {
+                        swal('Datos Incorrectos', '', 'error');
+    
+                    }
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    console.log(errorCode + errorMessage)
+                });
+        } else {
+            swal('No es un usuario AdultoMayor', '', 'error');
         }
-        else if (email == "") {
-        swal('Ingrese su Correo', '', 'error');
-        }
-        else {
-        swal('Datos Incorrectos', '', 'error');
-        
-        }
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode + errorMessage)
-});
-  
+
+    });
+
 
 })
 
 
-/*window.onload = function () {
+window.onload = function () {
     console.log("esta iniciado");
-    
+
     onAuthStateChanged(auth, async (user) => {
         if (user) {
             const uid = user.uid;
             const docRef = doc(cloudDB, "Users", user.uid);
             const docSnap = await getDoc(docRef);
-            if(docSnap.data().tipo == "fisioterapeuta"){
+            if (docSnap.data().tipo == "fisioterapeuta") {
                 window.location = "../html/home.html#Fisioterapeuta";
-            }else if (docSnap.data().tipo == "adulto"){
+            } else if (docSnap.data().tipo == "adulto") {
                 window.location = "../html/home.html#AdultoMayor";
-            }else{
+            } else {
                 await Swal.fire({
                     icon: 'error',
                     title: 'Error',
@@ -95,17 +109,17 @@ login.addEventListener('submit', (e) => {
                     confirmButtonColor: '#ffcc00',
                     timer: 3000
                 }).then(async (result) => {
-                    /* Read more about isConfirmed, isDenied below */
-                   /* if (result.isConfirmed) {
-                      await logout("e")
-                    } else{
+
+                    if (result.isConfirmed) {
+                        await logout("e")
+                    } else {
                         window.location = "../../index.html";
                     }
                 })
                 window.location = "../../index.html";
             }
         } else {
-            
+
         }
     });
-};*/
+};

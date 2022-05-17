@@ -33,45 +33,59 @@ login.addEventListener('submit', (e) => {
     event.preventDefault();
     const email = document.getElementById('emailFisioterapeuta').value;
     const password = document.getElementById('contraseñaFisioterapeuta').value;
-    signInWithEmailAndPassword(auth, email, password)
-    .then(async (userCredential) => {
-        const user = userCredential.user;
 
-        const listausers = doc(cloudDB, "Users", user.uid)
-        const docUser = await getDoc(listausers)
-        const tipoUser = docUser.data().tipo
-        if (tipoUser == "fisioterapeuta"){
-            window.location = "../html/home.html#Fisioterapeuta";
-        }else{
+    var tipoUser;
+
+    const onGetTasks = (callback) =>
+        onSnapshot(collection(cloudDB, "Users"), callback);
+
+    onGetTasks((querySnapshot) => {
+        querySnapshot.forEach((doc1) => {
+            const task = doc1.data();
+            var em = task.email;
+            var tipo = task.tipo;
+            if (email == em) {
+                tipoUser = tipo;
+                return;
+            }
+        }
+        );
+
+        if (tipoUser == "fisioterapeuta") {
+            signInWithEmailAndPassword(auth, email, password)
+                .then(async (userCredential) => {
+    
+                    window.location = "../html/home.html#Fisioterapeuta";
+                    console.log("Usuario logeado  :")
+                    console.log(tipoUser == "fisioterapeuta")
+                })
+                .catch((error) => {
+                    if (email == "" && password == "") {
+                        swal('Ingrese su correo y contraseña', '', 'error');
+                    } else if (password == "") {
+                        swal('Ingrese su contraseña', '', 'error');
+                    }
+                    else if (email == "") {
+                        swal('Ingrese su Correo', '', 'error');
+                    }
+                    else {
+                        swal('Datos Incorrectos', '', 'error');
+    
+                    }
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    console.log(errorCode + errorMessage)
+                });
+        } else {
             swal('No es un usuario Fisioterapeuta','','error');
         }
-        
-        console.log("Usuario logeado  :")
-        console.log(tipoUser == "fisioterapeuta")
-    })
-    .catch((error) => {
-        if (email == "" && password == "") {
-        swal('Ingrese su correo y contraseña', '', 'error');
-        } else if (password == "") {
-        swal('Ingrese su contraseña', '', 'error');
-        }
-        else if (email == "") {
-        swal('Ingrese su Correo', '', 'error');
-        }
-        else {
-        swal('Datos Incorrectos', '', 'error');
-        
-        }
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode + errorMessage)
-});
-  
+
+    });
 
 });
 
 
-/*window.onload = function () {
+window.onload = function () {
     console.log("esta iniciado");
     
     onAuthStateChanged(auth, async (user) => {
@@ -93,16 +107,16 @@ login.addEventListener('submit', (e) => {
                     confirmButtonColor: '#ffcc00',
                     timer: 3000
                 }).then(async (result) => {
-                    /* Read more about isConfirmed, isDenied below */
-                    /*if (result.isConfirmed) {
+                
+                    if (result.isConfirmed) {
                       await logout("e")
                     } else{
                         window.location = "../../index.html";
                     }
                 })
                 window.location = "../../index.html";
-            }*/
-       /* }
+            }
+        }
     });
-};*/
+};
   
