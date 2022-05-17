@@ -73,7 +73,7 @@ login.addEventListener('submit', (e) => {
 })
 
 
-window.onload = function () {
+/*window.onload = function () {
     console.log("esta iniciado");
     
     onAuthStateChanged(auth, async (user) => {
@@ -96,7 +96,7 @@ window.onload = function () {
                     timer: 3000
                 }).then(async (result) => {
                     /* Read more about isConfirmed, isDenied below */
-                    if (result.isConfirmed) {
+                   /* if (result.isConfirmed) {
                       await logout("e")
                     } else{
                         window.location = "../../index.html";
@@ -108,4 +108,4 @@ window.onload = function () {
             
         }
     });
-};
+};*/

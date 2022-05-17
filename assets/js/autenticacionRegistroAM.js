@@ -14,52 +14,16 @@ const firebaseConfig = {
   
   
   import { getFirestore, collection, addDoc, doc, setDoc, getDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"
-  import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-storage.js"
-  import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"
+  //import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-storage.js"
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"
   
   
   const cloudDB = getFirestore();
   //Conexion a Storage
-  const storage = getStorage();
+  //const storage = getStorage();
   
   const auth = getAuth();
-
-window.onload = function () {
-    console.log("esta iniciado");
-    
-    onAuthStateChanged(auth, async (user) => {
-        if (user) {
-            const uid = user.uid;
-            const docRef = doc(cloudDB, "Users", user.uid);
-            const docSnap = await getDoc(docRef);
-            if(docSnap.data().tipo == "fisioterapeuta"){
-                window.location = "../html/home.html#Fisioterapeuta";
-            }else if (docSnap.data().tipo == "adulto"){
-                window.location = "../html/home.html#AdultoMayor";
-            }else{
-                await Swal.fire({
-                    icon: 'error',
-                    title: 'Error',
-                    text: 'Acceso denegado ¡Vuelva a iniciar sesión!',
-                    color: '#312d2d',
-                    background: '#ffffff',
-                    confirmButtonColor: '#ffcc00',
-                    timer: 3000
-                }).then(async (result) => {
-                    /* Read more about isConfirmed, isDenied below */
-                    if (result.isConfirmed) {
-                      await logout("e")
-                    } else{
-                        window.location = "../../index.html";
-                    }
-                })
-                window.location = "../../index.html";
-            }
-        } else {
-            
-        }
-    });
-};
+  const registrarAM = document.getElementById('btnRegistrar');
 
 
 (function () {
@@ -162,9 +126,12 @@ async function  error(){
 
 async function  registrar(){
     event.preventDefault();
+    var username = document.getElementById('nombre');
     var correo = document.getElementById('correo');
     var pass1 = document.getElementById('contraseñaAM');
     var pass2 = document.getElementById('contraseñaAM2');
+    var bb1 = true;
+    var bb2 = true;
 
     if(validarDominio(correo.value)==false){
         await Swal.fire({
@@ -174,8 +141,9 @@ async function  registrar(){
             showCancelButton: false,
             showConfirmButton: false,
             timer:5000        
-    
+            
         });
+        bb1 = false;
     }else if(validarContraseñas(pass1.value,pass2.value)==false){
         await Swal.fire({
             title: "Contraseñas Incorrectas",
@@ -185,6 +153,28 @@ async function  registrar(){
             showConfirmButton: false,
             timer:5000        
     
+        });
+        bb2 = false;
+    }
+
+    if(bb1 == true && bb2 == true){
+        registrarAM.addEventListener('submit', (e)=>{
+            createUserWithEmailAndPassword(auth, correo.value, pass1.value)
+                .then(async (userCredential) => {
+                    // Signed in
+                    const user = userCredential.user;
+                    // ...
+                    await setDoc(doc(cloudDB, "Users", user.uid), {
+                        email: correo.value,
+                        tipo: "adulto",
+                        username: username.value
+                      });
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    // ..
+                });
         });
     }
 
