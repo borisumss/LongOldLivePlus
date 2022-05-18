@@ -10,6 +10,10 @@
     position: relative;
     margin-top: 30px;
  }
+ #tarjeta1{
+    position: relative;
+    margin-top: 30px;
+ }
  #btnEF{
     font-size: 22px;
  }
@@ -29,11 +33,13 @@
     
 }
 
-@media screen and (max-width: 9px){
+@media screen and (max-width: 986px){
     #tituloApp{
-        font-size: 70px;
+        font-size: 60px;
     }
-   
+    #btnEF{
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 617px){
