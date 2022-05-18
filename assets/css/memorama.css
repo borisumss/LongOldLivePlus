@@ -76,6 +76,7 @@ body {
 
 .botones {
     display: flex;
+    justify-content: center;
 }
 
 @keyframes iniciar {
@@ -90,3 +91,11 @@ body {
         transform: rotateY(0deg);
     }
 }
+
+
+/* @media screen and (max-width:700px) {
+    :root {
+        --w: calc(140vw / 6);
+        --h: calc(70vh / 4);  
+    }
+} */
