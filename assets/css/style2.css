@@ -72,7 +72,7 @@ body, header{
   
 
 
-#lista, #registrar, #rutinas{
+#lista, #registrar,#registrarU,#listaU, #rutinas{
     text-align: center;
     border:none;
     font-family: "Verdana";
@@ -87,7 +87,7 @@ body, header{
     background-color:#FD7314;
 }
 
-#lista:hover ,#registrar:hover ,#rutinas:hover{
+#lista:hover ,#registrar:hover ,#listaU:hover,#registrarU:hover,#rutinas:hover{
        top:15px;
        background-color: #2E3040;
 }
@@ -108,6 +108,14 @@ body, header{
         margin-top: 30%;
         align-content: center;
     }
+    #registrarU{
+        font-size: 27px;
+    }
+    #listaU{
+        font-size: 27px;
+    }
+
+
     #lista, #registrar, #rutinas{
         text-align: center;
         border:none;
@@ -147,8 +155,9 @@ body, header{
 }
 
 
+
 /*MENOR A 600*/
-@media screen and (max-width: 705px){
+@media screen and (max-width: 390px){
     #tituloApp{
         font-size: 70px;
     }
@@ -160,11 +169,77 @@ body, header{
         margin-bottom: 30px;
         margin-top: 15px;
     }
+    #registrarU{
+        font-size: 17px;
+    }
+    #listaU{
+        font-size: 17px;
+    }
 }
 
 
 
-@media screen and (max-width: 617px){
+ @media screen and (max-width: 420px) {
+    /* #volver {
+         min-width: 70px;
+         height: 30px;
+         position: absolute;
+         top: 15px;
+         left: 5px;
+         color: #fff;
+         padding: 1px;
+         cursor: pointer;
+         font-family: "Open Sans", sans-serif;
+         font-size: 15px;
+         border:none;
+         border-radius: 50px;
+         background-color: #FD7314;
+     }*/
+     
+     h1{
+         font-size: 21px;
+         align-self: flex-end;
+     }
+ 
+     #lista, #registrar, #rutinas{
+         text-align: center;
+         border:none;
+         font-family: "Verdana";
+         font-size: 14px;
+     }
+ 
+     #tituloApp{
+         font-size: 45px;
+     }
+ 
+     #tarjeta1{
+         margin-top: 15px;
+     }
+     
+     #tarjetaU{
+         margin-bottom: 30px;
+         margin-top: 15px;
+     }
+ 
+     #btnEF{
+         font-size: 16px;
+     }
+ 
+     #tituloApp{
+         font-size: 31px;
+     }
+     #registrarU{
+         font-size: 12px;
+     }
+     #listaU{
+         font-size: 12px;
+     }
+ }
+ 
+ @media screen and (max-width: 560px){
+    #tituloApp{
+        font-size: 70px;
+    }
     #tarjeta1{
         margin-top: 15px;
     }
@@ -173,197 +248,90 @@ body, header{
         margin-bottom: 30px;
         margin-top: 15px;
     }
-
-    #tituloApp{
-        font-size: 60px;
+    #registrarU{
+        font-size: 19px;
     }
-
-    h1{
-        font-size: 26px;
-        line-height: 50px;
-        text-align: center;
+    #listaU{
+        font-size: 19px;
     }
-    #botones{
-        margin-top: 15%;
-        align-content: center;
-    }
-    #lista, #registrar, #rutinas{
-        text-align: center;
-        border:none;
-        font-family: "Verdana";
-        font-size: 15px;
-        transition: all 0.3s ease;
-        position: relative;
-        display: inline-block;
-        outline: none;
-        border-radius: 5px; 
-        top:2px;
-        color: white;
-        background-color:#FD7314;
-    }
-    
-    #lista:hover ,#registrar:hover ,#rutinas:hover{
-        top:15px;
-        background-color: #2E3040;
-    }
-    body {
-        background-image: url("../img/galeria/fondo-small.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        min-height: 100vh;
-    }     
-
 }
 
-/*MENOR A 412 (CELULARES MAS PEQIEÑOS)*/
-
-@media screen and (max-width: 509px) {
-   
-    h1{
-        font-size: 21px;
-        align-self: flex-end;
+@media screen and (max-width: 420px){
+    #tituloApp{
+        font-size: 70px;
     }
- 
-    #lista, #registrar, #rutinas{
-        text-align: center;
-        border:none;
-        font-family: "Verdana";
+    #tarjeta1{
+        margin-top: 15px;
+    }
+    
+    #tarjetaU{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+    #registrarU{
         font-size: 14px;
     }
- 
-    #tituloApp{
-        font-size: 55px;
-    }
-
-    #tarjeta1{
-        margin-top: 15px;
-    }
-    
-    #tarjetaU{
-        margin-bottom: 30px;
-        margin-top: 15px;
-    }
- }
-
-
- @media screen and (max-width: 1380px) {
-    #tarjeta1{
-        margin-top: 15px;
-    }
-    
-    #tarjetaU{
-        margin-bottom: 30px;
-        margin-top: 15px;
-    }
-    #tarjeta2{
-        margin-top: 15px;
-    }
-    #tarjeta3{
-        margin-top: 15px;
-    }
- }
-
-@media screen and (max-width: 466px) {
-   /* #volver {
-        min-width: 70px;
-        height: 30px;
-        position: absolute;
-        top: 15px;
-        left: 5px;
-        color: #fff;
-        padding: 1px;
-        cursor: pointer;
-        font-family: "Open Sans", sans-serif;
-        font-size: 15px;
-        border:none;
-        border-radius: 50px;
-        background-color: #FD7314;
-    }*/
-    
-    h1{
-        font-size: 21px;
-        align-self: flex-end;
-    }
-
-    #lista, #registrar, #rutinas{
-        text-align: center;
-        border:none;
-        font-family: "Verdana";
+    #listaU{
         font-size: 14px;
-    }
-
-    #tituloApp{
-        font-size: 45px;
-    }
-
-    #tarjeta1{
-        margin-top: 15px;
-    }
-    
-    #tarjetaU{
-        margin-bottom: 30px;
-        margin-top: 15px;
-    }
-
-    #btnEF{
-        font-size: 16px;
-    }
-
-    #tituloApp{
-        font-size: 31px;
     }
 }
 
-
-
-
-/*MENOR A 412 (CELULARES MAS PEQIEÑOS)*/
-@media screen and (max-width: 290px) {
-  /*  #volver {
-        min-width: 50px;
-        height: 30px;
-        position: absolute;
-        top: 15px;
-        left: 5px;
-        color: #fff;
-        padding: 1px;
-        cursor: pointer;
-        font-family: "Open Sans", sans-serif;
-        font-size: 15px;
-        border:none;
-        border-radius: 50px;
-        background-color: #FD7314;
-    }*/
-    
-
-    h1{
-        font-size: 20px;
-        align-self: flex-end;
-    }
-
-    #lista, #registrar, #rutinas{
-        text-align: center;
-        border:none;
-        width: 144px;
-        font-family: "Verdana";
-        font-size: 12px;
-    }
+@media screen and (max-width: 400px){
     #tituloApp{
-        font-size: 31px;
+        font-size: 70px;
     }
-
     #tarjeta1{
         margin-top: 15px;
     }
     
     #tarjetaU{
-        margin-bottom: 30px !important;
+        margin-bottom: 30px;
         margin-top: 15px;
     }
-   
-    #btnEF{
-        font-size: 7px;
+    #registrarU{
+        font-size: 13px;
     }
+    #listaU{
+        font-size: 13px;
+    }
+}
 
+@media screen and (max-width: 380px){
+    #tituloApp{
+        font-size: 70px;
+    }
+    #tarjeta1{
+        margin-top: 15px;
+    }
+    
+    #tarjetaU{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+    #registrarU{
+        font-size: 11px;
+    }
+    #listaU{
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 290px){
+    #tituloApp{
+        font-size: 70px;
+    }
+    #tarjeta1{
+        margin-top: 15px;
+    }
+    
+    #tarjetaU{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+    #registrarU{
+        font-size: 8px;
+    }
+    #listaU{
+        font-size: 8px;
+    }
 }
