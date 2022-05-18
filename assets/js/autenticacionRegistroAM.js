@@ -7,26 +7,24 @@ const firebaseConfig = {
     storageBucket: "long-old-live-plus-aab44.appspot.com",
     messagingSenderId: "371071760445",
     appId: "1:371071760445:web:b44da528fddb82bb759254"
-  };
-  
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  
-  
-  import { getFirestore, collection, addDoc, doc, setDoc, getDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"
-  //import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-storage.js"
-  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"
-  
-  
-  const cloudDB = getFirestore();
-  //Conexion a Storage
-  //const storage = getStorage();
-  
-  const auth = getAuth();
-  const registrarAM = document.getElementById('btnRegistrar');
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 
 
-  window.onload = function () {
+import { getFirestore, collection, addDoc, doc, setDoc, getDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"
+//import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-storage.js"
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"
+
+
+const cloudDB = getFirestore();
+//Conexion a Storage
+//const storage = getStorage();
+
+const auth = getAuth();
+const formulario = document.getElementById('formulario')
+window.onload = function () {
     console.log("esta iniciado");
 
     onAuthStateChanged(auth, async (user) => {
@@ -34,11 +32,11 @@ const firebaseConfig = {
             const uid = user.uid;
             const docRef = doc(cloudDB, "Users", user.uid);
             const docSnap = await getDoc(docRef);
-            if(docSnap.data().tipo == "fisioterapeuta"){
+            if (docSnap.data().tipo == "fisioterapeuta") {
                 window.location = "../html/home.html#Fisioterapeuta";
-            }else if (docSnap.data().tipo == "adulto"){
+            } else if (docSnap.data().tipo == "adulto") {
                 window.location = "../html/home.html#AdultoMayor";
-            }else{
+            } else {
                 await Swal.fire({
                     icon: 'error',
                     title: 'Error',
@@ -50,8 +48,8 @@ const firebaseConfig = {
                 }).then(async (result) => {
                     /* Read more about isConfirmed, isDenied below */
                     if (result.isConfirmed) {
-                      await logout("e")
-                    } else{
+                        await logout("e")
+                    } else {
                         window.location = "../../index.html";
                     }
                 })
@@ -77,91 +75,101 @@ const firebaseConfig = {
                     event.preventDefault();
                     error();
                     event.stopPropagation();
-                   
+
                 } else {
                     event.preventDefault();
-                    
+
                     registrar();
                 }
 
                 form.classList.add('was-validated')
-               
+
             }, false)
         })
 })()
 
-async function  error(){
+async function error() {
     event.preventDefault();
     var username = document.getElementById('nombre');
     var correo = document.getElementById('correo');
     var pass1 = document.getElementById('contraseñaAM');
     var pass2 = document.getElementById('contraseñaAM2');
 
-    if(username.value.length==0||correo.value.length==0||pass1.value.length==0||pass2.value.length==0){
+    if (username.value.length == 0 || correo.value.length == 0 || pass1.value.length == 0 || pass2.value.length == 0) {
         await Swal.fire({
             title: "Campos Vacios",
             text: "Llene todos los campos",
             icon: "error",
             showCancelButton: false,
             showConfirmButton: false,
-            timer:3000        
-    
+            timer: 5000
+
         });
-    }else if(validarNombre(username.value)==false){
+    } else if (validarNombre(username.value) == false) {
         await Swal.fire({
             title: "Nombre de Usuario",
             text: "El nombre de usuario debe tener mínimo 5 caracteres y máximo 50 caracteres",
             icon: "error",
             showCancelButton: false,
             showConfirmButton: false,
-            timer:5000        
-    
+            timer: 5000
+
         });
-    }else if(validarCorreo(correo.value)==false){
+    } else if (validarCorreo(correo.value) == false) {
         await Swal.fire({
             title: "Correo Electrónico",
             text: "El correo electrónico debe tener mínimo 10 caracteres y máximo 50 caracteres",
             icon: "error",
             showCancelButton: false,
             showConfirmButton: false,
-            timer:5000        
-    
+            timer: 5000
+
         });
-    }else if(validarCorreo2(correo.value)==false){
+    } else if (validarCorreo2(correo.value) == false) {
         await Swal.fire({
             title: "Correo Electrónico",
             text: "Inserte un correo con formato válido: example@gmail.com",
             icon: "error",
             showCancelButton: false,
             showConfirmButton: false,
-            timer:5000        
-    
+            timer: 5000
+
         });
-    }else if(correo.checkValidity()==false){
+    } else if (correo.checkValidity() == false) {
         await Swal.fire({
             title: "Correo Electrónico",
             text: "No se permite caracteres especiales en el dominio del correo",
             icon: "error",
             showCancelButton: false,
             showConfirmButton: false,
-            timer:5000        
-    
+            timer: 5000
+
         });
-    }else{
+    } else if (pass1.checkValidity() == false || pass2.checkValidity() == false) {
+        await Swal.fire({
+            title: "Contraseña",
+            text: "La contraseña debe tener mínimo 6 caracteres",
+            icon: "error",
+            showCancelButton: false,
+            showConfirmButton: false,
+            timer: 5000
+
+        });
+    } else {
         await Swal.fire({
             title: "Nombre de Usuario",
             text: "No se permite Caracteres especiales",
             icon: "error",
             showCancelButton: false,
             showConfirmButton: false,
-            timer:5000        
-    
+            timer: 5000
+
         });
     }
 
 }
 
-async function  registrar(){
+async function registrar() {
     event.preventDefault();
     var username = document.getElementById('nombre');
     var correo = document.getElementById('correo');
@@ -170,96 +178,119 @@ async function  registrar(){
     var bb1 = true;
     var bb2 = true;
 
-    if(validarDominio(correo.value)==false){
+    if (validarDominio(correo.value) == false) {
         await Swal.fire({
             title: "Correo Electrónico inválido",
             text: "Sólo se permiten los dominios gmail.com y hotmail.com",
             icon: "error",
             showCancelButton: false,
             showConfirmButton: false,
-            timer:5000        
-            
+            timer: 5000
+
         });
         bb1 = false;
-    }else if(validarContraseñas(pass1.value,pass2.value)==false){
+    } else if (validarContraseñas(pass1.value, pass2.value) == false) {
         await Swal.fire({
             title: "Contraseñas Incorrectas",
             text: "Las contraseñas ingresadas no son las mismas",
             icon: "error",
             showCancelButton: false,
             showConfirmButton: false,
-            timer:5000        
-    
+            timer: 5000
+
         });
         bb2 = false;
     }
 
-    if(bb1 == true && bb2 == true){
-        registrarAM.addEventListener('submit', (e)=>{
-            createUserWithEmailAndPassword(auth, correo.value, pass1.value)
-                .then(async (userCredential) => {
+    if (bb1 == true && bb2 == true) {
+
+
+        createUserWithEmailAndPassword(auth, correo.value, pass1.value)
+            ./*then(async function crear() {
+            addDoc(collection(cloudDB,"Users"   ),{
+                email: correo.value,
+                tipo: "adulto",
+                username: username.value
+              });
+        })*/
+            then(onAuthStateChanged(auth, async (user) => {
+                if (user) {
                     // Signed in
-                    const user = userCredential.user;
+                    const uid = user.uid;
                     // ...
                     await setDoc(doc(cloudDB, "Users", user.uid), {
                         email: correo.value,
                         tipo: "adulto",
                         username: username.value
-                      });
-                })
-                .catch((error) => {
-                    const errorCode = error.code;
-                    const errorMessage = error.message;
-                    // ..
+                    });
+                }
+            }))
+            .catch((error) => {
+                Swal.fire({
+                    title: "ERROR",
+                    text: "Este correo electrónico ya está registrado",
+                    icon: "error",
+                    showCancelButton: false,
+                    showConfirmButton: false,
+                    timer: 5000
+
                 });
-        });
+                formulario.reset();
+                // ..
+            });
+
     }
+}
+function registrar2() {
+
+
 
 }
-function validarNombre(name){
+
+function validarNombre(name) {
     var res = false;
-    if(name.length >=5 && name.length<=20){
+    if (name.length >= 5 && name.length <= 20) {
         res = true;
     }
 
     return res;
 }
 
-function validarCorreo(correo){
+function validarCorreo(correo) {
     var res = false;
-    if(correo.length >=10 && correo.length<=50){
+    if (correo.length >= 10 && correo.length <= 50) {
         res = true;
     }
 
     return res;
 }
 
-function validarCorreo2(correo){
+function validarCorreo2(correo) {
     var res = false;
-    if(correo.indexOf("@")!=-1){
+    if (correo.indexOf("@") != -1) {
         res = true;
     }
 
     return res;
 }
 
-function validarDominio(correo){
+function validarDominio(correo) {
     var res = false;
     var pos = correo.indexOf("@");
-    var dominio= correo.substring(pos+1,correo.length).toUpperCase();
+    var dominio = correo.substring(pos + 1, correo.length).toUpperCase();
 
-    if(dominio == "GMAIL.COM"||dominio == "HOTMAIL.COM"){
+    if (dominio == "GMAIL.COM" || dominio == "HOTMAIL.COM") {
         res = true;
     }
 
     return res;
 }
 
-function validarContraseñas(pass1,pass2){
+function validarContraseñas(pass1, pass2) {
     var res = false;
-    
 
-    if(pass1 == pass2){
+
+    if (pass1 == pass2) {
         res = true;
     }
 
