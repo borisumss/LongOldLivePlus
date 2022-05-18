@@ -11,6 +11,19 @@
 
 }
 
+#tarjeta2:hover{
+    box-shadow: 5px 5px 20px;
+    transform: translateY(-5%);
+
+}
+
+#tarjeta3:hover{
+    box-shadow: 5px 5px 20px;
+    transform: translateY(-5%);
+
+}
+
+
 body{
     background-image: url("../img/galeria/fondo.jpg");
     background-repeat: no-repeat;
