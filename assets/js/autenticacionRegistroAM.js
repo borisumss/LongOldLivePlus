@@ -194,12 +194,13 @@ async function  registrar(){
         bb2 = false;
     }
 
-    if(bb1 == true && bb2 == true){
-        registrarAM.addEventListener('submit', (e)=>{
+    
+        registrarAM.addEventListener('click', (e)=>{
             createUserWithEmailAndPassword(auth, correo.value, pass1.value)
                 .then(async (userCredential) => {
                     // Signed in
                     const user = userCredential.user;
+                    console.log("Signed in");
                     // ...
                     await setDoc(doc(cloudDB, "Users", user.uid), {
                         email: correo.value,
@@ -213,7 +214,7 @@ async function  registrar(){
                     // ..
                 });
         });
-    }
+    
 
 }
 function validarNombre(name){
