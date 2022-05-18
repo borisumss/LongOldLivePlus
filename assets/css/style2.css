@@ -126,6 +126,11 @@ body, header{
     #tarjeta1{
         margin-top: 15px;
     }
+
+    #tarjetaU{
+        margin-bottom: 30px !important;
+        margin-top: 15px;
+    }
     
     #lista:hover ,#registrar:hover ,#rutinas:hover{
         top:15px;
@@ -150,12 +155,22 @@ body, header{
     #tarjeta1{
         margin-top: 15px;
     }
+    
+    #tarjetaU{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
 }
 
 
 
 @media screen and (max-width: 617px){
     #tarjeta1{
+        margin-top: 15px;
+    }
+    
+    #tarjetaU{
+        margin-bottom: 30px;
         margin-top: 15px;
     }
 
@@ -224,11 +239,21 @@ body, header{
     #tarjeta1{
         margin-top: 15px;
     }
+    
+    #tarjetaU{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
  }
 
 
  @media screen and (max-width: 1380px) {
     #tarjeta1{
+        margin-top: 15px;
+    }
+    
+    #tarjetaU{
+        margin-bottom: 30px;
         margin-top: 15px;
     }
     #tarjeta2{
@@ -273,6 +298,11 @@ body, header{
     }
 
     #tarjeta1{
+        margin-top: 15px;
+    }
+    
+    #tarjetaU{
+        margin-bottom: 30px;
         margin-top: 15px;
     }
 
@@ -324,6 +354,11 @@ body, header{
     }
 
     #tarjeta1{
+        margin-top: 15px;
+    }
+    
+    #tarjetaU{
+        margin-bottom: 30px !important;
         margin-top: 15px;
     }
    
