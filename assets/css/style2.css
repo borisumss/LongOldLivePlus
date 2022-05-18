@@ -122,6 +122,10 @@ body, header{
         color: white;
         background-color:#FD7314;
     }
+
+    #tarjeta1{
+        margin-top: 15px;
+    }
     
     #lista:hover ,#registrar:hover ,#rutinas:hover{
         top:15px;
@@ -134,6 +138,11 @@ body, header{
         background-position: center;
         min-height: 100vh;
     } 
+
+    #tarjeta1{
+        margin-top: 15px;
+    }
+    
     
     /*#volver {
         min-width: 90px;
@@ -169,9 +178,15 @@ body, header{
     #tituloApp{
         font-size: 70px;
     }
+    #tarjeta1{
+        margin-top: 15px;
+    }
 }
 
 @media screen and (max-width: 617px){
+    #tarjeta1{
+        margin-top: 15px;
+    }
 
     #tituloApp{
         font-size: 60px;
@@ -262,8 +277,19 @@ body, header{
      }
  
      #tituloApp{
-         font-size: 55px;
+        font-size: 55px;
      }
+
+     #tarjeta1{
+        margin-top: 15px;
+    }
+ }
+
+
+ @media screen and (max-width: 1380px) {
+    #tarjeta1{
+        margin-top: 15px;
+    }
  }
 
 @media screen and (max-width: 466px) {
@@ -297,6 +323,18 @@ body, header{
 
     #tituloApp{
         font-size: 45px;
+    }
+
+    #tarjeta1{
+        margin-top: 15px;
+    }
+
+    #btnEF{
+        font-size: 16px;
+    }
+
+    #tituloApp{
+        font-size: 31px;
     }
 }
 
@@ -338,7 +376,14 @@ body, header{
         font-size: 31px;
     }
 
-    
+    #tarjeta1{
+        margin-top: 15px;
+    }
+   
+    #btnEF{
+        font-size: 7px;
+    }
+
 }
 
 
