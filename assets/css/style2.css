@@ -139,40 +139,9 @@ body, header{
         min-height: 100vh;
     } 
 
-    #tarjeta1{
-        margin-top: 15px;
-    }
-    
-    
-    /*#volver {
-        min-width: 90px;
-        height: 30px;
-        position: absolute;
-        top: 15px;
-        left: 10px;
-        color: #fff;
-        padding: 0px;
-        cursor: pointer;
-        font-family: "Open Sans", sans-serif;
-        font-size: 20px;
-        border:none;
-        border-radius: 50px;
-        background-color: #FD7314;
-    }*/
 }
 
-/*
-@media screen and (max-width: 600px){
-  #volver{
-    position: fixed;
-    min-width: 50px;
-    height: 20px;
-    top: 5px;
-    left: 5px;
-    font-size: 15px;
-  }
-}
-*/
+
 /*MENOR A 600*/
 @media screen and (max-width: 705px){
     #tituloApp{
@@ -182,6 +151,8 @@ body, header{
         margin-top: 15px;
     }
 }
+
+
 
 @media screen and (max-width: 617px){
     #tarjeta1{
@@ -228,59 +199,29 @@ body, header{
         min-height: 100vh;
     }     
 
-   /* #volver {
-        min-width: 90px;
-        height: 30px;
-        position: absolute;
-        top: 13px;
-        left: 10px;
-        color: #fff;
-        padding: 0px;
-        cursor: pointer;
-        font-family: "Open Sans", sans-serif;
-        font-size: 15px;
-        border:none;
-        border-radius: 50px;
-        background-color: #FD7314;
-    }  */
 }
 
 /*MENOR A 412 (CELULARES MAS PEQIEÑOS)*/
 
 @media screen and (max-width: 509px) {
-    /* #volver {
-         min-width: 70px;
-         height: 30px;
-         position: absolute;
-         top: 15px;
-         left: 5px;
-         color: #fff;
-         padding: 1px;
-         cursor: pointer;
-         font-family: "Open Sans", sans-serif;
-         font-size: 15px;
-         border:none;
-         border-radius: 50px;
-         background-color: #FD7314;
-     }*/
-     
-     h1{
-         font-size: 21px;
-         align-self: flex-end;
-     }
+   
+    h1{
+        font-size: 21px;
+        align-self: flex-end;
+    }
  
-     #lista, #registrar, #rutinas{
-         text-align: center;
-         border:none;
-         font-family: "Verdana";
-         font-size: 14px;
-     }
+    #lista, #registrar, #rutinas{
+        text-align: center;
+        border:none;
+        font-family: "Verdana";
+        font-size: 14px;
+    }
  
-     #tituloApp{
+    #tituloApp{
         font-size: 55px;
-     }
+    }
 
-     #tarjeta1{
+    #tarjeta1{
         margin-top: 15px;
     }
  }
@@ -288,6 +229,12 @@ body, header{
 
  @media screen and (max-width: 1380px) {
     #tarjeta1{
+        margin-top: 15px;
+    }
+    #tarjeta2{
+        margin-top: 15px;
+    }
+    #tarjeta3{
         margin-top: 15px;
     }
  }
@@ -385,11 +332,3 @@ body, header{
     }
 
 }
-
-
-
-
-
-
-
-
