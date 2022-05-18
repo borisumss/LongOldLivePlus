@@ -1,20 +1,23 @@
+const round = document.getElementById('round')
 const verde = document.getElementById('verde')
 const rojo = document.getElementById('rojo')
 const amarillo = document.getElementById('amarillo')
 const celeste   = document.getElementById('celeste')
 const btnEmpezar = document.getElementById('btnEmpezar')
-const ULTIMO_NIVEL = 8
-const MAXIMO_DE_PUNTOS = ULTIMO_NIVEL * 100
+const ULTIMO_NIVEL = 15
+const MAXIMO_DE_PUNTOS = ULTIMO_NIVEL * 1
 
     
 class Juego{
     constructor(){
+        this.round = 0;
         this.inicializar = this.inicializar.bind(this)
         this.inicializar()
         this.generarSecuencia()
         setTimeout(this.siguienteNivel,1000)
     }
     inicializar(){
+        this.updateRound(0)
         // haciendo ref al this.elegirColor de abajo
         this.siguienteNivel = this.siguienteNivel.bind(this)
         this.elegirColor = this.elegirColor.bind(this)
@@ -28,6 +31,10 @@ class Juego{
             celeste
         }
      } 
+     updateRound(value) {
+        this.round = value;
+        round.textContent = `Puntaje: ${this.round}`;
+    }
     
      toggleBtnEmpezar(){
          if(btnEmpezar.classList.contains('hide')){
@@ -125,7 +132,8 @@ class Juego{
                      this.ganoElJuego()
                      
                  }else{
-                    setTimeout(this.siguienteNivel,1500)                
+                    setTimeout(this.siguienteNivel,1500)     
+                    this.updateRound(this.round+1)            
                  }
                 }
             }else{
