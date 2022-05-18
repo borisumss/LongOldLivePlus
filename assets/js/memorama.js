@@ -7,13 +7,13 @@ function cargarIconos() {
     iconos = [
         '<i class="bi bi-star-fill"></i>',
         '<i class="bi bi-star"></i>',
-        '<i class="bi bi-star-half"></i>',
+        '<i class="bi bi-gem"></i>',
         '<i class="bi bi-stars"></i>',
-        '<i class="bi bi-minecart"></i>',
-        '<i class="bi bi-key-fill"></i>',
+        '<i class="bi bi-moon-fill"></i>',
+        '<i class="bi bi-flower1"></i>',
         '<i class="bi bi-layers-fill"></i>',
         '<i class="bi bi-hourglass-top"></i>',
-        '<i class="bi bi-journal-medical"></i>',
+        '<i class="bi bi-dice-6-fill"></i>',
         '<i class="bi bi-hammer"></i>',
         '<i class="bi bi-gift-fill"></i>',
         '<i class="bi bi-emoji-smile"></i>',
@@ -33,7 +33,7 @@ function generarTablero() {
                     ${iconos[0]}
                 </div>
                 <div class="cara superior">
-                   <i class="bi bi-cloud-fill"></i>
+                    <i class="bi bi-question-circle"></i>
                 </div>
             </div>
         </div>        

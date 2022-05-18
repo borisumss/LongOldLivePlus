@@ -12,12 +12,7 @@ body {
     margin: 0;
     perspective: none;
     -webkit-perspective: 1000;
-    background: powderblue;
-    /*background-image: url(./imagen.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;*/
+    background:powderblue;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -29,6 +24,10 @@ body {
 
 .area-tarjeta {
     display: inline-block;
+}
+
+#tablero {
+    text-align: center;
 }
 
 .area-tarjeta,
@@ -72,8 +71,11 @@ body {
     border-radius: 50px;
     border: white 5px solid;
     font-size: 130%;
-    display: flex !important;
-    flex-direction: row !important;
+    margin: 0.5em;
+}
+
+.botones {
+    display: flex;
 }
 
 @keyframes iniciar {
