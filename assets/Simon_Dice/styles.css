@@ -111,6 +111,12 @@
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+.swal2-container.swal2-center>.swal2-popup{
+  background-color: #c4c4c4;
+}
+.swal2-styled.swal2-deny{
+  background-color: #fd7034;
+}
 
 @media screen and (max-width: 991px){
   .gameboard{
