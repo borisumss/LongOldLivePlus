@@ -11,6 +11,19 @@
 
 }
 
+#tarjeta2:hover{
+    box-shadow: 5px 5px 20px;
+    transform: translateY(-5%);
+
+}
+
+#tarjeta3:hover{
+    box-shadow: 5px 5px 20px;
+    transform: translateY(-5%);
+
+}
+
+
 body{
     background-image: url("../img/galeria/fondo.jpg");
     background-repeat: no-repeat;
@@ -19,6 +32,10 @@ body{
     min-height: 100vh;
   }
 
+
+.col-lg-6{
+    width: 80vh;
+}
   
 #letra{
     font-family: "Verdana";
@@ -32,6 +49,17 @@ body{
     padding-left: 10px;
     padding-right:10px;
     padding-top: 10px;
+}
+
+
+
+#fondoJuegMental{
+    background-image: url("../img/galeria/fondoMockup.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+
 }
 
 #head{

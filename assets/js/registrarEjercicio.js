@@ -59,9 +59,20 @@ async function registrar() {
         
 
         try {
-    
+            Swal.fire({
+
+                title: "Guardando registro...",
+                icon: "info",
+                closeOnConfirm: true,
+                closeOnCancel: true,
+                allowOutsideClick: false,
+                showCancelButton: false,
+                showConfirmButton: false,
+        
+        
+              });
             guardarRegistro(nombre.value,descripcion.value,musculo.value,minutos.value,segundos.value,gif[0])
-          
+            
         } catch (error) {
           console.log(error);
         }
