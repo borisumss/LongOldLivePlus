@@ -204,7 +204,15 @@ async function registrar() {
 
     if (bb1 == true && bb2 == true) {
 
-
+        Swal.fire({
+            title: "Registrando...",
+                icon: "info",
+                closeOnConfirm: true,
+                closeOnCancel: true,
+                allowOutsideClick: false,
+                showCancelButton: false,
+                showConfirmButton: false,
+        });
         createUserWithEmailAndPassword(auth, correo.value, pass1.value)
             ./*then(async function crear() {
             addDoc(collection(cloudDB,"Users"   ),{
@@ -214,6 +222,7 @@ async function registrar() {
               });
         })*/
             then(onAuthStateChanged(auth, async (user) => {
+            
                 if (user) {
                     // Signed in
                     const uid = user.uid;
@@ -222,7 +231,19 @@ async function registrar() {
                         email: correo.value,
                         tipo: "adulto",
                         username: username.value
+                    }).then(async function exito(){
+                        Swal.close();
+                        await Swal.fire({
+                            title: "Registro Exitoso",
+                            icon: "success",
+                            showCancelButton: false,
+                            showConfirmButton: false,
+                            timer: 5000
+        
+                        });
                     });
+
+                
                 }
             }))
             .catch((error) => {
@@ -240,11 +261,6 @@ async function registrar() {
             });
 
     }
-}
-function registrar2() {
-
-
-
 }
 
 function validarNombre(name) {
