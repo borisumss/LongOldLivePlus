@@ -36,7 +36,9 @@ login.addEventListener('submit', (e) => {
     const email = document.getElementById('email2').value;
     const password = document.getElementById('contraseñaAM').value;
     var tipoUser;
-
+    if(email.length == 0 || password.length==0){
+        swal('Llene todos los campos', '', 'error');
+    }else{
     const onGetTasks = (callback) =>
         onSnapshot(collection(cloudDB, "Users"), callback);
 
@@ -83,7 +85,7 @@ login.addEventListener('submit', (e) => {
 
     });
 
-
+    }
 })
 
 

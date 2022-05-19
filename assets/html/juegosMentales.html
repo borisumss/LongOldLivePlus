@@ -60,18 +60,26 @@
 </body>
 
 <script>
+  var url = "" + window.location.href;
+  var pos = url.indexOf("#");
+  var res = "";
+
+    for (var i = pos + 1; i < url.length && i > 0; i++) {
+      res += url[i];
+    }
+
     function redireccionar() {
-        var res = "";
+       
         window.location.href = "../html/home.html#" + res;
     }
   
     function redireccionarListaJuegos() {
-        var res = "";
+        
         window.location.href = "../html/listaJuegos.html#" + res;
     }
 
     function redireccionarRecomendados() {
-        var res = "";
+        
         window.location.href = "../html/listaRecomendados.html#" + res;
     }
 

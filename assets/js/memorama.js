@@ -100,6 +100,13 @@ function deseleccionar(selecciones) {
 }
 
 function redireccionar() {
+    var url = "" + window.location.href;
+    var pos = url.indexOf("#");
     var res = "";
+
+    for (var i = pos + 1; i < url.length && i > 0; i++) {
+      res += url[i];
+    }
+    
     window.location.href = "../html/listaJuegos.html#" + res;
 }
