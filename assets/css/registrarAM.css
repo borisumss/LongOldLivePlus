@@ -12,9 +12,21 @@
     font-family: Verdana !important;
     font-style: Verdana !important;
   }
-  
+
   #formulario{
     width: 40%;
+    color: #FDFDFD;
+    background: #2E3040;
+    padding: 20px 30px;
+    margin: auto;
+    border-radius: 7px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+  }
+  
+  #formularioAM{
+    width: 520px;
+    
     color: #FDFDFD;
     background: #2E3040;
     padding: 20px 30px;
@@ -89,79 +101,18 @@
   .invalid-feedback{
     color: #FD7314;
   }
-  @media screen and (max-width: 980px){   
-    #formulario{
+
+ 
+  
+  @media screen and (max-width: 550px){
+    #formularioAM{
       width: 90%;
-      color: #FDFDFD;
-      background: #2E3040;
-      padding: 25px 35px;
-      margin: auto;
-      font-family: "Open Sans", sans-serif;
-      font-size: 30px;
-    }  
-  
-  }
-  
-  @media screen and (max-width: 768px){
-  
-    #minCol{
-      padding-bottom:20px !important;
+    }
+
+    #btnRegistrar {
+      width: 70%;
+      
     }
   }
   
-  @media screen and (max-width:600px){
-    body{
-      /*background-image: linear-gradient(rgb(215, 208, 200),rgb(182, 171, 165));*/
-      background-image: url("../img/galeria/fondo-small.jpg");
-    }
-  
-    h1{
-      font-size: 30px !important;
-      font-weight: bold !important;
-    }
-  
-    #formulario{
-      padding: 4%;
-      font-size: 25px;
-    }
-  
-    #btnRegistrar{
-      font-size: 15px;
-      padding-bottom: 0%;
-      margin-bottom: 1%;
-    }
-  
-    #minCol{
-      padding-bottom:20px !important;
-    }
-  
-    #min.form-control{
-      min-width: 10px;
-    }
-  }
-  
-  @media screen and (max-width: 280px){
-  
-    h1{
-      font-size: 25px !important;
-    }
-  
-    #formulario{
-      padding: 4%;
-      font-size: 20px;
-    }
-  
-    #btnRegistrar{
-      font-size: 15px;
-      padding-bottom: 0%;
-      bottom: 1px;
-      margin-bottom: 1%;
-      width: 52%;
-      align-items: center;
-    }
-  
-    #minCol{
-      padding-bottom:20px !important;
-    }
-  }
   
