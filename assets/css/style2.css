@@ -1,26 +1,4 @@
-/*
-    boton Volver
-       color---> Azul
-    pagina home
-        letra -> home encabezado
-        tituloApp -> long old live +
-        btn-EF -> ejercicios fisicos boton
-    
-    ejercicios fisicos
-        letra -> ejercicios fisicos encabezado
-        lista ->lista de ejercicios(boton)
-        registrar -> registrar ejercicio
-
-    Lista de ejercicios 
-        letra-> Lista de ejercicios encabezado
-    
-    Registrar ejercicios 
-    
-*/
-
-
-
-body, header,#bod{
+body, header{
     font-family: Verdana !important;
     font-style: Verdana !important;
 }
@@ -52,27 +30,20 @@ body, header,#bod{
     width: 300px;
     height: 150px;
 }
-/*#volver {
-    min-width: 130px;
-    height: 40px;
-    position: absolute;
-    top: 15px;
-    left: 30px;
-    color: #fff;
-    padding: 0px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: "Open Sans", sans-serif;
-    font-size: 25px;
+#registrarU{
+    text-align: center;
     border:none;
-    border-radius: 50px;
-    background-size: 120% auto;
-    background-color: #FD7314;
-  }*/
-  
-
-
-#lista, #registrar,#registrarU,#listaU, #rutinas{
+    font-family: "Verdana" !important;
+    font-size: 30px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px; 
+    color: white;
+    background-color:#FD7314;
+}
+#listaU{
     text-align: center;
     border:none;
     font-family: "Verdana";
@@ -82,22 +53,38 @@ body, header,#bod{
     display: inline-block;
     outline: none;
     border-radius: 5px; 
-    top:2px;
+    color: white;
+    background-color:#FD7314;
+}
+
+#lista, #registrar,#rutinas{
+    text-align: center;
+    border:none;
+    font-family: "Verdana";
+    font-size: 30px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px; 
     color: white;
     background-color:#FD7314;
 }
 
 #lista:hover ,#registrar:hover ,#listaU:hover,#registrarU:hover,#rutinas:hover{
-       top:15px;
-       background-color: #2E3040;
+    top:15px;
+    background-color: #2E3040;
 }
 
 #botones{
-    margin-top: 10%;
+    margin-top:5% !important;
     align-content: center;
 }
 
-
+#botones2{
+    margin-top:16% !important;
+    align-content: center;
+}
 /*=============RESPONSIVE================*/
 /*MENOR A 980 (TABLETS, IPADS)*/
 @media screen and (max-width: 980px){
@@ -106,14 +93,20 @@ body, header,#bod{
         line-height: 50px;
     }
     #botones{
-        margin-top: 30%;
+        margin-top: 20%;
         align-content: center;
     }
+
+    #botones2{
+        margin-top:20% !important;
+        align-content: center;
+    }
+
     #registrarU{
-        font-size: 19px;
+        font-size: 27px;
     }
     #listaU{
-        font-size: 19px;
+        font-size: 27px;
     }
     #tituloApp{
         font-size: 90px;
@@ -137,11 +130,13 @@ body, header,#bod{
 
     #tarjeta1{
         margin-top: 15px;
+        margin-bottom: 20px;
     }
 
+
     #tarjetaU{
-        margin-bottom: 30px !important;
-        margin-top: 15px;
+        margin-bottom: 20px !important;
+        margin-top: 20px;
     }
     
     #lista:hover ,#registrar:hover ,#rutinas:hover{
@@ -156,93 +151,224 @@ body, header,#bod{
         min-height: 100vh;
     } 
 
-}
-
-/*MENOR A 600*/
-@media screen and (max-width: 1290px){
-    #tituloApp{
-        font-size: 70px;
+    #btnEF{
+        font-size: 25px;
     }
-    #tarjeta1{
-        margin-top: 15px;
-    }
-    #tarjeta2{
-        margin-top: 15px;
-    }
-    #tarjeta3{
-        margin-top: 15px;
-    }
-    #tituloApp{
-
-        font-size: 80px;
-    }
-
-    #tarjetaU{
-        margin-bottom: 30px;
-        margin-top: 15px;
-    }
-    #registrarU{
-        font-size: 17px;
-    }
-    #listaU{
-        font-size: 17px;
-    }
-}
-
-
-@media screen and (max-width: 1480px){
-    #tituloApp{
-        font-size: 70px;
-    }
-    #tarjeta1{
-        margin-top: 15px;
-    }
-
-    #tarjeta2{
-        margin-top: 15px;
-    }
-
-    #tarjeta3{
-        margin-top: 15px;
-    }
-    #tituloApp{
-
-        font-size: 80px;
-    }
-
-    #tarjetaU{
-        margin-bottom: 30px;
-        margin-top: 15px;
-    }
-    #registrarU{
-        font-size: 17px;
-    }
-    #listaU{
-        font-size: 17px;
-    }
-}
-
-@media screen and (max-width: 1485px){
-    #tituloApp{
-        font-size: 70px;
-    }
-   
     
-    #tituloApp{
+}
 
-        font-size: 80px;
+@media screen and (max-width: 890px){
+    h1{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    #botones{
+        margin-top: 20%;
+        align-content: center;
     }
 
-    #tarjetaU{
-        margin-bottom: 30px;
-        margin-top: 15px;
+    #botones2{
+        margin-top:50% !important;
+        align-content: center;
     }
+
     #registrarU{
-        font-size: 17px;
+        font-size: 27px;
     }
     #listaU{
-        font-size: 17px;
+        font-size: 27px;
     }
+    #tituloApp{
+        font-size: 90px;
+    }
+
+
+    #lista, #registrar, #rutinas{
+        text-align: center;
+        border:none;
+        font-family: "Verdana";
+        font-size: 28px;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        outline: none;
+        border-radius: 5px; 
+        top:2px;
+        color: white;
+        background-color:#FD7314;
+    }
+
+    #tarjeta1{
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+
+    #tarjetaU{
+        margin-bottom: 20px !important;
+        margin-top: 20px;
+    }
+    
+    #lista:hover ,#registrar:hover ,#rutinas:hover{
+        top:15px;
+        background-color: #2E3040;
+    }
+    body {
+        background-image: url("../img/galeria/fondo-small.jpg");
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center;
+        min-height: 100vh;
+    } 
+
+    #btnEF{
+        font-size: 25px;
+    }
+    
+}
+
+
+@media screen and (max-width: 920px){
+    h1{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    #botones{
+        margin-top: 20%;
+        align-content: center;
+    }
+
+    #botones2{
+        margin-top:50% !important;
+        align-content: center;
+    }
+
+    #registrarU{
+        font-size: 27px;
+    }
+    #listaU{
+        font-size: 27px;
+    }
+    #tituloApp{
+        font-size: 90px;
+    }
+
+
+    #lista, #registrar, #rutinas{
+        text-align: center;
+        border:none;
+        font-family: "Verdana";
+        font-size: 28px;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        outline: none;
+        border-radius: 5px; 
+        top:2px;
+        color: white;
+        background-color:#FD7314;
+    }
+
+    #tarjeta1{
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+
+    #tarjetaU{
+        margin-bottom: 20px !important;
+        margin-top: 20px;
+    }
+    
+    #lista:hover ,#registrar:hover ,#rutinas:hover{
+        top:15px;
+        background-color: #2E3040;
+    }
+    body {
+        background-image: url("../img/galeria/fondo-small.jpg");
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center;
+        min-height: 100vh;
+    } 
+
+    #btnEF{
+        font-size: 25px;
+    }
+    
+}
+
+
+
+
+@media screen and (max-width: 785px){
+    h1{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    #botones{
+        margin-top: 20%;
+        align-content: center;
+    }
+
+    #botones2{
+        margin-top:30% !important;
+        align-content: center;
+    }
+
+    #registrarU{
+        font-size: 27px;
+    }
+    #listaU{
+        font-size: 27px;
+    }
+    #tituloApp{
+        font-size: 90px;
+    }
+
+
+    #lista, #registrar, #rutinas{
+        text-align: center;
+        border:none;
+        font-family: "Verdana";
+        font-size: 28px;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        outline: none;
+        border-radius: 5px; 
+        top:2px;
+        color: white;
+        background-color:#FD7314;
+    }
+
+    #tarjeta1{
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+
+    #tarjetaU{
+        margin-bottom: 20px !important;
+        margin-top: 20px;
+    }
+    
+    #lista:hover ,#registrar:hover ,#rutinas:hover{
+        top:15px;
+        background-color: #2E3040;
+    }
+    body {
+        background-image: url("../img/galeria/fondo-small.jpg");
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center;
+        min-height: 100vh;
+    } 
+
+    #btnEF{
+        font-size: 25px;
+    }
+    
 }
 
 
@@ -271,6 +397,11 @@ body, header,#bod{
     }
     #listaU{
         font-size: 17px;
+    }
+
+    #botones2{
+        margin-top:16% !important;
+        align-content: center;
     }
     
 }
@@ -332,6 +463,10 @@ body, header,#bod{
      #listaU{
          font-size: 12px;
      }
+     #botones2{
+        margin-top:30% !important;
+        align-content: center;
+    }
  }
 
  
@@ -352,6 +487,10 @@ body, header,#bod{
     }
     #listaU{
         font-size: 19px;
+    }
+    #botones2{
+        margin-top:16% !important;
+        align-content: center;
     }
 }
 
@@ -379,6 +518,11 @@ body, header,#bod{
         font-size: 24px;
     }
 
+    #botones2{
+        margin-top:16% !important;
+        align-content: center;
+    }
+
 }
 
 
@@ -400,6 +544,10 @@ body, header,#bod{
     #listaU{
         font-size: 14px;
     }
+    #botones2{
+        margin-top:16% !important;
+        align-content: center;
+    }
 
 }
 
@@ -417,12 +565,15 @@ body, header,#bod{
         margin-top: 15px;
     }
     #registrarU{
-        font-size: 14px;
+        font-size: 18px;
     }
     #listaU{
-        font-size: 14px;
+        font-size: 15px;
     }
-
+    #botones2{
+        margin-top:50% !important;
+        align-content: center;
+    }
 }
 
 @media screen and (max-width: 510px){
@@ -442,6 +593,11 @@ body, header,#bod{
     }
     #listaU{
         font-size: 14px;
+    }
+
+    #botones2{
+        margin-top:26% !important;
+        align-content: center;
     }
 
 }
@@ -469,6 +625,10 @@ body, header,#bod{
     h1{
         font-size: 25px;
     }
+    #botones2{
+        margin-top:60% !important;
+        align-content: center;
+    }
 
 }
 
@@ -495,7 +655,10 @@ body, header,#bod{
     h1{
         font-size: 25px;
     }
-
+    #botones2{
+        margin-top:60% !important;
+        align-content: center;
+    }
 }
 
 @media screen and (max-width: 425px){
@@ -519,30 +682,13 @@ body, header,#bod{
     #btnEF{
         font-size: 16px;
     }
+
+    #botones2{
+        margin-top:50% !important;
+        align-content: center;
+    }
 }
 
-@media screen and (max-width: 435px){
-    #tituloApp{
-        font-size: 40px;
-    }
-    #tarjeta1{
-        margin-top: 15px;
-    }
-    
-    #tarjetaU{
-        margin-bottom: 30px;
-        margin-top: 15px;
-    }
-    #registrarU{
-        font-size: 13px;
-    }
-    #listaU{
-        font-size: 13px;
-    }
-    #btnEF{
-        font-size: 16px;
-    }
-}
 
 
 @media screen and (max-width: 380px){
@@ -554,40 +700,21 @@ body, header,#bod{
     }
     
     #tarjetaU{
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         margin-top: 15px;
     }
     #registrarU{
-        font-size: 11px;
+        font-size: 10px;
     }
     #listaU{
-        font-size: 11px;
+        font-size: 10px;
+    }
+    #botones2{
+        margin-top:70% !important;
+        align-content: center;
     }
 }
 
-@media screen and (max-width: 360px){
-    #tituloApp{
-        font-size: 30px;
-    }
-    #tarjeta1{
-        margin-top: 15px;
-    }
-    
-    #tarjetaU{
-        margin-bottom: 30px;
-        margin-top: 15px;
-    }
-    #registrarU{
-        font-size: 11px;
-    }
-    #listaU{
-        font-size: 11px;
-    }
-
-    #btnEF{
-        font-size: 11px;
-    }
-}
 
 @media screen and (max-width: 310px){
     #tituloApp{
@@ -614,5 +741,9 @@ body, header,#bod{
 
     h1{
         font-size: 20px;
+    }
+    #botones2{
+        margin-top:80% !important;
+        align-content: center;
     }
 }
