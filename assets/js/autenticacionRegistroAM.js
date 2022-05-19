@@ -233,7 +233,7 @@ async function registrar() {
                         username: username.value
                     }).then(async function exito(){
                         Swal.close();
-                        await Swal.fire({
+                        Swal.fire({
                             title: "Registro Exitoso",
                             icon: "success",
                             showCancelButton: false,
