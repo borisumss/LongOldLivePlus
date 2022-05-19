@@ -90,3 +90,27 @@ body{
     font-weight: bold;
 }
  */ 
+
+ @media screen and (max-width: 1999px) {
+   #bienvenido{
+    font-size:30px;
+   }
+ }
+
+ @media screen and (max-width: 537px) {
+    #bienvenido{
+     font-size:25px;
+    }
+  }
+
+  @media screen and (max-width: 456px) {
+    #bienvenido{
+     font-size:20px;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    #bienvenido{
+     font-size:17px;
+    }
+  }

@@ -36,6 +36,9 @@ login.addEventListener('submit', (e) => {
 
     var tipoUser;
 
+    if(email.length == 0 || password.length==0){
+        swal('Llene todos los campos', '', 'error');
+    }else{
     const onGetTasks = (callback) =>
         onSnapshot(collection(cloudDB, "Users"), callback);
 
@@ -81,7 +84,7 @@ login.addEventListener('submit', (e) => {
         }
 
     });
-
+    }
 });
 
 

@@ -36,8 +36,8 @@ window.onload = function () {
             const docSnap = await getDoc(docRef);
             name = docSnap.data().username;
            
-            usuario.innerHTML = `<h1 style="color:white">
-            Bienvenido ${name}
+            usuario.innerHTML = `<h1 style="color:white" id="bienvenido">
+            Bienvenid@ ${name}
           </h1>`;
         } else {
              window.location = "../../index.html";
