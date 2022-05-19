@@ -1,4 +1,11 @@
-
+#fondoJuegMental{
+    height: 100%;
+    background: url(../img/galeria/fondoMockup.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
 /*MENOR A 980 (TABLETS, IPADS)*/
 @media screen and (max-width: 990px){
     #tarjeta2{
@@ -17,13 +24,7 @@
    #btnEF{
       font-size: 22px;
    }
-   #bod {
-    background-image: url("../img/galeria/fondoSMALL.jpg");
-    background-repeat: no-repeat;
-    background-size: cover; 
-    background-position: center;
-    min-height: 100vh;
-} 
+  
 }
   
   /*MENOR A 980 (TABLETS, IPADS)*/
@@ -37,13 +38,7 @@
       #btnEF{
           font-size: 22px;
       }
-      #bod {
-        background-image: url("../img/galeria/fondoSMALL.jpg");
-        background-repeat: no-repeat;
-        background-size: cover; 
-        background-position: center;
-        min-height: 100vh;
-    } 
+   
       
   }
   
@@ -54,13 +49,7 @@
       #btnEF{
           font-size: 20px;
       }
-      #bod {
-        background-image: url("../img/galeria/fondo-small.jpg");
-        background-repeat: no-repeat;
-        background-size: cover; 
-        background-position: center;
-        min-height: 100vh;
-    } 
+      
   }
   
   
@@ -100,13 +89,7 @@
           top:15px;
           background-color: #2E3040;
       }
-      #bod {
-        background-image: url("../img/galeria/fondoSMALL.jpg");
-        background-repeat: no-repeat;
-        background-size: cover; 
-        background-position: center;
-        min-height: 100vh;
-    } 
+   
   
      /* #volver {
           min-width: 90px;
@@ -159,13 +142,7 @@
        #tituloApp{
            font-size: 55px;
        }
-       #bod {
-        background-image: url("../img/galeria/fondoSMALL.jpg");
-        background-repeat: no-repeat;
-        background-size: cover; 
-        background-position: center;
-        min-height: 100vh;
-    } 
+       
    }
   
   @media screen and (max-width: 466px) {
@@ -200,13 +177,7 @@
       #tituloApp{
           font-size: 45px;
       }
-      #bod {
-        background-image: url("../img/galeria/fondoSMALL.jpg");
-        background-repeat: no-repeat;
-        background-size: cover; 
-        background-position: center;
-        min-height: 100vh;
-    } 
+  
   }
   
   
@@ -243,13 +214,7 @@
       #tituloLista{
           font-size: 22px;
       }
-      #bod {
-        background-image: url("../img/galeria/fondoSMALL.jpg");
-        background-repeat: no-repeat;
-        background-size: cover; 
-        background-position: center;
-        min-height: 100vh;
-    } 
+      
   }
   
   

@@ -166,6 +166,12 @@ body, header,#bod{
     #tarjeta1{
         margin-top: 15px;
     }
+    #tarjeta2{
+        margin-top: 15px;
+    }
+    #tarjeta3{
+        margin-top: 15px;
+    }
     #tituloApp{
 
         font-size: 80px;
@@ -182,6 +188,7 @@ body, header,#bod{
         font-size: 17px;
     }
 }
+
 
 @media screen and (max-width: 1480px){
     #tituloApp{
@@ -190,6 +197,14 @@ body, header,#bod{
     #tarjeta1{
         margin-top: 15px;
     }
+
+    #tarjeta2{
+        margin-top: 15px;
+    }
+
+    #tarjeta3{
+        margin-top: 15px;
+    }
     #tituloApp{
 
         font-size: 80px;
@@ -206,6 +221,40 @@ body, header,#bod{
         font-size: 17px;
     }
 }
+
+@media screen and (max-width: 1485px){
+    #tituloApp{
+        font-size: 70px;
+    }
+    #tarjeta1{
+        margin-top: -150px;
+    }
+
+    #tarjeta2{
+        margin-top: -150px;
+    }
+
+    #tarjeta3{
+        margin-top: -150px;
+    }
+    #tituloApp{
+
+        font-size: 80px;
+    }
+
+    #tarjetaU{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+    #registrarU{
+        font-size: 17px;
+    }
+    #listaU{
+        font-size: 17px;
+    }
+}
+
+
 
 
 
