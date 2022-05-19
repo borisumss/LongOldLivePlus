@@ -139,12 +139,8 @@ class Juego{
             }else{
                 var numeroPerdido = this.secuencia[this.subnivel]
                 colorPerdido = this.transformarNumeroAColor(numeroPerdido)
-                //document.write(colorPerdido)
-                //for(num = 0; num < 3; num++){
-                 //   this.iluminarColor(colorPerdido)
-                //}
                 if(colorPerdido === 'verde'){
-                    this.perdioElJuego('verde')
+                    this.perdioElJuego('verde', color.green)
                 }else if(colorPerdido === 'amarillo'){
                     this.perdioElJuego('amarillo')
                 }else if(colorPerdido === 'rojo'){
@@ -152,13 +148,26 @@ class Juego{
                 }else{
                     this.perdioElJuego('celeste')
                 }
-                //this.perdioElJuego()
             }
         }
        
         ganoElJuego(){
-            swal('NOTIFICACIÓN', '¡¡Ganaste el juego, Felicidades!!','success')
-            .then(this.inicializar)
+            Swal.fire({
+                title: '¡Ganaste! :)',
+                text: 'Felicidades, lograste los 15 puntos',
+                showDenyButton: true,
+                
+                confirmButtonText: 'Jugar de nuevo',
+                denyButtonText: `Salir del juego`,
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  this.eliminarEventosClick()
+                  this.inicializar()
+                } else if (result.isDenied) {
+                  window.location = "menuSD.html";
+                }
+            })
+                              
         }
 
         /*perdioElJuego(colorPerdido){
@@ -179,7 +188,7 @@ class Juego{
             showDenyButton: true,
             
             confirmButtonText: 'Jugar de nuevo',
-            denyButtonText: `Salir del Juego`,
+            denyButtonText: `Salir del juego`,
           }).then((result) => {
             if (result.isConfirmed) {
               this.eliminarEventosClick()
