@@ -4,10 +4,11 @@ const rojo = document.getElementById('rojo')
 const amarillo = document.getElementById('amarillo')
 const celeste   = document.getElementById('celeste')
 const btnEmpezar = document.getElementById('btnEmpezar')
-const ULTIMO_NIVEL = 15
+const ULTIMO_NIVEL = 2
 const MAXIMO_DE_PUNTOS = ULTIMO_NIVEL * 1
 var colorPerdido = '';
-    
+var circulo = '';
+
 class Juego{
     constructor(){
         this.round = 0;
@@ -140,13 +141,13 @@ class Juego{
                 var numeroPerdido = this.secuencia[this.subnivel]
                 colorPerdido = this.transformarNumeroAColor(numeroPerdido)
                 if(colorPerdido === 'verde'){
-                    this.perdioElJuego('verde', color.green)
+                    this.perdioElJuego('verde', 'https://cdn.icon-icons.com/icons2/402/PNG/512/trafficlight-green_40427.png')
                 }else if(colorPerdido === 'amarillo'){
-                    this.perdioElJuego('amarillo')
+                    this.perdioElJuego('amarillo', 'https://cdn.icon-icons.com/icons2/77/PNG/128/button_blank_yellow_14988.png')
                 }else if(colorPerdido === 'rojo'){
-                    this.perdioElJuego('rojo')
+                    this.perdioElJuego('rojo', 'https://cdn.icon-icons.com/icons2/402/PNG/512/trafficlight-red_40428.png')
                 }else{
-                    this.perdioElJuego('celeste')
+                    this.perdioElJuego('celeste', 'https://cdn.icon-icons.com/icons2/321/PNG/512/Circle_34541.png')
                 }
             }
         }
@@ -155,8 +156,11 @@ class Juego{
             Swal.fire({
                 title: '¡Ganaste! :)',
                 text: 'Felicidades, lograste los 15 puntos',
-                showDenyButton: true,
-                
+                imageUrl: 'https://cdn.icon-icons.com/icons2/2055/PNG/512/trophy_icon_124465.png',
+                imageWidth: 60,
+                imageHeight: 60,
+                showDenyButton: true,      
+
                 confirmButtonText: 'Jugar de nuevo',
                 denyButtonText: `Salir del juego`,
               }).then((result) => {
@@ -166,25 +170,16 @@ class Juego{
                 } else if (result.isDenied) {
                   window.location = "menuSD.html";
                 }
-            })
-                              
+            })                             
         }
 
-        /*perdioElJuego(colorPerdido){
-            Swal.fire({
-                html: `<h1> ¡Perdiste! :( </h1>
-                       <p> El color correcto era: </p>
-                       <br>
-                       <div id="circulo">
-                       <p> ${colorPerdido} </p>
-                       `
-                       
-            });
-        }*/
-        perdioElJuego(colorPerdido){
+        perdioElJuego(colorPerdido, circulo){
           Swal.fire({
             title: '¡Perdiste! :(',
             text: 'El color correcto era: '+colorPerdido,
+            imageUrl: circulo,
+            imageWidth: 50,
+            imageHeight: 50,
             showDenyButton: true,
             
             confirmButtonText: 'Jugar de nuevo',
