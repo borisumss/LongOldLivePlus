@@ -77,6 +77,7 @@ body {
 .botones {
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 @keyframes iniciar {
@@ -93,9 +94,28 @@ body {
 }
 
 
-/* @media screen and (max-width:700px) {
+@media screen and (max-width:838px) {
     :root {
-        --w: calc(140vw / 6);
+        --w: calc(60vw / 4);
         --h: calc(70vh / 4);  
     }
-} */
+} 
+
+@media screen and (max-width:628px) {
+    :root {
+        --w: calc(80vw / 4);
+        --h: calc(70vh / 4);  
+    }
+} 
+
+@media screen and (max-height:500px) {
+    .cara {
+        font-size: 320%;
+    }
+}
+
+@media screen and (max-width:425px){
+    .botones {
+        flex-direction: column;
+    }
+}
