@@ -21,6 +21,9 @@ function cargarIconos() {
 }
 
 function generarTablero() {
+    let control = document.body;
+    // control.style.pointerEvents="none";
+
     cargarIconos()
     selecciones = []
     let tablero = document.getElementById("tablero")
@@ -44,6 +47,13 @@ function generarTablero() {
     }
     tarjetas.sort(() => Math.random() - 0.5)
     tablero.innerHTML = tarjetas.join(" ")
+
+    control.style.pointerEvents="none";
+    setTimeout(() => {
+        control.style.pointerEvents="all";
+    }
+    , 5000);
+    
 }
 
 function rendirse() {
