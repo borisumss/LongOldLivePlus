@@ -20,8 +20,12 @@ body {
   
   h1, h2, h3, h4, h5, h6 {
     font-family: "Raleway", sans-serif;
+    
   }
   
+  #listaRutinas{
+    font-weight: bold;
+  }
  
   /*--------------------------------------------------------------
   # Disable AOS delay on mobile para ver menu en responsive
