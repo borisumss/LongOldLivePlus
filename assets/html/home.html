@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Long Old Live +</title>
+  <title id="titulo">Long Old Live +</title>
 
   <!-- Google Fonts formato de letra google -->
   <link
@@ -62,22 +62,32 @@
 
   <!----------------------------------->
 
-  <br>
+  
 
   <div class="display-4">
     <p class="text-center" id="tituloApp">Long Old Live+ </p>
   </div>
   <div class="row mx-5">
-    <!-- tarjeta ejercicio físicos-->
-    <div class="col d-flex justify-content-center">
-      <div class="card" style="width: 30rem;" id="tarjeta1">
-        <a onclick="redireccionar()" class="btn btn-secondary" id="card-color">
-          <img src="../img/galeria/ej1.jpg" class="card-img-top" alt="ImagenEjercicio">
-          <h1 id="btnEF">Ejercicios Físicos</h1>
-        </a>
+    <div class="row justify-content-center ">
+      <div class="col-lg-6">
+        <div class="card" id="tarjeta1">
+          <a onclick="redireccionar()" class="btn btn-secondary" id="card-color">
+            <img src="../img/galeria/ej1.jpg" class="card-img-top" alt="ImagenEjercicio">
+            <h1 id="btnEF">Ejercicios Físicos</h1>
+          </a>
+        </div>
+      </div>
+  
+      <div class="col-lg-6">
+        <div class="card"  id="tarjetaU">
+          <a onclick="redireccionarEjM()" class="btn btn-secondary" id="card-color" >
+            <img src="../img/galeria/person-playing-sudoku-on-tablet.jpg" class="card-img-top" alt="ImagenEjercicio">
+            <h1 id="btnEF">Juegos Mentales</h1>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
+    </div>
 
   <!-- import archivos JS -->
   <script src="../import/aos/aos.js"></script>
@@ -112,6 +122,11 @@
     }
 
   }
+  function redireccionarEjM(){
+    var res = "";
+    window.location.href="../html/juegosMentales.html#" + res;
+  }
+
 
 </script>
 

@@ -1,0 +1,117 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Juegos</title>
+  <!--implementacion bootstrap-->
+  <link rel="stylesheet" href="../css/style2.css">
+  <link rel="stylesheet" href="../css/style3.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <link href="../import/bootstrap/css/bootstrap.min.css" rel="stylesheet"><!--bootstrap 5-->
+  <link href="../import/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"><!--iconos boostrap 5-->
+  <link rel="stylesheet" href="../css/plantilla.css">
+  
+<!-- import archivos JS -->
+    <script src="../import/aos/aos.js"></script>
+    <script src="../import/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--archivo JS principal-->
+    <script src="../js/plantilla.js"></script>
+
+</head>
+
+<body id="fondoJuegMental">
+  
+ <!-- ======= Header ======= -->
+ <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+  <div class="container d-flex align-items-center justify-content-between">
+      <div class="col col-lg-2">
+          <nav id="navbar" class="navbar">
+              <ul>
+                  <li><a class="nav-link scrollto active" onclick="redireccionar()" id="volver">Volver</a></li>
+              </ul>
+              <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
+      </div>
+      
+      <div class="col-auto-md">
+          <div class="rutinas align-text-top">
+              <h1 id="tituloLista">Lista De Juegos</h1>
+          </div>
+      </div>
+      <div class="col col-lg-2">
+      </div>
+  </div>
+</header><!-- End Header -->
+<br>
+<br>
+<br><br><br>
+  <body id="bod">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-4">
+            <div class="card" id="tarjeta1">
+                <a onclick="redireccionar()" class="btn btn-secondary" id="card-color">
+                  <img src="../img/galeria/simon.png"class="card-img-top" alt="imagen" id="tamañoImg">
+                  <h1 id="btnEF">Simon Dice</h1>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" id="tarjeta2">
+                <a onclick="redireccionar()" class="btn btn-secondary" id="card-color">
+                  <img src="../img/galeria/sudoku.jpg" class="card-img-top" alt="imagen" id = "tamañoImg">
+                  <h1 id="btnEF">Sudoku</h1>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" id="tarjeta3">
+                <a onclick="redireccionarMemorama()" class="btn btn-secondary" id="card-color">
+                  <img src="../img/galeria/memorama.jpg" class="card-img-top" alt="imagen" id="tamañoImg">
+                  <h1 id="btnEF">Memorama</h1>
+                </a>
+              </div>
+        </div>
+        
+        </div>
+        
+        </div>
+   
+  <script src="../../assets/js/generarCard.js" type="module"></script>
+  <script src="../../assets/import/aos/aos.js"></script>
+  <script src="../../assets/import/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!--archivo JS principal-->
+  <script src="../../assets/js/plantilla.js"></script>
+  </body>
+
+
+
+  <!--Implementar generar objeto desde js
+<script src='https://code.jquery.com/jquery-1.12.4.min.js'></script>
+
+
+<div class="container" id="contentPanel"style="height: 25em;line-height:1em; ;overflow-x: hidden;overflow-y: auto;width: 100%;border:1px solido;">
+  la funcion agrega aqui los cambios
+</div>  
+
+appentTo? como funciona?
+  var myCol = $('<div class="col-sm-3 col-md-3 pb-2"></div>');
+      var myPanel = $('<div class="card card-outline-info" id="' + i + 'Panel"><div class="card-block"><div class="card-title"><span>Card #' + i + '</span><button type="button" class="close" data-target="#' + i + 'Panel" data-dismiss="alert"><span class="float-right"><i class="fa fa-remove"></i></span></button></div><p>Some text in ' + i + ' </p><img src="//placehold.it/50/eeeeee" class="rounded rounded-circle"></div></div>');
+      myPanel.appendTo(myCol);
+      myCol.appendTo('#contentPanel');
+      --->
+
+    <script>
+        function redireccionar() {
+            var res = "";
+            window.location.href = "../html/juegosMentales.html#" + res;
+        }
+
+        function redireccionarMemorama() {
+            var res = "";
+            window.location.href = "../html/memorama.html#" + res;
+        }
+      
+    </script>
+</html>
