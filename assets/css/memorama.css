@@ -93,8 +93,12 @@ body {
     }
 }
 
+.boton:hover{
+    box-shadow: 5px 5px 20px;
+    transform: translateY(-5%);
+}
 
-@media screen and (max-width:838px) {
+@media screen and (max-width:700px), (max-height:700px) {
     :root {
         --w: calc(60vw / 4);
         --h: calc(70vh / 4);  
