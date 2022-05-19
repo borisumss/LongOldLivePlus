@@ -95,8 +95,16 @@
 
 
     <script>
+      var url = "" + window.location.href;
+      var pos = url.indexOf("#");
+      var res = "";
+
+       for (var i = pos + 1; i < url.length && i > 0; i++) {
+         res += url[i];
+        }
+        
          function redireccionar() {
-            var res = "";
+            
             window.location.href = "../html/juegosMentales.html#" + res;
         }
     </script>

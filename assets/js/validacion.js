@@ -44,7 +44,7 @@ window.onload = function () {
                 window.location = "../html/home.html#Fisioterapeuta";
                }
             }else if (docSnap.data().tipo == "adulto"){
-                if((window.location.href).includes("Fisioterapeuta")){
+                if((window.location.href).includes("Fisioterapeuta")||(window.location.href).includes("ejerciciosFisicosFTP")||(window.location.href).includes("registrarEjercicio")){
                     window.location = "../html/home.html#AdultoMayor";
                 }
                // window.location = "../html/home.html#AdultoMayor";
