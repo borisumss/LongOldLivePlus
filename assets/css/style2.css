@@ -97,6 +97,7 @@ body, header,#bod{
     align-content: center;
 }
 
+
 /*=============RESPONSIVE================*/
 /*MENOR A 980 (TABLETS, IPADS)*/
 @media screen and (max-width: 980px){
@@ -113,6 +114,9 @@ body, header,#bod{
     }
     #listaU{
         font-size: 19px;
+    }
+    #tituloApp{
+        font-size: 90px;
     }
 
 
@@ -154,17 +158,43 @@ body, header,#bod{
 
 }
 
-
-
 /*MENOR A 600*/
-@media screen and (max-width: 390px){
+@media screen and (max-width: 1290px){
     #tituloApp{
         font-size: 70px;
     }
     #tarjeta1{
         margin-top: 15px;
     }
-    
+    #tituloApp{
+
+        font-size: 80px;
+    }
+
+    #tarjetaU{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+    #registrarU{
+        font-size: 17px;
+    }
+    #listaU{
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 1480px){
+    #tituloApp{
+        font-size: 70px;
+    }
+    #tarjeta1{
+        margin-top: 15px;
+    }
+    #tituloApp{
+
+        font-size: 80px;
+    }
+
     #tarjetaU{
         margin-bottom: 30px;
         margin-top: 15px;
@@ -179,7 +209,35 @@ body, header,#bod{
 
 
 
- @media screen and (max-width: 420px) {
+/*MENOR A 600*/
+@media screen and (max-width: 390px){
+    #tituloApp{
+        font-size: 70px;
+    }
+    #tarjeta1{
+        margin-top: 15px;
+    }
+    #tituloApp{
+
+        font-size: 15px;
+    }
+
+    #tarjetaU{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+    #registrarU{
+        font-size: 17px;
+    }
+    #listaU{
+        font-size: 17px;
+    }
+    
+}
+
+
+
+ @media screen and (max-width: 425px) {
     /* #volver {
          min-width: 70px;
          height: 30px;
@@ -209,7 +267,7 @@ body, header,#bod{
      }
  
      #tituloApp{
-         font-size: 45px;
+         font-size: 15px;
      }
  
      #tarjeta1{
@@ -235,10 +293,11 @@ body, header,#bod{
          font-size: 12px;
      }
  }
+
  
  @media screen and (max-width: 560px){
     #tituloApp{
-        font-size: 70px;
+        font-size: 60px;
     }
     #tarjeta1{
         margin-top: 15px;
@@ -256,7 +315,34 @@ body, header,#bod{
     }
 }
 
-@media screen and (max-width: 420px){
+
+@media screen and (max-width: 490px){
+    #tituloApp{
+        font-size: 30px;
+    }
+    #tarjeta1{
+        margin-top: 15px;
+    }
+    
+    #tarjetaU{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+    #registrarU{
+        font-size: 14px;
+    }
+    #listaU{
+        font-size: 14px;
+    }
+
+    #btnEF{
+        font-size: 24px;
+    }
+
+}
+
+
+@media screen and (max-width: 690px){
     #tituloApp{
         font-size: 70px;
     }
@@ -273,12 +359,131 @@ body, header,#bod{
     }
     #listaU{
         font-size: 14px;
+    }
+
+}
+
+
+@media screen and (max-width: 670px){
+    #tituloApp{
+        font-size: 60px;
+    }
+    #tarjeta1{
+        margin-top: 15px;
+    }
+    
+    #tarjetaU{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+    #registrarU{
+        font-size: 14px;
+    }
+    #listaU{
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 510px){
+    #tituloApp{
+        font-size: 50px;
+    }
+    #tarjeta1{
+        margin-top: 15px;
+    }
+    
+    #tarjetaU{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+    #registrarU{
+        font-size: 14px;
+    }
+    #listaU{
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 485px){
+    #tituloApp{
+        font-size: 50px;
+    }
+    #tarjeta1{
+        margin-top: 15px;
+    }
+    
+    
+    #tarjetaU{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+    #registrarU{
+        font-size: 14px;
+    }
+    #listaU{
+        font-size: 14px;
+    }
+
+    h1{
+        font-size: 25px;
+    }
+
+}
+
+@media screen and (max-width: 440px){
+    #tituloApp{
+        font-size: 50px;
+    }
+    
+    #tarjeta1{
+        margin-top: 15px;
+    }
+    
+    
+    #tarjetaU{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+    #registrarU{
+        font-size: 14px;
+    }
+    #listaU{
+        font-size: 14px;
+    }
+    h1{
+        font-size: 25px;
+    }
+
+}
+
+@media screen and (max-width: 425px){
+    #tituloApp{
+        font-size: 40px;
+    }
+    #tarjeta1{
+        margin-top: 15px;
+    }
+    
+    #tarjetaU{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+    #registrarU{
+        font-size: 13px;
+    }
+    #listaU{
+        font-size: 13px;
+    }
+    #btnEF{
+        font-size: 16px;
     }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 435px){
     #tituloApp{
-        font-size: 70px;
+        font-size: 40px;
     }
     #tarjeta1{
         margin-top: 15px;
@@ -294,11 +499,15 @@ body, header,#bod{
     #listaU{
         font-size: 13px;
     }
+    #btnEF{
+        font-size: 16px;
+    }
 }
+
 
 @media screen and (max-width: 380px){
     #tituloApp{
-        font-size: 70px;
+        font-size: 30px;
     }
     #tarjeta1{
         margin-top: 15px;
@@ -316,9 +525,9 @@ body, header,#bod{
     }
 }
 
-@media screen and (max-width: 290px){
+@media screen and (max-width: 360px){
     #tituloApp{
-        font-size: 70px;
+        font-size: 30px;
     }
     #tarjeta1{
         margin-top: 15px;
@@ -329,9 +538,41 @@ body, header,#bod{
         margin-top: 15px;
     }
     #registrarU{
+        font-size: 11px;
+    }
+    #listaU{
+        font-size: 11px;
+    }
+
+    #btnEF{
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 310px){
+    #tituloApp{
+        font-size: 30px;
+    }
+    #tarjeta1{
+        margin-top: 15px;
+    }
+    
+    #tarjetaU{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+    #btnEF{
+        font-size: 7px;
+    }
+
+    #registrarU{
         font-size: 8px;
     }
     #listaU{
         font-size: 8px;
+    }
+
+    h1{
+        font-size: 20px;
     }
 }
