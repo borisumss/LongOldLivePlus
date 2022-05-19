@@ -6,7 +6,7 @@ const celeste   = document.getElementById('celeste')
 const btnEmpezar = document.getElementById('btnEmpezar')
 const ULTIMO_NIVEL = 15
 const MAXIMO_DE_PUNTOS = ULTIMO_NIVEL * 1
-
+var colorPerdido = '';
     
 class Juego{
     constructor(){
@@ -137,7 +137,22 @@ class Juego{
                  }
                 }
             }else{
-                this.perdioElJuego()
+                var numeroPerdido = this.secuencia[this.subnivel]
+                colorPerdido = this.transformarNumeroAColor(numeroPerdido)
+                //document.write(colorPerdido)
+                //for(num = 0; num < 3; num++){
+                 //   this.iluminarColor(colorPerdido)
+                //}
+                if(colorPerdido === 'verde'){
+                    this.perdioElJuego('verde')
+                }else if(colorPerdido === 'amarillo'){
+                    this.perdioElJuego('amarillo')
+                }else if(colorPerdido === 'rojo'){
+                    this.perdioElJuego('rojo')
+                }else{
+                    this.perdioElJuego('celeste')
+                }
+                //this.perdioElJuego()
             }
         }
        
@@ -146,9 +161,21 @@ class Juego{
             .then(this.inicializar)
         }
 
-        perdioElJuego(){
+        /*perdioElJuego(colorPerdido){
+            Swal.fire({
+                html: `<h1> ¡Perdiste! :( </h1>
+                       <p> El color correcto era: </p>
+                       <br>
+                       <div id="circulo">
+                       <p> ${colorPerdido} </p>
+                       `
+                       
+            });
+        }*/
+        perdioElJuego(colorPerdido){
           Swal.fire({
             title: '¡Perdiste! :(',
+            text: 'El color correcto era: '+colorPerdido,
             showDenyButton: true,
             
             confirmButtonText: 'Jugar de nuevo',
