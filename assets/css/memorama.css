@@ -93,10 +93,27 @@ h3 {
     margin: 0.5em;
 }
 
+.botonMenu {
+    cursor: pointer;
+    background: linear-gradient(orange, darkorange);
+    padding: 20px;
+    border-radius: 50px;
+    border: white 5px solid;
+    font-size: 150%;
+    margin: 0.5em;
+}
+
 .botones {
     display: flex;
     justify-content: center;
     text-align: center;
+}
+
+.botonesMenu {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
 }
 
 @keyframes iniciar {

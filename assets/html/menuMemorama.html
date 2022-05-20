@@ -27,7 +27,7 @@
       <div class="col col-lg-2">
           <nav id="navbar" class="navbar">
               <ul>
-                  <li><a class="nav-link scrollto active" onclick="redireccionarMenuMemorama()" id="volver">Salir</a></li>
+                  <li><a class="nav-link scrollto active" onclick="redireccionar()" id="volver">Volver</a></li>
               </ul>
               <i class="bi bi-list mobile-nav-toggle"></i>
           </nav><!-- .navbar -->
@@ -50,19 +50,14 @@
     <br>
     <br>
 
-    <div id="tablero">
-    </div>
 
 
-    <div class="botones">
+    <div class="botonesMenu">
 
-        <button class="boton" onclick="generarTablero()">
-            Nuevo Juego
+        <button class="botonMenu" onclick="redireccionarJuegoMemorama()">
+            Jugar
         </button>
-        <button class="boton" onclick="rendirse()">
-            Me Rindo
-        </button>
-        <button type="button" class="boton" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#instruccion">
+        <button type="button" class="botonMenu" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#instruccion">
             Cómo Jugar
         </button>
 

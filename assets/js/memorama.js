@@ -126,3 +126,13 @@ function redireccionar() {
     var res = "";
     window.location.href = "../html/listaJuegos.html#" + res;
 }
+
+function redireccionarJuegoMemorama(){
+    var res = "";
+    window.location.href = "../html/memorama.html#" + res;
+}
+
+function redireccionarMenuMemorama(){
+    var res = "";
+    window.location.href = "../html/menuMemorama.html#" + res;
+}
