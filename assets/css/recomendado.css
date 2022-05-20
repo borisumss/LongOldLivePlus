@@ -1,0 +1,749 @@
+body, header{
+    font-family: Verdana !important;
+    font-style: Verdana !important;
+}
+#tituloApp, #letra, #btnEF{
+   font-family: "Verdana";
+}
+
+#tituloApp{
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.TodosTitulo{
+    font-size: 48px !important;
+    text-align: center !important;
+}
+
+#letra,#btnEF{
+   font-size: 30px;
+   font-weight: bold;
+   margin-top: 15px;
+}
+
+#tituloLista{
+    color: white;
+}
+
+#imagen{
+    width: 300px;
+    height: 150px;
+}
+#registrarU{
+    text-align: center;
+    border:none;
+    font-family: "Verdana" !important;
+    font-size: 30px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px; 
+    color: white;
+    background-color:#FD7314;
+}
+#listaU{
+    text-align: center;
+    border:none;
+    font-family: "Verdana";
+    font-size: 30px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px; 
+    color: white;
+    background-color:#FD7314;
+}
+
+#lista, #registrar,#rutinas{
+    text-align: center;
+    border:none;
+    font-family: "Verdana";
+    font-size: 30px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px; 
+    color: white;
+    background-color:#FD7314;
+}
+
+#lista:hover ,#registrar:hover ,#listaU:hover,#registrarU:hover,#rutinas:hover{
+    top:15px;
+    background-color: #2E3040;
+}
+
+#botones{
+    margin-top:5% !important;
+    align-content: center;
+}
+
+#botones2{
+    margin-top:16% !important;
+    align-content: center;
+}
+/*=============RESPONSIVE================*/
+/*MENOR A 980 (TABLETS, IPADS)*/
+@media screen and (max-width: 980px){
+    h1{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    #botones{
+        margin-top: 20%;
+        align-content: center;
+    }
+
+    #botones2{
+        margin-top:20% !important;
+        align-content: center;
+    }
+
+    #registrarU{
+        font-size: 27px;
+    }
+    #listaU{
+        font-size: 27px;
+    }
+    #tituloApp{
+        font-size: 90px;
+    }
+
+
+    #lista, #registrar, #rutinas{
+        text-align: center;
+        border:none;
+        font-family: "Verdana";
+        font-size: 28px;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        outline: none;
+        border-radius: 5px; 
+        top:2px;
+        color: white;
+        background-color:#FD7314;
+    }
+
+    #tarjeta1{
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+
+    #tarjetaU{
+        margin-bottom: 20px !important;
+        margin-top: 20px;
+    }
+    
+    #lista:hover ,#registrar:hover ,#rutinas:hover{
+        top:15px;
+        background-color: #2E3040;
+    }
+    body {
+        background-image: url("../img/galeria/fondo-small.jpg");
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center;
+        min-height: 100vh;
+    } 
+
+    #btnEF{
+        font-size: 25px;
+    }
+    
+}
+
+@media screen and (max-width: 890px){
+    h1{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    #botones{
+        margin-top: 20%;
+        align-content: center;
+    }
+
+    #botones2{
+        margin-top:50% !important;
+        align-content: center;
+    }
+
+    #registrarU{
+        font-size: 27px;
+    }
+    #listaU{
+        font-size: 27px;
+    }
+    #tituloApp{
+        font-size: 90px;
+    }
+
+
+    #lista, #registrar, #rutinas{
+        text-align: center;
+        border:none;
+        font-family: "Verdana";
+        font-size: 28px;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        outline: none;
+        border-radius: 5px; 
+        top:2px;
+        color: white;
+        background-color:#FD7314;
+    }
+
+    #tarjeta1{
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+
+    #tarjetaU{
+        margin-bottom: 20px !important;
+        margin-top: 20px;
+    }
+    
+    #lista:hover ,#registrar:hover ,#rutinas:hover{
+        top:15px;
+        background-color: #2E3040;
+    }
+    body {
+        background-image: url("../img/galeria/fondo-small.jpg");
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center;
+        min-height: 100vh;
+    } 
+
+    #btnEF{
+        font-size: 25px;
+    }
+    
+}
+
+
+@media screen and (max-width: 920px){
+    h1{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    #botones{
+        margin-top: 20%;
+        align-content: center;
+    }
+
+    #botones2{
+        margin-top:50% !important;
+        align-content: center;
+    }
+
+    #registrarU{
+        font-size: 27px;
+    }
+    #listaU{
+        font-size: 27px;
+    }
+    #tituloApp{
+        font-size: 90px;
+    }
+
+
+    #lista, #registrar, #rutinas{
+        text-align: center;
+        border:none;
+        font-family: "Verdana";
+        font-size: 28px;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        outline: none;
+        border-radius: 5px; 
+        top:2px;
+        color: white;
+        background-color:#FD7314;
+    }
+
+    #tarjeta1{
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+
+    #tarjetaU{
+        margin-bottom: 20px !important;
+        margin-top: 20px;
+    }
+    
+    #lista:hover ,#registrar:hover ,#rutinas:hover{
+        top:15px;
+        background-color: #2E3040;
+    }
+    body {
+        background-image: url("../img/galeria/fondo-small.jpg");
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center;
+        min-height: 100vh;
+    } 
+
+    #btnEF{
+        font-size: 25px;
+    }
+    
+}
+
+
+
+
+@media screen and (max-width: 785px){
+    h1{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    #botones{
+        margin-top: 20%;
+        align-content: center;
+    }
+
+    #botones2{
+        margin-top:30% !important;
+        align-content: center;
+    }
+
+    #registrarU{
+        font-size: 27px;
+    }
+    #listaU{
+        font-size: 27px;
+    }
+    #tituloApp{
+        font-size: 90px;
+    }
+
+
+    #lista, #registrar, #rutinas{
+        text-align: center;
+        border:none;
+        font-family: "Verdana";
+        font-size: 28px;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        outline: none;
+        border-radius: 5px; 
+        top:2px;
+        color: white;
+        background-color:#FD7314;
+    }
+
+    #tarjeta1{
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+
+    #tarjetaU{
+        margin-bottom: 20px !important;
+        margin-top: 20px;
+    }
+    
+    #lista:hover ,#registrar:hover ,#rutinas:hover{
+        top:15px;
+        background-color: #2E3040;
+    }
+    body {
+        background-image: url("../img/galeria/fondo-small.jpg");
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center;
+        min-height: 100vh;
+    } 
+
+    #btnEF{
+        font-size: 25px;
+    }
+    
+}
+
+
+
+
+
+/*MENOR A 600*/
+@media screen and (max-width: 390px){
+    #tituloApp{
+        font-size: 70px;
+    }
+    #tarjeta1{
+        margin-top: 15px;
+    }
+    #tituloApp{
+
+        font-size: 15px;
+    }
+
+    #tarjetaU{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+    #registrarU{
+        font-size: 17px;
+    }
+    #listaU{
+        font-size: 17px;
+    }
+
+    #botones2{
+        margin-top:16% !important;
+        align-content: center;
+    }
+    
+}
+
+
+
+ @media screen and (max-width: 425px) {
+    /* #volver {
+         min-width: 70px;
+         height: 30px;
+         position: absolute;
+         top: 15px;
+         left: 5px;
+         color: #fff;
+         padding: 1px;
+         cursor: pointer;
+         font-family: "Open Sans", sans-serif;
+         font-size: 15px;
+         border:none;
+         border-radius: 50px;
+         background-color: #FD7314;
+     }*/
+     
+     h1{
+         font-size: 21px;
+         align-self: flex-end;
+     }
+ 
+     #lista, #registrar, #rutinas{
+         text-align: center;
+         border:none;
+         font-family: "Verdana";
+         font-size: 14px;
+     }
+ 
+     #tituloApp{
+         font-size: 15px;
+     }
+ 
+     #tarjeta1{
+         margin-top: 15px;
+     }
+     
+     #tarjetaU{
+         margin-bottom: 30px;
+         margin-top: 15px;
+     }
+ 
+     #btnEF{
+         font-size: 16px;
+     }
+ 
+     #tituloApp{
+         font-size: 31px;
+     }
+     #registrarU{
+         font-size: 12px;
+     }
+     #listaU{
+         font-size: 12px;
+     }
+     #botones2{
+        margin-top:30% !important;
+        align-content: center;
+    }
+ }
+
+ 
+ @media screen and (max-width: 560px){
+    #tituloApp{
+        font-size: 60px;
+    }
+    #tarjeta1{
+        margin-top: 15px;
+    }
+    
+    #tarjetaU{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+    #registrarU{
+        font-size: 19px;
+    }
+    #listaU{
+        font-size: 19px;
+    }
+    #botones2{
+        margin-top:16% !important;
+        align-content: center;
+    }
+}
+
+
+@media screen and (max-width: 490px){
+    #tituloApp{
+        font-size: 30px;
+    }
+    #tarjeta1{
+        margin-top: 15px;
+    }
+    
+    #tarjetaU{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+    #registrarU{
+        font-size: 14px;
+    }
+    #listaU{
+        font-size: 14px;
+    }
+
+    #btnEF{
+        font-size: 24px;
+    }
+
+    #botones2{
+        margin-top:16% !important;
+        align-content: center;
+    }
+
+}
+
+
+@media screen and (max-width: 690px){
+    #tituloApp{
+        font-size: 70px;
+    }
+    #tarjeta1{
+        margin-top: 15px;
+    }
+    
+    #tarjetaU{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+    #registrarU{
+        font-size: 14px;
+    }
+    #listaU{
+        font-size: 14px;
+    }
+    #botones2{
+        margin-top:16% !important;
+        align-content: center;
+    }
+
+}
+
+
+@media screen and (max-width: 670px){
+    #tituloApp{
+        font-size: 60px;
+    }
+    #tarjeta1{
+        margin-top: 15px;
+    }
+    
+    #tarjetaU{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+    #registrarU{
+        font-size: 18px;
+    }
+    #listaU{
+        font-size: 15px;
+    }
+    #botones2{
+        margin-top:50% !important;
+        align-content: center;
+    }
+}
+
+@media screen and (max-width: 510px){
+    #tituloApp{
+        font-size: 50px;
+    }
+    #tarjeta1{
+        margin-top: 15px;
+    }
+    
+    #tarjetaU{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+    #registrarU{
+        font-size: 14px;
+    }
+    #listaU{
+        font-size: 14px;
+    }
+
+    #botones2{
+        margin-top:26% !important;
+        align-content: center;
+    }
+
+}
+
+@media screen and (max-width: 485px){
+    #tituloApp{
+        font-size: 50px;
+    }
+    #tarjeta1{
+        margin-top: 15px;
+    }
+    
+    
+    #tarjetaU{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+    #registrarU{
+        font-size: 14px;
+    }
+    #listaU{
+        font-size: 14px;
+    }
+
+    h1{
+        font-size: 25px;
+    }
+    #botones2{
+        margin-top:60% !important;
+        align-content: center;
+    }
+
+}
+
+@media screen and (max-width: 440px){
+    #tituloApp{
+        font-size: 50px;
+    }
+    
+    #tarjeta1{
+        margin-top: 15px;
+    }
+    
+    
+    #tarjetaU{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+    #registrarU{
+        font-size: 14px;
+    }
+    #listaU{
+        font-size: 14px;
+    }
+    h1{
+        font-size: 25px;
+    }
+    #botones2{
+        margin-top:60% !important;
+        align-content: center;
+    }
+}
+
+@media screen and (max-width: 425px){
+    #tituloApp{
+        font-size: 40px;
+    }
+    #tarjeta1{
+        margin-top: 15px;
+    }
+    
+    #tarjetaU{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+    #registrarU{
+        font-size: 13px;
+    }
+    #listaU{
+        font-size: 13px;
+    }
+    #btnEF{
+        font-size: 16px;
+    }
+
+    #botones2{
+        margin-top:50% !important;
+        align-content: center;
+    }
+}
+
+
+
+@media screen and (max-width: 380px){
+    #tituloApp{
+        font-size: 30px;
+    }
+    #tarjeta1{
+        margin-top: 15px;
+    }
+    
+    #tarjetaU{
+        margin-bottom: 20px;
+        margin-top: 15px;
+    }
+    #registrarU{
+        font-size: 10px;
+    }
+    #listaU{
+        font-size: 10px;
+    }
+    #botones2{
+        margin-top:70% !important;
+        align-content: center;
+    }
+}
+
+
+@media screen and (max-width: 310px){
+    #tituloApp{
+        font-size: 30px;
+    }
+    #tarjeta1{
+        margin-top: 15px;
+    }
+    
+    #tarjetaU{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+    #btnEF{
+        font-size: 7px;
+    }
+
+    #registrarU{
+        font-size: 8px;
+    }
+    #listaU{
+        font-size: 8px;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+    #botones2{
+        margin-top:80% !important;
+        align-content: center;
+    }
+}

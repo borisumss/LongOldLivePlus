@@ -1,0 +1,140 @@
+*{
+    margin:0;
+    padding: 0;  
+    font-style: Verdana !important;
+}
+
+#tarjeta1:hover{
+    box-shadow: 5px 5px 20px;
+    transform: translateY(-5%);
+}
+
+#tarjetaU:hover{
+    box-shadow: 5px 5px 20px;
+    transform: translateY(-5%);
+}
+
+#tarjeta2:hover{
+    box-shadow: 5px 5px 20px;
+    transform: translateY(-5%);
+
+}
+
+#tarjeta3:hover{
+    box-shadow: 5px 5px 20px;
+    transform: translateY(-5%);
+}
+
+
+body{
+    background-image: url("../img/galeria/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+}
+
+
+.col-lg-6{
+    width: 80vh;
+}
+  
+#letra{
+    font-family: "Verdana";
+    font-size: 30px;
+    color:#fdfdfd;
+}
+
+#card-color{
+    background-color:#c4c4c4;
+    color: black;
+    padding-left: 10px;
+    padding-right:10px;
+    padding-top: 10px;
+}
+
+
+
+#head{
+    height: 78px;
+    background-image: linear-gradient(315deg, rgb(109, 110, 182) 0%, #38204C 75%);
+}
+
+#tituloApp{
+    font-family: "Verdana";
+    font-size: 80px;
+    margin-top: 80px;
+}
+
+<<<<<<< HEAD
+=======
+/*
+#footer{
+    padding: 0%;
+    background-color:#38204c95;
+    color:beige;
+    font-family: "Open Sans", sans-serif;;
+}
+
+.tituloFooter2, .tituloFooter1,#nombre{
+    font-size: 30px;
+}
+
+.descripcionFooter, #enlace{
+    font-size: 20px;
+}
+
+#formulario {
+    padding: 20px 30px;
+    margin:auto;
+    border-radius: 7px;
+    font-family:"Open Sans", sans-serif;
+}
+
+#descripcion {
+    max-height: 200px;
+    min-height: 200px;
+  }
+
+  #btnRegistrar{
+    width: 30%;
+    margin:auto;
+    border-radius:15px;
+    font-size: 20px;
+    font-family:"Open Sans", sans-serif;
+    border:none;
+  }
+#boton-reclamos{
+    background-color: #e8cb9a;
+    border:none;
+    border-radius: 5px;
+    padding: 2px;
+    font-family:"Open Sans", sans-serif;;
+    font-weight: bold;
+}
+ */ 
+
+ @media screen and (max-width: 1999px) {
+   #bienvenido{
+    font-size:30px;
+   }
+ }
+
+ @media screen and (max-width: 537px) {
+    #bienvenido{
+     font-size:25px;
+    }
+  }
+
+  @media screen and (max-width: 456px) {
+    #bienvenido{
+     font-size:20px;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    #bienvenido{
+     font-size:17px;
+    }
+  }
+>>>>>>> 136d7a270167225dca1e026b2f30a13dfff4a81c
