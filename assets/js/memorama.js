@@ -1,7 +1,7 @@
 let iconos = []
 let selecciones = []
 let cont=0;
-let modal = document.getElementById("finJuego");
+
 generarTablero()
 
 function cargarIconos() {
@@ -98,7 +98,7 @@ function deseleccionar(selecciones) {
             cont++;
             if(cont == 12){
                 document.getElementById("finJuego").innerHTML=`
-                <div class="modal show" tabindex="-1" aria-modal="true" role="dialog" style="display: block;">
+                <div id="felicidades" class="modal show" tabindex="-1" aria-modal="true" role="dialog" style="display: block;">
                     <div class="modal-dialog modal-dialog-centered">
                          <div class="modal-content">
                             <div class="modal-header">
@@ -106,20 +106,19 @@ function deseleccionar(selecciones) {
                             </div>
                             <div class="modal-footer">
                                 <h3 class="modal-title">
-                                    <button type="button" class="btn btn-primary" onclick="cerrar()">Cerrar</button>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal" onclick="cerrar()">Cerrar</button>
                                 </h3>
                             </div>
                         </div>
                     </div>
-                </div>
-                `
+                </div>`;
             }
         }
     }, 1000);
 }
 
 function cerrar(){
-    modal.style.display = "none";
+    document.getElementById("felicidades").style.display = "none";
 }
 
 function redireccionar() {
