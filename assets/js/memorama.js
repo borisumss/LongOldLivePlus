@@ -1,6 +1,7 @@
 let iconos = []
 let selecciones = []
-
+let cont=0;
+let modal = document.getElementById("finJuego");
 generarTablero()
 
 function cargarIconos() {
@@ -22,8 +23,7 @@ function cargarIconos() {
 
 function generarTablero() {
     let control = document.body;
-    // control.style.pointerEvents="none";
-
+    cont=0;
     cargarIconos()
     selecciones = []
     let tablero = document.getElementById("tablero")
@@ -95,8 +95,31 @@ function deseleccionar(selecciones) {
         } else {
             trasera1.style.background = "plum"
             trasera2.style.background = "plum"
+            cont++;
+            if(cont == 12){
+                document.getElementById("finJuego").innerHTML=`
+                <div class="modal" tabindex="-1" style="display: block;">
+                    <div class="modal-dialog modal-dialog-centered">
+                         <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">¡FELICIDADES!</h5>
+                            </div>
+                            <div class="modal-footer">
+                                <h5 class="modal-title">
+                                    <button type="button" class="btn btn-primary" onclick="cerrar()">Close</button>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                `
+            }
         }
     }, 1000);
+}
+
+function cerrar(){
+    modal.style.display = "none";
 }
 
 function redireccionar() {

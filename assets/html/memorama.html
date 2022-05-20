@@ -50,10 +50,10 @@
     <br>
     <br>
 
-    <div id="tablero" style="margin-left: 20px;margin-right: 20px;">
+    <div id="tablero">
     </div>
 
-    <br>
+
     <div class="botones">
 
         <button class="boton" onclick="generarTablero()">
@@ -62,14 +62,35 @@
         <button class="boton" onclick="rendirse()">
             Me Rindo
         </button>
-        <button type="button" class="boton" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#static">
+        <button type="button" class="boton" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#instruccion">
             Cómo Jugar
         </button>
 
 
     </div>
+    <div class="modal" tabindex="-1" id="instruccion">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Instrucciones</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Tiene 5 segundos para memorizar la mayor cantidad de cartas.<br>
+                       Encuentre sus parejas y gane el juego. Buena suerte!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <h5 class="modal-title">
+                        <button class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    
+    <div id="finJuego">
+
+    </div>
 
   
   <script src="../../assets/import/aos/aos.js"></script>

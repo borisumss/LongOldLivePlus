@@ -26,8 +26,15 @@ body {
     display: inline-block;
 }
 
+h5 {
+    flex: auto;
+    text-align: center;
+}
+
 #tablero {
     text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .area-tarjeta,
