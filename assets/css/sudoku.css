@@ -10,7 +10,7 @@
     --red: #e91e63;
     --black: #000;
 
-    --nav-size: 70px;
+    /*--nav-size: 70px;*/
     --sudoku-cell-size: 50px;
 
     --border-radius: 10px;
@@ -22,6 +22,96 @@
     --font-size: 1.5rem;
     --font-size-lg: 2rem;
     --font-size-xl: 3rem;
+}
+
+/*Para el modal de instrucciones*/
+.fondo_transparente{
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100vh;
+    width: 100vh;
+    display: none;
+}
+.modal{
+    background: #c4c4c4;
+    width: 600px;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 5%;
+    margin-bottom: 5%;
+    /*position: relative;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_titulo{
+    color:  black;
+    font-size: 40px;
+    margin-top: 40%;
+    text-align: center;
+}
+
+#icono_modal{
+    width: 20%;
+    height: 20%;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+.modal_mensaje{            
+   padding: 10px 30px;
+}
+.modal_cerrar{      
+   width: 100%;    
+   background: #c4c4c4;
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.boton{
+    width: 90px;
+    background: #FD7314;
+    color: white;
+    text-align: center;
+    border-radius: 5px;    
+}
+.boton:hover{
+    background:  #2E3040;
+    color: white;
+}
+
+p{
+    color: black;
+}
+
+/*#comoJugar {
+    text-align: center;
+    border: none;
+    font-family: "Verdana";
+    font-size: 30px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    top: 2px;
+    color: white;
+    background-color: #FD7314;
+}*/
+
+/*#comoJugar:hover {
+    top: 15px;
+    background-color: #2E3040;
+}*/
+
+.mostrarNivel{
+    color: #000;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 .botonVolver{
@@ -254,10 +344,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 991px) {
-    body{
-        background-position: center;
-        min-height: 93vh;
-    }
+    
     .mobile-nav-toggle {
         display: block;
     }
@@ -356,6 +443,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
+    background-color: coral;
     font-family: "Verdana";
     /* height: 100vh; */
     background-color: var(--bg-body);
@@ -383,8 +471,8 @@ ul {
     list-style-type: none;
 }
 
-nav {
-    background-color: var(--bg-body);
+/*nav {
+    /*background-color: var(--bg-body);
     color: var(--color-txt);
     position: fixed;
     top: 0;
@@ -394,7 +482,7 @@ nav {
 }
 
 .nav-container {
-    max-width: 1280px;
+    /*max-width: 1280px;
     display: flex;
     justify-content: space-between;
     padding: 0 40px;
@@ -406,9 +494,9 @@ nav {
 }
 
 .nav-logo {
-    font-size: var(--font-size-lg);
+    /*font-size: var(--font-size-lg);
     color: var(--blue);
-}
+}*/
 
 .dark-mode-toggle {
     color: var(--blue);
@@ -434,7 +522,7 @@ nav {
 
 .main {
     /* height: 100vh; */
-    padding-top: var(--nav-size);
+    padding-top: 63px;
     display: grid;
     place-items: center;
 }
@@ -604,6 +692,18 @@ nav {
     margin-bottom: auto;
 }
 
+.btn-especial {
+    background-color: var(--bg-main);
+    color: var(--color-txt);
+    border-radius: var(--border-radius);
+    display: grid;
+    place-items: center;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+    font-size: var(--font-size-lg);
+    cursor: pointer;
+}
+
 .pause-btn {
     position: absolute;
     right: 10px;
@@ -728,7 +828,7 @@ nav {
 
 @media only screen and (max-width: 800px) {
     :root {
-        --nav-size: 50px;
+        /*--nav-size: 50px;*/
 
         --sudoku-cell-size: 30px;
 

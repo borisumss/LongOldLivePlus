@@ -48,7 +48,7 @@
             <div class="col col-lg-2">
                 <nav id="navbar" class="navbar">
                     <ul>
-                        <li><a class="nav-link scrollto active" onclick="redireccionar()" id="volver">Volver</a></li>
+                        <li><a class="nav-link scrollto active" href="menuSD.html" id="volver">Volver</a></li>
                     </ul>
                     <i class="bi bi-list mobile-nav-toggle"></i>
                 </nav><!-- .navbar -->
@@ -63,7 +63,9 @@
             </div>
 
         </div>
-    </header><!-- End Header -->
+    </header>
+    <!-- End Header -->
+
     <!-- main -->
     <div class="main">
         <div class="screen">
@@ -71,16 +73,49 @@
             <div class="start-screen active" id="start-screen">
                 <input class="ocultar" type="text" placeholder="Your name" maxlength="11" class="input-name" id="input-name">
                 <div class="btn" id="btn-level">
-                    Easy
+                    Fácil
                 </div>
-                <div class="btn btn-blue">Instrucciones</div>
-                <div class="btn btn-blue" id="btn-play">Nuevo juego</div>
+                <div id="comoJugar" class="btn btn-blue">¿Como Jugar?</div>
+                <div class="btn btn-blue" id="btn-play">Jugar</div>
                 <div class="ocultar" class="btn btn-blue" id="btn-continue"></div>
             </div>
             <!-- end start screen -->
+            
+            
+                <!-- ======= Modal de Instrucciones ====== -->
+            <div class="fondo_transparente">
+                <div class="modal">
+                    <div class="modal_mensaje">
+                        <div class="modal_titulo">Instrucciones</div>
+                        <p><strong>¿Qué es Sudoku?</strong></p>
+                        <p>Simon Dice es un juego de memoria musical acompañado de cuatro colores.
+                        Por lo que se recomienda aumentar el volumen para mejor disfrute del juego.</p>
+                        <p><strong>Pasos:</strong></p>
+                        <p> -Para ingresar al juego, presione el botón de "Jugar", podra observar un botón de "¡Comenzar!" y un círculo con 4 colores</p>
+                        <p> -Presione el botón de ¡Comenzar!, cuando sienta que esta preparado (el juego requiere mucha atención)</p>
+                        <p> -Primero, ponga atención al orden de colores que muestra el juego,
+                            (usted vera los colores volverse más brillantes por un momento) </p>
+                        <p> -Luego de que termine la música y los colores ya no se muestren más brillantes,
+                            presione los botones de color y repita el orden de colores que mostró el juego</p>
+                        <p> -Si logra repetir el orden, va por buen camino y el juego mostrará el mismo orden
+                            aumentando un movimiento más</p> 
+                        <p> -En caso de no lograr repetir el orden, se pierde la partida</p> 
+                        <p> -Gana el juego si logra conseguir un puntaje igual a 15</p>  
+                        <div class="modal_cerrar">
+                            <a href="" class="boton">¡Listo!</a>
+                        </div>
+                    </div>  
+                </div>
+            </div>   
+            <!-- ======= Fin Modal ====== -->
 
             <!-- game screen -->
             <div class="main-game" id="game-screen">
+                
+                <div class="mostrarNivel" class="main-game-info-box main-game-info-level">
+                    <span>Nivel:</span>
+                    <span id="game-level">Fácil</span>
+                </div>
                 <div class="main-sudoku-grid">
                     <!-- 81 cells -->
                     <div class="main-grid-cell"></div>
@@ -170,9 +205,6 @@
                     <div class="ocultar" class="main-game-info-box main-game-info-name">
                         <span id="player-name">tuat</span>
                     </div>
-                    <div class="main-game-info-box main-game-info-level">
-                        <span id="game-level">Fácil</span>
-                    </div>
                 </div>
 
                 <div class="main-game-info-box main-game-info-time">
@@ -201,6 +233,7 @@
             <div class="pause-screen" id="pause-screen">
                 <div class="btn btn-blue" id="btn-resume">Continuar</div>
                 <div class="btn btn-blue" id="btn-new-game">Nuevo juego</div>
+                
             </div>
             <!-- end pause screen -->
 
@@ -209,16 +242,42 @@
                 <div class="congrate">Completado</div>
                 <div class="info">Tiempo</div>
                 <div id="result-time"></div>
+                <div class="btn" id="btn-level">
+                    Fácil
+                </div>
+                <div class="btn btn-blue" id="btn-playagain">Jugar</div>
+                <div class="btn btn-blue">Salir</div>
                 <div class="btn btn-blue" id="btn-new-game-2">Nuevo juego</div>
             </div>
             <!-- end result screen -->
         </div>
+
+
     </div>
     <!-- end main -->
+    <script src="../import/aos/aos.js"></script>
+    <script src="../import/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type= "module" src="../js/validacion.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="../js/sudokuconstant.js"></script>
     <script src="../js/sudokuapp.js"></script>
     <script src="../js/sudoku.js"></script>
 </body>
+
+<script>
+    document.getElementById("comoJugar").addEventListener  
+    ("click", function(){
+        document.getElementsByClassName
+        ("fondo_transparente")[0].style.display="block"
+        return false
+    })
+ 
+    document.getElementsByClassName("modal_cerrar")[0].
+    addEventListener("click", function(){
+        document.getElementsByClassName
+        ("fondo_transparente")[0].style.display="none"
+    })
+ </script>
 
 </html>
