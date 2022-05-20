@@ -25,9 +25,7 @@
 
 <body id="fondoJuegMental">
   <!--js de bootstrap-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
+  
 
   
  <!-- ======= Header ======= -->
@@ -47,7 +45,16 @@
               <h1 id="tituloLista">Juegos Recomendados</h1>
           </div>
       </div>
-      <div class="col col-lg-2">
+      <div class="col col-lg-2 text-end">
+        
+        <div class="dropdown" id="drop">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+           
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" id="logout"  onclick="salir()">Cerrar Sesión</a></li>
+          </ul>
+        </div>        
       </div>
   </div>
 </header><!-- End Header -->
@@ -86,10 +93,12 @@
         
         </div>
    
-  <script src="../../assets/js/generarCard.js" type="module"></script>
+  
 
   <!--archivo JS principal-->
   <script src="../../assets/js/plantilla.js"></script>
+  <script type= "module" src="../js/validacion.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 
 
