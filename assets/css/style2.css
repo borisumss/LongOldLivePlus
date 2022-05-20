@@ -81,6 +81,11 @@ body, header{
     align-content: center;
 }
 
+#botones3{
+    margin-top:4% !important;
+    align-content: center;
+}
+
 #botones2{
     margin-top:16% !important;
     align-content: center;
@@ -99,6 +104,11 @@ body, header{
 
     #botones2{
         margin-top:20% !important;
+        align-content: center;
+    }
+
+    #botones3{
+        margin-top:40% !important;
         align-content: center;
     }
 
@@ -172,6 +182,11 @@ body, header{
         align-content: center;
     }
 
+    #botones3{
+        margin-top:30% !important;
+        align-content: center;
+    }
+
     #registrarU{
         font-size: 27px;
     }
@@ -237,7 +252,7 @@ body, header{
         margin-top: 20%;
         align-content: center;
     }
-
+   
     #botones2{
         margin-top:50% !important;
         align-content: center;
@@ -313,6 +328,10 @@ body, header{
 
     #botones2{
         margin-top:30% !important;
+        align-content: center;
+    }
+    #botones3{
+        margin-top:10% !important;
         align-content: center;
     }
 
@@ -492,6 +511,17 @@ body, header{
         margin-top:16% !important;
         align-content: center;
     }
+    #botones3{
+        margin-top:16% !important;
+        align-content: center;
+    }
+    #lista{
+        font-size: 21px;
+    }
+    #registrar{
+        font-size: 21px;
+    }
+
 }
 
 
@@ -574,6 +604,16 @@ body, header{
         margin-top:50% !important;
         align-content: center;
     }
+    #botones3{
+        margin-top:10% !important;
+        align-content: center;
+    }
+    #lista{
+        font-size: 19px;
+    }
+    #registrar{
+        font-size: 19px;
+    }
 }
 
 @media screen and (max-width: 510px){
@@ -610,7 +650,12 @@ body, header{
         margin-top: 15px;
     }
     
-    
+    #lista{
+        font-size: 13px;
+    }
+    #registrar{
+        font-size: 13px;
+    }
     #tarjetaU{
         margin-bottom: 30px;
         margin-top: 15px;
