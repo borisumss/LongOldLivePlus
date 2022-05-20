@@ -270,7 +270,7 @@ body, header{
     }
    
     #botones2{
-        margin-top:50% !important;
+        margin-top:20% !important;
         align-content: center;
     }
 
@@ -359,10 +359,10 @@ body, header{
     }
 
     #registrarU{
-        font-size: 27px;
+        font-size: 18px;
     }
     #listaU{
-        font-size: 27px;
+        font-size: 18px;
     }
     #tituloApp{
         font-size: 90px;
@@ -686,7 +686,7 @@ body, header{
         font-size: 15px;
     }
     #botones2{
-        margin-top:50% !important;
+        margin-top:30% !important;
         align-content: center;
     }
     #botones3{
@@ -773,7 +773,7 @@ body, header{
         font-size: 25px;
     }
     #botones2{
-        margin-top:60% !important;
+        margin-top:40% !important;
         align-content: center;
     }
 
