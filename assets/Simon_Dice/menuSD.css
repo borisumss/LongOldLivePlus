@@ -195,6 +195,11 @@ h1, h2, h3, h4, h5, h6 {
         display: none;
     }
 }
+@media (max-width: 870px) {
+    body{
+        min-height: 100vh;
+    }
+}
 
 .navbar-mobile {
     position: fixed;
@@ -276,7 +281,47 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
 }
 
+/*===BOTONES===*/
 
+.start-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-screen.active {
+    transform: translateX(0);
+    max-height: 500px;
+}
+
+.start-screen > * + * {
+    margin-top: 20px;
+}
+.btn {
+    height: 70px;
+    width: 330px;
+    background-color:  #FD7314;
+    color: white;
+    border-radius: 5px;
+    /*display: grid;*/
+    place-items: center;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+    font-size: 30px;
+    font-family: "Verdana";
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+/*
 #jugar, #comoJugar {
     text-align: center;
     border: none;
@@ -300,7 +345,7 @@ h1, h2, h3, h4, h5, h6 {
 #botones {
     margin-top: 10%;
     align-content: center;
-}
+}*/
 
 /*Para el modal de instrucciones*/
 .fondo_transparente{
@@ -366,9 +411,18 @@ p{
 }
 
 /*border: 5px solid black*/
+
+@media only screen and (max-width: 650px) {
+    .modal{
+        width: 370px;
+    }
+    .modal_titulo{
+        margin-top: 150%;
+    }
+}
 @media screen and (max-width: 500px) {
     body{
         background-position: center;
-        min-height: 112vh;
+        min-height: 100vh;
     }   
 }
