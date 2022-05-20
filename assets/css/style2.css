@@ -139,10 +139,19 @@ body, header{
     }
 
     #tarjeta1{
-        margin-top: 15px;
+        margin-top: 20px;
         margin-bottom: 20px;
     }
 
+    #tarjeta2{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #tarjeta3{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 
     #tarjetaU{
         margin-bottom: 20px !important;
@@ -214,10 +223,17 @@ body, header{
     }
 
     #tarjeta1{
-        margin-top: 15px;
+        margin-top: 20px;
         margin-bottom: 20px;
     }
-
+    #tarjeta2{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #tarjeta3{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 
     #tarjetaU{
         margin-bottom: 20px !important;
@@ -285,10 +301,17 @@ body, header{
     }
 
     #tarjeta1{
-        margin-top: 15px;
+        margin-top: 20px;
         margin-bottom: 20px;
     }
-
+    #tarjeta2{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #tarjeta3{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 
     #tarjetaU{
         margin-bottom: 20px !important;
@@ -362,7 +385,15 @@ body, header{
     }
 
     #tarjeta1{
-        margin-top: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #tarjeta2{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #tarjeta3{
+        margin-top: 20px;
         margin-bottom: 20px;
     }
 
@@ -400,7 +431,16 @@ body, header{
         font-size: 70px;
     }
     #tarjeta1{
-        margin-top: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #tarjeta2{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #tarjeta3{
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
     #tituloApp{
 
@@ -461,8 +501,17 @@ body, header{
      }
  
      #tarjeta1{
-         margin-top: 15px;
-     }
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #tarjeta2{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #tarjeta3{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
      
      #tarjetaU{
          margin-bottom: 30px;
@@ -494,7 +543,16 @@ body, header{
         font-size: 60px;
     }
     #tarjeta1{
-        margin-top: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #tarjeta2{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #tarjeta3{
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
     
     #tarjetaU{
@@ -530,7 +588,16 @@ body, header{
         font-size: 30px;
     }
     #tarjeta1{
-        margin-top: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #tarjeta2{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #tarjeta3{
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
     
     #tarjetaU{
@@ -561,7 +628,16 @@ body, header{
         font-size: 70px;
     }
     #tarjeta1{
-        margin-top: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #tarjeta2{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #tarjeta3{
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
     
     #tarjetaU{
@@ -587,7 +663,16 @@ body, header{
         font-size: 60px;
     }
     #tarjeta1{
-        margin-top: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #tarjeta2{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #tarjeta3{
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
     
     #tarjetaU{
@@ -621,7 +706,16 @@ body, header{
         font-size: 50px;
     }
     #tarjeta1{
-        margin-top: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #tarjeta2{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #tarjeta3{
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
     
     #tarjetaU{
@@ -647,9 +741,17 @@ body, header{
         font-size: 50px;
     }
     #tarjeta1{
-        margin-top: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
-    
+    #tarjeta2{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #tarjeta3{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
     #lista{
         font-size: 13px;
     }
@@ -683,7 +785,16 @@ body, header{
     }
     
     #tarjeta1{
-        margin-top: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #tarjeta2{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #tarjeta3{
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
     
     
@@ -711,7 +822,16 @@ body, header{
         font-size: 40px;
     }
     #tarjeta1{
-        margin-top: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #tarjeta2{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #tarjeta3{
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
     
     #tarjetaU{
@@ -741,7 +861,16 @@ body, header{
         font-size: 30px;
     }
     #tarjeta1{
-        margin-top: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #tarjeta2{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #tarjeta3{
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
     
     #tarjetaU{
@@ -766,7 +895,16 @@ body, header{
         font-size: 30px;
     }
     #tarjeta1{
-        margin-top: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #tarjeta2{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #tarjeta3{
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
     
     #tarjetaU{
