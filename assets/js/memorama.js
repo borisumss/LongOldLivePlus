@@ -48,9 +48,10 @@ function generarTablero() {
     tarjetas.sort(() => Math.random() - 0.5)
     tablero.innerHTML = tarjetas.join(" ")
 
-    control.style.pointerEvents="none";
+    // bloquear solo fichas sin boton salir
+    tablero.style.pointerEvents="none";
     setTimeout(() => {
-        control.style.pointerEvents="all";
+        tablero.style.pointerEvents="all";
     }
     , 5000);
     
