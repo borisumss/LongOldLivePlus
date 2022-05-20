@@ -108,7 +108,7 @@ body, header{
     }
 
     #botones3{
-        margin-top:40% !important;
+        margin-top:5% !important;
         align-content: center;
     }
 
@@ -192,7 +192,7 @@ body, header{
     }
 
     #botones3{
-        margin-top:30% !important;
+        margin-top:5% !important;
         align-content: center;
     }
 
@@ -367,13 +367,13 @@ body, header{
     #tituloApp{
         font-size: 90px;
     }
-
-
+    
+ 
     #lista, #registrar, #rutinas{
         text-align: center;
         border:none;
         font-family: "Verdana";
-        font-size: 28px;
+        font-size: 21px;
         transition: all 0.3s ease;
         position: relative;
         display: inline-block;
