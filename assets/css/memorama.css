@@ -12,7 +12,7 @@ body {
     margin: 0;
     perspective: none;
     -webkit-perspective: 1000;
-    background:powderblue;
+    background:rgb(49, 104, 167) !important;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -26,9 +26,13 @@ body {
     display: inline-block;
 }
 
-h5 {
+h3 {
     flex: auto;
     text-align: center;
+}
+.modal-backdrop {
+    /* bug fix - no overlay */    
+    display: none;    
 }
 
 #tablero {
@@ -69,6 +73,14 @@ h5 {
 
 .superior {
     background: linear-gradient(orange, darkorange);
+}
+
+.btn-primary {
+    background: linear-gradient(orange, darkorange);
+    border-radius: 50px !important;
+    border-color: white !important;
+    padding: 10px !important;
+    color: black !important;
 }
 
 .boton {

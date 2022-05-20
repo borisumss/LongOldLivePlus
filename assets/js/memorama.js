@@ -98,16 +98,16 @@ function deseleccionar(selecciones) {
             cont++;
             if(cont == 12){
                 document.getElementById("finJuego").innerHTML=`
-                <div class="modal" tabindex="-1" style="display: block;">
+                <div class="modal show" tabindex="-1" aria-modal="true" role="dialog" style="display: block;">
                     <div class="modal-dialog modal-dialog-centered">
                          <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title">¡FELICIDADES!</h5>
+                                <h3 class="modal-title">¡FELICIDADES!</h3>
                             </div>
                             <div class="modal-footer">
-                                <h5 class="modal-title">
-                                    <button type="button" class="btn btn-primary" onclick="cerrar()">Close</button>
-                                </h5>
+                                <h3 class="modal-title">
+                                    <button type="button" class="btn btn-primary" onclick="cerrar()">Cerrar</button>
+                                </h3>
                             </div>
                         </div>
                     </div>
