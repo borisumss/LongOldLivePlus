@@ -36,7 +36,7 @@
 .modal{
     background: #c4c4c4;
     width: 600px;
-    height: 600px;
+    height: 560px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -52,7 +52,7 @@
 .modal_titulo{
     color:  black;
     font-size: 40px;
-    margin-top: 40%;
+    margin-top: 0%;
     text-align: center;
 }
 
@@ -62,14 +62,17 @@
     margin-left: 40%;
     margin-right: 40%;
 }
-.modal_mensaje{            
-   padding: 10px 30px;
+.modal_mensaje{       
+    max-height: 600px;     
+    padding: 5%;
+    border-bottom: 5px;
 }
 .modal_cerrar{      
    width: 100%;    
    background: #c4c4c4;
    display: flex;
    justify-content: space-evenly;
+   margin-bottom: 3%;
 }
 
 .boton{
@@ -175,6 +178,7 @@ header {
 }
 
 body {
+    background-color: rgb(233, 234, 184);
     font-family: "Open Sans", sans-serif;
     color: #fff;
 }
@@ -443,10 +447,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-    background-color: coral;
+    background-color: rgb(233, 234, 184);
     font-family: "Verdana";
     /* height: 100vh; */
-    background-color: var(--bg-body);
+    /*background-color: var(--bg-body);*/
     overflow-x: hidden;
     user-select: none;
 }
@@ -462,7 +466,7 @@ input:focus {
     border-color: var(--blue);
 }
 
-a {
+.a1 {
     text-decoration: none;
     color: unset;
 }
@@ -525,9 +529,11 @@ ul {
     padding-top: 63px;
     display: grid;
     place-items: center;
+    background-color: rgb(233, 234, 184);
 }
 
 .screen {
+    background-color: rgb(237, 234, 184);
     position: relative;
     overflow: hidden;
     height: 100%;
@@ -572,6 +578,8 @@ ul {
     width: 280px;
     background-color: var(--bg-main);
     color: var(--color-txt);
+    border-color: #000;
+    border: 1px;
     border-radius: var(--border-radius);
     display: grid;
     place-items: center;
@@ -754,7 +762,7 @@ ul {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--bg-body);
+    background-color: rgb(233, 234, 184);
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -826,7 +834,13 @@ ul {
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 650px) {
+    .modal{
+        width: 370px;
+    }
+}
+
+@media only screen and (max-width: 990px) {
     :root {
         /*--nav-size: 50px;*/
 

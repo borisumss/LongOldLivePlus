@@ -50,7 +50,7 @@
             <div class="col col-lg-2">
                 <nav id="navbar" class="navbar">
                     <ul>
-                        <li><a class="nav-link scrollto active" href="menuSD.html" id="volver">Volver</a></li>
+                        <li><a class="nav-link scrollto active" href="home.html" id="volver">Volver</a></li>
                     </ul>
                     <i class="bi bi-list mobile-nav-toggle"></i>
                 </nav><!-- .navbar -->
@@ -90,19 +90,20 @@
                     <div class="modal_mensaje">
                         <div class="modal_titulo">Instrucciones</div>
                         <p><strong>¿Qué es Sudoku?</strong></p>
-                        <p>Simon Dice es un juego de memoria musical acompañado de cuatro colores.
-                        Por lo que se recomienda aumentar el volumen para mejor disfrute del juego.</p>
+                        <p>El sudoku es uno de los juegos de puzle más populares de todos los tiempos. El objetivo del sudoku es rellenar 
+                            una cuadrícula de 9 x 9 con números, de forma que cada fila, columna y sección de 3 x 3 contenga cada uno de los dígitos 
+                        entre 1 y 9. Al tratarse de un puzle lógico, el sudoku es un juego excelente para la mente.</p>
                         <p><strong>Pasos:</strong></p>
-                        <p> -Para ingresar al juego, presione el botón de "Jugar", podra observar un botón de "¡Comenzar!" y un círculo con 4 colores</p>
-                        <p> -Presione el botón de ¡Comenzar!, cuando sienta que esta preparado (el juego requiere mucha atención)</p>
-                        <p> -Primero, ponga atención al orden de colores que muestra el juego,
-                            (usted vera los colores volverse más brillantes por un momento) </p>
-                        <p> -Luego de que termine la música y los colores ya no se muestren más brillantes,
-                            presione los botones de color y repita el orden de colores que mostró el juego</p>
-                        <p> -Si logra repetir el orden, va por buen camino y el juego mostrará el mismo orden
-                            aumentando un movimiento más</p> 
-                        <p> -En caso de no lograr repetir el orden, se pierde la partida</p> 
-                        <p> -Gana el juego si logra conseguir un puntaje igual a 15</p>  
+                        <p> -Para ingresar al juego, seleccione el nivel haciendo click sobre el cuadro que dice "Fácil" y presione el botón de "Jugar", 
+                            podra observar que se le genera un cuadro de sudoku, según el nivel que eligió, arriba a la izquierda del cuadro de sudoku 
+                            le mostrará el nivel que escogió, debajo del sudoku podrá observar el tiempo que va tardando en resolver el sudoku,
+                             a la derecha del cuadro le aparecerá un botón de pausa, para que pueda pausar el juego el momento que quiera, debajo de 
+                             todo esto le aparecerán los botones de los numeros con los que podrá llenar el sudoku y un botón de "x" para eliminar un número que usted haya colocado</p>
+                        <p> -Para llenar una casilla, debe seleccionarla con el cursor y hacer click en el números de los números de abajo para llenar la casilla</p>
+                        <p> -Si se equivoca al llenar una casilla, el juego marcará con rojo las casillas que generen conflicto con la casilla que colocó</p> 
+                        <p> -Si quiere quitar una casilla que usten llenó, debe seleccionar la casilla que desea eliminar y hacer click el botón "x" que aparece en la sección de los botones de números</p>
+                        <p> -Si no puede con el sudoku, puede darle al botón de pausa y darle clcik al botón "Nuevo juego", para ir a la página principal y poder volver a jugar</p>
+                        <p> -Gana el juego si logra llenar todo el tablero de Sudoku sin errores</p>  
                         <div class="modal_cerrar">
                             <a href="" class="boton">¡Listo!</a>
                         </div>
@@ -244,11 +245,7 @@
                 <div class="congrate">Completado</div>
                 <div class="info">Tiempo</div>
                 <div id="result-time"></div>
-                <div class="btn" id="btn-level">
-                    Fácil
-                </div>
-                <div class="btn btn-blue" id="btn-playagain">Jugar</div>
-                <div class="btn btn-blue">Salir</div>
+                <a href="listaEjercicios" class="btn btn-blue">Salir</a>
                 <div class="btn btn-blue" id="btn-new-game-2">Nuevo juego</div>
             </div>
             <!-- end result screen -->
