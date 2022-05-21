@@ -3,7 +3,7 @@ const verde = document.getElementById('verde')
 const rojo = document.getElementById('rojo')
 const amarillo = document.getElementById('amarillo')
 const celeste   = document.getElementById('celeste')
-
+const btnEmpezar = document.getElementById('btnEmpezar')
 const ULTIMO_NIVEL = 3
 const MAXIMO_DE_PUNTOS = ULTIMO_NIVEL * 1
 var colorPerdido = '';
@@ -11,8 +11,6 @@ var circulo = '';
 
 class Juego{
     constructor(){
-        let audio = document.getElementById("clip2");
-      audio.play();
         this.round = 0;
         this.inicializar = this.inicializar.bind(this)
         this.inicializar()
@@ -21,11 +19,10 @@ class Juego{
     }
     inicializar(){
         this.updateRound(0)
-        
         // haciendo ref al this.elegirColor de abajo
         this.siguienteNivel = this.siguienteNivel.bind(this)
         this.elegirColor = this.elegirColor.bind(this)
-        //this.toggleBtnEmpezar()
+        this.toggleBtnEmpezar()
         //btnEmpezar.classList.add('hide')
         this.nivel = 1
         this.colores = {
@@ -36,7 +33,6 @@ class Juego{
         }
      } 
      updateRound(value) {
-
         this.round = value;
         round.textContent = `Puntaje: ${this.round}`;
     }
@@ -86,7 +82,6 @@ class Juego{
      }
 
      iluminarSecuencia(){
-         
          for(let i = 0 ; i< this.nivel; i++) {
              const COLOR = this.transformarNumeroAColor(this.secuencia[i])
              setTimeout(() => this.iluminarColor(COLOR), 1000 * i)
@@ -202,7 +197,4 @@ class Juego{
 
     function empezarJuego(){
      window.juego= new Juego()
-     let audio = document.getElementById("clip2");
-      audio.play();
     }
-    empezarJuego()
