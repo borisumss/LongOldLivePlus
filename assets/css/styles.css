@@ -159,6 +159,12 @@
   }
 }
 
+@media screen and (max-width: 540px) {
+  .btn-start { 
+    margin-top: -210px;   
+  }
+}
+
 @media screen and (max-width: 500px){
   .gameboard{
     margin-top: 35%;
@@ -202,7 +208,7 @@
 
 @media screen and (max-width: 360px){
   .btn-start {
-    margin-top: -255px;   
+    margin-top: -200px;   
   }
  
 }
