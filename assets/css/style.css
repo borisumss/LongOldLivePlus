@@ -22,7 +22,7 @@ body {
   }
   
   /*--------------------------------------------------------------
-  # Back to top button
+  # Boton regresar
   --------------------------------------------------------------*/
   .back-to-top {
     position: fixed;
@@ -52,7 +52,7 @@ body {
   }
   
   /*--------------------------------------------------------------
-  # Disable AOS delay on mobile
+  # AOS
   --------------------------------------------------------------*/
   @media screen and (max-width: 768px) {
     [data-aos-delay] {
@@ -95,11 +95,8 @@ body {
   }
   
   /*--------------------------------------------------------------
-  # Navigation Menu
+  # nav
   --------------------------------------------------------------*/
-  /**
-  * Desktop Navigation 
-  */
   .navbar {
     padding: 0;
   }
@@ -189,7 +186,7 @@ body {
   }
   
   /**
-  * Mobile Navigation 
+  * nav mob
   */
   .mobile-nav-toggle {
     color: #fff;
@@ -278,7 +275,7 @@ body {
   }
   
   /*--------------------------------------------------------------
-  # Hero Section
+  # carrusel
   --------------------------------------------------------------*/
   #hero {
     width: 100%;
@@ -436,7 +433,7 @@ body {
     }
   }
   /*--------------------------------------------------------------
-  # Sections General
+  # galeria
   --------------------------------------------------------------*/
   section {
     padding: 60px 0;
@@ -477,7 +474,7 @@ body {
   
   
   /*--------------------------------------------------------------
-  # Portfolio
+  # galeria
   --------------------------------------------------------------*/
   .portfolio .portfolio-item {
     margin-bottom: 30px;
@@ -562,7 +559,7 @@ body {
     padding: 30px 0;
   }
   #footer h3 {
-    font-size: 36px;
+    font-size: 20px;
     font-weight: 700;
     color: #fff;
     position: relative;
@@ -571,12 +568,12 @@ body {
     margin: 0 0 15px 0;
   }
   #footer p {
-    font-size: 15;
+    font-size: 10;
     font-style: verdana;
     padding: 0;
-    margin: 0 0 40px 0;
+    margin: 0 0 20px 0;
   }
 
   #footer .credits {
-    font-size: 20px;
+    font-size: 15px;
   }
