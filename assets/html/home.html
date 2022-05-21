@@ -56,19 +56,12 @@
     </div>
   </header>
 
-  <!--aqui codigo luego de header-->
-
-
-
-  <!----------------------------------->
-
-  <br>
-
-  <div class="display-4">
-    <p class="text-center" id="tituloApp">Long Old Live+ </p>
-  </div>
+  
+<div class="display-4">
+  <p class="text-center" id="tituloApp">Long Old Live+ </p>
+</div>
   <div class="row mx-5">
-    <div class="row justify-content-center ">
+    <div class="row justify-content-center">
       <div class="col-lg-6">
         <div class="card" id="tarjeta1">
           <a onclick="redireccionar()" class="btn btn-secondary" id="card-color">
@@ -79,7 +72,7 @@
       </div>
   
       <div class="col-lg-6">
-        <div class="card"  id="tarjeta1">
+        <div class="card"  id="tarjetaU">
           <a onclick="redireccionarEjM()" class="btn btn-secondary" id="card-color" >
             <img src="../img/galeria/person-playing-sudoku-on-tablet.jpg" class="card-img-top" alt="ImagenEjercicio">
             <h1 id="btnEF">Juegos Mentales</h1>
@@ -87,8 +80,8 @@
         </div>
       </div>
     </div>
-    </div>
-
+  </div>
+  
   <!-- import archivos JS -->
   <script src="../import/aos/aos.js"></script>
   <script src="../import/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -100,17 +93,6 @@
 </body>
 <script>
   user = link();
-  const usuario = document.getElementById('cont');
-
-  if (user == "AdultoMayor") {
-    usuario.innerHTML = `<h1 style="color:white">
-          Bienvenido Jheison
-        </h1>`;
-    } else {
-      usuario.innerHTML = `<h1 style="color:white">
-          Bienvenido Juan
-        </h1>`;
-    }
  
   function redireccionar() {
     
@@ -134,7 +116,7 @@
 
   }
   function redireccionarEjM(){
-    var res = "";
+    var res = user;
     window.location.href="../html/juegosMentales.html#" + res;
   }
 

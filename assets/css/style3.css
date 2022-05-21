@@ -1,210 +1,245 @@
-
-
+#fondoJuegMental{
+    height: 100%;
+    background: url(../img/galeria/fondoMockup.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
 /*MENOR A 980 (TABLETS, IPADS)*/
-@media screen and (max-width: 980px){
-  #tarjeta2{
-     position: relative;
-     margin-top: 30px;
-  }
-  #tarjeta3{
-    position: relative;
-    margin-top: 30px;
- }
- #tarjeta1{
-    position: relative;
-    margin-top: 30px;
- }
- #btnEF{
-    font-size: 22px;
- }
+@media screen and (max-width: 990px){
+    #tarjeta2{
+       position: relative;
+       margin-top: 30px;
+    }
+    #tarjeta3{
+      position: relative;
+      margin-top: 30px;
+      margin-bottom: 20px;
+   }
+   #tarjeta1{
+      position: relative;
+      margin-top: 30px;
+   }
+   #btnEF{
+      font-size: 22px;
+   }
+  
 }
-
-/*MENOR A 980 (TABLETS, IPADS)*/
-@media screen and (max-width: 830px){
-   
-    #tarjeta1{
-        position:relative;
-        margin-top: 30px;
-    }
-
-    #btnEF{
-        font-size: 22px;
-    }
-    
-}
-
-@media screen and (max-width: 986px){
-    #tituloApp{
-        font-size: 60px;
-    }
-    #btnEF{
-        font-size: 20px;
-    }
-}
-
-@media screen and (max-width: 617px){
-
-    #tituloApp{
-        font-size: 60px;
-    }
-
-    h1{
-        font-size: 26px;
-        line-height: 50px;
-        text-align: center;
-    }
-    #botones{
-        margin-top: 15%;
-        align-content: center;
-    }
-    #lista, #registrar, #rutinas{
-        text-align: center;
-        border:none;
-        font-family: "Verdana";
-        font-size: 15px;
-        transition: all 0.3s ease;
-        position: relative;
-        display: inline-block;
-        outline: none;
-        border-radius: 5px; 
-        top:2px;
-        color: white;
-        background-color:#FD7314;
-    }
-    
-    #lista:hover ,#registrar:hover ,#rutinas:hover{
-        top:15px;
-        background-color: #2E3040;
-    }
-    body {
-        background-image: url("../img/galeria/fondo-small.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        min-height: 100vh;
-    }     
-
-   /* #volver {
-        min-width: 90px;
-        height: 30px;
-        position: absolute;
-        top: 13px;
-        left: 10px;
-        color: #fff;
-        padding: 0px;
-        cursor: pointer;
-        font-family: "Open Sans", sans-serif;
-        font-size: 15px;
-        border:none;
-        border-radius: 50px;
-        background-color: #FD7314;
-    }  */
-}
-
-/*MENOR A 412 (CELULARES MAS PEQIEÑOS)*/
-
-@media screen and (max-width: 509px) {
-    /* #volver {
-         min-width: 70px;
-         height: 30px;
-         position: absolute;
-         top: 15px;
-         left: 5px;
-         color: #fff;
-         padding: 1px;
-         cursor: pointer;
-         font-family: "Open Sans", sans-serif;
-         font-size: 15px;
-         border:none;
-         border-radius: 50px;
-         background-color: #FD7314;
-     }*/
+  
+  /*MENOR A 980 (TABLETS, IPADS)*/
+  @media screen and (max-width: 830px){
      
-     h1{
-         font-size: 21px;
-         align-self: flex-end;
-     }
- 
-     #lista, #registrar, #rutinas{
-         text-align: center;
-         border:none;
-         font-family: "Verdana";
-         font-size: 14px;
-     }
- 
-     #tituloApp{
-         font-size: 55px;
-     }
- }
-
-@media screen and (max-width: 466px) {
-   /* #volver {
-        min-width: 70px;
-        height: 30px;
-        position: absolute;
-        top: 15px;
-        left: 5px;
-        color: #fff;
-        padding: 1px;
-        cursor: pointer;
-        font-family: "Open Sans", sans-serif;
-        font-size: 15px;
-        border:none;
-        border-radius: 50px;
-        background-color: #FD7314;
-    }*/
-    
-    h1{
-        font-size: 21px;
-        align-self: flex-end;
-    }
-
-    #lista, #registrar, #rutinas{
-        text-align: center;
-        border:none;
-        font-family: "Verdana";
-        font-size: 14px;
-    }
-
-    #tituloApp{
-        font-size: 45px;
-    }
-}
+      #tarjeta1{
+          position:relative;
+          margin-top: 30px;
+      }
+  
+      #btnEF{
+          font-size: 22px;
+      }
+   
+      
+  }
+  
+  @media screen and (max-width: 986px){
+      #tituloApp{
+          font-size: 60px;
+      }
+      #btnEF{
+          font-size: 20px;
+      }
+      
+  }
+  
+  
 
 
-
-
-/*MENOR A 412 (CELULARES MAS PEQIEÑOS)*/
-@media screen and (max-width: 290px) {
-  /*  #volver {
-        min-width: 50px;
-        height: 30px;
-        position: absolute;
-        top: 15px;
-        left: 5px;
-        color: #fff;
-        padding: 1px;
-        cursor: pointer;
-        font-family: "Open Sans", sans-serif;
-        font-size: 15px;
-        border:none;
-        border-radius: 50px;
-        background-color: #FD7314;
-    }*/
-    
-
-    h1{
-        font-size: 20px;
-        align-self: flex-end;
-    }
-
-    #tituloApp{
-        font-size: 20px;
-    }
-
-    #tituloLista{
-        font-size: 22px;
-    }
-    
-}
-
+  @media screen and (max-width: 617px){
+  
+      #tituloApp{
+          font-size: 60px;
+      }
+  
+      h1{
+          font-size: 26px;
+          line-height: 50px;
+          text-align: center;
+      }
+      #botones{
+          margin-top: 15%;
+          align-content: center;
+      }
+      #lista, #registrar, #rutinas{
+          text-align: center;
+          border:none;
+          font-family: "Verdana";
+          font-size: 15px;
+          transition: all 0.3s ease;
+          position: relative;
+          display: inline-block;
+          outline: none;
+          border-radius: 5px; 
+          top:2px;
+          color: white;
+          background-color:#FD7314;
+      }
+      
+      #lista:hover ,#registrar:hover ,#rutinas:hover{
+          top:15px;
+          background-color: #2E3040;
+      }
+   
+  
+     /* #volver {
+          min-width: 90px;
+          height: 30px;
+          position: absolute;
+          top: 13px;
+          left: 10px;
+          color: #fff;
+          padding: 0px;
+          cursor: pointer;
+          font-family: "Open Sans", sans-serif;
+          font-size: 15px;
+          border:none;
+          border-radius: 50px;
+          background-color: #FD7314;
+      }  */
+  }
+  
+  /*MENOR A 412 (CELULARES MAS PEQIEÑOS)*/
+  
+  @media screen and (max-width: 509px) {
+      /* #volver {
+           min-width: 70px;
+           height: 30px;
+           position: absolute;
+           top: 15px;
+           left: 5px;
+           color: #fff;
+           padding: 1px;
+           cursor: pointer;
+           font-family: "Open Sans", sans-serif;
+           font-size: 15px;
+           border:none;
+           border-radius: 50px;
+           background-color: #FD7314;
+       }*/
+       
+       h1{
+           font-size: 21px;
+           align-self: flex-end;
+       }
+   
+       #lista, #registrar, #rutinas{
+           text-align: center;
+           border:none;
+           font-family: "Verdana";
+           font-size: 14px;
+       }
+   
+       #tituloApp{
+           font-size: 55px;
+       }
+       
+   }
+  
+  @media screen and (max-width: 466px) {
+     /* #volver {
+          min-width: 70px;
+          height: 30px;
+          position: absolute;
+          top: 15px;
+          left: 5px;
+          color: #fff;
+          padding: 1px;
+          cursor: pointer;
+          font-family: "Open Sans", sans-serif;
+          font-size: 15px;
+          border:none;
+          border-radius: 50px;
+          background-color: #FD7314;
+      }*/
+      
+      h1{
+          font-size: 21px;
+          align-self: flex-end;
+      }
+  
+      #lista, #registrar, #rutinas{
+          text-align: center;
+          border:none;
+          font-family: "Verdana";
+          font-size: 14px;
+      }
+  
+      #tituloApp{
+          font-size: 45px;
+      }
+  
+  }
+  
+  
+  
+  
+  /*MENOR A 412 (CELULARES MAS PEQIEÑOS)*/
+  @media screen and (max-width: 290px) {
+    /*  #volver {
+          min-width: 50px;
+          height: 30px;
+          position: absolute;
+          top: 15px;
+          left: 5px;
+          color: #fff;
+          padding: 1px;
+          cursor: pointer;
+          font-family: "Open Sans", sans-serif;
+          font-size: 15px;
+          border:none;
+          border-radius: 50px;
+          background-color: #FD7314;
+      }*/
+      
+  
+      h1{
+          font-size: 20px;
+          align-self: flex-end;
+      }
+  
+      #tituloApp{
+          font-size: 20px;
+      }
+  
+      #tituloLista{
+          font-size: 22px;
+      }
+      
+  }
+  
+  #dropdownMenuButton1{
+    font-size: 30px;
+    background-color: rgba(127, 137, 161, 0);
+    /*background-color: #C4C4C4;*/
+    border-radius: 50%;
+    border: none;
+    padding-left: 8px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  
+  }
+  
+  
+  #drop ul{
+    background-color: #2E3040;
+  }
+  
+  #logout{
+    cursor: pointer;
+    color: white;
+  }
+  
+  #logout:hover{
+    background-color: #fc8129;
+  }

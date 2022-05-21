@@ -81,11 +81,6 @@ body, header{
     align-content: center;
 }
 
-#botones3{
-    margin-top:4% !important;
-    align-content: center;
-}
-
 #botones2{
     margin-top:16% !important;
     align-content: center;
@@ -104,11 +99,6 @@ body, header{
 
     #botones2{
         margin-top:20% !important;
-        align-content: center;
-    }
-
-    #botones3{
-        margin-top:5% !important;
         align-content: center;
     }
 
@@ -139,19 +129,10 @@ body, header{
     }
 
     #tarjeta1{
-        margin-top: 20px;
+        margin-top: 15px;
         margin-bottom: 20px;
     }
 
-    #tarjeta2{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    #tarjeta3{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
 
     #tarjetaU{
         margin-bottom: 20px !important;
@@ -191,11 +172,6 @@ body, header{
         align-content: center;
     }
 
-    #botones3{
-        margin-top:5% !important;
-        align-content: center;
-    }
-
     #registrarU{
         font-size: 27px;
     }
@@ -223,17 +199,10 @@ body, header{
     }
 
     #tarjeta1{
-        margin-top: 20px;
+        margin-top: 15px;
         margin-bottom: 20px;
     }
-    #tarjeta2{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    #tarjeta3{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+
 
     #tarjetaU{
         margin-bottom: 20px !important;
@@ -268,9 +237,9 @@ body, header{
         margin-top: 20%;
         align-content: center;
     }
-   
+
     #botones2{
-        margin-top:20% !important;
+        margin-top:50% !important;
         align-content: center;
     }
 
@@ -301,17 +270,10 @@ body, header{
     }
 
     #tarjeta1{
-        margin-top: 20px;
+        margin-top: 15px;
         margin-bottom: 20px;
     }
-    #tarjeta2{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    #tarjeta3{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+
 
     #tarjetaU{
         margin-bottom: 20px !important;
@@ -353,27 +315,23 @@ body, header{
         margin-top:30% !important;
         align-content: center;
     }
-    #botones3{
-        margin-top:10% !important;
-        align-content: center;
-    }
 
     #registrarU{
-        font-size: 18px;
+        font-size: 27px;
     }
     #listaU{
-        font-size: 18px;
+        font-size: 27px;
     }
     #tituloApp{
         font-size: 90px;
     }
-    
- 
+
+
     #lista, #registrar, #rutinas{
         text-align: center;
         border:none;
         font-family: "Verdana";
-        font-size: 21px;
+        font-size: 28px;
         transition: all 0.3s ease;
         position: relative;
         display: inline-block;
@@ -385,15 +343,7 @@ body, header{
     }
 
     #tarjeta1{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    #tarjeta2{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    #tarjeta3{
-        margin-top: 20px;
+        margin-top: 15px;
         margin-bottom: 20px;
     }
 
@@ -431,16 +381,7 @@ body, header{
         font-size: 70px;
     }
     #tarjeta1{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    #tarjeta2{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    #tarjeta3{
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 15px;
     }
     #tituloApp{
 
@@ -501,17 +442,8 @@ body, header{
      }
  
      #tarjeta1{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    #tarjeta2{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    #tarjeta3{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+         margin-top: 15px;
+     }
      
      #tarjetaU{
          margin-bottom: 30px;
@@ -543,16 +475,7 @@ body, header{
         font-size: 60px;
     }
     #tarjeta1{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    #tarjeta2{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    #tarjeta3{
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 15px;
     }
     
     #tarjetaU{
@@ -569,17 +492,6 @@ body, header{
         margin-top:16% !important;
         align-content: center;
     }
-    #botones3{
-        margin-top:16% !important;
-        align-content: center;
-    }
-    #lista{
-        font-size: 21px;
-    }
-    #registrar{
-        font-size: 21px;
-    }
-
 }
 
 
@@ -588,16 +500,7 @@ body, header{
         font-size: 30px;
     }
     #tarjeta1{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    #tarjeta2{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    #tarjeta3{
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 15px;
     }
     
     #tarjetaU{
@@ -628,16 +531,7 @@ body, header{
         font-size: 70px;
     }
     #tarjeta1{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    #tarjeta2{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    #tarjeta3{
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 15px;
     }
     
     #tarjetaU{
@@ -663,16 +557,7 @@ body, header{
         font-size: 60px;
     }
     #tarjeta1{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    #tarjeta2{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    #tarjeta3{
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 15px;
     }
     
     #tarjetaU{
@@ -686,18 +571,8 @@ body, header{
         font-size: 15px;
     }
     #botones2{
-        margin-top:30% !important;
+        margin-top:50% !important;
         align-content: center;
-    }
-    #botones3{
-        margin-top:10% !important;
-        align-content: center;
-    }
-    #lista{
-        font-size: 19px;
-    }
-    #registrar{
-        font-size: 19px;
     }
 }
 
@@ -706,16 +581,7 @@ body, header{
         font-size: 50px;
     }
     #tarjeta1{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    #tarjeta2{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    #tarjeta3{
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 15px;
     }
     
     #tarjetaU{
@@ -741,23 +607,10 @@ body, header{
         font-size: 50px;
     }
     #tarjeta1{
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 15px;
     }
-    #tarjeta2{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    #tarjeta3{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    #lista{
-        font-size: 13px;
-    }
-    #registrar{
-        font-size: 13px;
-    }
+    
+    
     #tarjetaU{
         margin-bottom: 30px;
         margin-top: 15px;
@@ -773,7 +626,7 @@ body, header{
         font-size: 25px;
     }
     #botones2{
-        margin-top:40% !important;
+        margin-top:60% !important;
         align-content: center;
     }
 
@@ -784,17 +637,12 @@ body, header{
         font-size: 50px;
     }
     
+    #tituloLista{
+        font-size: 20px;
+    }
+    
     #tarjeta1{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    #tarjeta2{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    #tarjeta3{
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 15px;
     }
     
     
@@ -822,16 +670,7 @@ body, header{
         font-size: 40px;
     }
     #tarjeta1{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    #tarjeta2{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    #tarjeta3{
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 15px;
     }
     
     #tarjetaU{
@@ -861,16 +700,7 @@ body, header{
         font-size: 30px;
     }
     #tarjeta1{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    #tarjeta2{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    #tarjeta3{
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 15px;
     }
     
     #tarjetaU{
@@ -895,16 +725,7 @@ body, header{
         font-size: 30px;
     }
     #tarjeta1{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    #tarjeta2{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    #tarjeta3{
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 15px;
     }
     
     #tarjetaU{
@@ -930,3 +751,31 @@ body, header{
         align-content: center;
     }
 }
+
+
+#dropdownMenuButton1{
+    font-size: 30px;
+    background-color: rgba(127, 137, 161, 0);
+    /*background-color: #C4C4C4;*/
+    border-radius: 50%;
+    border: none;
+    padding-left: 8px;
+    padding-right: 13px;
+    padding-top: 3px;
+    padding-bottom: 0px;
+  
+  }
+  
+  
+  #drop ul{
+    background-color: #2E3040;
+  }
+  
+  #logout{
+    cursor: pointer;
+    color: white;
+  }
+  
+  #logout:hover{
+    background-color: #fc8129;
+  }

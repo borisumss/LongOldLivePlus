@@ -48,9 +48,10 @@ function generarTablero() {
     tarjetas.sort(() => Math.random() - 0.5)
     tablero.innerHTML = tarjetas.join(" ")
 
-    control.style.pointerEvents="none";
+    // bloquear solo fichas sin boton salir
+    tablero.style.pointerEvents="none";
     setTimeout(() => {
-        control.style.pointerEvents="all";
+        tablero.style.pointerEvents="all";
     }
     , 5000);
     
@@ -122,7 +123,14 @@ function cerrar(){
 }
 
 function redireccionar() {
+    var url = "" + window.location.href;
+    var pos = url.indexOf("#");
     var res = "";
+
+    for (var i = pos + 1; i < url.length && i > 0; i++) {
+      res += url[i];
+    }
+    
     window.location.href = "../html/listaJuegos.html#" + res;
 }
 
