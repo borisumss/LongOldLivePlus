@@ -145,9 +145,9 @@ class Juego{
                 }else if(colorPerdido === 'amarillo'){
                     this.perdioElJuego('amarillo', 'https://cdn.icon-icons.com/icons2/77/PNG/128/button_blank_yellow_14988.png')
                 }else if(colorPerdido === 'rojo'){
-                    this.perdioElJuego('rojo', 'https://cdn.icon-icons.com/icons2/402/PNG/512/trafficlight-red_40428.png')
+                    this.perdioElJuego('rojo', 'https://cdn-icons-png.flaticon.com/512/595/595005.png')
                 }else{
-                    this.perdioElJuego('celeste', 'https://cdn.icon-icons.com/icons2/321/PNG/512/Circle_34541.png')
+                    this.perdioElJuego('celeste', 'https://cdn.icon-icons.com/icons2/215/PNG/256/circle256_25243.png')
                 }
             }
         }
@@ -156,7 +156,7 @@ class Juego{
             Swal.fire({
                 title: '¡Ganaste! :)',
                 text: 'Felicidades, lograste los 15 puntos',
-                imageUrl: 'https://cdn.icon-icons.com/icons2/2055/PNG/512/trophy_icon_124465.png',
+                imageUrl: 'https://cdn.icon-icons.com/icons2/1633/PNG/512/52725trophy_109387.png',
                 imageWidth: 60,
                 imageHeight: 60,
                 showDenyButton: true,      
