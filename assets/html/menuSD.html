@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UFT-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +22,8 @@
                 <div class="col col-lg-2">
                     <nav id="navbar" class="navbar">
                         <ul>
-                            <li><a class="nav-link scrollto active" href="listaJuegos.html" id="volver">Volver</a></li>
+                            <li><a class="nav-link scrollto active" onclick="redireccionar()" id="volver">Volver</a>
+                            </li>
                         </ul>
                         <i class="bi bi-list mobile-nav-toggle"></i>
                     </nav><!-- .navbar -->
@@ -38,7 +40,7 @@
 
         <!-- ======= Botones ====== -->
         <div class="start-screen active" id="start-screen">
-            <a id="jugar" class="btn" href="simon.html" role="button">
+            <a id="jugar" class="btn" onclick="redireccionarJugar()" role="button">
                 <i class="bi bi-caret-right-square-fill" id="btn-jugar"></i> Jugar</a>
             <a id="comoJugar" class="btn" role="button">
                 <i class="bi bi-info-square-fill" id="btn-como"></i> ¿Cómo Jugar?</a>
@@ -53,48 +55,66 @@
                     <p><img id="icono_modal" src="../img/galeria/simon.png"></p>
                     <p><strong>¿Qué es Simon Dice?</strong></p>
                     <p>Simon Dice es un juego de memoria musical acompañado de cuatro colores.
-                     Por lo que se recomienda aumentar el volumen para mejor disfrute del juego.</p>
+                        Por lo que se recomienda aumentar el volumen para mejor disfrute del juego.</p>
                     <p><strong>Pasos:</strong></p>
-                    <p> -Para ingresar al juego, presione el botón de "Jugar", podra observar un botón de "¡Comenzar!" y un círculo con 4 colores</p>
-                    <p> -Presione el botón de ¡Comenzar!, cuando sienta que esta preparado (el juego requiere mucha atención)</p>
+                    <p> -Para ingresar al juego, presione el botón de "Jugar", podra observar un botón de "¡Comenzar!" y
+                        un círculo con 4 colores</p>
+                    <p> -Presione el botón de ¡Comenzar!, cuando sienta que esta preparado (el juego requiere mucha
+                        atención)</p>
                     <p> -Primero, ponga atención al orden de colores que muestra el juego,
-                         (usted vera los colores volverse más brillantes por un momento) </p>
+                        (usted vera los colores volverse más brillantes por un momento) </p>
                     <p> -Luego de que termine la música y los colores ya no se muestren más brillantes,
-                         presione los botones de color y repita el orden de colores que mostró el juego</p>
+                        presione los botones de color y repita el orden de colores que mostró el juego</p>
                     <p> -Si logra repetir el orden, va por buen camino y el juego mostrará el mismo orden
-                         aumentando un movimiento más</p> 
-                    <p> -En caso de no lograr repetir el orden, se pierde la partida</p> 
-                    <p> -Gana el juego si logra llegar al nivel 15</p>  
+                        aumentando un movimiento más</p>
+                    <p> -En caso de no lograr repetir el orden, se pierde la partida</p>
+                    <p> -Gana el juego si logra llegar al nivel 15</p>
                     <div class="modal_cerrar">
-                        <a href="" class="boton">¡Listo!</a>
+                        <a class="boton">¡Listo!</a>
                     </div>
-                </div>  
+                </div>
             </div>
-        </div>   
+        </div>
         <!-- ======= Fin Modal ====== -->
 
-  <!-- import archivos JS -->
-  <script src="../import/aos/aos.js"></script>
-  <script src="../import/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script type= "module" src="../js/validacion.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <!--archivo JS principal-->
-  <script src="../js/plantilla.js"></script>            
+        <!-- import archivos JS -->
+        <script src="../import/aos/aos.js"></script>
+        <script src="../import/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script type="module" src="../js/validacion.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <!--archivo JS principal-->
+        <script src="../js/plantilla.js"></script>
 </body>
 
 <script>
-   document.getElementById("comoJugar").addEventListener  
-   ("click", function(){
-       document.getElementsByClassName
-       ("fondo_transparente")[0].style.display="block"
-       return false
-   })
 
-   document.getElementsByClassName("modal_cerrar")[0].
-   addEventListener("click", function(){
-       document.getElementsByClassName
-       ("fondo_transparente")[0].style.display="none"
-   })
+    var url = "" + window.location.href;
+    var pos = url.indexOf("#");
+    var res = "";
+
+    for (var i = pos + 1; i < url.length && i > 0; i++) {
+        res += url[i];
+    }
+    function redireccionar() {
+        window.location.href = "../html/listaJuegos.html#" + res;
+    }
+
+    function redireccionarJugar() {
+        window.location.href = "../html/simon.html#" + res;
+    }
+
+    document.getElementById("comoJugar").addEventListener
+        ("click", function () {
+            document.getElementsByClassName
+                ("fondo_transparente")[0].style.display = "block"
+            return false
+        })
+
+    document.getElementsByClassName("modal_cerrar")[0].
+        addEventListener("click", function () {
+            document.getElementsByClassName
+                ("fondo_transparente")[0].style.display = "none"
+        })
 </script>
 
 </html>
