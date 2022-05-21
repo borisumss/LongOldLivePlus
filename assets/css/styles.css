@@ -147,6 +147,7 @@
   .btn-start {  
     margin-top: -490px;   
   }
+}
 @media screen and (max-width: 700px){
   .gameboard{
     margin-top: 25%;
@@ -157,6 +158,7 @@
     margin-top: -500px;   
   }
 }
+
 @media screen and (max-width: 500px){
   .gameboard{
     margin-top: 35%;
@@ -167,26 +169,37 @@
     margin-top: -320px;   
   }
 }
+
 @media screen and (max-width: 420px){
   .btn-start {  
     margin-top: -320px;   
    }
- @media screen and (max-width: 391px){
+}   
+ 
+@media screen and (max-width: 391px){
     .btn-start {
       margin-top: -285px;   
+    }
 }
+
 @media screen and (max-width: 385px){
     .btn-start {
       margin-top: -295px;   
+    }
 }
+
 @media screen and (max-width: 380px){
     .btn-start {  
       margin-top: -210px;   
     }
+}
+
  @media screen and (max-width: 376px){
       .btn-start {
-        margin-top: -275px;   
+        margin-top: -200px;  
+      } 
  }
+
 @media screen and (max-width: 360px){
   .btn-start {
     margin-top: -255px;   
@@ -199,5 +212,4 @@
     height: 21vh;
     width: 21vh;
   }
- 
 }
