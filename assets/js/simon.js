@@ -4,7 +4,7 @@ const rojo = document.getElementById('rojo')
 const amarillo = document.getElementById('amarillo')
 const celeste   = document.getElementById('celeste')
 const btnEmpezar = document.getElementById('btnEmpezar')
-const ULTIMO_NIVEL = 15
+const ULTIMO_NIVEL = 2
 const MAXIMO_DE_PUNTOS = ULTIMO_NIVEL * 1
 var colorPerdido = '';
 var circulo = '';
@@ -18,7 +18,7 @@ class Juego{
         setTimeout(this.siguienteNivel,1000)
     }
     inicializar(){
-        this.updateRound(0)
+        this.updateRound(1)
         // haciendo ref al this.elegirColor de abajo
         this.siguienteNivel = this.siguienteNivel.bind(this)
         this.elegirColor = this.elegirColor.bind(this)
@@ -34,7 +34,7 @@ class Juego{
      } 
      updateRound(value) {
         this.round = value;
-        round.textContent = `Puntaje: ${this.round}`;
+        round.textContent = `Nivel: ${this.round}`;
     }
     
      toggleBtnEmpezar(){
@@ -155,7 +155,7 @@ class Juego{
         ganoElJuego(){
             Swal.fire({
                 title: '¡Ganaste! :)',
-                text: 'Felicidades, lograste los 15 puntos',
+                text: 'Felicidades, completaste los 15 niveles',
                 imageUrl: 'https://cdn.icon-icons.com/icons2/1633/PNG/512/52725trophy_109387.png',
                 imageWidth: 60,
                 imageHeight: 60,
