@@ -1,9 +1,9 @@
 body {
-    background-image: url("../img/galeria/FondoSimonDice.jpg");
+    background-image: url("../img/galeria/fondoSD3.png");
     background-repeat: no-repeat;
     background-size: cover;
-    /*background-position: center;
-    min-height: 100vh;*/
+    background-position: center;
+    min-height: 100vh;
     font-family: Verdana !important;
     font-style: Verdana !important;
 }
