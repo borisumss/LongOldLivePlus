@@ -19,6 +19,7 @@
 }
 
 .btn-start {
+  text-align: center;
   cursor: pointer;
   width: 420px;
   height: 100px;
@@ -121,15 +122,48 @@
   text-align: center;
 }
 
-@media screen and (max-width: 991px){
+
+@media screen and (max-width: 1100px){
   .gameboard{
     margin-top: 15%;
+    height: 60vh;
+    width: 60vh;
   }
 }
-
-
-@media screen and (max-width: 500px){
+@media screen and (max-width: 950px){
+  .gameboard{
+    margin-top: 15%;
+    height: 40vh;
+    width: 40vh;
+  }
+}
+@media screen and (max-width: 700px){
   .gameboard{
     margin-top: 25%;
+    height: 35vh;
+    width: 35vh;
   }
 }
+@media screen and (max-width: 500px){
+  .gameboard{
+    margin-top: 35%;
+    height: 30vh;
+    width: 30vh;
+  }
+}
+
+@media screen and (max-width: 330px){
+  .gameboard{
+    margin-top: 50%;
+    height: 21vh;
+    width: 21vh;
+  }
+  .btn-start {
+    width: 150px;
+    height: 50px;
+    padding: 5px 10px;
+    margin-top: -15px;
+    text-align: center;
+  }
+}
+
