@@ -4,31 +4,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lista de Ejercicios</title>
+  <title>Lista de Juegos Recomendados</title>
   <!--implementacion bootstrap-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <script src="../js/generarCard.js"></script>
-  <link rel="stylesheet" href="../css/listaEjercicios.css">
+  <link rel="stylesheet" href="../css/recomendado.css">
+  <link rel="stylesheet" href="../css/recomendado2.css">
   <link href="../import/bootstrap/css/bootstrap.min.css" rel="stylesheet"><!--bootstrap 5-->
   <link href="../import/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"><!--iconos boostrap 5-->
   <link rel="stylesheet" href="../css/plantilla.css">
   
-    <!-- import archivos JS -->
+<!-- import archivos JS -->
     <script src="../import/aos/aos.js"></script>
     <script src="../import/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script type= "module" src="../js/validacion.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--archivo JS principal-->
     <script src="../js/plantilla.js"></script>
 
 </head>
 
-<body">
+<body id="fondoJuegMental">
   <!--js de bootstrap-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
+  
 
   
  <!-- ======= Header ======= -->
@@ -42,9 +39,10 @@
               <i class="bi bi-list mobile-nav-toggle"></i>
           </nav><!-- .navbar -->
       </div>
+      
       <div class="col-auto-md">
           <div class="rutinas align-text-top">
-              <h1>Lista de Ejercicios</h1>
+              <h1 id="tituloLista">Juegos Recomendados</h1>
           </div>
       </div>
       <div class="col col-lg-2 text-end">
@@ -58,70 +56,65 @@
           </ul>
         </div>        
       </div>
-  
   </div>
 </header><!-- End Header -->
 <br>
+
 <br>
-
-  <div class="container p-4">
-    <div class="row">
-      <div class="col-md-2">
-
-      </div>
-
-      <div class="col-md-8" id="tasks-container">
+  <body id="bod m" >
+    <div class="container" style="margin-top: 150px;">
+        <div class="row">
+        <div class="col-md-4">
+            <div class="card" id="tarjeta1">
+                <a href="https://www.chess.com/es" target="_blank" class="btn btn-secondary" id="card-color">
+                  <img src="../img/galeria/chess.jpg"class="card-img-top" alt="imagen" id="tamañoImg" style="max-width:250px ;">
+                  <h1 id="btnEF" style="font-size: 25px;">Ajedrez Online (Chess)</h1>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" id="tarjeta2">
+                <a href="https://isbooth.com/crucigramas" target="_blank" class="btn btn-secondary" id="card-color">
+                  <img src="../img/galeria/isbooth.png" class="card-img-top" alt="imagen" id = "tamañoImg" style="max-width:250px">
+                  <h1 id="btnEF" style="font-size: 25px;">Crucigramas y Puzzles</h1>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" id="tarjeta3">
+                <a href="https://www.juegos-mentales.com/juego/B%C3%BAsqueda+de+Palabras+Diaria" target="_blank" class="btn btn-secondary" id="card-color">
+                  <img src="../img/galeria/busqueda.png" class="card-img-top" alt="imagen" id="tamañoImg" style="max-width:250px">
+                  <h1 id="btnEF" style="font-size: 25px;">Busqueda de Palabras</h1>
+                </a>
+              </div>
+        </div>
         
-      </div>
-
-    </div>
-  </div>
+        </div>
+        
+        </div>
+   
   
 
-
-  
-  <script src="../../assets/js/generarCard.js" type="module"></script>
-  <script src="../../assets/import/aos/aos.js"></script>
-  <script src="../../assets/import/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script type= "module" src="../js/validacion.js"></script>
   <!--archivo JS principal-->
   <script src="../../assets/js/plantilla.js"></script>
+  <script type= "module" src="../js/validacion.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 
 
-
-  <!--Implementar generar objeto desde js
-<script src='https://code.jquery.com/jquery-1.12.4.min.js'></script>
-
-
-<div class="container" id="contentPanel"style="height: 25em;line-height:1em; ;overflow-x: hidden;overflow-y: auto;width: 100%;border:1px solido;">
-  la funcion agrega aqui los cambios
-</div>  
-
-appentTo? como funciona?
-  var myCol = $('<div class="col-sm-3 col-md-3 pb-2"></div>');
-      var myPanel = $('<div class="card card-outline-info" id="' + i + 'Panel"><div class="card-block"><div class="card-title"><span>Card #' + i + '</span><button type="button" class="close" data-target="#' + i + 'Panel" data-dismiss="alert"><span class="float-right"><i class="fa fa-remove"></i></span></button></div><p>Some text in ' + i + ' </p><img src="//placehold.it/50/eeeeee" class="rounded rounded-circle"></div></div>');
-      myPanel.appendTo(myCol);
-      myCol.appendTo('#contentPanel');
--->
-<script>
-  function redireccionar() {
+    <script>
       var url = "" + window.location.href;
       var pos = url.indexOf("#");
       var res = "";
 
-      for (var i = pos + 1; i < url.length && i > 0; i++) {
-          res += url[i];
-      }
-
-      if (res == "AdultoMayor") {
-          window.location.href = "../html/ejerciciosFisicos.html#" + res;
-      } else {
-          window.location.href = "../html/ejerciciosFisicosFTP.html#" + res;
-      }
-
-  }
-
-</script>
+       for (var i = pos + 1; i < url.length && i > 0; i++) {
+         res += url[i];
+        }
+        
+         function redireccionar() {
+            
+            window.location.href = "../html/juegosMentales.html#" + res;
+        }
+    </script>
 
 </html>

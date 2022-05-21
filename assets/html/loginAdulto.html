@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-  <link href="../import/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-   
+
+    <link href="../import/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/98af28cb8a.js" crossorigin="anonymous"></script>
     <title>Iniciar Sesión</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,34 +16,34 @@
     <link href="../../assets/import/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!--bootstrap 5-->
     <link href="../../assets/import/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    
-    <link rel="stylesheet" href="../css/login.css" />
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>             
-    <script>
-    let con = true
-    function verClave() {
-    let ver = document.getElementById("ver_clave");
-    let clave = document.getElementById("contraseñaAM")
-    let icono = document.getElementById("icono")
-    if (con == true) {
-        clave.type = "text"
-        icono.classList.add("fa-eye-slash")
-        con = false
-    } else {
-        clave.type = "password"
-        icono.classList.remove("fa-eye-slash")
-        con = true
-    }
 
-    }
+    <link rel="stylesheet" href="../css/login.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        let con = true
+        function verClave() {
+            let ver = document.getElementById("ver_clave");
+            let clave = document.getElementById("contraseñaAM")
+            let icono = document.getElementById("icono")
+            if (con == true) {
+                clave.type = "text"
+                icono.classList.add("fa-eye-slash")
+                con = false
+            } else {
+                clave.type = "password"
+                icono.classList.remove("fa-eye-slash")
+                con = true
+            }
+
+        }
     </script>
-     <!--js de bootstrap-->
-  <script src="../import/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!--js de bootstrap-->
+    <script src="../import/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
-    
-    <div class="container-fluid p-1">       
+
+    <div class="container-fluid p-1">
         <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
             <div class="container d-flex align-items-center justify-content-between">
                 <div class="col col-lg-2">
@@ -60,46 +60,66 @@
                     </div>
                 </div>
                 <div class="col col-lg-2">
-    
+
                 </div>
-    
+
             </div>
-        </header><!-- End Header -->     
+        </header><!-- End Header -->
     </div>
-    </div>
-        <div class="container" id="contenedor">
-        <div class="logo">
-            <img class="logo_img" src="../img/galeria/logo.png" alt="">
+    
+    <div class="container" id="contenedor">
+        <div class="container" id="contenedorLogo">
+            <div class = "row">
+                <div class="col">
+                    <div class="logo">
+                        <img class="logo_img" src="../img/galeria/logo.png" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
-    <form id="login">
-        <div action="" class="form">
-            <h3 class="signin-text text-center " id="letra"> Iniciar Sesión </h3>
-            <br>
-            <div class="form__usuario">
-                <label class="correo" for="email2">Correo Electrónico:<br></label>
-                <input id ="email2" type="email" class="usuario">
-                
-                <label for="contraseñaAM">Contraseña:</label>
-                <div class="input-group flex-nowrap" id="contra">
-                    <input id="contraseñaAM" type="password" class="clave">
-                    <span class="input-group-text" id="ver_clave" onclick="verClave()"><i id="icono" class="fas fa-eye"></i></span>  
+       
+        <div class="container" id="contenedor2">
+            <form class="row g-3 needs-validation" novalidate action="" method="get" name="regEjer" id="login">
+                <div class="col-md-12 text-center">
+                    <h3 class="signin-text text-center " id="letra"> Iniciar Sesión </h3>
                 </div>
-            </div>
-            <h2 ></h2>
+
+                <div class="col-md-12">
+                    <label class="correo form-label" for="email2">Correo Electrónico:</label>
+                    <input id="email2" type="email" class="form-control">
+                </div>
+
+                <div class="col-md-12">
+                    <label for="contraseñaAM" class="form-label">Contraseña:</label>
+                    <div class="input-group flex-nowrap" id="contra">
+                        <input id="contraseñaAM" type="password" class="form-control">
+                        <span class="input-group-text" id="ver_clave" onclick="verClave()"><i id="icono"
+                                class="fas fa-eye"></i></span>
+                    </div>
+                </div>
+
+                <div class="col-md-12 text-center">
+                     <button type="submit" name="iniciarSesionFisioterapeuta" class="boton" 
+                            style="border-radius: 50px">Acceder</button>
+    
+                </div>
+
+                
+                <div class="col-md-12 text-center">
+                    <h5 >¿No tienes una cuenta?<br><a href="registroAM.html" id="enlaceReg">Regístrate Aquí</a> </h5>
+               </div>
+               <br><br><br>
+            </form>
             
-            <div class="form__boton">
-                <button type="submit" name="iniciarSesionFisioterapeuta" class="boton" id="acceder" style="border-radius: 50px">Acceder</button>
-                
-               
-            </div>
         </div>
-    </form>
+        
     </div>
     <script type="module" src="../js/autenticacionAdulto.js"></script>
 </body>
 <script src="../../assets/import/aos/aos.js"></script>
-    <script src="../../assets/import/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../../assets/js/plantilla.js"></script>
+<script src="../../assets/import/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/plantilla.js"></script>
+
 </html>
 
 <!--
@@ -113,4 +133,3 @@
     }
 </script>
 -->
-

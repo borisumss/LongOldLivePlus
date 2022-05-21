@@ -22,7 +22,7 @@ body {
   }
   
   /*--------------------------------------------------------------
-  # Back to top button
+  # Boton regresar
   --------------------------------------------------------------*/
   .back-to-top {
     position: fixed;
@@ -52,7 +52,7 @@ body {
   }
   
   /*--------------------------------------------------------------
-  # Disable AOS delay on mobile
+  # AOS
   --------------------------------------------------------------*/
   @media screen and (max-width: 768px) {
     [data-aos-delay] {
@@ -95,11 +95,8 @@ body {
   }
   
   /*--------------------------------------------------------------
-  # Navigation Menu
+  # nav
   --------------------------------------------------------------*/
-  /**
-  * Desktop Navigation 
-  */
   .navbar {
     padding: 0;
   }
@@ -189,7 +186,7 @@ body {
   }
   
   /**
-  * Mobile Navigation 
+  * nav mob
   */
   .mobile-nav-toggle {
     color: #fff;
@@ -278,16 +275,16 @@ body {
   }
   
   /*--------------------------------------------------------------
-  # Hero Section
+  # carrusel
   --------------------------------------------------------------*/
-  #hero {
+  #carrusel {
     width: 100%;
     overflow: hidden;
     position: relative;
     background: linear-gradient(0deg, #2a2c39 0%, #33364a 100%);
     padding: 0;
   }
-  #hero .carousel-container {
+  #carrusel .carousel-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -297,30 +294,30 @@ body {
     height: 70vh;
     padding-top: 60px;
   }
-  #hero h2 {
+  #carrusel h2 {
     color: #fff;
     margin-bottom: 30px;
     font-size: 48px;
     font-weight: 700;
   }
-  #hero p {
+  #carrusel p {
     width: 80%;
     -webkit-animation-delay: 0.4s;
     animation-delay: 0.4s;
     margin: 0 auto 30px auto;
     color: #fff;
   }
-  #hero .carousel-control-prev, #hero .carousel-control-next {
+  #carrusel .carousel-control-prev, #carrusel .carousel-control-next {
     width: 10%;
   }
-  #hero .carousel-control-next-icon, #hero .carousel-control-prev-icon {
+  #carrusel .carousel-control-next-icon, #carrusel .carousel-control-prev-icon {
     background: none;
     font-size: 48px;
     line-height: 1;
     width: auto;
     height: auto;
   }
-  #hero .btn-get-started {
+  #carrusel .btn-get-started {
     font-family: "Verdana";
     font-weight: 500;
     font-size: 14px;
@@ -336,24 +333,24 @@ body {
     animation-delay: 0.8s;
     border: 2px solid #FD7E14;
   }
-  #hero .btn-get-started:hover {
+  #carrusel .btn-get-started:hover {
     background: #FD7E14;
     color: #fff;
     text-decoration: none;
   }
   @media (min-width: 1024px) {
-    #hero p {
+    #carrusel p {
       width: 60%;
     }
-    #hero .carousel-control-prev, #hero .carousel-control-next {
+    #carrusel .carousel-control-prev, #carrusel .carousel-control-next {
       width: 5%;
     }
   }
   @media (max-width: 768px) {
-    #hero .carousel-container {
+    #carrusel .carousel-container {
       height: 90vh;
     }
-    #hero h2 {
+    #carrusel h2 {
       font-size: 28px;
     }
   }
@@ -436,7 +433,7 @@ body {
     }
   }
   /*--------------------------------------------------------------
-  # Sections General
+  # galeria
   --------------------------------------------------------------*/
   section {
     padding: 60px 0;
@@ -477,7 +474,7 @@ body {
   
   
   /*--------------------------------------------------------------
-  # Portfolio
+  # galeria
   --------------------------------------------------------------*/
   .portfolio .portfolio-item {
     margin-bottom: 30px;
@@ -562,7 +559,7 @@ body {
     padding: 30px 0;
   }
   #footer h3 {
-    font-size: 36px;
+    font-size: 20px;
     font-weight: 700;
     color: #fff;
     position: relative;
@@ -571,12 +568,12 @@ body {
     margin: 0 0 15px 0;
   }
   #footer p {
-    font-size: 15;
+    font-size: 10;
     font-style: verdana;
     padding: 0;
-    margin: 0 0 40px 0;
+    margin: 0 0 20px 0;
   }
 
   #footer .credits {
-    font-size: 20px;
+    font-size: 15px;
   }

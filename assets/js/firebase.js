@@ -90,7 +90,7 @@ export const guardarRegistro = (nombre, descripcion, musculo, minutos, segundos,
     }
     );
     function guardarFirestore(downloadURL){
-      addDoc(collection(cloudDB, "test"),{
+      addDoc(collection(cloudDB, "Ejercicio"),{
         NombreEjercicio: nombre,
         DescripcionEjercicio: descripcion,
         GrupoMuscular: musculo,
@@ -153,7 +153,7 @@ export const conf = initializeApp(firebaseConfig);
 //export const db = getFirestore();
 
 export const onGetTasks = (callback) =>
-  onSnapshot(collection(cloudDB, "test"), callback);
+  onSnapshot(collection(cloudDB, "Ejercicio"), callback);
 
 export const onGetTasks2 = (callback) =>
   onSnapshot(collection(cloudDB, "Rutinas"), callback);

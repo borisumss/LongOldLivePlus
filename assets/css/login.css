@@ -16,9 +16,9 @@
 
 
 .signin-text{
-    font-style: bolder;
-    font-weight: 900 !important;
-    font-family: Verdana !important;
+  font-style: bolder;
+  font-weight: 900 !important;
+  font-family: Verdana !important;
 }
 
 .container-fluid {
@@ -52,32 +52,53 @@ body {
   
   #contenedor{
      
-      width: 700px;
+      width: 850px;
       position: relative;
-      margin-top: 15%;
-
-      background: white;
+      margin-top: 12%;
+      background: #2E3040;
       padding: 0px;
-      border-radius: 3px;
+      border-radius: 7px;
       display: flex;
       align-items: center;
       gap: 20px;
       margin-bottom: 10%;
   }
+
+  #login{
+    width: 100%;
+    color: #FDFDFD;
+    background: #2E3040;
+    /*arriba-derecha-abajo-izquierd*/
+    padding: 0px 40px 0px 20px;
+    margin: auto;
+    border-radius: 7px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+  }
+
+  #contenedorLogo{
+    width: 80%;
+    color: #FDFDFD;
+    background: #2E3040;
+    padding:0px;
+    margin: auto;
+    border-radius: 7px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+  }
+
   .logo_img{
-      width: 300px;   
-      padding-top: 0%;
-      padding-bottom: 0%;
-      padding-left: 0%;
+    width: 100%;   
+    
   
   }
   
-  .form{
+  /*.form{
       padding: 10px;
-  }
+  }*/
   
   
-  .form__clave{
+  /*.form__clave{
       width: 100%;
       margin-bottom: 40px;
       position: relative;
@@ -85,58 +106,55 @@ body {
   .form__usuario{
       font-size: 20px;
   
-  }
+  }*/
   .usuario{
-      width: 92%;
-      padding: 10px 15px !important;
-      border: none;
-      outline: none;
+    border: none;
+    outline: none;
       background: #C4C4C4;
       
   }
 
   .clave{
-    width: 80%;
-    padding: 10px 15px !important;
     border: none;
     outline: none;
     background: #C4C4C4;
     
 }
 
-#contra, .usuario, label{
-    margin-left: 2%;
-    margin-right: 2%;
+#ver_clave{
+  /*position: absolute;
+  right: 25px;
+  bottom: 104px;*/
+  cursor: pointer;
+  font-size: 20px;
 }
-  #ver_clave{
-      /*position: absolute;
-      right: 25px;
-      bottom: 104px;*/
-      cursor: pointer;
-      font-size: 20px;
-  }
+/*margin-top: 27px  !important;
+    margin-bottom: 5px;*/
   .boton{
     background: #FD7314;
-    padding: 10px 20px;
+    padding: 5px 25px;
     color: white;
     border-radius: 10px !important;
     border: none;
     cursor: pointer;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 27px  !important;
-    margin-bottom: 5px;
     overflow-y: auto;
     transition: 0.3s;
+
+    margin-top: 10px  !important;
+    margin-bottom: 0px;
 }
 .boton:hover{
-    background: #2E3040;;
+  background-color: #C4C4C4
 }
-  
-  .form__boton{
-      display: flex;
-      justify-content: flex-start;
-  }
+
+#acceder{
+  margin-top: 30px !important;
+  margin-bottom: 0px !important;
+}
+
+
     h1{
         color:white;
         font-weight: bold;
@@ -353,8 +371,21 @@ body {
       display: block;
     }
     
-  
+    @media (max-width:991px){
+    
+
+      .logo_img{
+        width: 100%; 
+        height: 415px; 
+      }
+
+      #acceder{
+        margin-top: 25px !important;
+        margin-bottom: 0px !important;
+      }
+    } 
    
+
     @media screen and (max-width:769px){
      
       #contenedor{
@@ -368,8 +399,7 @@ body {
     }
     .logo_img{
       margin-top: 50px;
-      
-  
+      height: auto;
     }
 
     .clave{
@@ -384,6 +414,23 @@ body {
     .boton{
         margin-bottom:20px;
     }
+
+    #login{
+      
+      /*arriba-derecha-abajo-izquierd*/
+      padding: 0px 20px 0px 20px;
+     
+    }
+
+    .boton{
+      margin-top: 10px  !important;
+      margin-bottom: 0px;
+  }
+  #acceder{
+    margin-top: 20px !important;
+    margin-bottom: 30px !important;
+  }
+
   } 
     
   @media (max-width:767px){
