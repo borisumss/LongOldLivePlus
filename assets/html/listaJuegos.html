@@ -120,23 +120,17 @@ appentTo? como funciona?
       myCol.appendTo('#contentPanel');
       --->
 
-  <script>
-    var url = "" + window.location.href;
-    var pos = url.indexOf("#");
-    var res = "";
+    <script>
+        function redireccionar() {
+            var res = "";
+            window.location.href = "../html/juegosMentales.html#" + res;
+        }
 
-    for (var i = pos + 1; i < url.length && i > 0; i++) {
-      res += url[i];
-    }
+        function redireccionarMemorama() {
+            var res = "";
+            window.location.href = "../html/menuMemorama.html#" + res;
+        }
+      
+    </script>
+</html>
 
-    function redireccionar() {
-      window.location.href = "../html/juegosMentales.html#" + res;
-    }
-
-    function redireccionarMemorama() {
-      window.location.href = "./memorama.html#" + res;
-    }
-
-  </script>
-
-  </html>

@@ -1,5 +1,6 @@
 let iconos = []
 let selecciones = []
+let cont=0;
 
 generarTablero()
 
@@ -22,8 +23,7 @@ function cargarIconos() {
 
 function generarTablero() {
     let control = document.body;
-    // control.style.pointerEvents="none";
-
+    cont=0;
     cargarIconos()
     selecciones = []
     let tablero = document.getElementById("tablero")
@@ -96,8 +96,30 @@ function deseleccionar(selecciones) {
         } else {
             trasera1.style.background = "plum"
             trasera2.style.background = "plum"
+            cont++;
+            if(cont == 12){
+                document.getElementById("finJuego").innerHTML=`
+                <div id="felicidades" class="modal show" tabindex="-1" aria-modal="true" role="dialog" style="display: block;">
+                    <div class="modal-dialog modal-dialog-centered">
+                         <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title">¡FELICIDADES!</h3>
+                            </div>
+                            <div class="modal-footer">
+                                <h3 class="modal-title">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal" onclick="cerrar()">Cerrar</button>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+            }
         }
     }, 1000);
+}
+
+function cerrar(){
+    document.getElementById("felicidades").style.display = "none";
 }
 
 function redireccionar() {
@@ -110,4 +132,14 @@ function redireccionar() {
     }
     
     window.location.href = "../html/listaJuegos.html#" + res;
+}
+
+function redireccionarJuegoMemorama(){
+    var res = "";
+    window.location.href = "../html/memorama.html#" + res;
+}
+
+function redireccionarMenuMemorama(){
+    var res = "";
+    window.location.href = "../html/menuMemorama.html#" + res;
 }
