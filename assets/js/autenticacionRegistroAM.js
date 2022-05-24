@@ -108,7 +108,7 @@ async function error() {
     } else if (validarNombre(username.value) == false) {
         await Swal.fire({
             title: "Nombre de Usuario",
-            text: "El nombre de usuario debe tener mínimo 5 caracteres y máximo 50 caracteres",
+            text: "El nombre de usuario debe tener mínimo 5 caracteres y máximo 20 caracteres",
             icon: "error",
             showCancelButton: false,
             showConfirmButton: false,
@@ -231,7 +231,7 @@ async function registrar() {
                         email: correo.value,
                         tipo: "adulto",
                         username: username.value
-                    }).then(async function exito(){
+                    })/*.then(async function exito(){
                         Swal.close();
                         Swal.fire({
                             title: "Registro Exitoso",
@@ -241,7 +241,7 @@ async function registrar() {
                             timer: 5000
         
                         });
-                    });
+                    });*/
 
                 
                 }

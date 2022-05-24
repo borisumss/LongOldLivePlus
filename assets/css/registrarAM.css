@@ -80,13 +80,14 @@
     font-size: 25px;
     font-family: "Open Sans", sans-serif;
     border: none;
+    transition: 0.3s;
     background-color: #FD7314;
   }
   #btnRegistrar:hover {
       
       /*border-radius: 5px;*/
      
-      color: black;
+      color: white;
       transition: all 0.3s ease;
       top:15px;
       background-color: #C4C4C4
