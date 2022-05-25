@@ -67,7 +67,7 @@
       <div class="row">
         <div class="col-md-4">
           <div class="card" id="tarjeta1">
-            <a onclick="redireccionar()" class="btn btn-secondary" id="card-color">
+            <a onclick="redireccionarSimonDice()" class="btn btn-secondary" id="card-color">
               <img src="../img/galeria/simon.png" class="card-img-top" alt="imagen" id="tamañoImg">
               <h1 id="btnEF">Simon Dice</h1>
             </a>
@@ -75,7 +75,7 @@
         </div>
         <div class="col-md-4">
           <div class="card" id="tarjeta2">
-            <a onclick="redireccionar()" class="btn btn-secondary" id="card-color">
+            <a onclick="redireccionarSudoku()" class="btn btn-secondary" id="card-color">
               <img src="../img/galeria/sudoku.jpg" class="card-img-top" alt="imagen" id="tamañoImg">
               <h1 id="btnEF">Sudoku</h1>
             </a>
@@ -121,9 +121,14 @@ appentTo? como funciona?
       --->
 
     <script>
-        function redireccionar() {
+        function redireccionarSimonDice() {
             var res = "";
-            window.location.href = "../html/juegosMentales.html#" + res;
+            window.location.href = "../html/menuSD.html#" + res;
+        }
+
+        function redireccionarSudoku() {
+            var res = "";
+            window.location.href = "../html/sudoku.html#" + res;
         }
 
         function redireccionarMemorama() {
