@@ -8,6 +8,10 @@ const ULTIMO_NIVEL = 15
 const MAXIMO_DE_PUNTOS = ULTIMO_NIVEL * 1
 var colorPerdido = '';
 var circulo = '';
+let audio = document.getElementById("clip1");
+let audio1 = document.getElementById("clip2");
+let audio2 = document.getElementById("clip3");
+let audio3 = document.getElementById("clip4");
 
 class Juego {
     constructor() {
@@ -84,16 +88,25 @@ class Juego {
     iluminarSecuencia() {
         for (let i = 0; i < this.nivel; i++) {
             const COLOR = this.transformarNumeroAColor(this.secuencia[i])
+            console.log(COLOR);
             setTimeout(() => this.iluminarColor(COLOR), 1000 * i)
         }
     }
 
     iluminarColor(COLOR) {
-        let audio = document.getElementById("clip2");
-        audio.play();
+        if (COLOR === 'verde') {
+            audio.play();
+        } else if (COLOR === 'amarillo') {
+            audio1.play();
+        } else if (COLOR === 'rojo') {
+            audio2.play();
+        } else if(COLOR == 'celeste'){
+            audio3.play();
+        }
+
         this.colores[COLOR].classList.add('light')
         setTimeout(() => this.apagarColor(COLOR), 350)
-
+      
     }
 
     apagarColor(COLOR) {
@@ -115,8 +128,6 @@ class Juego {
     }
 
     elegirColor(ev) {
-        let audio = document.getElementById("clip2");
-        audio.play();
         //console.log(this)
         console.log(ev)
         const nombreColor = ev.target.dataset.color
