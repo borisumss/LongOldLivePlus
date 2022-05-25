@@ -31,7 +31,8 @@ const login = document.getElementById('login');
 
 login.addEventListener('submit', (e) => {
     event.preventDefault();
-    const email = document.getElementById('emailFisioterapeuta').value;
+    var email = document.getElementById('emailFisioterapeuta').value;
+    email = email.toUpperCase();
     const password = document.getElementById('contraseñaFisioterapeuta').value;
 
     var tipoUser;
@@ -46,6 +47,7 @@ login.addEventListener('submit', (e) => {
         querySnapshot.forEach((doc1) => {
             const task = doc1.data();
             var em = task.email;
+            em = em.toUpperCase();
             var tipo = task.tipo;
             if (email == em) {
                 tipoUser = tipo;
