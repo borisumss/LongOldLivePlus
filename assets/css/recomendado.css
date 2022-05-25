@@ -162,6 +162,14 @@ body, header{
         font-size: 40px;
         line-height: 50px;
     }
+
+    #botonFF{
+        min-height: 100px; 
+        display:flex; 
+        align-items: center; 
+        text-align: center;
+    }
+
     #botones{
         margin-top: 20%;
         align-content: center;
@@ -233,6 +241,14 @@ body, header{
         font-size: 40px;
         line-height: 50px;
     }
+
+    #botonFF{
+        min-height: 100px; 
+        display:flex; 
+        align-items: center; 
+        text-align: center;
+    }
+
     #botones{
         margin-top: 20%;
         align-content: center;
@@ -306,6 +322,14 @@ body, header{
         font-size: 40px;
         line-height: 50px;
     }
+
+    #botonFF{
+        min-height: 100px; 
+        display:flex; 
+        align-items: center; 
+        text-align: center;
+    }
+
     #botones{
         margin-top: 20%;
         align-content: center;
@@ -383,6 +407,14 @@ body, header{
     #tarjeta1{
         margin-top: 15px;
     }
+
+    #botonFF{
+        min-height: 100px; 
+        display:flex; 
+        align-items: center; 
+        text-align: center;
+    }
+
     #tituloApp{
 
         font-size: 15px;
@@ -429,6 +461,13 @@ body, header{
          font-size: 21px;
          align-self: flex-end;
      }
+
+     #botonFF{
+        min-height: 100px; 
+        display:flex; 
+        align-items: center; 
+        text-align: center;
+    }
  
      #lista, #registrar, #rutinas{
          text-align: center;
@@ -477,6 +516,13 @@ body, header{
     #tarjeta1{
         margin-top: 15px;
     }
+
+    #botonFF{
+        min-height: 100px; 
+        display:flex; 
+        align-items: center; 
+        text-align: center;
+    }
     
     #tarjetaU{
         margin-bottom: 30px;
@@ -503,6 +549,13 @@ body, header{
         margin-top: 15px;
     }
     
+    #botonFF{
+        min-height: 100px; 
+        display:flex; 
+        align-items: center; 
+        text-align: center;
+    }
+
     #tarjetaU{
         margin-bottom: 30px;
         margin-top: 15px;
@@ -533,6 +586,13 @@ body, header{
     #tarjeta1{
         margin-top: 15px;
     }
+
+    #botonFF{
+        min-height: 100px; 
+        display:flex; 
+        align-items: center; 
+        text-align: center;
+    }
     
     #tarjetaU{
         margin-bottom: 30px;
@@ -559,6 +619,13 @@ body, header{
     #tarjeta1{
         margin-top: 15px;
     }
+
+    #botonFF{
+        min-height: 100px; 
+        display:flex; 
+        align-items: center; 
+        text-align: center;
+    }
     
     #tarjetaU{
         margin-bottom: 30px;
@@ -582,6 +649,13 @@ body, header{
     }
     #tarjeta1{
         margin-top: 15px;
+    }
+
+    #botonFF{
+        min-height: 100px; 
+        display:flex; 
+        align-items: center; 
+        text-align: center;
     }
     
     #tarjetaU{
@@ -608,6 +682,13 @@ body, header{
     }
     #tarjeta1{
         margin-top: 15px;
+    }
+
+    #botonFF{
+        min-height: 100px; 
+        display:flex; 
+        align-items: center; 
+        text-align: center;
     }
     
     
@@ -637,6 +718,13 @@ body, header{
         font-size: 50px;
     }
     
+    #botonFF{
+        min-height: 100px; 
+        display:flex; 
+        align-items: center; 
+        text-align: center;
+    }
+
     #tituloLista{
         font-size: 20px;
     }
@@ -672,6 +760,13 @@ body, header{
     #tarjeta1{
         margin-top: 15px;
     }
+
+    #botonFF{
+        min-height: 100px; 
+        display:flex; 
+        align-items: center; 
+        text-align: center;
+    }
     
     #tarjetaU{
         margin-bottom: 30px;
@@ -702,6 +797,13 @@ body, header{
     #tarjeta1{
         margin-top: 15px;
     }
+
+    #botonFF{
+        min-height: 100px; 
+        display:flex; 
+        align-items: center; 
+        text-align: center;
+    }
     
     #tarjetaU{
         margin-bottom: 20px;
@@ -726,6 +828,13 @@ body, header{
     }
     #tarjeta1{
         margin-top: 15px;
+    }
+
+    #botonFF{
+        min-height: 100px; 
+        display:flex; 
+        align-items: center; 
+        text-align: center;
     }
     
     #tarjetaU{
