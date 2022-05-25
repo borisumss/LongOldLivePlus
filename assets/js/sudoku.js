@@ -113,9 +113,31 @@ const sudokuCreate = (grid) => {
 
     return isFullGrid(grid);
 }
-
+/*verifica si el sudoku está correcto*/
 const sudokuCheck = (grid) => {
-    let unassigned_pos = {
+    if(isFullGrid(grid)){
+        for (var i = 0; i < 9; i++) {
+            for (var j = 0; j < 9; j++) {
+                for (var k = j + 1; k < 9; k++) {
+                    if (grid[i][j] == grid[i][k]) {
+                    console.log('H', s[i][j], i+'-'+j, i+'-'+k)
+                        return false;
+                    }
+                    if (grid[j][i] == grid[k][i]) {
+                        console.log('V', s[j][i], j+'-'+i, k+'-'+i)
+                        return false;
+                    }
+                    if (grid[Math.floor(i/3) * 3 + Math.floor(j/3)][i%3 * 3 + j%3] == grid[Math.floor(i/3) * 3 + Math.floor(k/3)][i%3 * 3 + k%3]) {
+                        console.log('C', grid[Math.floor(i/3) * 3 + Math.floor(j/3)][i%3 * 3 + j%3], (Math.floor(i/3) * 3 + Math.floor(j/3))+'-'+ (i%3 * 3 + j%3), (Math.floor(i/3) * 3 + Math.floor(k/3))+'-'+(i%3 * 3 + k%3));
+                        return false;
+                    }
+                }
+            }
+        }
+        
+    return true;
+    }
+    /*let unassigned_pos = {
         row: -1,
         col: -1
     }
@@ -136,7 +158,7 @@ const sudokuCheck = (grid) => {
         })
     })
 
-    return isFullGrid(grid);
+    return isFullGrid(grid);*/
 }
 
 const rand = () => Math.floor(Math.random() * CONSTANT.GRID_SIZE);
