@@ -404,6 +404,7 @@ h1, h2, h3, h4, h5, h6 {
 .boton:hover{
     background:  #2E3040;
     color: white;
+    cursor: pointer;
 }
 
 p{
