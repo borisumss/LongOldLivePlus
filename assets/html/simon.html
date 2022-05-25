@@ -31,7 +31,7 @@
               <div class="col col-lg-2">
                   <nav id="navbar" class="navbar">
                       <ul>
-                          <li><a class="nav-link scrollto active" href="menuSD.html" id="volver">Salir</a></li>
+                          <li><a class="nav-link scrollto active" onclick="redireccionar()" id="volver">Salir</a></li>
                       </ul>
                       <i class="bi bi-list mobile-nav-toggle"></i>
                   </nav><!-- .navbar -->
@@ -45,6 +45,7 @@
           </div>
           
       </header>
+      <br>
     <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">¡Comenzar!</button>
     <div class="gameboard">
       
@@ -54,7 +55,7 @@
             <div id="celeste" class="color celeste right" data-color="celeste"></div>
             
     </div>
-    <div id="round">Puntaje: 0</div>
+    <div id="round"> <b>Nivel: 1</b></div>
     
     
   <!-- import archivos JS -->
@@ -68,4 +69,18 @@
   <script src="../js/simon.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </body>
+<script>
+  
+  var url = "" + window.location.href;
+    var pos = url.indexOf("#");
+    var res = "";
+
+    for (var i = pos + 1; i < url.length && i > 0; i++) {
+        res += url[i];
+    }
+    function redireccionar() {
+        window.location.href = "../html/menuSD.html#" + res;
+    }
+</script>
+
 </html>

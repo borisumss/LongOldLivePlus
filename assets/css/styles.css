@@ -21,7 +21,7 @@
 .btn-start {
  
   margin-left: 100px;
-  margin-top: -170px;
+  margin-top: 20%;
   text-align: center;
   cursor: pointer;
   width: 210px;
@@ -125,7 +125,11 @@
   text-align: center;
 }
 
-
+@media screen and (max-width: 1366px) {
+  .btn-start{
+    top: calc(10% - 5px);
+  }
+}
 @media screen and (max-width: 1100px){
   .gameboard{
     margin-top: 15%;
@@ -140,13 +144,22 @@
     width: 40vh;
   }
   .btn-start {  
-    margin-top: -390px;   
+    margin-top: -290px;  
+    top: calc(80% - 50px); 
   }
 }
 @media screen and (max-width: 800px){
   .btn-start {  
-    margin-top: -490px;   
+    margin-top: -100px;   
   }
+}
+
+@media screen and (max-width: 720px){
+  .btn-start {  
+    margin-top: -80rem;   
+  }
+}
+
 @media screen and (max-width: 700px){
   .gameboard{
     margin-top: 25%;
@@ -154,9 +167,17 @@
     width: 35vh;
   }
   .btn-start {  
-    margin-top: -500px;   
+    margin-top: -50px;   
   }
 }
+
+@media screen and (max-width: 540px) {
+  .btn-start { 
+    margin-top: -210px;  
+    top: calc(60% - 50px); 
+  }
+}
+
 @media screen and (max-width: 500px){
   .gameboard{
     margin-top: 35%;
@@ -164,32 +185,44 @@
     width: 30vh;
   }
   .btn-start { 
-    margin-top: -320px;   
+    margin-top: -210px;   
   }
 }
+
 @media screen and (max-width: 420px){
   .btn-start {  
-    margin-top: -320px;   
+    margin-top: -295px; 
+    top: calc(80% - 50px);  
    }
- @media screen and (max-width: 391px){
-    .btn-start {
-      margin-top: -285px;   
-}
-@media screen and (max-width: 385px){
+}   
+ 
+@media screen and (max-width: 391px){
     .btn-start {
       margin-top: -295px;   
+    }
 }
+
+@media screen and (max-width: 385px){
+    .btn-start {
+      margin-top: -285px;   
+    }
+}
+
 @media screen and (max-width: 380px){
     .btn-start {  
       margin-top: -210px;   
     }
+}
+
  @media screen and (max-width: 376px){
       .btn-start {
-        margin-top: -275px;   
+        margin-top: -200px;  
+      } 
  }
+
 @media screen and (max-width: 360px){
   .btn-start {
-    margin-top: -255px;   
+    margin-top: -200px;   
   }
  
 }
@@ -199,5 +232,4 @@
     height: 21vh;
     width: 21vh;
   }
- 
 }

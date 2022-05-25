@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../css/index.css">
   <link href="../import/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!--bootstrap 5-->
-  
+
   <!--iconos boostrap 5-->
   <link rel="stylesheet" href="../css/plantilla.css">
   <script src="https://kit.fontawesome.com/98af28cb8a.js" crossorigin="anonymous"></script>
@@ -25,8 +25,8 @@
 
 <body id="fondoJuegMental">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-  crossorigin="anonymous"></script>
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
     <div class="container d-flex align-items-center justify-content-between">
@@ -45,15 +45,16 @@
         </div>
       </div>
       <div class="col col-lg-2 text-end">
-        
+
         <div class="dropdown" id="drop">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-           
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" id="logout"  onclick="salir()">Cerrar Sesión</a></li>
+            <li><a class="dropdown-item" id="logout" onclick="salir()">Cerrar Sesión</a></li>
           </ul>
-        </div>        
+        </div>
       </div>
     </div>
   </header><!-- End Header -->
@@ -94,10 +95,10 @@
 
     </div>
 
-    
+
     <script src="../../assets/import/aos/aos.js"></script>
     <script src="../../assets/import/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script type= "module" src="../js/validacion.js"></script>
+    <script type="module" src="../js/validacion.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--archivo JS principal-->
     <script src="../../assets/js/plantilla.js"></script>
@@ -120,22 +121,31 @@ appentTo? como funciona?
       myCol.appendTo('#contentPanel');
       --->
 
-    <script>
-        function redireccionarSimonDice() {
-            var res = "";
-            window.location.href = "../html/menuSD.html#" + res;
-        }
+  <script>
 
-        function redireccionarSudoku() {
-            var res = "";
-            window.location.href = "../html/sudoku.html#" + res;
-        }
+    var url = "" + window.location.href;
+    var pos = url.indexOf("#");
+    var res = "";
 
-        function redireccionarMemorama() {
-            var res = "";
-            window.location.href = "../html/menuMemorama.html#" + res;
-        }
-      
-    </script>
-</html>
+    for (var i = pos + 1; i < url.length && i > 0; i++) {
+      res += url[i];
+    }
+    function redireccionar() {
+      window.location.href = "../html/juegosMentales.html#" + res;
+    }
 
+    function redireccionarSimonDice() {
+      window.location.href = "../html/menuSD.html#" + res;
+    }
+
+    function redireccionarSudoku() {
+      window.location.href = "../html/sudoku.html#" + res;
+    }
+
+    function redireccionarMemorama() {
+      window.location.href = "../html/menuMemorama.html#" + res;
+    }
+
+  </script>
+
+  </html>

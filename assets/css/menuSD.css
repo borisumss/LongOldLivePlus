@@ -360,7 +360,7 @@ h1, h2, h3, h4, h5, h6 {
 .modal{
     background: #c4c4c4;
     width: 600px;
-    height: 600px;
+    height: 500px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -374,7 +374,7 @@ h1, h2, h3, h4, h5, h6 {
 .modal_titulo{
     color:  black;
     font-size: 40px;
-    margin-top: 40%;
+    margin-top: 55%;
     text-align: center;
 }
 

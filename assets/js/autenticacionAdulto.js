@@ -33,8 +33,9 @@ const login = document.getElementById('login');
 
 login.addEventListener('submit', (e) => {
     event.preventDefault();
-    const email = document.getElementById('email2').value;
-    const password = document.getElementById('contraseñaAM').value;
+    var email = document.getElementById('email2').value;
+    email = email.toUpperCase();
+    var password = document.getElementById('contraseñaAM').value;
     var tipoUser;
     if(email.length == 0 || password.length==0){
         swal('Llene todos los campos', '', 'error');
@@ -46,6 +47,7 @@ login.addEventListener('submit', (e) => {
         querySnapshot.forEach((doc1) => {
             const task = doc1.data();
             var em = task.email;
+            em = em.toUpperCase();
             var tipo = task.tipo;
             if (email == em) {
                 tipoUser = tipo;

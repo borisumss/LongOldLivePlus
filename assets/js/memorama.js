@@ -135,11 +135,24 @@ function redireccionar() {
 }
 
 function redireccionarJuegoMemorama(){
+    var url = "" + window.location.href;
+    var pos = url.indexOf("#");
     var res = "";
+
+    for (var i = pos + 1; i < url.length && i > 0; i++) {
+      res += url[i];
+    }
     window.location.href = "../html/memorama.html#" + res;
 }
 
 function redireccionarMenuMemorama(){
+    var url = "" + window.location.href;
+    var pos = url.indexOf("#");
     var res = "";
+
+    for (var i = pos + 1; i < url.length && i > 0; i++) {
+      res += url[i];
+    }
+    
     window.location.href = "../html/menuMemorama.html#" + res;
 }
