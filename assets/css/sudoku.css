@@ -75,6 +75,10 @@
    margin-bottom: 3%;
 }
 
+.btn:hover{
+    color: rgb(36, 36, 99);
+}
+
 .boton{
     width: 90px;
     background: #FD7314;
