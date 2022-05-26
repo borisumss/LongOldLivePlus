@@ -16,7 +16,7 @@ let audio3 = document.getElementById("clip4");
 //let circuloVerde = "https://cdn.icon-icons.com/icons2/402/PNG/512/trafficlight-green_40427.png";
 //let circuloCeleste = "https://cdn.icon-icons.com/icons2/215/PNG/256/circle256_25243.png";
 let circuloVerde = "https://cdn.icon-icons.com/icons2/210/PNG/256/trafficlight-green256_24943.png";
-let circuloCeleste = "../img/galeria/iconos/circuloCeleste.png";
+let circuloCeleste = "https://cdn-icons-png.flaticon.com/512/1281/1281225.png";
 
 class Juego {
     constructor() {
