@@ -449,7 +449,7 @@ h1, h2, h3, h4, h5, h6 {
 body {
     background-color: rgb(233, 234, 184);
     font-family: "Verdana";
-    /* height: 100vh; */
+    height: 100%;
     /*background-color: var(--bg-body);*/
     overflow-x: hidden;
     user-select: none;
@@ -525,7 +525,7 @@ ul {
 }
 
 .main {
-    /* height: 100vh; */
+    height: 100%;
     padding-top: 63px;
     display: grid;
     place-items: center;
@@ -538,6 +538,7 @@ ul {
     overflow: hidden;
     height: 100%;
     min-width: 400px;
+    zoom: 84%;
 }
 
 .start-screen {
