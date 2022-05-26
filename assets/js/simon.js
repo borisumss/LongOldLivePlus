@@ -12,10 +12,11 @@ let audio = document.getElementById("clip1");
 let audio1 = document.getElementById("clip2");
 let audio2 = document.getElementById("clip3");
 let audio3 = document.getElementById("clip4");
-let trofeoCup = "https://cdn.icon-icons.com/icons2/1633/PNG/512/52725trophy_109387.png";
-let circuloVerde = "https://cdn.icon-icons.com/icons2/402/PNG/512/trafficlight-green_40427.png";
-let circuloCeleste = "https://cdn.icon-icons.com/icons2/215/PNG/256/circle256_25243.png";
-
+//let trofeoCup = "https://cdn.icon-icons.com/icons2/1633/PNG/512/52725trophy_109387.png";
+//let circuloVerde = "https://cdn.icon-icons.com/icons2/402/PNG/512/trafficlight-green_40427.png";
+//let circuloCeleste = "https://cdn.icon-icons.com/icons2/215/PNG/256/circle256_25243.png";
+let circuloVerde = "https://cdn.icon-icons.com/icons2/210/PNG/256/trafficlight-green256_24943.png";
+let circuloCeleste = "../img/galeria/iconos/circuloCeleste.png";
 
 class Juego {
     constructor() {
@@ -158,7 +159,7 @@ class Juego {
             if (colorPerdido === 'verde') {
                 this.perdioElJuego('verde', circuloVerde)
             } else if (colorPerdido === 'amarillo') {
-                this.perdioElJuego('amarillo', 'https://cdn.icon-icons.com/icons2/77/PNG/128/button_blank_yellow_14988.png')
+                this.perdioElJuego('amarillo', 'https://cdn-icons-png.flaticon.com/512/1281/1281188.png')
             } else if (colorPerdido === 'rojo') {
                 this.perdioElJuego('rojo', 'https://cdn-icons-png.flaticon.com/512/595/595005.png')
             } else {
@@ -172,7 +173,7 @@ class Juego {
         Swal.fire({
             title: '¡Ganaste! :)',
             text: 'Felicidades, completaste los 15 niveles',
-            imageUrl: trofeoCup,
+            imageUrl: '../img/galeria/iconos/trofeo.png',
             imageWidth: 60,
             imageHeight: 60,
             showDenyButton: true,
