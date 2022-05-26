@@ -843,6 +843,17 @@ ul {
     }
 }
 
+@media only screen and (min-height: 1050px) {
+    .screen{
+        zoom: 125%;
+    }
+    .main-game{
+        height: 600px;
+    }
+    .start-screen.active{
+        width: 308px;
+    }
+}
 @media only screen and (max-width: 990px) {
     :root {
         /*--nav-size: 50px;*/
