@@ -185,7 +185,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 991px) {
     body{
         background-position: center;
-        min-height: 93vh;
+        min-height: 100vh;
     }
     .mobile-nav-toggle {
         display: block;

@@ -4,7 +4,7 @@ const rojo = document.getElementById('rojo')
 const amarillo = document.getElementById('amarillo')
 const celeste = document.getElementById('celeste')
 const btnEmpezar = document.getElementById('btnEmpezar')
-const ULTIMO_NIVEL = 5
+const ULTIMO_NIVEL = 15
 const MAXIMO_DE_PUNTOS = ULTIMO_NIVEL * 1
 var colorPerdido = '';
 var circulo = '';
@@ -200,7 +200,7 @@ class Juego {
     perdioElJuego(colorPerdido, circulo) {
         Swal.fire({
             title: '¡Perdiste! :(',
-            text: 'El color correcto era: ' + colorPerdido,
+            text: 'El color correcto era ' + colorPerdido,
             imageUrl: circulo,
             imageWidth: 50,
             imageHeight: 50,
