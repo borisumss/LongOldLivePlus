@@ -37,7 +37,7 @@
     background: #c4c4c4;
     width: 600px;
     height: 560px;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin-top: 5%;
@@ -281,7 +281,7 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0;
     visibility: hidden;
     background: #fff;
-    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    box-shadow: 0px 0px 30px rgba(3, 77, 250, 0.25);
     transition: 0.3s;
     border-radius: 15px;
     cursor: pointer;
@@ -365,7 +365,7 @@ h1, h2, h3, h4, h5, h6 {
     right: 0;
     left: 0;
     bottom: 0;
-    background: rgba(20, 21, 28, 0.9);
+    background: rgba(2, 31, 247, 0.9);
     transition: 0.3s;
     z-index: 999;
 }
@@ -839,6 +839,7 @@ ul {
 @media only screen and (max-width: 650px) {
     .modal{
         width: 370px;
+        top: 47%;
     }
 }
 
