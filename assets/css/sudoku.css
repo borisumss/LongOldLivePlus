@@ -891,4 +891,7 @@ ul {
     .main {
         height: 100vh;
     }
+    .main-game{
+        height: 600px;
+    }
 }
