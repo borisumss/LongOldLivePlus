@@ -14,8 +14,9 @@ let audio2 = document.getElementById("clip3");
 let audio3 = document.getElementById("clip4");
 
 const circuloCeleste = "https://cdn-icons-png.flaticon.com/512/1281/1281225.png";
-const circuloVerde = "https://cdn.icon-icons.com/icons2/210/PNG/256/trafficlight-green256_24943.png";
 //const circuloCeleste = "https://cdn.icon-icons.com/icons2/215/PNG/256/circle256_25243.png";
+//(Rodri)const circuloVerde = "https://cdn.icon-icons.com/icons2/210/PNG/256/trafficlight-green256_24943.png";
+const circuloVerde = "https://cdn.icon-icons.com/icons2/402/PNG/512/trafficlight-green_40427.png";
 
 class Juego {
     constructor() {
