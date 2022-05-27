@@ -157,7 +157,7 @@ class Juego {
             var numeroPerdido = this.secuencia[this.subnivel]
             colorPerdido = this.transformarNumeroAColor(numeroPerdido)
             if (colorPerdido === 'verde') {
-                this.perdioElJuego('verde', circuloVerde)
+                this.perdioElJuego('verde', 'https://cdn.icon-icons.com/icons2/210/PNG/256/trafficlight-green256_24943.png')
             } else if (colorPerdido === 'amarillo') {
                 this.perdioElJuego('amarillo', 'https://cdn-icons-png.flaticon.com/512/1281/1281188.png')
             } else if (colorPerdido === 'rojo') {
