@@ -21,9 +21,7 @@
 .btn-start {
  
   margin-left: 100px;
-  margin-top: 20%;
-  text-align: center;
-  cursor: pointer;
+  margin-top: 15%;
   width: 210px;
   height: 45px;
   background: #c4c4c4;
@@ -34,7 +32,7 @@
   font-size: 2em;
   letter-spacing: 1.5px;
   position: absolute;
-  top: calc(50% - 50px);
+
   left: calc(50% - 210px);
   transition: 0.5s;
   outline: none;
@@ -125,10 +123,11 @@
   text-align: center;
 }
 
-@media screen and (max-width: 1366px) {
-  .btn-start{
-    top: calc(10% - 5px);
-  }
+@media screen and (max-width: 1370px){
+  .btn-start {
+
+  margin-top: 5%;
+ }
 }
 @media screen and (max-width: 1100px){
   .gameboard{
@@ -144,21 +143,10 @@
     width: 40vh;
   }
   .btn-start {  
-    margin-top: -290px;  
-    top: calc(80% - 50px); 
-  }
-}
-@media screen and (max-width: 800px){
-  .btn-start {  
-    margin-top: -100px;   
+    margin-top: 12%;   
   }
 }
 
-@media screen and (max-width: 720px){
-  .btn-start {  
-    margin-top: -80rem;   
-  }
-}
 
 @media screen and (max-width: 700px){
   .gameboard{
@@ -167,14 +155,7 @@
     width: 35vh;
   }
   .btn-start {  
-    margin-top: -50px;   
-  }
-}
-
-@media screen and (max-width: 540px) {
-  .btn-start { 
-    margin-top: -210px;  
-    top: calc(60% - 50px); 
+    margin-top: 15%;   
   }
 }
 
@@ -184,52 +165,15 @@
     height: 30vh;
     width: 30vh;
   }
-  .btn-start { 
-    margin-top: -210px;   
-  }
 }
 
-@media screen and (max-width: 420px){
-  .btn-start {  
-    margin-top: -295px; 
-    top: calc(80% - 50px);  
-   }
-}   
- 
-@media screen and (max-width: 391px){
-    .btn-start {
-      margin-top: -295px;   
-    }
-}
-
-@media screen and (max-width: 385px){
-    .btn-start {
-      margin-top: -285px;   
-    }
-}
-
-@media screen and (max-width: 380px){
-    .btn-start {  
-      margin-top: -210px;   
-    }
-}
-
- @media screen and (max-width: 376px){
-      .btn-start {
-        margin-top: -200px;  
-      } 
- }
-
-@media screen and (max-width: 360px){
-  .btn-start {
-    margin-top: -200px;   
-  }
- 
-}
 @media screen and (max-width: 330px){
   .gameboard{
     margin-top: 50%;
     height: 21vh;
     width: 21vh;
+  }
+  .btn-start {
+    margin-top: 22%;
   }
 }
