@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Memorama</title>
-  <link rel="stylesheet" href="../css/memorama.css">
+  <!--<link rel="stylesheet" href="../css/memorama.css">-->
   <!--implementacion bootstrap-->
   <link rel="stylesheet" href="../css/listaEjercicios.css">
   <link href="../import/bootstrap/css/bootstrap.min.css" rel="stylesheet"><!--bootstrap 5-->
   <link href="../import/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"><!--iconos boostrap 5-->
   <link rel="stylesheet" href="../css/plantilla.css">
-  
+  <link rel="stylesheet" href="../css/memorama.css">
     
  
 
@@ -62,30 +62,57 @@
         <button class="boton" onclick="rendirse()">
             Me Rindo
         </button>
-        <button type="button" class="boton" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#instruccion">
+        <button id="comoJugar" class="boton">
             Cómo Jugar
         </button>
 
-
+  
     </div>
-    <div class="modal" tabindex="-1" id="instruccion">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title"><i class="bi bi-info-circle-fill"></i> Instrucciones</h3>
-                </div>
-                <div class="modal-body">
-                    <p>Tiene 5 segundos para memorizar la mayor cantidad de cartas.<br>
-                       Encuentre sus parejas y gane el juego. Buena suerte!
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <h3 class="modal-title">
-                        <button class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
-                    </h3>
-                </div>
-            </div>
+
+    <div class="fondo_transparente">
+      <div class="modal">
+        <div class="modal_mensaje">
+          <div class="modal-header">
+            <h3 class="modal-title"><i class="bi bi-info-circle-fill"></i> Instrucciones</h3>
+          </div>
+          <div class="modal-body">
+              <p><strong>¿Qué es Memorama?</strong></p>
+              <p>
+                Memorama es un juego que ayuda a ejercitar la memoria.
+                Consta de 12 pares de cartas que se le revelarán al 
+                jugardor por 5 segundos para que pueda memorizar el 
+                mayor número de pares de cartas, después del tiempo establecido las cartas serán volcadas.
+                El objetivo es tratar de descubrir todas las cartas con sus pares respectivos.
+              </p>
+              <p><strong>Pasos:</strong></p>
+              <p>
+                -Para ingresar al juego, presione el botón "Jugar" y observará durante 5 segundos los 12 pares de cartas.
+              </p>
+              <p>
+                -Una vez que se den la vuelta, seleccione una carta y encuentre su par.
+              </p>
+              <p>
+                -Si acierta, el par de cartas se mantendrá descubierto y su fondo cambiará de color para que continue con las que faltan, sino volverán a voltearse hasta que halle su par respectivo.
+              </p>
+              <p>
+                -En caso de rendirse, presione el botón "Me Rindo" para observar dónde estaban los pares que le faltaban encontrar.
+              </p>
+              <p>
+                -Si desea una nueva partida, presione el botón "Nuevo Juego" para desafiar a su memoria.
+              </p>
+              <p>
+                -Gane el juego descubriendo todas los pares de cartas.
+              </p>
+          </div>
+          <div class="modal-footer">
+            <h3 class="modal-title">
+              <div class="modal_cerrar">
+                <button class="btn btn-primary">Cerrar</button>
+              </div>
+            </h3>
+          </div>
         </div>
+      </div>
     </div>
 
     <div id="finJuego">
@@ -102,7 +129,20 @@
   <script type= "module" src="../js/validacion.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
+  <script>
+    document.getElementById("comoJugar").addEventListener
+        ("click", function () {
+            document.getElementsByClassName
+                ("fondo_transparente")[0].style.display = "block"
+            return false
+        })
 
+    document.getElementsByClassName("modal_cerrar")[0].
+        addEventListener("click", function () {
+            document.getElementsByClassName
+                ("fondo_transparente")[0].style.display = "none"
+        })
+  </script>
 </html>
 
 
