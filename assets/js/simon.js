@@ -13,9 +13,9 @@ let audio1 = document.getElementById("clip2");
 let audio2 = document.getElementById("clip3");
 let audio3 = document.getElementById("clip4");
 
-const circuloCeleste = "https://cdn-icons-png.flaticon.com/512/1281/1281225.png";
-//const circuloCeleste = "https://cdn.icon-icons.com/icons2/215/PNG/256/circle256_25243.png";
-//(Rodri)const circuloVerde = "https://cdn.icon-icons.com/icons2/210/PNG/256/trafficlight-green256_24943.png";
+const circuloCeleste = "https://cdn-icons-png.flaticon.com/512/1281/1281225.png"; //Fab si Rodri no
+//(Ni Fab ni Rodri)const circuloCeleste = "https://cdn.icon-icons.com/icons2/215/PNG/256/circle256_25243.png";
+//(Rodri si Fab no)const circuloVerde = "https://cdn.icon-icons.com/icons2/210/PNG/256/trafficlight-green256_24943.png";
 const circuloVerde = "https://cdn.icon-icons.com/icons2/402/PNG/512/trafficlight-green_40427.png";
 
 class Juego {
@@ -198,31 +198,86 @@ class Juego {
     }
 
     perdioElJuego(colorPerdido, circulo) {
-        Swal.fire({
-            title: '¡Perdiste! :(',
-            text: 'El color correcto era ' + colorPerdido,
-            imageUrl: circulo,
-            imageWidth: 50,
-            imageHeight: 50,
-            showDenyButton: true,
-
-            confirmButtonText: 'Jugar de nuevo',
-            denyButtonText: `Salir del juego`,
-        }).then((result) => {
-            if (result.isConfirmed) {
-                this.eliminarEventosClick()
-                this.inicializar()
-            } else if (result.isDenied) {
-                var url = "" + window.location.href;
-                var pos = url.indexOf("#");
-                var res = "";
-
-                for (var i = pos + 1; i < url.length && i > 0; i++) {
-                    res += url[i];
+        if(colorPerdido === 'verde'){
+            Swal.fire({
+                title: '¡Perdiste! :(',
+                text: 'El color correcto era ' + colorPerdido,
+                imageUrl: '../img/iconos/circuloVerde.png',
+                imageWidth: 50,
+                imageHeight: 50,
+                showDenyButton: true,
+    
+                confirmButtonText: 'Jugar de nuevo',
+                denyButtonText: `Salir del juego`,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    this.eliminarEventosClick()
+                    this.inicializar()
+                } else if (result.isDenied) {
+                    var url = "" + window.location.href;
+                    var pos = url.indexOf("#");
+                    var res = "";
+    
+                    for (var i = pos + 1; i < url.length && i > 0; i++) {
+                        res += url[i];
+                    }
+                    window.location = "menuSD.html#" + res;
                 }
-                window.location = "menuSD.html#" + res;
-            }
-        })
+            })
+        }else if(colorPerdido === 'celeste'){
+            Swal.fire({
+                title: '¡Perdiste! :(',
+                text: 'El color correcto era ' + colorPerdido,
+                imageUrl: '../img/iconos/circuloCeleste.png',
+                imageWidth: 50,
+                imageHeight: 50,
+                showDenyButton: true,
+    
+                confirmButtonText: 'Jugar de nuevo',
+                denyButtonText: `Salir del juego`,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    this.eliminarEventosClick()
+                    this.inicializar()
+                } else if (result.isDenied) {
+                    var url = "" + window.location.href;
+                    var pos = url.indexOf("#");
+                    var res = "";
+    
+                    for (var i = pos + 1; i < url.length && i > 0; i++) {
+                        res += url[i];
+                    }
+                    window.location = "menuSD.html#" + res;
+                }
+            })
+        }else{
+            Swal.fire({
+                title: '¡Perdiste! :(',
+                text: 'El color correcto era ' + colorPerdido,
+                imageUrl: circulo,
+                imageWidth: 50,
+                imageHeight: 50,
+                showDenyButton: true,
+    
+                confirmButtonText: 'Jugar de nuevo',
+                denyButtonText: `Salir del juego`,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    this.eliminarEventosClick()
+                    this.inicializar()
+                } else if (result.isDenied) {
+                    var url = "" + window.location.href;
+                    var pos = url.indexOf("#");
+                    var res = "";
+    
+                    for (var i = pos + 1; i < url.length && i > 0; i++) {
+                        res += url[i];
+                    }
+                    window.location = "menuSD.html#" + res;
+                }
+            })
+        }
+        
     }
 }
 
