@@ -37,8 +37,13 @@ login.addEventListener('submit', (e) => {
 
     var tipoUser;
 
-    if(email.length == 0 || password.length==0){
-        swal('Llene todos los campos', '', 'error');
+    if (email == "" && password == "") {
+        Swal.fire('Ingrese su correo y contraseña', '', 'error');
+    } else if (password == "") {
+        Swal.fire('Ingrese su contraseña', '', 'error');
+    }
+    else if (email == "") {
+        Swal.fire('Ingrese su Correo', '', 'error');
     }else{
     const onGetTasks = (callback) =>
         onSnapshot(collection(cloudDB, "Users"), callback);
@@ -66,15 +71,15 @@ login.addEventListener('submit', (e) => {
                 })
                 .catch((error) => {
                     if (email == "" && password == "") {
-                        swal('Ingrese su correo y contraseña', '', 'error');
+                        Swal.fire('Ingrese su correo y contraseña', '', 'error');
                     } else if (password == "") {
-                        swal('Ingrese su contraseña', '', 'error');
+                        Swal.fire('Ingrese su contraseña', '', 'error');
                     }
                     else if (email == "") {
-                        swal('Ingrese su Correo', '', 'error');
+                        Swal.fire('Ingrese su Correo', '', 'error');
                     }
                     else {
-                        swal('Datos Incorrectos', '', 'error');
+                        Swal.fire('Datos Incorrectos', '', 'error');
     
                     }
                     const errorCode = error.code;
@@ -82,7 +87,12 @@ login.addEventListener('submit', (e) => {
                     console.log(errorCode + errorMessage)
                 });
         } else {
-            swal('No es un usuario Fisioterapeuta','','error');
+            if(tipoUser=="adulto"){
+                Swal.fire('No es un usuario Fisioterapeuta','','error');
+                }else{
+                Swal.fire('Datos Incorrectos', '', 'error');
+                }
+            
         }
 
     });
