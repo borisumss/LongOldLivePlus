@@ -1,5 +1,5 @@
 # LongOldLivePlus
-El proposito de esta pagina web es brindarles a las personas mayores, distintos tipos de ejercicos fisicos para un estado fisico y saludable.
+El proposito de esta pagina web es brindarles a las personas mayores, distintos tipos de ejercicios fisicos y mentales para mejorar su memoria y estado fisico.
 
 ## Tecnologías usadas
 -HTML
