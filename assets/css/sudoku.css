@@ -76,7 +76,7 @@
 }
 
 .btn:hover{
-    color: rgb(36, 36, 99);
+    color: rgb(69, 69, 227);
 }
 
 .boton{
@@ -847,7 +847,7 @@ ul {
     }
 }
 
-@media only screen and (min-height: 1050px) {
+@media only screen and (min-height: 990px) {
     .screen{
         zoom: 125%;
     }
@@ -859,6 +859,43 @@ ul {
     }
 }
 @media only screen and (max-width: 990px) {
+    :root {
+        /*--nav-size: 50px;*/
+
+        --sudoku-cell-size: 30px;
+
+        --border-radius: 5px;
+
+        --space-y: 10px;
+
+        --gap: 2px;
+
+        --font-size: 1rem;
+        --font-size-lg: 1.5rem;
+        --font-size-xl: 2rem;
+    }
+
+    .input-name,
+    .btn {
+        height: 50px;
+    }
+
+    .main-grid-cell.hover {
+        border-width: 2px;
+    }
+
+    .screen {
+        min-width: unset;
+    }
+
+    .main {
+        height: 100vh;
+    }
+    .main-game{
+        height: 600px;
+    }
+}
+@media only screen and (max-height: 722px) {
     :root {
         /*--nav-size: 50px;*/
 
