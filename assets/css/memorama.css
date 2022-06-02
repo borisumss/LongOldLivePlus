@@ -235,6 +235,12 @@ p{
     }
 }
 
+@media screen and (max-height:500px){
+    .modal_mensaje {
+        height: 430px;
+    }
+}
+
 @media only screen and (max-width: 650px) {
     .modal{
         width: 360px;
