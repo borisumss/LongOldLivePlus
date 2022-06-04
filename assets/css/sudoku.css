@@ -840,7 +840,7 @@ ul {
     }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 915px) {
     .modal{
         width: 370px;
         top: 47%;
@@ -852,11 +852,11 @@ ul {
         zoom: 125%;
     }
     .main-game{
-        height: 600px;
+        height: 770px;
     }
-    .start-screen.active{
+    /*.start-screen.active{
         width: 308px;
-    }
+    }*/
 }
 @media only screen and (max-width: 990px) {
     :root {
@@ -930,5 +930,13 @@ ul {
     }
     .main-game{
         height: 600px;
+    }
+}
+@media only screen and (min-height: 1300px) {
+    .screen{
+        zoom: 150%;
+    }
+    #game-screen{
+        zoom: 100%;
     }
 }
