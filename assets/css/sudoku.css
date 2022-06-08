@@ -37,7 +37,7 @@
     background: #c4c4c4;
     width: 600px;
     height: 560px;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin-top: 5%;
@@ -73,6 +73,10 @@
    display: flex;
    justify-content: space-evenly;
    margin-bottom: 3%;
+}
+
+.btn:hover{
+    color: rgb(69, 69, 227);
 }
 
 .boton{
@@ -281,7 +285,7 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0;
     visibility: hidden;
     background: #fff;
-    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    box-shadow: 0px 0px 30px rgba(202, 207, 217, 0.25);
     transition: 0.3s;
     border-radius: 15px;
     cursor: pointer;
@@ -365,7 +369,7 @@ h1, h2, h3, h4, h5, h6 {
     right: 0;
     left: 0;
     bottom: 0;
-    background: rgba(20, 21, 28, 0.9);
+    background: rgba(252, 252, 255, 0.238);
     transition: 0.3s;
     z-index: 999;
 }
@@ -449,7 +453,7 @@ h1, h2, h3, h4, h5, h6 {
 body {
     background-color: rgb(233, 234, 184);
     font-family: "Verdana";
-    /* height: 100vh; */
+    height: 100%;
     /*background-color: var(--bg-body);*/
     overflow-x: hidden;
     user-select: none;
@@ -525,7 +529,7 @@ ul {
 }
 
 .main {
-    /* height: 100vh; */
+    height: 100%;
     padding-top: 63px;
     display: grid;
     place-items: center;
@@ -538,6 +542,7 @@ ul {
     overflow: hidden;
     height: 100%;
     min-width: 400px;
+    zoom: 84%;
 }
 
 .start-screen {
@@ -835,12 +840,24 @@ ul {
     }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 915px) {
     .modal{
         width: 370px;
+        top: 47%;
     }
 }
 
+@media only screen and (min-height: 990px) {
+    .screen{
+        zoom: 125%;
+    }
+    .main-game{
+        height: 770px;
+    }
+    /*.start-screen.active{
+        width: 308px;
+    }*/
+}
 @media only screen and (max-width: 990px) {
     :root {
         /*--nav-size: 50px;*/
@@ -873,5 +890,53 @@ ul {
 
     .main {
         height: 100vh;
+    }
+    .main-game{
+        height: 600px;
+    }
+}
+@media only screen and (max-height: 722px) {
+    :root {
+        /*--nav-size: 50px;*/
+
+        --sudoku-cell-size: 30px;
+
+        --border-radius: 5px;
+
+        --space-y: 10px;
+
+        --gap: 2px;
+
+        --font-size: 1rem;
+        --font-size-lg: 1.5rem;
+        --font-size-xl: 2rem;
+    }
+
+    .input-name,
+    .btn {
+        height: 50px;
+    }
+
+    .main-grid-cell.hover {
+        border-width: 2px;
+    }
+
+    .screen {
+        min-width: unset;
+    }
+
+    .main {
+        height: 100vh;
+    }
+    .main-game{
+        height: 600px;
+    }
+}
+@media only screen and (min-height: 1300px) {
+    .screen{
+        zoom: 150%;
+    }
+    #game-screen{
+        zoom: 100%;
     }
 }

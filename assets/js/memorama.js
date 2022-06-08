@@ -99,7 +99,7 @@ function deseleccionar(selecciones) {
             cont++;
             if(cont == 12){
                 document.getElementById("finJuego").innerHTML=`
-                <div id="felicidades" class="modal show" tabindex="-1" aria-modal="true" role="dialog" style="display: block;">
+                <div id="felicidades" class="modal show" tabindex="-1" aria-modal="true" role="dialog" style="display: block; background: none;">
                     <div class="modal-dialog modal-dialog-centered">
                          <div class="modal-content">
                             <div class="modal-header">

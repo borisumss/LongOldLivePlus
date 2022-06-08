@@ -93,16 +93,6 @@ h3 {
     margin: 0.5em;
 }
 
-#cerrar {
-    cursor: pointer;
-    background: linear-gradient(orange, darkorange);
-    padding: 20px;
-    border-radius: 50px;
-    border: white 5px solid;
-    font-size: 90%;
-    margin: 0.5em;
-}
-
 .botonMenu {
     cursor: pointer;
     background: linear-gradient(orange, darkorange);
@@ -126,50 +116,7 @@ h3 {
     flex-direction: column;
 }
 
-/*Para el modal de instrucciones*/
-.fondo_transparente{
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.226);
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    display: none;
-}
-.modal{
-    background: #ffffff;
-    width: 600px;
-    height: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /*position: relative;*/
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0.3rem;
-}
-
-.modal_titulo{
-    color:  black;
-    font-size: 40px;
-    margin-top: 55%;
-    text-align: center;
-}
-
-.modal_mensaje{          
-   text-align: initial;
-   height: 500px;
-}
-.modal_cerrar{      
-   width: 100%;    
-   background: #ffffff;
-   display: flex;
-   justify-content: space-evenly;
-}
-
-p{
+p {
     color: black;
 }
 
@@ -214,38 +161,5 @@ p{
 @media screen and (max-width:425px){
     .botones {
         flex-direction: column;
-    }
-}
-
-@media screen and (max-height:840px){
-    .modal_mensaje {
-        height: 750px;
-    }
-}
-
-@media screen and (max-height:728px){
-    .modal_mensaje {
-        height: 650px;
-    }
-}
-
-@media screen and (max-height:546px){
-    .modal_mensaje {
-        height: 550px;
-    }
-}
-
-@media screen and (max-height:500px){
-    .modal_mensaje {
-        height: 430px;
-    }
-}
-
-@media only screen and (max-width: 650px) {
-    .modal{
-        width: 360px;
-    }
-    .modal_titulo{
-        margin-top: 150%;
     }
 }
